@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>BFM注册</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.12.0/lib/index.css" rel="external nofollow" target="_blank">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/common.js"></script>
+		<script src="layer/layer.js"></script>
+		<script src="js/vue.js"></script>
+		<script src="js/base64.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vant@2.12.0/lib/vant.min.js" rel="external nofollow"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="pages">
+				<div class="bgBox">
+					<img src="images/img-bg.jpg" alt="背景图">
+				</div>
+				<div class="main" v-show="step == 0">
+					<div class="logoBox">
+						<img src="images/icon-logo.png" alt="Logo" />
+					</div>
+					<div class="tabsBox">
+						<div class="tabsBox-control">
+							<div class="tabsBox-control__item" :class="{ 'tabsBox-control__item--active': tabsActive == 0 }" @click="changeTabsActive(0)">手机注册</div>
+							<div class="tabsBox-control__item" :class="{ 'tabsBox-control__item--active': tabsActive == 1 }" @click="changeTabsActive(1)">邮箱注册</div>
+						</div>
+					</div>
+					<div class="formBox">
+						<div class="formBox-wrapper">
+							<div class="formBox-list">
+								<div class="formBox-zone" @click="pickerShow = true" v-show="tabsActive == 0">+{{ zone }}</div>
+								<input type="text" :placeholder="'请输入注册的' + (tabsActive == 0 ? '手机号' : '邮箱')" v-model="phone" />
+							</div>
+							<div class="formBox-list">
+								<input type="text" placeholder="请输入验证码" v-model="code">
+								<div class="formBox-verification" @click="sendCode()">{{ remain }}</div>
+							</div>
+							<div class="formBox-list">
+								<input type="password" placeholder="请输入登录密码" v-model="pwd">
+							</div>
+							<div class="formBox-list">
+								<input type="password" placeholder="请再次输入登录密码" v-model="againPwd">
+							</div>
+							<div class="formBox-list">
+								<input type="password" placeholder="请输入交易密码" v-model="tradePwd">
+							</div>
+							<div class="formBox-list">
+								<input type="password" placeholder="请再次输入交易密码" v-model="againTradePwd">
+							</div>
+							<div class="formBox-list">
+								<input type="text" placeholder="请输入邀请码" v-model="leaderName">
+							</div>
+							<div class="formBox-btn" @click="register()" style="padding-right:0">
+								<div class="button">注册</div>
+							</div>
+							<div class="formBox-btn" @click="step = 1" style="padding-right:0">
+								<div class="button">下载APP</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="downloadBox" v-if="step == 1">
+					<div class="downloadBox-wrapper">
+						<div class="downloadBox-logo">
+							<img src="images/icon-logo.png" alt="Logo" />
+						</div>
+						<div class="downloadBox-button">
+							<div class="downloadBox-button__btn" @click="downloadAppPage(0)">
+								<div class="downloadBox-button__btn-icon"><img src="images/icon-android-black.png" alt="android" /></div>
+								<div class="downloadBox-button__btn-label">Android 下载</div>
+							</div>
+							<div class="downloadBox-button__btn" @click="downloadAppPage(1)">
+								<div class="downloadBox-button__btn-icon"><img src="images/icon-ios-black.png" alt="ios" /></div>
+								<div class="downloadBox-button__btn-label">iOS 下载</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<van-popup v-model="pickerShow" position="bottom">
+				<van-picker :columns="zoneList" show-toolbar @confirm='pickerConfirm' @cancel="pickerShow = false" />
+			</van-popup>
+		</div>
+		<script>
+			new Vue({
+				el: "#app",
+				data() {
+					return {
+						isSend: true,
+						timer: null,
+						time: 60,
+						remain: '发送验证码',
+						phone: '',
+						tradePwd: '', //交易密码
+						pwd: '', //注册密码
+						againPwd: '', //确认密码
+						againTradePwd: '', //确认交易密码
+						leaderName: '', //领导人,从上一个页面跳转过来的
+						deviceId: "12312321321312",
+						code: '', //验证码,
+						zone: "86",
+						value: 86,
+						title: '选择国家',
+						autoPop: false,
+						disabled: false,
+						fixedHeight: '',
+						type: 0,
+						step: 0,
+						isWechat: true,
+						tabsActive: 0,
+
+						pickerShow: false,
+						zoneList: [],
+					}
+				},
+				mounted: function() {
+					that = this;
+					
+					that.getZoneList();
+					// setTimeout(() => {
+					// 	that.getZoneList();
+					// }, 1000);
+						
+					this.inputBugFixed();
+					clearInterval(this.timer);
+					that.leaderName = leaderName;
+
+					if (window.plus) {
+						console.log("uuid: " + plus.device.uuid);
+						alert('12312');
+						this.deviceId = plus.device.uuid;
+					} else {
+						console.log('不支持设备号');
+					}
+
+
+					var ua = window.navigator.userAgent.toLowerCase();
+					if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+						this.isWechat = true;
+					} else {
+						this.isWechat = false;
+					}
+				},
+				methods: {
+					getZoneList: function() {
+						let that = this;;
+						$.ajax({
+							url: basePath + '/ajax/zoneList',
+							type: 'POST',
+							dataType: 'json',
+							data: {},
+							success: (res) => {
+								if (res.code == 0) {
+									this.zoneList = res.obj;
+									this.zoneList.forEach(item => {
+										item.text = item.zone + ' ' + item.cnName;
+										item.value = item.zone;
+									});
+								}
+							}
+						})
+					},
+					pickerConfirm(picker, value, index) {
+						this.zone = picker.value;
+						this.pickerShow = false;
+					},
+					pickerChange(picker, value, index) {
+						console.log(value);
+						console.log(index);
+					},
+					sendCode: function() {
+						console.log(that.phone);
+						that = this;
+						var reg = /^[0-9]{4,20}/;
+						var reg1 = /[a-zA-Z0-9]{1,10}@[a-zA-Z0-9]{1,5}\.[a-zA-Z0-9]{1,5}/;
+						if (!reg.test(that.phone) && !reg1.test(that.phone)) {
+							return layer.msg('用户名不合法');
+						}
+						if (that.isSend) {
+							$.ajax({
+								url: basePath + '/ajax/sendCode',
+								type: 'POST',
+								data: {
+									'account': that.phone,
+									'zone': that.zone
+								},
+								success: function(response) {
+									console.log(response);
+									layer.msg('发送成功');
+									if (response.code == 0) {
+										that.isSend = false;
+										that.remain = that.time + 's后重新获取';
+										that.timer = setInterval(() => {
+											that.time--;
+											that.remain = that.time + 's后重新获取';
+											if (that.time == 0) {
+												clearInterval(that.timer);
+												that.isSend = true;
+												that.time = 60;
+												that.remain = '重新获取';
+											}
+										}, 1000)
+									}
+								}
+							});
+						}
+					},
+					register: function() {
+						that = this;
+						console.log(that.type);
+						if (that.phone == '') {
+							return layer.msg('手机号/邮箱不能为空');
+						}
+
+						if (that.code == '') {
+							return layer.msg('验证码不能为空');
+						}
+
+						if (that.pwd == '') {
+							return layer.msg('登录密码不能为空');
+						}
+
+						if (that.againPwd != that.pwd) {
+							return layer.msg('登录密码不一致');
+						}
+
+						if (that.tradePwd == '') {
+							return layer.msg('交易密码不能为空');
+						}
+
+						if (that.tradePwd != that.againTradePwd) {
+							return layer.msg('交易密码不一致');
+						}
+
+						$.ajax({
+							url: basePath + '/front/register/one',
+							type: 'POST',
+							dataType: 'json',
+							data: {
+								"account": that.phone,
+								"code": that.code
+							},
+							success: function(response) {
+								if (response.code == 0) {
+									$.ajax({
+										url: basePath + '/front/register/two',
+										type: 'POST',
+										dataType: 'json',
+										data: {
+											"pwd": that.pwd,
+											"tradePwd": that.tradePassword,
+											"uuid": response.obj,
+											"deviceId": that.deviceId,
+											"inviteCode": that.leaderName,
+											"zone": that.zone
+										},
+										success: function(response) {
+											if (response.code == 0) {
+												layer.msg("注册成功");
+												that.step = 1;
+												// that.downloadAppPage();
+											} else {
+												layer.msg(response.msg);
+											}
+										}
+									});
+								} else {
+									layer.msg(response.msg);
+								}
+							}
+						});
+					},
+					downloadAppPage: function(type) {
+						$.ajax({
+							url: basePath + '/search/appVersion',
+							type: 'POST',
+							dataType: 'json',
+							data: {
+								"content-type": "application/x-www-form-urlencoded",
+								"type": type
+							},
+							success: function(res) {
+								if (res.code == 0) {
+									var add = res.obj.appAddress;
+									console.log(add);
+									window.location.href = add + "?random=" + Math.random();
+								}
+							}
+						});
+					},
+					changeTabsActive(index) {
+						this.tabsActive = index;
+					},
+					inputBugFixed() {
+						let ua = window.navigator.userAgent;
+						let app = window.navigator.appVersion;
+						//$alert('浏览器版本: ' + app + '\n' + '用户代理: ' + ua);
+						if (!!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
+							//$alert('ios端');
+							this.type = 1;
+							$("input").on("blur", function() {
+								var currentPosition, timer;
+								var speed = 1;
+								timer = setInterval(function() {
+									currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+									currentPosition -= speed;
+									window.scrollTo(0, currentPosition); //页面向上滚动
+									currentPosition += speed;
+									window.scrollTo(0, currentPosition); //页面向下滚动
+									clearInterval(timer);
+								}, 100);
+							})
+						} else if (ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1) {
+							this.type = 0;
+							//$alert('android端');
+						}
+					}
+				},
+			})
+		</script>
+	</body>
+
+</html>

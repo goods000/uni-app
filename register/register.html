@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+	<meta name="keywords" content="MMX" />
+	<meta name="description" content="MMX" />
+	<title>MMX注册</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+    <div id="app">
+		<div class="login">
+			
+			<div class="loginFrom" v-show="step == 0">
+				<div class="logo_img">
+					<img src="./img/logo.png" class="logo-image">
+				</div>
+				<div class="loginFrom-box">
+					<div class="loginFrom-icon">
+						<img src="./img/icon-login-1.png" >
+					</div>
+					<input type="text" placeholder="请设置用户名（少于10字)" v-model="username" />
+				</div>
+				<div class="loginFrom-box">
+					<div class="loginFrom-icon">
+						<img src="./img/icon-login-3.png" >
+					</div>
+					<input type="text" placeholder="请输入您的手机号/邮箱" v-model="account" />
+				</div>
+				<div class="loginFrom-box">
+					<div class="loginFrom-icon">
+						<img src="./img/icon-login-8.png" >
+					</div>
+					<input type="text" placeholder="请输入您的图形验证码" value="" v-model="captcha"/>
+					<div class="captchaBox" @click="checkSrc()">
+						<image :src="src" mode=""></image>
+					</div>
+				</div>
+				<div class="loginFrom-box">
+					<div class="loginFrom-icon">
+						<img src="./img/icon-login-4.png" >
+					</div>
+					<input type="number" placeholder="请输入您的短信验证码" v-model="code" />
+					<div class="codeBox">
+						<div class="getCode" @click="sendCode()">{{ remain }}</div>
+					</div>
+				</div>
+				<div class="loginFrom-box">
+					<div class="loginFrom-icon">
+						<img src="./img/icon-login-2.png" >
+					</div>
+					<input type="password" placeholder="请设置登录密码(6-18位字母数字组合)" v-model="password" />
+				</div>
+				<div class="loginFrom-box">
+					<div class="loginFrom-icon">
+						<img src="./img/icon-login-2.png" >
+					</div>
+					<input type="password" placeholder="请确认登录密码" v-model="re_password" />
+				</div>
+				<div class="loginFrom-box">
+					<div class="loginFrom-icon">
+						<img src="./img/icon-login-7.png" >
+					</div>
+					<input type="password" placeholder="请输入您的交易密码(6位数字)" v-model="pay_password" />
+				</div>
+				<div class="loginFrom-box">
+					<div class="loginFrom-icon">
+						<img src="./img/icon-login-7.png" >
+					</div>
+					<input type="password" placeholder="请确认交易密码" v-model="re_pay_password" />
+				</div>
+				<div class="loginFrom-box">
+					<div class="loginFrom-icon">
+						<img src="./img/icon-login-5.png" >
+					</div>
+					<input type="text" placeholder="请输入您的推荐码"  v-model="invite" disabled/>
+				</div>
+				
+				<div class="btn-active-login" @click="register()">确定</div>
+				
+				<a class="onload" @click="step = 1">下载APP</a>
+			</div>
+			<div class="downloadBox" v-if="step == 1">
+				<div class="downloadBox-wrapper">
+					<div class="downloadBox-logo">
+						<img src="img/logo.png" alt="Logo" />
+					</div>
+					<div class="downloadBox-button">
+						<div class="downloadBox-button__btn" @click="downloadAppPage(0)">
+							<div class="downloadBox-button__btn-icon"><img src="img/icon-android-white.png" alt="android" /></div>
+							<div class="downloadBox-button__btn-label">Android 下载</div>
+						</div>
+						<div class="downloadBox-button__btn" @click="downloadAppPage(1)">
+							<div class="downloadBox-button__btn-icon"><img src="img/icon-ios-white.png" alt="ios" /></div>
+							<div class="downloadBox-button__btn-label">iOS 下载</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/md5.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("input").on("blur",function(){
+	            var toFix=$(this).offset().top;
+	            window.scroll(0,toFix);//失焦后强制让页面归位
+	        });
+			
+			var url = 'http://404.show/api'
+			var vm = new Vue({
+				el:'#app',
+				data:{
+					username:'',
+					account:'',
+					captcha:'',
+					code:'',
+					password:'',
+					re_password:'',
+					pay_password:'',
+					re_pay_password:'',
+					invite:'',
+					// 验证码
+					remain: '发送验证码',
+					isSend: true,
+					time: 60,
+					timer: null,
+					src: url + '/code/captcha.jpg',
+					step: 0,
+				},
+				mounted: function(){
+					let hash = document.URL.split('?')[1];
+					console.log(document.URL.split('?')[1]);
+					this.invite = hash.split('invite=')[1];
+			    },
+				methods: {
+					checkSrc(){
+						let newDate = new Date().getTime();
+						this.src = url + "/code/captcha.jpg?t=" + newDate;
+					},
+					sendCode() {
+						that = this;
+						// var layerMsg = layer.load(1,{ icon: 0, shade: [0.5,'black'] });
+						if (that.account == '' ) {
+							return layer.msg('请输入您的手机号/邮箱');
+						}if (that.captcha == '' ) {
+							return layer.msg('请输入您的图形验证码');
+						}
+						var data={'busType':'register','account': that.account,'captcha': that.captcha}
+						$.ajax({
+							type: "POST",
+							url: url + "/code/send",
+							dataType: "JSON",
+							contentType: "application/json",
+							data:JSON.stringify(data),//serialize
+							success: function (res) {
+								console.log(res)
+								if (res.code == 0) {
+									layer.msg('发送成功');
+									that.isSend = false;
+									that.remain = that.time + 's后重新获取';
+									that.timer = setInterval(() => {
+										that.time--;
+										that.remain = that.time + 's后重新获取';
+										if (that.time == 0) {
+											clearInterval(that.timer);
+											that.remain = '重新获取';
+											(that.isSend = true), (that.time = 60);
+										}
+									}, 1000);
+
+								} else {
+									layer.msg(res.msg);
+								}
+							},
+							error: function () {
+								layer.msg("网络请求失败,请重试");
+							}
+						})
+						layer.closeAll(); 
+					},
+					register: function(){
+						let that = this;
+						if (that.username == '') {
+							return layer.msg('请设置用户名（少于10字）');
+						}
+						if (that.username.length > 10) {
+							return layer.msg('用户名（少于10字）');
+						}
+						if (that.account == '' ) {
+							return layer.msg('请输入您的手机号/邮箱');
+						}
+						if (that.code == '') {
+							return layer.msg('请输入您的短信验证码');
+						}
+						if (that.password == '' ) {
+							return layer.msg('请设置登录密码(6-18位字母数字组合)');
+						}
+						if(!/^(?!\D+$)(?![^a-zA-Z]+$)\S{6,20}$/.test(that.password)) {
+							return layer.msg('6-18位字母数字组合的登录密码');
+						}
+						if (that.re_password == '') {
+							return layer.msg('请确认登录密码');
+						}
+						if (that.re_password != that.password ) {
+							return layer.msg('登录密码两者不一致');
+						}
+						if (that.pay_password == '' ) {
+							return layer.msg('请输入您的交易密码(6位数字)');
+						}
+						if(!/^\d{6}$/.test(this.pay_password)){
+							return layer.msg('交易密码为6为数字');
+						}
+						if (that.re_pay_password == '') {
+							return layer.msg('请确认交易密码');
+						}
+						if (that.re_pay_password != that.pay_password ) {
+							return layer.msg('交易密码两者不一致');
+						}
+						if(that.account.indexOf("@") <0){
+							if (that.account.length!=11 || !/^((1[0-9])+\d{9})$/.test(that.account)){
+								return layer.msg('请输入正确的手机号');
+							}else{
+								data = {'username': that.username,'mobile': that.account,'code': that.code,'password': md5(that.password).toString(),'payPassword': md5(that.pay_password).toString()};
+							}
+						}
+						if(that.account.indexOf("@") >-1){
+							if(!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g.test(that.account)){
+								return layer.msg('请输入正确的邮箱');
+							}else{
+								data = {'username': that.username,'email': that.account,'code': that.code,'password': md5(that.password).toString(),'payPassword': md5(that.pay_password).toString()};
+							}
+						}
+						$.ajax({
+							type: "POST",
+							url: url + "/user/register",
+							dataType: "JSON",
+							contentType: "application/json",
+							data: JSON.stringify(data),
+							success: function (res) {
+								console.log(res)
+								if (res.code == 0) {
+									layer.msg(res.msg);
+									that.step = 1;
+								} else {
+									layer.msg(res.msg);
+								}
+							},
+							error: function () {
+								layer.msg("网络请求失败,请重试");
+							}
+						})
+					},
+					downloadAppPage: function(type) {
+						console.log("type",type);
+						$.ajax({
+							url: url + '/version/newest',
+							type: 'POST',
+							dataType: 'json',
+							data: {
+								"content-type": "application/json",
+							},
+							success: function(res) {
+								if (res.code == 0) {
+									if(type == 0){
+										var add = res.android.versionUrl;
+										console.log(add);
+										window.location.href = add + "?random=" + Math.random();
+									}else{
+										var add = res.ios.versionUrl;
+										console.log(add);
+										window.location.href = add + "?random=" + Math.random();
+									}
+									
+								}
+							}
+						});
+					},
+				},
+				created: function(){
+					
+			    }
+			});
+		</script>
+</body>
+</html>

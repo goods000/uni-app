@@ -1,0 +1,186 @@
+@charset "UTF-8";
+/* 动画 */
+body {
+  background-color: #040408;
+  position: relative; }
+
+.pages {
+  position: relative; }
+
+.bgBox {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0; }
+  .bgBox img {
+    width: 100%;
+    height: 100%; }
+
+.main {
+  padding: 0.6rem;
+  position: relative;
+  z-index: 1; }
+
+.logoBox {
+  width: 2.4rem;
+  margin: 0 auto 0.6rem;
+  border-radius: 0.3rem;
+  overflow: hidden; }
+  .logoBox img {
+    width: 100%; }
+
+.tabsBox {
+  margin-bottom: 0.3rem; }
+  .tabsBox-control {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .tabsBox-control__item {
+      -webkit-transition: 0.4s all;
+      transition: 0.4s all;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      color: #FFFFFF;
+      font-size: 0.28rem;
+      padding: 0.3rem 0;
+      text-align: center;
+      position: relative; }
+      .tabsBox-control__item:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0.04rem;
+        background-color: transparent;
+        position: absolute;
+        bottom: -0.01rem;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        border-radius: 0.04rem;
+        -webkit-transition: 0.4s all;
+        transition: 0.4s all; }
+      .tabsBox-control__item--active {
+        color: #2bffb0; }
+        .tabsBox-control__item--active:after {
+          width: 100%;
+          background-color: #2bffb0; }
+
+.formBox-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.3rem;
+  position: relative;
+  border-bottom: 1px solid #999999; }
+  .formBox-list input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-size: 0.28rem;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding: 0.3rem 0; }
+    .formBox-list input::-webkit-input-placeholder {
+      color: rgba(172, 177, 176, 0.8); }
+    .formBox-list input:-ms-input-placeholder {
+      color: rgba(172, 177, 176, 0.8); }
+    .formBox-list input::-ms-input-placeholder {
+      color: rgba(172, 177, 176, 0.8); }
+    .formBox-list input::placeholder {
+      color: rgba(172, 177, 176, 0.8); }
+.formBox-verification {
+  width: auto;
+  text-align: center;
+  font-size: 0.28rem;
+  color: #2bffb0; }
+.formBox-zone {
+  width: 1.4rem;
+  margin-right: 0.15rem;
+  border-right: 0.01rem solid #2bffb0;
+  background: url(../images/icon-triangle-bottom-green.png) no-repeat;
+  background-position: calc(100% - 0.15rem) center;
+  background-size: 0.24rem 0.12rem;
+  color: #2bffb0; }
+.formBox-btn {
+  background-color: #2bffb0;
+  border-radius: 0.08rem;
+  padding: 0.3rem 0;
+  text-align: center;
+  font-size: 0.28rem;
+  font-weight: bold;
+  margin-top: 0.45rem;
+  color: #101010; }
+
+.downloadBox {
+  height: 100vh;
+  position: relative;
+  z-index: 1; }
+  .downloadBox-wrapper {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .downloadBox-logo {
+    width: 2.4rem;
+    margin: 0 auto; }
+    .downloadBox-logo img {
+      width: 100%; }
+  .downloadBox-button {
+    margin-top: 1.2rem; }
+    .downloadBox-button__btn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 0.25rem 0;
+      color: #FFFFFF;
+      background-color: #2bffb0;
+      width: 5rem;
+      margin-bottom: 0.4rem;
+      border-radius: 0.1rem;
+      color: #101010;
+      font-weight: bold; }
+      .downloadBox-button__btn-icon {
+        width: 0.4rem;
+        margin-right: 0.1rem;
+        height: auto; }
+        .downloadBox-button__btn-icon img {
+          width: 0.4rem;
+          margin-right: 0.1rem;
+          height: auto; }
+      .downloadBox-button__btn-label {
+        font-size: 0.3rem; }
+
+/*# sourceMappingURL=style.css.map */

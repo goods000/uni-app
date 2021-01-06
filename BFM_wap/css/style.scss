@@ -1,0 +1,259 @@
+// 快捷布局
+@mixin flexCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flexLeft {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@mixin flexRight {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+@mixin flexBetween {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin flexCenterColumn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+@mixin flexLeftColumn {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+}
+
+@mixin flexRightColumn {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	flex-direction: column;
+}
+
+@mixin justifiedLayout {
+	text-align: center;
+	&:first-child {
+		text-align: left;
+	}
+	&:last-child {
+		text-align: right;
+	}
+}
+
+@mixin fullImage {
+	img {
+		width: 100%;
+	}
+}
+
+@mixin calcMargin($val) {
+	width: calc(100% + ((2 * #{$val}) * 1px));
+	margin-left: calc(( -1 * #{$val}) * 1px);
+}
+
+@mixin clearLastMargin {
+	&:last-child{
+		margin: 0;
+	}
+}
+
+@mixin clearLastBorder {
+	&:last-child{
+		border-bottom: 0;
+	}
+}
+
+/* 动画 */
+@mixin initTransition($val) {
+	transition: ($val * 1s) all;
+}
+
+$globalColor-style: #2bffb0;
+
+body{
+	background-color: #040408;
+	position: relative;
+}
+
+.pages{
+	position: relative;
+}
+
+.bgBox {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.main{
+	padding: 0.6rem;
+	position: relative;
+	z-index: 1;
+}
+
+.logoBox{
+	width: 2.4rem;
+	margin: 0 auto 0.6rem;
+	border-radius: 0.3rem;
+	overflow: hidden;
+	@include fullImage;
+}
+
+.tabsBox{
+	margin-bottom: 0.3rem;
+	&-control{
+		@include flexCenter;
+		
+		&__item{
+			@include initTransition(0.4);
+			flex: 1;
+			color: #FFFFFF;
+			font-size: 0.28rem;
+			padding: 0.3rem 0;
+			text-align: center;
+			position: relative;
+			
+			&:after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 0.04rem;
+				background-color: transparent;
+				position: absolute;
+				bottom: -0.01rem;
+				left: 50%;
+				transform: translateX(-50%);
+				border-radius: 0.04rem;
+				@include initTransition(0.4);
+			}
+			&--active {
+				color: $globalColor-style;
+				&:after {
+					width: 100%;
+					background-color: $globalColor-style;
+				}
+			}
+		}
+	}
+}
+
+
+.formBox{
+	&-list{
+		@include flexLeft;
+		// height: 0.9rem;
+		margin-bottom: 0.3rem;
+		position: relative;
+		border-bottom: 1px solid #999999;
+		input{
+			flex: 1;
+			font-size: 0.28rem;
+			color: #ffffff;
+			background-color: transparent;
+			border: none;
+			width: 100%;
+			padding: 0.3rem 0;
+			
+			&::placeholder{
+				color: rgba(172, 177, 176, 0.8);
+			}
+		}
+	}
+	
+	&-verification{
+		width: auto;
+		text-align: center;
+		font-size: 0.28rem;
+		color: $globalColor-style;
+	}
+	
+	&-zone{
+		width: 1.4rem;
+		margin-right: 0.15rem;
+		border-right: 0.01rem solid $globalColor-style;
+		background: url(../images/icon-triangle-bottom-green.png) no-repeat;
+		background-position: calc(100% - 0.15rem) center;
+		background-size: 0.24rem 0.12rem;
+		color: $globalColor-style;
+	}
+	
+	
+	&-btn{
+		background-color: $globalColor-style;
+		border-radius: 0.08rem;
+		padding: 0.3rem 0;
+		text-align: center;
+		font-size: 0.28rem;
+		font-weight: bold;
+		margin-top: 0.45rem;
+		color: #101010;
+	}
+}
+
+.downloadBox{
+	height: 100vh;
+	position: relative;
+	z-index: 1;
+	
+	&-wrapper{
+		height: 100%;
+		@include flexCenterColumn;
+	}
+	
+	&-logo{
+		width: 2.4rem;
+		margin: 0 auto;
+		@include fullImage;
+	}
+	
+	&-button{
+		margin-top: 1.2rem;
+		&__btn{
+			@include flexCenter;
+			padding: 0.25rem 0;
+			color: #FFFFFF;
+			background-color: $globalColor-style;
+			width: 5rem;
+			margin-bottom: 0.4rem;
+			border-radius: 0.1rem;
+			color: #101010;
+			font-weight: bold;
+			&-icon{
+				width: 0.4rem;
+				margin-right: 0.1rem;
+				height: auto;
+				img{
+					width: 0.4rem;
+					margin-right: 0.1rem;
+					height: auto;
+				}
+			}
+			
+			&-label{
+				font-size: 0.3rem;
+			}
+		}
+	}
+}
