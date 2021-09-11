@@ -1,0 +1,97 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'DINPro', 'PingFangSC-Regular', 'AvenirBold';
+}
+
+image {
+	height: 0;
+	display: block;
+}
+
+// 全局背景色
+page{
+	background-color: #F5F6FA;
+	// height: 100vh;
+	// overflow: scroll;
+}
+.pages{
+	background-color: $globalColor-bgStyle;
+	// height: 100vh;
+}
+.content {
+	/* #ifdef APP-PLUS */
+	min-height: 100vh;
+	/* #endif */
+	overflow: scroll;
+	background: $globalColor-bgStyle;
+	/* #ifdef H5 */
+	padding-bottom: 8vh;
+	/* #endif */
+	/* #ifdef APP-PLUS */
+	padding-bottom: 4vh;
+	/* #endif */
+}
+.contentBg{
+	background: $globalColor-bgStyle;
+	/* #ifdef APP-PLUS */
+	min-height: 100vh;
+	/* #endif */
+	overflow: scroll;
+}
+.pagesBg{
+	background: $globalColor-white;
+	/* #ifdef APP-PLUS */
+	min-height: 100vh;
+	/* #endif */
+	overflow: scroll;
+}
+.tipsBox {
+	position: relative;
+	// border-top: 16upx solid #f5f6f8;
+	&-wrapper {
+		// padding: 0 30upx;
+	}
+
+	&-title {
+		@include flexBetween;
+
+		padding: 30upx;
+
+		&__label {
+			@include initBeforeHolder;
+			font-size: 32upx;
+			color: $globalColor-fontStyle;
+			font-weight: bold;
+		}
+
+		&__more {
+			color: #999999;
+			font-size: 24upx;
+		}
+	}
+	&-right{
+		position: absolute;
+		right: 10upx;
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			font-weight: 500;
+		}
+	}
+}	
+
+.initBtn{
+	background: $globalColor-style;
+	border: 1px solid $globalColor-style;
+	color: $globalColor-fontStyle;
+	margin: 60upx auto;
+	text-align: center;
+	border-radius: 18upx;
+	width: 90%;
+	font-size: 32upx;
+	padding: 20upx 0;
+	font-weight: bold;
+	letter-spacing: 8upx;
+}

@@ -1,0 +1,217 @@
+.tabsBox {
+	margin-bottom: 45upx;
+	&-control {
+		@include flexLeft;
+		align-items: flex-end;
+		height: 60upx;
+		padding: 0 30upx;
+		margin-bottom: 15upx;
+
+		&__item {
+			@include initTransition(0.15);
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			font-weight: bold;
+			margin-right: 30upx;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&--active {
+				font-size: 42upx;
+				color: $globalColor-style;
+			}
+		}
+	}
+
+	&-wrapper {
+		padding: 0 30upx;
+	}
+}
+
+.frameBox {
+	&-wrapper {
+		position: relative;
+	}
+
+	&-plane{
+		@include initShadow;
+		padding: 30upx;
+		background-color: #ffffff;
+		border-radius: 20upx;
+		margin-bottom: 30upx;
+		
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	&-header {
+		@include flexLeft;
+		margin-bottom: 30upx;
+	}
+
+	&-icon {
+		@include fullImage;
+		width: 46upx;
+		margin-right: 8upx;
+	}
+
+	&-label {
+		color: $globalColor-fontStyle;
+		font-size: 32upx;
+		font-weight: 300;
+	}
+
+	&-price {
+		text-align: right;
+		flex: 1;
+		color: #be7b25;
+		font-size: 48upx;
+		font-weight: bold;
+	}
+
+	&-itemBox {
+		@include flexCenter;
+
+		&__item {
+			flex: 1;
+
+			&--alignRight {
+				text-align: right;
+			}
+
+			&-label {
+				color: #999999;
+				font-size: 24upx;
+				font-weight: 300;
+				margin-bottom: 8upx;
+			}
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.fancyBox {
+	margin-top: 30upx;
+	// padding: 30upx 0;
+	&-wrapper {
+		@include flexCenter;
+	}
+	&-item {
+		@include flexCenter;
+		// @include initButtonGrad;
+		border: 1upx solid $globalColor-style;
+		flex: 1;
+		border-radius: 15upx;
+		padding: 10upx 0;
+		margin-right: 30upx;
+		
+		// width: 33.33%;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&__label {
+			font-size: 26upx;
+			color: $globalColor-style;
+			font-weight: bold;
+		}
+	}
+}
+
+.filterBox {
+	margin-bottom: 30upx;
+	
+	&-title {
+		color: $globalColor-fontStyle;
+		font-size: 28upx;
+		font-weight: bold;
+		margin-bottom: 15upx;
+	}
+	
+	&-button {
+		@include flexLeft;
+		&__btn {
+			@include initTransition(0.4);
+			font-size: 24upx;
+			font-weight: 300;
+			color: $globalColor-style;
+			border-radius: 12upx;
+			padding: 8upx 15px;
+			border: 1upx solid $globalColor-style;
+			margin-right: 15upx;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&--active {
+				background-color: $globalColor-style;
+				color: #ffffff;
+				border: 1upx solid transparent;
+			}
+		}
+	}
+}
+
+.listBox {
+	&-wrapper {
+		padding: 0 30upx 30upx;
+	}
+
+	&-list {
+		padding-bottom: 30upx;
+		margin-bottom: 30upx;
+		border-bottom: 1upx solid #cccccc;
+
+		&:last-child {
+			border-bottom: 0;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		&__info {
+			@include flexBetween;
+			margin-bottom: 15upx;
+		}
+
+		&__title {
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			font-weight: bold;
+		}
+
+		&__date {
+			color: #999999;
+			font-size: 24upx;
+		}
+
+		&__itemBox {
+			@include flexBetween;
+			&-item {
+				@include justifiedLayout;
+				flex: 1;
+				font-size: 24upx;
+			}
+
+			&-label {
+				color: #999999;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+		}
+	}
+}

@@ -1,0 +1,304 @@
+.content{
+	height: 100%;
+}
+.swiperBox {
+	background: $globalColor-white;
+	height: 420upx;
+	position: relative;
+	@include flexCenter;
+	padding-bottom: 30upx;
+
+	&-wrapper {
+		width: 100%;
+	}
+
+	&-swiper {
+		height: 376upx;
+
+		&__item {
+			width: 100%;
+			height: 376upx;
+			padding: 0 30upx;
+			overflow: hidden;
+			@include flexCenterColumn;
+
+			image {
+				width: 100%;
+				border-radius: 12upx;
+			}
+		}
+	}
+}
+
+.noticeBox {
+	background: $globalColor-white;
+	margin-bottom: 8upx;
+	padding: 15upx 30upx;
+	font-size: 28upx;
+	position: relative;
+	z-index: 1;
+	&-wrapper {
+		border-top: 1px solid $globalColor-border;
+		@include flexBetween;
+		padding-top: 10upx;
+		// background: url(@/static/index/icon-index-notice.png) no-repeat;
+		// background-position: left center;
+		// background-size: 32upx 32upx;
+	} 
+	&-title{
+		image{
+			width: 32upx;
+			height: 32upx;
+		}
+	}
+
+	&-icon {
+		margin-right: 15upx;
+
+		image {
+			width: 50upx;
+			@include fullImage;
+		}
+	}
+
+	&-swiper {
+		height: 60upx;
+		flex: 1;
+		padding: 0 45upx 0 8upx;
+
+		&__item {
+			@include flexCenter;
+			&-label {
+				width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				color: #444444;
+				font-size: 24upx;
+			}
+		}
+	}
+
+	&-btn {
+		background-color: $globalColor-style;
+		color: $globalColor-fontStyle;
+		font-size: 24upx;
+		padding: 8upx 15upx;
+		border-radius: 8upx;
+	}
+	&-more{
+		color: $globalColor-style;
+		font-size: 24upx;
+	}
+}
+
+.etiquetaBox {
+	background: $globalColor-white;
+	&-wrapper {
+		@include flexBetween;
+		flex-wrap: wrap;
+		padding: 25upx 0 14upx;
+	}
+	
+	&-item {
+		@include flexCenterColumn;
+		width: 25%;
+		padding: 15upx;
+
+		&:nth-child(1){@include flexLeft;}
+		&:nth-last-child(1){@include flexRight;}
+		&__icon {
+			@include fullImage;
+			width: 52upx;
+			margin-bottom: 8upx;
+		}
+
+		&__label {
+			font-size: 24rpx;
+			font-family: PingFang SC, PingFang SC-Medium;
+			font-weight: 500;
+			color: $globalColor-fontStyle;
+		}
+	}
+}
+
+.indexBg{
+	background: $globalColor-white;
+	padding:16upx 30upx 0;
+	image{
+		width: 100%;
+	}
+	&-title{
+		background: $globalColor-white;
+		color: $globalColor-fontStyle;
+		padding: 28upx 30upx;
+		font-size: 28upx;
+		font-family: PingFang SC, PingFang SC-Bold;
+		font-weight: 700;
+	}
+}
+
+.indexBox{
+	margin: 32upx 0 0;
+	padding: 40upx 0 0;
+	background: $globalColor-white;
+	.initTilte{
+		margin-top: 0;
+	}
+	&-title{
+		font-size: 24upx;
+		font-family: DINPro;
+		font-weight: 500;
+		color: #999999;
+		margin: 21upx 0 34upx 30upx;
+	}
+	&-image{
+		@include flexCenterColumn;
+		margin: 0 30upx;
+		image{
+			width: 100%;
+			margin: 0 0 20upx 0;
+		}
+	}
+	&-header{
+		@include flexLeft;
+		padding: 24upx 0;
+		margin: 0 30upx;
+		border-bottom: 1px solid $globalColor-border;
+		position: relative;
+		&__image{
+			margin-right: 13upx;
+			image{
+				width: 38upx;
+				height: 38upx;
+			}
+		}
+		&__title{
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: bold;
+			color: $globalColor-fontStyle;
+		}
+		&__more{
+			position: absolute;
+			right: 0upx;
+			image{
+				width: 36upx;
+				height: 26upx;
+			}
+		}
+	}
+}
+
+.dynamic{
+	.initNoData{
+		background: $globalColor-white;
+	}
+	&-wrapper{
+		background: $globalColor-white;
+		@include flexLeftColumn;
+		padding: 38upx 0;
+		margin-bottom: 16upx;
+	}
+}
+.newsList{
+	&-header{
+		@include flexLeft;
+		padding: 0 30upx;
+		&__image{
+			width: 74upx;
+			height: 74upx;
+			margin-right: 19upx;
+			image{
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+			}
+		}
+		&__name{
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: bold;
+			color: $globalColor-fontStyle;
+		}
+		&__delete{
+			width: 32upx;
+			height: 32upx;
+			position: absolute;
+			right: 30upx;
+		}
+	}
+	&-box{
+		width: 100%;
+		@include flexLeftColumn;
+		// padding: 0 30upx;
+		&__title{
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: $globalColor-fontStyle;
+			line-height: 46upx;
+			margin: 32upx 0 24upx;
+			padding: 0 30upx;
+			word-break: break-all;
+		}
+		&__imageList{
+			@include flexLeft;
+			padding: 0 30upx;
+			flex-wrap: wrap;
+			width: 100%;
+			&-imageBox{
+				width: 31.33%;
+				margin: 0 3% 24upx 0;
+				height: 214upx;
+				overflow: hidden;
+				&:nth-child(3n){
+					margin: 0 0 24upx 0;
+				}
+				image{
+					width: 100%;
+					height: 100%;
+					// width: 214upx;
+					// height: 214upx;
+					border-radius: 12upx;
+				}
+			}
+		}
+	}
+	&-operate{
+		width: 100%;
+		@include flexBetween;
+		padding: 0 30upx;
+		&__time{
+			@include flexLeft;
+			image{
+				width: 30upx;
+				height: 30upx;
+				margin-right: 15upx;
+			}
+			&-title{
+				font-size: 28upx;
+				font-family: DINPro;
+				font-weight: 400;
+				color: #999999;
+				line-height: 40upx;
+			}
+		}
+		&__like{
+			@include flexRight;
+			image{
+				width: 36upx;
+				margin-right: 11upx;
+			}
+			&-title{
+				font-size: 28upx;
+				font-family: DINPro;
+				font-weight: 500;
+				color: $globalColor-fontStyle;
+				&--active{
+					color: #FF002D;
+				}
+			}
+		}
+	}
+}

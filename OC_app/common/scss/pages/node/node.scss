@@ -1,0 +1,72 @@
+.node{
+	&_bg{
+		width: 100vw;
+		position: fixed;
+		top: 0;
+		z-index: 1;
+	}
+	&_box{
+		position: relative;
+		z-index: 2;
+		margin-top: 86upx;
+		&_title{
+			width: 460upx;
+			margin: auto;
+			text-align: center;
+		}
+		&_tips{
+			color: $globalColor-white;
+			font-size: 30upx;
+			margin: auto;
+			text-align: center;
+		}
+		&_txt{
+			background: #0656C1;
+			border-radius: 26upx;
+			font-size: 34upx;
+			padding: 2upx 90upx;
+			margin: auto;
+			text-align: center;
+			width: 50%;
+			color: $globalColor-white;
+		}
+	}
+	&-list{
+		position: relative;
+		z-index: 2;
+		margin-top: 92upx;
+		background:$globalColor-white;
+		border-radius: 40upx 40upx 0 0;
+	}
+}
+
+.formBox{
+	padding: 0 32upx;
+	&-form{
+		position: relative;
+		padding: 24upx 0;
+		border-bottom: 1px dashed #666666;
+		&-label{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+		}
+		input{
+			margin: 24upx 0 0;
+			font-size: 24upx;
+		}
+		&-tips{
+			position: absolute;
+			bottom: 24upx;
+			right: 0;
+		}
+		.chioce{font-size: 40upx;color: $globalColor-style;}
+	}	
+	&-item{color: $globalColor-style;font-size: 20upx;}
+	&-tips{
+		padding: 0 32upx 32upx;
+		&-title{
+			color: #999999;
+			font-size: 20upx;
+		}
+	}
+}

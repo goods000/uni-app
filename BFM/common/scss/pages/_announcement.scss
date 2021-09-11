@@ -1,0 +1,42 @@
+.announcement {
+	&-wrapper {
+		padding: 0 30upx;
+	}
+
+	&-item {
+		@include flexBetween;
+		padding: 30upx 0;
+		color: #ffffff;
+		overflow: hidden;
+		// border-bottom: 1upx solid #cccccc;
+
+		&__content {
+			flex: 1;
+			background: url(@/static/public/icon-arrow-right-grey.png) no-repeat;
+			background-position: right center;
+			background-size: 14upx 26upx;
+			width: 100%;
+			padding-right: 45upx;
+		}
+
+		&__title {
+			font-size: 32upx;
+			margin-bottom: 15upx;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-weight: bold;
+			@include initBeforeHolder;
+			@include initOneLine;
+		}
+		&__date {
+			padding-left: 30upx;
+			background-image: url(@/static/notice/icon-date.png);
+			background-position: left;
+			background-size: 20upx;
+			background-repeat: no-repeat;
+			font-size: 20upx;
+			color: #898d8c;
+		}
+	}
+}

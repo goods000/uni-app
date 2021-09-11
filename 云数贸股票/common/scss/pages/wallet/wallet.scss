@@ -1,0 +1,168 @@
+.wallet{
+	position: relative;
+	z-index: 2;
+	&-Bg{
+		background: $globalColor-style;
+		width: 100%;
+		/* #ifdef H5 */
+		height: 240upx;
+		/* #endif */
+		/* #ifdef APP-PLUS */
+		height: 300upx;
+		/* #endif */
+		position: absolute;
+		top: 0;
+		left: 0px;
+		z-index: -1;
+	}
+	&-tabs{
+		@include flexLeft;
+		padding: 0upx 30upx 0;
+		&__title{
+			width: 30%;
+			color: #FFFEFE;
+			font-size: 32upx;
+			&--active{
+				font-size: 42upx;
+				font-weight: bold;
+				color: #FFB70A;
+			}
+		}
+	}
+}
+.walletBox{
+	background: $globalColor-white;
+	border-radius: 28upx;
+	margin: 30upx;
+	padding: 30upx;
+	&-top{
+		@include flexBetween;
+		margin-bottom: 30upx;
+		&-left{
+			@include flexLeft;
+			&-image{
+				width: 60upx;
+				height: 60upx;
+				margin-right: 10upx;
+			}
+			&-txt{
+				color: $globalColor-fontStyle;
+				font-size: 36upx;
+				font-weight: bold;
+			}
+		}
+		&-right{
+			color: #FFB70A;
+			font-size: 48upx;
+			font-weight: bold;
+		}
+	}
+	&-bottom{
+		@include flexBetween;
+		&-item:nth-child(1){@include flexLeftColumn;}
+		&-item:nth-child(2){@include flexCenterColumn;}
+		&-item:nth-child(3){@include flexRightColumn;}
+		&-item{
+			&__num{
+				font-weight: bold;
+				font-size: 28upx;
+				color: $globalColor-fontStyle;
+			}
+			&__title{
+				font-size: 24upx;
+				color: #999999;
+				margin-top: 10upx;
+			}
+		}
+		&-line{
+			border-left: 1px solid $globalColor-border;
+			height: 34upx;
+			width: 2upx;
+		}
+	}
+}
+
+.walletList{
+	&-wrapper{
+		padding:0 30upx;
+		&-height{
+			height: 52vh;
+		}
+		&-item{
+			padding: 30upx;
+			border-bottom: 1px solid $globalColor-border;
+			&__top{
+				&-mt{
+					margin-bottom: 20upx;
+				}
+				@include flexBetween;
+				&--name{
+					color: $globalColor-fontStyle;
+					font-size: 32upx;
+					font-weight: bold;
+				}
+				&--time{
+					color: #999999;
+					font-size: 24upx;
+				}
+				&--num{
+					color: $globalColor-fontStyle;
+					font-size: 28upx;
+					font-weight: 500;
+				}
+				&--count{
+					color: #666666;
+					font-size: 28upx;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}
+
+.oppupBox{background-color: #FFFFFF;border-radius: 20upx;text-align: center;margin: auto;padding: 50upx;box-sizing: border-box;width: 90%;
+ animation:myfirst 1s;-webkit-animation:myfirst 1s;animation-fill-mode: forwards;}
+ @-webkit-keyframes myfirst {
+     0%   { bottom:-100vh;}
+     50%   {bottom:-50vh;}
+     100%  {bottom:0px;}
+} 
+
+.oppupBox{
+	&-header{
+		color: #393536;
+		font-size: 32upx;
+		text-align: center;
+		font-weight: bold;
+	}
+	&-title{
+		color: #393536;
+		font-size: 28upx;
+		text-align: center;
+		font-weight: bold;
+		width: 60%;
+		margin: 50upx auto 88upx;
+	}
+	&-btn{
+		background: $globalColor-style;
+		border-radius: 50upx;
+		color: $globalColor-white;
+		padding: 24upx 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

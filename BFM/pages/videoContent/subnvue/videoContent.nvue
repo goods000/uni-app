@@ -1,0 +1,142 @@
+<template>
+	<view class="pages">
+		<view class="logoBox">
+			<image class="logoBox-img" src="../../../static/firstPage/icon-video-logo.png" mode="widthFix"></image>
+		</view>
+		<view class="contentBox">
+			<view class="contentBox-wrapper">
+				<!-- <view class="contentBox-logo">
+					<image class="contentBox-logo__img" src="../../../static/public/icon-video-logo.png" mode="widthFix"></image>
+				</view> -->
+				<text class="contentBox-title">BFMEX</text>
+				<text class="contentBox-desc">驱动世界 • 链接未来</text>
+				<text class="contentBox-desc">无缝链接所有平台，数字资产尽在掌握</text>
+				<!-- <text class="contentBox-desc"></text> -->
+				<view class="contentBox-button">
+					<text class="contentBox-button__btn contentBox-button__btn--full" @click="toLogin()">账号登陆</text>
+					<text class="contentBox-button__btn" @click="toRegiste()">用户注册</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+export default {
+	data() {
+		return {
+			
+		};
+	},
+	onShow() {
+		
+	},
+	methods: {
+		toLogin(){
+			uni.navigateTo({
+				url: '../operate/login'
+			})
+		},
+		toRegiste(){
+			uni.navigateTo({
+				url: '../operate/register'
+			})
+		}
+	}
+};
+</script>
+
+<style lang="scss" scoped>
+// Nvue注意事项，SCSS没用
+// 只有Text能修改css
+// 只能用Flex布局
+// 样式请看 https://weex.apache.org/zh/docs/styles/common-styles.html#flexbox
+
+.pages {
+	position: relative;
+}
+
+.initBack {
+	height: 90upx;
+	width: 90upx;
+	align-items: center;
+	justify-content: center;
+}
+
+.initBack-img {
+	width: 20upx;
+	height: 36upx;
+}
+
+.logoBox{
+	position: absolute;
+	top: 160upx;
+	left: 0;
+	width: 750upx;
+	justify-content: center;
+	align-items: center;
+}
+
+.logoBox-img{
+	width: 160upx;
+	height: 206upx;
+}
+
+.contentBox-logo{
+	margin-bottom: 15upx;
+}
+
+.contentBox-logo__img{
+	width: 160upx;
+	height: 206upx;
+}
+
+.contentBox {
+	position: absolute;
+	bottom: 90upx;
+	left: 0;
+	width: 750upx;
+}
+
+.contentBox-wrapper{
+	padding: 30upx;
+}
+
+.contentBox-title{
+	color: #FFFFFF;
+	font-size: 44upx;
+	font-weight: bold;
+	margin-bottom: 15upx;
+	
+}
+.contentBox-desc{
+	color: #FFFFFF;
+	font-size: 34upx;
+	font-weight: bold;
+}
+
+.contentBox-button{
+	flex-direction: row;
+	margin-top: 60upx;
+	// align-items: center;
+}
+
+.contentBox-button__btn{
+	border-style: solid;
+	border-width: 1upx;
+	border-color: #27cd9c;
+	border-radius: 8upx;
+	font-size: 32upx;
+	padding: 30upx 60upx; 
+	margin-right: 30upx;
+	color: #27cd9c;
+	font-weight: bold;
+	// background-color: #FFFFFF;
+	background-color: rgba(255,255,255,0.3);
+}
+
+.contentBox-button__btn--full{
+	background-color: #27cd9c;
+	color: #101010;
+}
+</style>

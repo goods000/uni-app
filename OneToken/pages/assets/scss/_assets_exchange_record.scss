@@ -1,0 +1,88 @@
+.listBox {
+	&-wrapper {
+		padding: 30upx;
+	}
+	&-list {
+		@include initShadow;
+		background-color: #FFFFFF;
+		margin-bottom: 30upx;
+		padding: 30upx;
+		border-radius: 24upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&__header {
+			@include flexLeft;
+			margin-bottom: 30upx;
+			position: relative;
+		}
+
+		&__body {
+			@include flexBetween;
+		}
+
+		&__footer {
+			border-top: 1upx dashed #333333;
+			margin-top: 30upx;
+			padding-top: 30upx;
+			@include flexBetween;
+		}
+
+		&__title {
+			@include initBeforeHolder;
+			color: #333333;
+			font-size: 32upx;
+			font-weight: 300;
+			margin-right: 15upx;
+			padding-left: 20upx;
+		}
+
+		&__period {
+			color: #999999;
+			font-size: 20upx;
+		}
+
+		&__date {
+			color: #999999;
+			font-size: 28upx;
+			font-weight: 300;
+			text-align: right;
+			flex: 1;
+		}
+
+		&__item {
+			flex: 1;
+			text-align: left;
+
+			&--long {
+				flex: 2;
+			}
+
+			&:last-child {
+				text-align: right;
+			}
+
+			&-label {
+				text-transform: uppercase;
+				color: #999999;
+				font-size: 24upx;
+				margin-bottom: 8upx;
+			}
+
+			&-data {
+				color: #333333;
+				font-size: 28upx;
+				font-weight: 300;
+			}
+		}
+
+		&__address {
+			@include flexLeft;
+			color: #101010;
+			font-size: 28upx;
+			font-weight: 300;
+		}
+	}
+}

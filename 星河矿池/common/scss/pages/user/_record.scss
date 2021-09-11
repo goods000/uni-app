@@ -1,0 +1,120 @@
+.tipsBox{
+	margin: 20upx 0;
+	&-title{
+		@include flexLeft;
+		image{
+			width: 30upx;
+			height: 40upx;
+		}
+		&__label{
+			&::before{
+				background-color:transparent;
+			}
+		}
+	}
+}
+.userAsset{
+	&-list-box{
+		z-index: 1;
+		margin:-38upx 10upx 30upx;
+		padding: 30upx 0upx 20upx;
+		background: #F0F0F0;
+		border-radius: 20upx;
+		border: 1px solid $globalColor-border;
+	}
+	&-list{
+		background: $globalColor-white;
+		@include initShadow;
+		border-radius: 20upx;
+		padding: 20upx 0;
+		position: relative;
+		z-index: 1;
+		&-header{
+			position: relative;
+			@include flexBetween;
+			padding: 0 20upx;
+			&-title{
+				@include flexLeft;
+				&-image{
+					margin-right: 15upx;
+					image{
+						width: 45upx;
+					}
+				}
+			}
+			&-name{
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+			}
+			&-see{
+				color: $globalColor-style;
+				font-weight: bold;
+				font-size: 46upx;
+				image{
+					width: 30upx;
+				}
+			}
+		}
+		&-data{
+			@include flexBetween;
+			padding: 30upx 20upx 0;
+			&-item:nth-last-child(1){@include flexRightColumn}
+			&-item{
+				@include flexLeftColumn;
+				&-title{
+					color: #777777;
+					font-size: 24upx;
+				}
+				&-num{
+					color: $globalColor-fontStyle;
+					font-size: 28upx;
+					font-weight: bold;
+				}
+				&-num_cny{
+					color: #999999;
+					font-size: 28upx;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+.recordBox{
+	&-height{
+		height: 60vh;
+	}
+}
+
+.operate{
+	position: absolute;
+	bottom: 40upx;
+	width: 100%;
+	&-wrapper{
+		@include flexBetween;
+		width: 60%;
+		margin: auto;
+	}
+	&-box{
+		@include flexCenterColumn;
+		&__image{
+			image{
+				width: 80upx;
+			}
+		}
+		&__title{
+			font-weight: bold;
+			color: $globalColor-fontStyle;
+			font-size: 26upx;
+			margin-top: 20upx;
+		}
+	}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,87 @@
+.productBuyBox{
+	background: $globalColor-white;
+	margin: 0 30upx 30upx;
+	border-radius: 20upx;
+	padding-bottom: 16upx;
+	&-title{
+		color: $globalColor-fontStyle;
+	}
+	&-list{
+		&-data{
+			@include flexBetween;
+			margin: 0upx 30upx;
+			padding: 8upx 0;
+			&-title{
+				@include flexLeft
+				font-size:30upx;
+				color: #666666;
+			}
+			.yellow{color: #FFC033;}
+			&-price{
+				font-size:30upx;
+				color: $globalColor-fontStyle;
+			}
+		}
+	}
+	&-from{
+		margin: 30upx;
+		&-box{
+			@include flexLeftColumn;
+			&-lable{
+				color: $globalColor-fontStyle;
+				font-size: 35upx;
+				font-weight: bold;
+			}
+			
+			input{
+				background: $globalColor-white;
+				border-radius: 20upx;
+				@include initShadow;
+				padding: 0upx 30upx;
+				height: 100upx;
+				line-height: 100upx;
+				margin: 20upx 0;
+				width: 100%;
+			}
+		}
+	}
+	&-data{
+		@include flexBetween;
+		padding: 10upx 0 0;
+		&-title{
+			color: #999999;
+			font-size: 26upx;
+		}
+		&-bold{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: bold;
+		}
+	}
+}
+
+.productBuyBtn{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	@include flexBetween;
+	background: $globalColor-white;
+	padding: 0 0 0 30upx;
+	&-title{
+		@include flexLeft;
+		&-name{
+			color: $globalColor-fontStyle;
+			font-weight: bold;
+			
+		}
+		&-total{
+			color: $globalColor-style;
+			font-weight: bold;
+		}
+	}
+	&-btn{
+		padding: 30upx 50upx;
+		background: $globalColor-style;
+		font-weight: bold;
+	}
+}

@@ -1,0 +1,91 @@
+.bgBox {
+	// @include initGradBg;
+	background-color: $globalColor-style;
+	height: 400upx;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+.infoBox {
+	position: relative;
+	z-index: 1;
+	&-wrapper {
+		@include flexBetween;
+		align-items: flex-end;
+		padding: 0 30upx 30upx 30upx;
+	}
+
+	&-info {
+		flex: 1;
+		margin-right: 30upx;
+
+		&__title {
+			color: #ffffff;
+			font-size: 44upx;
+			font-weight: 300;
+			margin-bottom: 8upx;
+		}
+
+		&__desc {
+			color: #eeeeee;
+			font-size: 24upx;
+		}
+	}
+
+	&-icon {
+		width: 240upx;
+		@include fullImage;
+	}
+}
+
+.listBox {
+	position: relative;
+	z-index: 1;
+	&-wrapper {
+		background-color: #ffffff;
+		// padding: 30upx;
+		border-top-left-radius: 30upx;
+		border-top-right-radius: 30upx;
+		min-height: 200upx;
+	}
+
+	&-list {
+		border-bottom: 12upx solid #fafafa;
+		
+		&__header{
+			padding: 30upx;
+			border-bottom: 2upx solid #cccccc;
+		}
+		
+		&__title {
+			@include initBeforeHolder;
+			font-size: 36upx;
+			color: #101010;
+			font-weight: 300;
+			position: relative;
+		}
+		
+		&__content{
+			padding: 0 30upx;
+		}
+		
+		&__data {
+			font-size: 32upx;
+			color: #101010;
+			font-weight: 300;
+			padding: 30upx 0;
+			border-bottom: 1upx solid #cccccc;
+			
+			background: url(@/static/public/icon-arrow-right-grey.png) no-repeat;
+			background-position: right center;
+			background-size: 14upx 26upx;
+			
+			&:last-child{
+				border-bottom: 0;
+			}
+		}
+	}
+}

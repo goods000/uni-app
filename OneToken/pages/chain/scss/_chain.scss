@@ -1,0 +1,619 @@
+.main {
+	// padding-top: 30upx;
+}
+
+.currencyBox {
+	margin-bottom: 30upx;
+	&-wrapper {
+		@include flexLeft;
+		padding: 0 30upx;
+	}
+	&-item {
+		@include initShadow;
+		@include initTransition(0.4);
+		background-color: #ffffff;
+		color: $globalColor-fontStyle;
+		font-size: 28upx;
+		font-weight: 300;
+		padding: 18upx 42upx;
+		border-radius: 14upx;
+		margin-right: 30upx;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&--active {
+			background-color: $globalColor-style;
+			color: #ffffff;
+		}
+	}
+}
+
+.flowBox {
+	margin-bottom: 30upx;
+	&-wrapper {
+		padding: 0 30upx;
+	}
+
+	&-itemBox {
+		@include flexLeft;
+		margin-bottom: 30upx;
+		&__item {
+			flex: 1;
+
+			&-label {
+				@include initBeforeHolder;
+				color: #999999;
+				font-size: 28upx;
+				font-weight: 300;
+			}
+
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 36upx;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.initTitle {
+	&-wrapper {
+		padding: 0 30upx;
+	}
+}
+
+.initButtonTabs {
+	margin-bottom: 30upx;
+	padding: 0 30upx;
+}
+
+.tradeRecordBox {
+	&-wrapper {
+		padding: 0 30upx 30upx;
+	}
+
+	&-item {
+		@include initShadow;
+		background-color: #ffffff;
+		border-radius: 20upx;
+		padding: 30upx;
+		margin-bottom: 30upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&__header {
+			@include flexBetween;
+			margin-bottom: 15upx;
+		}
+
+		&__title {
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			font-weight: bold;
+		}
+
+		&__date {
+			color: #999999;
+			font-size: 24upx;
+			font-weight: 300;
+		}
+
+		&__price {
+			color: #be7b25;
+			font-size: 32upx;
+			font-weight: bold;
+			margin-bottom: 15upx;
+		}
+
+		&__list {
+			@include flexBetween;
+
+			&-label {
+				color: #999999;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.exchangeDayRecordBox,
+.exchangeHistoryBox {
+	&-wrapper {
+		// padding: 30upx 0;
+	}
+
+	&-header {
+		@include flexCenter;
+		color: #99999d;
+		font-size: 24upx;
+		font-weight: 300;
+		margin-bottom: 15upx;
+		padding: 0 30upx;
+	}
+
+	&-data {
+		@include flexCenter;
+		flex: 1;
+		font-size: 100%;
+
+		&:first-child {
+			justify-content: flex-start;
+		}
+		&:last-child {
+			justify-content: flex-end;
+		}
+
+		&--green {
+			color: $globalColor-green;
+		}
+
+		&--red {
+			color: $globalColor-red;
+		}
+	}
+
+	&-icon {
+		@include fullImage;
+		width: 24upx;
+	}
+
+	&-name {
+		color: $globalColor-fontStyle;
+	}
+
+	&-row {
+		@include flexCenter;
+		background-color: #ffffff;
+		padding: 30upx;
+		border-bottom: 1upx solid #cccccc;
+		font-size: 24upx;
+		font-weight: 300;
+		color: #626266;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		&__header {
+			@include flexBetween;
+			margin-bottom: 15upx;
+		}
+
+		&__title {
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			font-weight: bold;
+		}
+
+		&__date {
+			color: #999999;
+			font-size: 24upx;
+			font-weight: 300;
+		}
+
+		&__price {
+			color: #be7b25;
+			font-size: 32upx;
+			font-weight: bold;
+			margin-bottom: 15upx;
+		}
+
+		&__list {
+			@include flexBetween;
+
+			&-label {
+				color: #999999;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.coinSelectBox {
+	margin-bottom: 30upx;
+	&-wrapper {
+	}
+	&-scroll {
+		width: 750rpx;
+		flex-direction: row;
+		white-space: nowrap;
+	}
+
+	&-item {
+		display: inline-block;
+		padding: 12upx 30upx;
+		font-size: 28upx;
+		font-weight: 300;
+		color: $globalColor-fontStyle;
+		position: relative;
+
+		&::after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+			height: 4upx;
+			width: 32upx;
+			border-radius: 2upx;
+			background-color: transparent;
+			@include initTransition(0.4);
+		}
+
+		&--active {
+			// color: $globalColor-style;
+
+			&::after {
+				background-color: $globalColor-style;
+			}
+		}
+	}
+}
+
+.dateSelectBox{
+	margin-bottom: 45upx;
+	&-wrapper{
+		@include flexLeft;
+		padding: 0 30upx;
+	}
+	
+	&-lable{
+		color: $globalColor-fontStyle;
+		font-size: 28upx;
+		font-weight: bold;
+	}
+	
+	&-tabs{
+		&__control {
+			@include flexLeft;
+		
+			&-item {
+				margin-right: 30upx;
+				font-size: 28upx;
+				font-weight: 300;
+				color: $globalColor-fontStyle;
+				position: relative;
+			
+				&::after {
+					content: '';
+					display: inline-block;
+					position: absolute;
+					left: 50%;
+					bottom: -12upx;
+					transform: translateX(-50%);
+					height: 4upx;
+					width: 24upx;
+					border-radius: 2upx;
+					background-color: transparent;
+					@include initTransition(0.4);
+				}
+			
+				&--active {
+					// color: $globalColor-style;
+			
+					&::after {
+						background-color: $globalColor-style;
+					}
+				}
+			}
+		}
+	}
+}
+
+.progressBox {
+	margin-bottom: 30upx;
+	&-wrapper {
+		padding: 0 30upx;
+	}
+
+	&-header {
+		@include flexBetween;
+		margin-bottom: 24upx;
+	}
+
+	&-body {
+		position: relative;
+		width: 100%;
+		height: 28upx;
+	}
+
+	&-item {
+		@include flexCenter;
+		align-items: flex-end;
+
+		&--1 {
+			color: #cb0101;
+		}
+
+		&--2 {
+			color: #00a388;
+		}
+
+		&__lable {
+			color: $globalColor-fontStyle;
+			font-size: 24upx;
+			font-weight: bold;
+			order: 2;
+		}
+
+		&__data {
+			font-size: 32upx;
+			font-weight: 300;
+			margin: 0 15upx;
+			color: inherit;
+
+			.progressBox-item--1 & {
+				order: 3;
+			}
+
+			.progressBox-item--2 & {
+				order: 1;
+			}
+		}
+	}
+
+	&-progress {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		flex: 1;
+		&__data {
+			@include initTransition(0.4);
+			position: absolute;
+			background-color: $globalColor-style;
+			left: 0;
+			top: 50%;
+			height: 100%;
+			transform: translateY(-50%);
+			z-index: 2;
+			border-radius: 14upx;
+		}
+		&__line {
+			position: absolute;
+			background-color: #00a388;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 1;
+			border-radius: 14upx;
+		}
+	}
+}
+
+.progressTabelBox {
+	margin-bottom: 30upx;
+	&-wrapper {
+		padding: 0 30upx;
+	}
+
+	&-header {
+		@include flexCenter;
+		color: #99999d;
+		font-size: 24upx;
+		font-weight: 300;
+		margin-bottom: 15upx;
+		padding: 0 30upx;
+	}
+
+	&-body {
+		border-radius: 20upx;
+		overflow: hidden;
+	}
+
+	&-data {
+		@include flexCenter;
+		flex: 1;
+		font-size: 100%;
+
+		&:first-child {
+			justify-content: flex-start;
+		}
+		&:last-child {
+			justify-content: flex-end;
+		}
+
+		&--green {
+			color: $globalColor-green;
+		}
+
+		&--red {
+			color: $globalColor-red;
+		}
+	}
+
+	&-icon {
+		@include fullImage;
+		width: 24upx;
+	}
+
+	&-name {
+		color: $globalColor-fontStyle;
+		font-size: 24upx;
+		font-weight: 300;
+		width: 180upx;
+	}
+
+	&-row {
+		@include flexCenter;
+		background-color: #ffffff;
+		padding: 30upx;
+		border-bottom: 1upx solid #cccccc;
+		font-size: 24upx;
+		font-weight: 300;
+		color: #626266;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+
+	&-progressBox {
+		@include flexRight;
+		flex: 1;
+
+		&__item {
+			color: #626266;
+			font-size: 24upx;
+			font-weight: 300;
+			width: 120upx;
+
+			&--highlight {
+				color: $globalColor-fontStyle;
+			}
+		}
+
+		&__progress {
+			position: relative;
+			width: 160upx;
+			height: 12upx;
+			margin: 0 30upx;
+			border-radius: 6upx;
+			overflow: hidden;
+
+			&-data {
+				@include initTransition(0.4);
+				position: absolute;
+				background-color: $globalColor-style;
+				left: 0;
+				top: 50%;
+				height: 12upx;
+				transform: translateY(-50%);
+				z-index: 2;
+				border-radius: 6upx;
+			}
+			&-line {
+				position: absolute;
+				background-color: #00a388;
+				height: 12upx;
+				width: 160upx;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 1;
+				border-radius: 6upx;
+			}
+		}
+	}
+}
+
+.networkRealHolding {
+	margin-bottom: 30upx;
+	&-wrapper {
+		padding: 0 30upx;
+	}
+
+	&-header {
+		@include flexCenter;
+		color: #99999d;
+		font-size: 24upx;
+		font-weight: 300;
+		margin-bottom: 15upx;
+		padding: 0 30upx;
+	}
+
+	&-body {
+		border-radius: 20upx;
+		overflow: hidden;
+	}
+
+	&-data {
+		@include flexCenter;
+		flex: 1;
+		font-size: 100%;
+
+		&:first-child {
+			justify-content: flex-start;
+		}
+		&:last-child {
+			justify-content: flex-end;
+		}
+
+		&--green {
+			color: $globalColor-green;
+		}
+
+		&--red {
+			color: $globalColor-red;
+		}
+	}
+
+	&-icon {
+		@include fullImage;
+		width: 24upx;
+	}
+
+	&-name {
+		color: $globalColor-fontStyle;
+	}
+
+	&-row {
+		@include flexCenter;
+		background-color: #ffffff;
+		padding: 30upx;
+		border-bottom: 1upx solid #cccccc;
+		font-size: 24upx;
+		font-weight: 300;
+		color: #626266;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+
+	&-quantity {
+		color: #be7b25;
+	}
+
+	&-progress {
+		position: relative;
+		width: 100%;
+		flex: 1;
+		&__data {
+			@include initTransition(0.4);
+			position: absolute;
+			background-color: $globalColor-style;
+			left: 0;
+			top: 50%;
+			height: 12upx;
+			transform: translateY(-50%);
+			z-index: 2;
+			border-radius: 6upx;
+		}
+		&__line {
+			position: absolute;
+			background-color: #faf5f5;
+			height: 12upx;
+			width: 160upx;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 1;
+			border-radius: 6upx;
+		}
+	}
+}
+
+.echartsBox {
+	padding-bottom: 30upx;
+}

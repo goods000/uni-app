@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>路径@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FF7D7A" offset="0%"></stop>
+            <stop stop-color="#FF4040" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="跟随" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="待晋级" transform="translate(-286.000000, -505.000000)">
+            <g id="编组-5备份-2" transform="translate(13.000000, 411.000000)">
+                <g id="heart-2-fill" transform="translate(273.000000, 94.000000)">
+                    <polygon id="路径" points="0 0 16.8 0 16.8 16.8 0 16.8"></polygon>
+                    <path d="M1.9747,8.9558 C0.604982021,7.3584722 0.509203469,5.0303075 1.74308986,3.32586981 C2.97697624,1.62143212 5.21862144,0.985388738 7.1638,1.7878 L7.1624,1.7878 L4.193,4.7586 L5.1828,5.7484 L8.1522,2.779 C9.92901051,1.00199627 12.8099462,1.0018396 14.5869499,2.77865007 C16.3639537,4.55546054 16.3641104,7.43639619 14.5873,9.2134 L8.4,15.4 L1.9656,8.9656 L1.9747,8.9558 Z" id="路径" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

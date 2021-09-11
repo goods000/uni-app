@@ -1,0 +1,93 @@
+.main{
+	padding-bottom: calc(constant(safe-area-inset-bottom) + 30upx);
+	padding-bottom: calc(env(safe-area-inset-bottom) + 30upx);
+}
+
+.infoBox {
+	padding: 30upx;
+}
+
+.titleBox {
+	&-wrapper {
+	}
+
+	&-label {
+		@include themeColor('globalColor-fontStyle');
+		font-size: 52upx;
+		font-weight: bold;
+	}
+}
+
+.selectBox {
+	// padding: 30upx 0;
+	&-wrapper {
+		@include flexBetween;
+		@include initShadow;
+		padding: 30upx;
+		border-radius: 20upx;
+		background-color: #FFFFFF;
+	}
+
+	&-label {
+		color: #666666;
+		font-weight: bold;
+		font-size: 28upx;
+	}
+
+	&-data {
+		@include flexRight;
+		color: $globalColor-fontStyle;
+		font-size: 32upx;
+		font-weight: 300;
+		background-image: url(@/static/public/icon-arrow-bottom-grey.png);
+		background-size: 26upx 14upx;
+		background-position: right center;
+		background-repeat: no-repeat;
+		padding-right: 45upx;
+	}
+}
+
+.filterBox {
+	margin-top: 30upx;
+	
+	&-label {
+		@include themeColor('globalColor-fontStyle');
+		font-size: 28upx;
+		font-weight: bold;
+		margin-bottom: 15upx;
+	}
+
+	&-button {
+		@include flexLeft;
+
+		&__btn {
+			@include themeColor('globalColor-themeStyle');
+			@include themeBorderColor('globalColor-themeStyle');
+			@include initTransition(0.4);
+			@include themeBgColor('globalColor-bgStyle');
+			font-size: 24upx;
+			font-weight: 300;
+			border-radius: 12upx;
+			padding: 8upx 15px;
+			border: 1px solid;
+			margin-right: 15upx;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&--active {
+				@include themeColorValue(#ffffff,#ffffff);
+				@include themeBgColor('globalColor-themeStyle');
+			}
+		}
+	}
+}
+
+.initFormBox{
+	padding: 0 30upx;
+}
+
+.initButton {
+	padding: 0 30upx;
+}

@@ -1,0 +1,57 @@
+.initButton {
+	font-size: 34upx;
+	@include flexCenterColumn;
+	
+	&--absolute{
+		position: absolute;
+		bottom: 60upx;
+		left: 0;
+		width: 100%;
+		padding: 0 30upx;
+	}
+	
+	&-row{
+		@include flexCenter;
+		flex: 1;
+		width: 100%;
+	}
+	
+	&-btn {
+		flex: 1;
+		padding: 20upx 0;
+		border-radius: 20upx;
+		font-size: 100%;
+		width: 100%;
+		font-weight: bold;
+		
+		@include flexCenter;
+		
+		+ .initButton-btn{
+			margin-top: 30upx;
+			
+			.initButton-row &{
+				margin-top: 0;
+			}
+		}
+		
+		.initButton-row &{
+			margin-right: 30upx;
+			
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		
+		&--golden {
+			// @include initButtonGrad;
+			background-color: #be7b25;
+			color: #FFFFFF;
+		}
+		
+		&--style {
+			// @include initButtonGrad;
+			background-color: $globalColor-style;
+			color: #FFFFFF;
+		}
+	}
+}

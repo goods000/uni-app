@@ -1,0 +1,93 @@
+page,.pages{
+	background: $globalColor-bgStyle;
+	height: 100vh;
+}
+.account{
+	&-wrapper{
+		@include flexCenterColumn;
+		margin:0 30upx;
+	}
+	&-box{
+		background: $globalColor-white;
+		padding: 30upx;
+		border-radius: 20upx;
+		margin: 0 0 20upx;
+		width: 100%;
+		&__name{
+			@include flexBetween;
+			text{
+				font-size: 32upx;
+				font-weight: bold;
+				color: $globalColor-fontStyle;
+			}
+			image{
+				width: 40upx;
+				height: 15upx;
+			}
+		}
+		&__title{
+			color: #999999;
+			font-size: 24upx;
+			margin: 40upx 0 10upx;
+		}
+		&__address{
+			@include flexBetween;
+			&-num{
+				color: $globalColor-fontStyle;
+				font-size: 26upx;
+				font-weight: bold;
+				flex-wrap: wrap;
+				width: 80%;
+			}
+			image{
+				width: 35upx;
+			}
+		}
+	}
+}
+
+.exportBox{
+	@include flexCenterColumn;
+	&-image{
+		margin: 135upx 0 39upx;
+		image{
+			width: 130upx;
+			height: 130upx;
+		}
+	}
+	&-title{
+		color: $globalColor-style;
+		font-size: 40upx;
+		font-weight: bold;
+	}
+	&-tips{
+		color: #FF4343;
+		font-size: 20upx;
+		width: 80%;
+		text-align: center;
+		margin: 8upx 0;
+	}
+	&-btn{
+		position: fixed;
+		bottom: 10%;
+		width: 100%;
+	}
+}
+
+.listBox{
+	width: 100vw;
+	background: $globalColor-white;
+	border-radius: 20upx 20upx 0 0;
+	@include flexLeftColumn;
+	&-form{
+		padding: 30upx 0;
+		text-align: center;
+		width: 100%;
+		border-bottom: 1px solid $globalColor-border;
+		&:nth-last-child(1){border-bottom: none;}
+		&__label{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.initTitle {
+	&-wrapper {
+		@include flexBetween;
+		// padding: 0 30upx;
+		margin-bottom: 30upx;
+	}
+
+	&-label {
+		@include themeColor('globalColor-fontStyle');
+		@include initBeforeHolder;
+		font-size: 32upx;
+		// color: $globalColor-fontStyle;
+		font-weight: bold;
+	}
+
+	// &-more {
+	// 	@include fullImage;
+	// 	width: 30upx;
+	// 	height: 30upx;
+	// 	background: url(@/static/index/icon-notice-more.png) no-repeat;
+	// 	background-size: 30upx 30upx;
+	// 	background-position: center center;
+	// }
+}

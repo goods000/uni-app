@@ -1,0 +1,566 @@
+<script>
+	// require("sdk/libs/strophe");
+	let WebIM = (wx.WebIM = require("./utils/WebIM")["default"]);
+	let msgStorage = require("./components/chat/msgstorage");
+	let msgType = require("./components/chat/msgtype");
+	let disp = require("./utils/broadcast");
+	let logout = false;
+	// let emedia = uni.emedia = require("./emediaSDK/webrtc/src/entry")
+	let emedia = (uni.emedia = require("./emediaSDK/emedia_for_miniProgram"));
+	emedia.config({ useUniappPlugin: true });
+	function ack(receiveMsg) {
+	  // 处理未读消息回执
+	  var bodyId = receiveMsg.id; // 需要发送已读回执的消息id
+	
+	  var ackMsg = new WebIM.message("read", WebIM.conn.getUniqueId());
+	  ackMsg.set({ 
+	    id: bodyId, 
+	    to: receiveMsg.from,
+	  });
+	  WebIM.conn.send(ackMsg.body);
+	}
+	function onMessageError(err) {
+	  if (err.type === "error") {
+	    uni.showToast({
+	      title: err.errorText,
+	    });
+	    return false;
+	  }
+	
+	  return true;
+	}
+	function getCurrentRoute() {
+	  let pages = getCurrentPages();
+	  if (pages.length > 0) {
+	    let currentPage = pages[pages.length - 1];
+	    return currentPage.route;
+	  }
+	  return "/";
+	}
+	
+// 不包含陌生人版本(不接收陌生人消息)
+function calcUnReadSpot(message) {
+  let myName = uni.getStorageSync("myUsername");
+  let members = uni.getStorageSync("member") || []; //好友
+
+  var listGroups = uni.getStorageSync("listGroup") || []; //群组
+  let allMembers = members.concat(listGroups);
+  let count = allMembers.reduce(function(result, curMember, idx) {
+    let chatMsgs;
+    if (curMember.groupid) {
+      chatMsgs =
+        uni.getStorageSync(curMember.groupid + myName.toLowerCase()) || [];
+    } else {
+      chatMsgs =
+        uni.getStorageSync(
+          curMember.name && curMember.name.toLowerCase() + myName.toLowerCase()
+        ) || [];
+    }
+    return result + chatMsgs.length;
+  }, 0);
+  getApp().globalData.unReadMessageNum = count;
+  disp.fire("em.unreadspot", message);
+}
+
+// // 包含陌生人版本
+// function calcUnReadSpot(message) {
+//   let myName = uni.getStorageSync("myUsername");
+//   uni.getStorageInfo({
+//     success: function (res) {
+//       let storageKeys = res.keys;
+//       let newChatMsgKeys = [];
+//       let historyChatMsgKeys = [];
+//       storageKeys.forEach((item) => {
+//         if (item.indexOf(myName) > -1 && item.indexOf("rendered_") == -1) {
+//           newChatMsgKeys.push(item);
+//         }
+//       });
+//       let count = newChatMsgKeys.reduce(function (result, curMember, idx) {
+//         let chatMsgs;
+//         chatMsgs = uni.getStorageSync(curMember) || [];
+//         return result + chatMsgs.length;
+//       }, 0);
+
+//       getApp().globalData.unReadMessageNum = count;
+//       disp.fire("em.unreadspot", message);
+//     },
+//   });
+// }
+	
+	function saveGroups() {
+	  var me = this;
+	  return WebIM.conn.getGroup({
+	    limit: 50,
+	    success: function (res) {
+	      uni.setStorage({
+	        key: "listGroup",
+	        data: res.data,
+	      });
+	    },
+	    error: function (err) {
+	      console.log(err);
+	    },
+	  });
+	}
+	
+	import version from './common/js/url.js';
+	export default {
+		// 修复了未登录的重复跳转问题
+		globalData: {
+			is_flag: true,
+			unReadMessageNum: 0,
+			userInfo: null,
+			saveFriendList: [],
+			saveGroupInvitedList: [],
+			isIPX: false, //是否为iphone X
+			conn: {
+			    closed: false,
+			    curOpenOpt: {},
+			
+				open(opt) {
+					uni.showLoading({
+						title: "正在初始化客户端..",
+						mask: true,
+					});
+					this.curOpenOpt = opt;
+					WebIM.conn.open(opt);
+					this.closed = false;
+				},
+			
+				reopen() {
+					if (this.closed) {
+					  //this.open(this.curOpenOpt);
+					  WebIM.conn.open(this.curOpenOpt);
+					  this.closed = false;
+					}
+				},
+			},
+			onLoginSuccess: function (myName) {
+			  uni.hideLoading();
+			  uni.redirectTo({
+			    url: "../chat/chat?myName=" + myName,
+			  });
+			},
+			
+			getUserInfo(cb) {
+				var me = this;
+				if (this.userInfo) {
+					typeof cb == "function" && cb(this.userInfo);
+				} else {
+					// 调用登录接口
+					uni.login({
+					  success() {
+						uni.getUserInfo({
+						  success(res) {
+							me.userInfo = res.userInfo;
+							typeof cb == "function" && cb(me.userInfo);
+						  },
+						});
+					  },
+					});
+				}
+			},
+			
+			checkIsIPhoneX: function () {
+				const me = this;
+				uni.getSystemInfo({
+			    success: function (res) {
+					// 根据 model 进行判断
+					if (res.model && res.model.search("iPhone X") != -1) {
+						me.isIPX = true;
+					}
+					},
+				});
+			},
+		},
+		onLaunch: function() {
+			console.log('App Launch');
+		  // 调用 API 从本地缓存中获取数据
+		  // uni.setInnerAudioOption({
+		  //   obeyMuteSwitch: false
+		  // });
+		  var me = this;
+		  var logs = uni.getStorageSync("logs") || [];
+		  logs.unshift(Date.now());
+		  uni.setStorageSync("logs", logs); //
+		
+		  disp.on("em.main.ready", function () {
+			calcUnReadSpot();
+		  });
+		  disp.on("em.chatroom.leave", function () {
+			calcUnReadSpot();
+		  });
+		  disp.on("em.chat.session.remove", function () {
+			calcUnReadSpot();
+		  });
+		  disp.on("em.chat.audio.fileLoaded", function () {
+			calcUnReadSpot();
+		  });
+		  disp.on("em.main.deleteFriend", function () {
+			calcUnReadSpot();
+		  });
+		  disp.on("em.chat.audio.fileLoaded", function () {
+			calcUnReadSpot();
+		  }); //
+		
+		  WebIM.conn.listen({
+			onOpened(message) {
+			  if (
+				getCurrentRoute() == "pages/operate/login"
+			  ) {
+				me.globalData.onLoginSuccess(
+				  uni.getStorageSync("myUsername").toLowerCase()
+				);
+			  }
+			},
+		
+			onReconnect() {
+			  uni.showToast({
+				title: "重连中...",
+				duration: 2000,
+			  });
+			},
+		
+			onSocketConnected() {
+			  uni.showToast({
+				title: "socket连接成功",
+				duration: 2000,
+			  });
+			},
+		
+			onClosed() {
+			  uni.showToast({
+				title: "安全退出成功",
+				icon: "none",
+				duration: 2000,
+			  });
+			  uni.redirectTo({
+				url: "../operate/login",
+			  });
+			  me.globalData.conn.closed = true;
+			  WebIM.conn.close();
+			},
+		
+			onInviteMessage(message) {
+			  me.globalData.saveGroupInvitedList.push(message);
+			  disp.fire("em.invite.joingroup", message); 
+			  // uni.showModal({
+			  // 	title: message.from + " 已邀你入群 " + message.roomid,
+			  // 	success(){
+			  // 		disp.fire("em.invite.joingroup", message);
+			  // 	},
+			  // 	error(){
+			  // 		disp.fire("em.invite.joingroup", message);
+			  // 	}
+			  // });
+			},
+		
+			onReadMessage(message) {
+			  //console.log('已读', message)
+			},
+		
+			//onPresence为旧版 ，建议参考最新增删好友api文档 ：http://docs-im.easemob.com/im/web/basics/buddy
+			onPresence(message) {
+			  switch (message.type) {
+				case "unsubscribe":
+				  break;
+				// 好友邀请列表
+				case "subscribe":
+					for (let i = 0; i < me.globalData.saveFriendList.length; i++) {
+					  if (me.globalData.saveFriendList[i].from === message.from) {
+						me.globalData.saveFriendList[i] = message;
+						disp.fire("em.subscribe");
+						return;
+					  }
+					}
+					msgStorage.saveReceiveMsg(message, 'INFORM'); //存添加好友消息，方便展示通知
+					me.globalData.saveFriendList.push(message);
+					disp.fire("em.subscribe");
+				      	console.log("saveFriendList====",saveFriendList);
+			            	break;
+				case "subscribed":
+				 //  uni.showToast({
+					// title: "添加成功",
+					// duration: 1000,
+				 //  });
+				  disp.fire("em.subscribed");
+				  break;
+		
+				case "unsubscribed":
+				  disp.fire("em.unsubscribed");
+				  break;
+				case "direct_joined":
+				  saveGroups();
+				 //  uni.showToast({
+					// title: "已进群",
+					// duration: 1000,
+				 //  });
+				  break;
+				case "memberJoinPublicGroupSuccess":
+				  saveGroups();
+				 //  uni.showToast({
+					// title: "已进群",
+					// duration: 1000,
+				 //  });
+				  break;
+				case "invite":
+				  // 防止重复添加
+				  for (let i = 0; i < me.globalData.saveGroupInvitedList.length; i++) {
+					  if (me.globalData.saveGroupInvitedList[i].from === message.from) {
+						me.globalData.saveGroupInvitedList[i] = message;
+						disp.fire("em.invite.joingroup")
+						return;
+					  }
+					}
+				  me.globalData.saveGroupInvitedList.push(message);
+				  disp.fire("em.invite.joingroup");
+				  msgStorage.saveReceiveMsg(message,'INFORM'); //存添加好友消息，方便展示通知
+				  break;
+				case "unavailable":
+				  disp.fire("em.contacts.remove");
+				  disp.fire("em.group.leaveGroup", message);
+				  break;
+		
+				case "deleteGroupChat":
+				  disp.fire("em.invite.deleteGroup", message);
+				  break;
+		
+				case "leaveGroup":
+				  disp.fire("em.group.leaveGroup", message);
+				  break;
+		
+				case "removedFromGroup":
+				  disp.fire("em.group.leaveGroup", message);
+				  break;
+		
+				default:
+				  break;
+			  }
+			},
+		
+			onRoster(message) {
+			  // let pages = getCurrentPages();
+			  // if(pages[0]){
+			  // 	pages[0].onShow();
+			  // }
+			},
+		
+			onVideoMessage(message) {
+			  console.log("onVideoMessage: ", message);
+				
+			  if (message) {
+				msgStorage.saveReceiveMsg(message, msgType.VIDEO);
+				var node = document.getElementById('privateVideo');
+				var option = {
+					url: message.url,
+					headers: {
+					  'Accept': 'audio/mp4'
+					},
+					onFileDownloadComplete: function (response) {
+						var objectURL = WebIM.utils.parseDownloadResponse.call(conn, response);
+						node.src = objectURL;
+					},
+					onFileDownloadError: function () {
+						console.log('File down load error.')
+					}
+				};
+				WebIM.utils.download.call(conn, option);
+			  }
+		
+			  calcUnReadSpot(message);
+			  ack(message);
+			},
+		
+			onAudioMessage(message) {
+			  console.log("onAudioMessage", message);
+		
+			  if (message) {
+				if (onMessageError(message)) {
+				  msgStorage.saveReceiveMsg(message, msgType.AUDIO);
+				}
+		
+				calcUnReadSpot(message);
+				ack(message);
+			  }
+			},
+		
+			onCmdMessage(message) {
+			  console.log("onCmdMessage", message);
+		
+			  if (message) {
+				if (onMessageError(message)) {
+				  msgStorage.saveReceiveMsg(message, msgType.CMD);
+				}
+		
+				calcUnReadSpot(message);
+				ack(message);
+			  }
+			},
+		
+			// onLocationMessage(message){
+			// 	console.log("Location message: ", message);
+			// 	if(message){
+			// 		msgStorage.saveReceiveMsg(message, msgType.LOCATION);
+			// 	}
+			// },
+			onTextMessage(message) {
+			  console.log("onTextMessage", message);
+		
+			  if (message) {
+				if (onMessageError(message)) {
+				  msgStorage.saveReceiveMsg(message, msgType.TEXT);
+				}
+		
+				calcUnReadSpot(message);
+				ack(message);
+			  }
+			},
+		
+			onEmojiMessage(message) {
+			  console.log("onEmojiMessage", message);
+		
+			  if (message) {
+				if (onMessageError(message)) {
+				  msgStorage.saveReceiveMsg(message, msgType.EMOJI);
+				}
+		
+				calcUnReadSpot(message);
+				ack(message);
+			  }
+			},
+		
+			onPictureMessage(message) {
+			  console.log("onPictureMessage", message);
+		
+			  if (message) {
+				if (onMessageError(message)) {
+				  msgStorage.saveReceiveMsg(message, msgType.IMAGE);
+				}
+		
+				calcUnReadSpot(message);
+				ack(message);
+			  }
+			},
+		
+			onFileMessage(message) {
+			  console.log("onFileMessage", message);
+		
+			  if (message) {
+				if (onMessageError(message)) {
+				  msgStorage.saveReceiveMsg(message, msgType.FILE);
+				}
+				calcUnReadSpot(message);
+				ack(message);
+			  }
+			},
+		
+			// 各种异常
+			onError(error) {
+			  // console.log(error); 
+			  if (error.type == 28) {
+				uni.removeStorageSync('MItoken');
+				// var options = {
+				// 	apiUrl: WebIM.config.apiURL,
+				// 	user: this.myUsername,
+				// 	pwd: this.myUser,   //账号密码登录
+				// 	appKey: WebIM.config.appkey,
+				// 	success: function (res) {
+				// 		console.log("环信登录");
+				// 		var token = res.access_token;
+				// 		uni.setStorageSync('MItoken', token);
+				// 	},
+				// 	error: function(){
+				// 	}
+				// };
+				// WebIM.conn.open(options);
+			  }
+		
+			  if (error.type == WebIM.statusCode.WEBIM_CONNCTION_OPEN_ERROR) {
+				uni.hideLoading();
+				disp.fire("em.error.passwordErr"); 
+			  }
+		
+			  if (error.type == WebIM.statusCode.WEBIM_CONNCTION_AUTH_ERROR) {
+				uni.hideLoading();
+				disp.fire("em.error.tokenErr");
+			  }
+		
+			  if (error.type == "socket_error") {
+				///sendMsgError
+				console.log("socket_errorsocket_error", error);
+				uni.showToast({
+				  title: "网络已断开",
+				  icon: "none",
+				  duration: 2000,
+				});
+				disp.fire("em.error.sendMsgErr", error);
+			  }
+			},
+		  });
+		  this.globalData.checkIsIPhoneX();
+		},
+		onShow: function() {
+			let type = 0;
+			uni.getSystemInfo({
+				success: function(res) {
+					if (res.platform == 'android') {
+						type = 0;
+					} else if (res.platform == 'ios') {
+						type = 1;
+					}
+				}
+			});
+			
+			uni.request({
+				url: version.webUrl + '/search/appVersion',
+				method: 'POST',
+				dataType: 'json',
+				data: {
+					type: type
+				},
+				header: {
+					'content-type': 'application/x-www-form-urlencoded'
+				},
+				success: res => {
+					var code = res.data.code;
+					if (code == 0) {
+						var add = res.data.obj.appAddress;
+						var currentVersion = res.data.obj.appVersion;
+						console.log(currentVersion, version.version);
+						if (version.version != currentVersion) {
+							// uni.removeStorageSync('token');
+							uni.showModal({ //提醒用户更新
+								title:'更新提示',
+								content: '检测到新版本' + currentVersion + ',你的版本是' + version.version,
+								showCancel: false,
+								closeOnClickModal: false,
+								confirmText:'确认',
+								success: (res) => {
+									if (res.confirm) {
+										plus.runtime.openURL(add);
+									} else {
+										console.log(9999999);
+									}
+								}
+							})
+							console.log(res.data.obj);
+							uni.setStorageSync('version', res.data.obj);
+						}
+					}
+				},
+				fail: () => {
+					uni.showToast({
+						title: '请稍后重试'
+					});
+				}
+			});
+		},
+		onHide: function() {
+			console.log('App Hide')
+		}
+	}
+</script>
+
+<style lang="scss">
+	
+</style>

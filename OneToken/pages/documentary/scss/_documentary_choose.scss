@@ -1,0 +1,58 @@
+.titleBox {
+	position: relative;
+	z-index: 1;
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-title {
+		color: $globalColor-fontStyle;
+		font-size: 36upx;
+		font-weight: bold;
+	}
+
+	&-note {
+		color: #666666;
+		font-size: 24upx;
+		font-weight: 300;
+		margin-top: 8upx;
+	}
+}
+
+.itemBox {
+	&-wrapper {
+		@include flexLeft;
+		flex-wrap: wrap;
+		padding: 0 30upx;
+	}
+	
+	&-item{
+		@include flexLeft;
+		@include initShadow;
+		width: calc(50% - 15upx);
+		margin-bottom: 15upx;
+		margin-right: 15upx;
+		padding: 30upx;
+		border-radius: 10upx;
+		background: url(@/static/public/icon-arrow-right-black.png) no-repeat;
+		background-size: 14upx 26upx;
+		background-position: calc(100% - 30upx) center;
+		background-color: #FFFFFF;
+		
+		&:nth-child(2n){
+			margin-right: 0;
+		}
+		
+		&__image{
+			@include fullImage;
+			width: 42upx;
+			margin-right: 15upx;
+		}
+		
+		&__label{
+			font-weight: bold;
+			font-size: 36upx;
+			color: $globalColor-fontStyle;
+		}
+	}
+}

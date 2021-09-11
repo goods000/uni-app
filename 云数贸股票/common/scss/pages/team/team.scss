@@ -1,0 +1,200 @@
+.team{
+	position: relative;
+	z-index: 2;
+	&-Bg{
+		background: url(../../static/team/icon-team-bg.png);
+		background-size: 100% 100%;
+		background-position: center center; 
+		background-repeat: no-repeat;
+		// background: $globalColor-style;
+		// border-radius: 0 0 65% 65%;
+		width: 100%;
+		height: 474upx;
+		position: absolute;
+		top: 0;
+		left: 0px;
+		z-index: -1;
+	}
+}
+.teamBox{
+	background: $globalColor-white;
+	border-radius: 28upx;
+	/* #ifdef H5 */
+	margin: 250upx 30upx 54upx;
+	/* #endif */
+	/* #ifdef APP-PLUS */
+	margin: 180upx 30upx 54upx;
+	/* #endif */
+	padding: 30upx;
+	&-top{
+		@include flexCenterColumn;
+		&-txt{
+			color: $globalColor-fontStyle;
+			font-size: 24upx;
+		}
+		&-count{
+			color: $globalColor-style;
+			font-size: 46upx;
+			margin: 6upx 0 30upx;
+		}
+	}
+	&-bottom{
+		@include flexAround;
+		&-item{
+			@include flexCenterColumn;
+			&__num{
+				font-weight: bold;
+				font-size: 32upx;
+				color: $globalColor-fontStyle;
+			}
+			&__title{
+				font-size: 24upx;
+				color: #999999;
+				margin-top: 10upx;
+			}
+		}
+		&-line{
+			border-left: 1px solid $globalColor-border;
+			height: 34upx;
+			width: 2upx;
+		}
+	}
+}
+
+.teamList{
+	margin: 0 30upx;
+	&-header{
+		padding: 0 30upx 15upx;
+		@include flexBetween;
+		&-txt{
+			color: #999999;
+			font-size: 20upx;
+		}
+	}
+	&-wrapper{
+		@include flexCenterColumn;
+		border-radius: 20upx;
+		background: $globalColor-white;
+		&-item:nth-last-child(1){
+			border-bottom: none;
+		}
+		&-height{
+			height: 50vh;
+		}
+		&-item{
+			@include flexBetween;
+			border-bottom: 1px solid $globalColor-border;
+			width: 100%;
+			padding: 19upx 28upx;
+			&__left{
+				@include flexLeft;
+				image{
+					width: 52upx;
+					height: 52upx;
+					margin-right: 14upx;
+				}
+				&-account{
+					color: $globalColor-fontStyle;
+					font-size: 28upx;
+				}
+			}
+			&__time{
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+			}
+		}
+	}
+}
+
+.inviteBox{
+	@include flexCenterColumn;
+	padding: 28upx 39upx;
+	position: relative;
+	margin: 23upx ;
+	&-image{
+		position: absolute;
+		top: 0;
+		width: 316upx;
+		height: 84upx;
+	}
+	&-item{
+		@include flexCenterColumn;
+		@include initShadow;
+		background: $globalColor-white;
+		border-radius: 41upx;
+		margin: 0 auto 20%;
+		padding: 100upx 0 72upx;
+		width: 100%;
+		&-qrcode{
+			border: 1px solid $globalColor-style;
+			border-radius: 10upx;
+			position: relative;
+			padding: 20upx;
+			&-code{
+				width: 388upx;
+				height: 388upx;
+			}
+			&-logo{
+				position: absolute;
+				top: 50%;left: 50%;
+				transform: translate(-50%,-50%);
+				width: 100upx;
+				height: 100upx;
+				border-radius: 20upx;
+			}
+		}
+		&-coin{
+			color: #999999;
+			font-size: 24upx;
+			position: relative;
+			margin: 50upx auto 30upx;
+			width: 30%;
+			text-align: center;
+			&::after{
+				content: '';
+				width: 32upx;
+				height: 2upx;
+				background: #999999;
+				position: absolute;
+				left: 0;top: 50%;
+			}
+			&::before{
+				content: '';
+				width: 42upx;
+				height: 2upx;
+				background: #999999;
+				position: absolute;
+				right: 0;top: 50%;
+			}
+		}
+		&-code{
+			color: $globalColor-style;
+			font-size: 59upx;
+			font-weight: bold;
+		}
+		&-btn{
+			color: $globalColor-style;
+			font-size: 24upx;
+			text-decoration: underline;
+		}
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

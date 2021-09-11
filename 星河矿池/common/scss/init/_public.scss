@@ -1,0 +1,210 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'DINPro', 'PingFangSC-Regular', 'AvenirBold';
+}
+
+image {
+	height: 0;
+	display: block;
+}
+
+// 全局背景色
+page{
+	background-color: $globalColor-bgStyle;
+	// height: 100vh;
+	// overflow: scroll;
+}
+.pages{
+	background-color: $globalColor-bgStyle;
+	/* #ifdef APP-PLUS */
+	min-height: 100vh;
+	/* #endif */
+	overflow: scroll;
+}
+.content {
+	height: 100vh;
+	background: $globalColor-bgStyle;
+	/* #ifdef H5 */
+	// padding-bottom: 8vh;
+	/* #endif */
+	/* #ifdef APP-PLUS */
+	padding-bottom: 4vh;
+	/* #endif */
+}
+.contentBg{
+	background: $globalColor-bgStyle;
+	height: 100vh;
+}
+.tipsBox {
+	position: relative;
+	// border-top: 16upx solid #f5f6f8;
+	&-wrapper {
+		// padding: 0 30upx;
+	}
+	&-title {
+		@include flexBetween;
+
+		padding: 22upx 30upx;
+
+		&__label {
+			@include initBeforeHolder;
+			font-size: 32upx;
+			color: $globalColor-fontStyle;
+			font-weight: bold;
+		}
+
+		&__more {
+			color: #999999;
+			font-size: 24upx;
+		}
+	}
+	&-right{
+		position: absolute;
+		right: 30upx;
+		@include flexRight;
+		&-title{
+			color: #666666;
+			font-size: 28upx;
+		}
+		&__image{
+			width: 24upx;
+			height: 24upx;
+			margin-left: 10upx;
+		}
+	}
+}	
+
+.initBtn{
+	background: $globalColor-style;
+	border: 1px solid $globalColor-style;
+	color: $globalColor-white;
+	margin: 60upx auto;
+	text-align: center;
+	border-radius: 18upx;
+	width: 90%;
+	font-size: 32upx;
+	padding: 20upx 0;
+	font-weight: bold;
+	letter-spacing: 8upx;
+}
+
+
+.frameBox{
+	width: 80vw;
+	background: $globalColor-white;
+	border-radius: 20upx;
+	padding: 40upx 30upx;
+	@include flexLeftColumn;
+	&-wrapper{
+		@include flexLeft;
+		&__label{
+			@include initBeforeHolder;
+			font-size: 32upx;
+			color: $globalColor-fontStyle;
+			font-weight: bold;
+		}
+	}
+	&-title{
+		color: $globalColor-fontStyle;
+		font-weight: bold;
+		padding: 30upx 0;
+		text-align: center;
+		font-size: 28upx;
+	}
+	&-input{
+		width: 100%;
+		margin: 60upx 0 30upx;
+		padding: 20upx 0;
+		border-bottom: 1px solid $globalColor-border;
+		input{
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			font-weight: bold;
+		}
+	}
+	&-btn{
+		@include flexBetween;
+		width: 100%;
+		margin-top: 30upx;
+		& > view{
+			border-radius: 18upx;
+			width: 45%;
+			padding: 18upx 0;
+			font-weight: bold;
+			text-align: center;
+		}
+		&__close{
+			color: #999999;
+			border: 1px solid #999999;
+		}
+		&__config{
+			color: $globalColor-white;
+			background: $globalColor-style;
+			border: 1px solid $globalColor-style;
+		}
+	}
+}
+
+.tabs {
+	    flex: 1;
+	    flex-direction: column;
+	    overflow: hidden;
+	    /* #ifdef MP-ALIPAY || MP-BAIDU */
+	    height: 100vh;
+	    /* #endif */
+	}
+	
+	.scroll-h {
+	    padding: 0 15px;
+	    // height: 80rpx;
+		display: flex;
+	    flex-direction: row;
+		white-space: nowrap;
+	    flex-wrap: nowrap;
+	    /* border-color: #cccccc;
+		border-bottom-style: solid;
+		border-bottom-width: 1px; */
+	}
+	
+	.uni-tab-item {
+	    display: inline-block;
+	    flex-wrap: nowrap;
+	    // padding-left: 34rpx;
+	    // padding-right: 34rpx;
+		width: 20%;
+		text-align: left;
+		padding-bottom: 20upx;
+	}
+	
+	.uni-tab-item-title {
+	    color: $globalColor-fontStyle;
+	    font-size: 30rpx;
+	    // height: 80rpx;
+	    // line-height: 80rpx;
+	    flex-wrap: nowrap;
+	    /* #ifndef APP-PLUS */
+	    white-space: nowrap;
+	    /* #endif */
+		position: relative;
+	}
+	
+	.uni-tab-item-title-active {
+	    color: $globalColor-fontStyle;
+		padding-bottom: 10upx;
+	}
+	.uni-tab-item-title-active::before{
+		content: '';
+		display: inline-block;
+		height: 4upx;
+		width: 30upx;
+		border-radius: 8upx;
+		position: absolute;
+		left: 0;
+		right:0;
+		bottom: 0;
+		// transform: translateY(-50%);
+		margin: auto;
+		background-color: $globalColor-style;
+	}

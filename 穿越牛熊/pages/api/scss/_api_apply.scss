@@ -1,0 +1,30 @@
+.main{
+	position: relative;
+	z-index: 1;
+}
+
+.titleBox {
+	margin-bottom: 30upx;
+	
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-title {
+		@include themeColor('globalColor-fontStyle');
+		font-size: 36upx;
+		font-weight: bold;
+	}
+
+	&-note {
+		@include themeColor('globalColor-fontSubStyle');
+		font-size: 24upx;
+		font-weight: 300;
+		margin-top: 8upx;
+	}
+}
+
+
+.initFormBox {
+	padding: 0 30upx;
+}

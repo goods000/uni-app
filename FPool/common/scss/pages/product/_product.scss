@@ -1,0 +1,153 @@
+.header{
+	&-right{position: absolute;font-size: 12px;right: 30upx;top:12px;color: $globalColor-fontStyle;@include flexRight;
+		image{width: 50upx;height: 50upx;}
+	}
+}
+
+.initButtonTabs{ 
+	&-control {
+		width: 85%;
+	}
+}
+
+.productBox{
+	&-list{
+		margin: 0upx 15upx 30upx;
+		&-item{
+			background: $globalColor-white;
+			border-radius: 20upx;
+			position: relative;
+			padding-bottom: 10upx;
+			margin-bottom: 20upx;
+		}
+		
+		&-status{
+			&-image{
+				image{
+					width: 75upx;
+				}
+				position: absolute;
+				right: 45upx;
+				top: 0;
+			}
+			@include flexLeft;
+			margin: 0 30upx;
+			padding: 20upx 0;
+			border-top: 1px solid $globalColor-border;
+			&  > view {
+				font-size:20upx;
+				padding: 4upx 10upx;
+				margin-right: 15upx;
+			}
+			&-dividend{
+				border-radius:6upx;
+				border: 1px solid #FFC033;
+				background: #FFF3D9;
+				color: #FFC033;
+			}
+			&-old{
+				border-radius:6upx;
+				border: 1px solid #00AC8F;
+				background: #C4F5EB;
+				color: #00AC8F;
+			}
+			&-time{
+				@include flexCenter;
+				border-radius:6upx;
+				border: 1px solid #EB2929;
+				background: #FFD6D6;
+				image{
+					width: 22upx;
+					height: 22upx;
+					margin-right: 10upx;
+				}
+			}
+			&-title{
+				color: #EB2929;
+			}
+		}
+		&-data{
+			@include flexBetween;
+			margin: 20upx 30upx;
+			&-title{
+				@include flexLeft
+				font-size:30upx;
+				color: #666666;
+			}
+			&-yellow{
+				width: 0;
+				height: 0;
+				border: 12upx solid;
+				border-radius: 40upx;
+				margin-bottom: 15upx;
+				margin-right: 5upx;
+				border-color: transparent transparent #FFC033 transparent;
+			}
+			.yellow{color: #FFC033;}
+			&-price{
+				font-size:30upx;
+				color: $globalColor-fontStyle;
+			}
+		}
+		&-content{
+			margin: 15upx 30upx;
+			position: relative;
+			background: #EDEDF2;
+			border-radius: 30upx;
+			height: 10upx;
+			&__chart {
+				width: 100%;
+				// height: 40upx;
+				height: 100%;
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 1;
+				@include flexLeft;
+				&-line {
+					height: 100%;
+					background-color: #FFC033;
+					border-radius: 30upx;
+				}
+			}
+		}
+	}
+	&-wrapper{
+		margin-top: 12upx;
+		&__title{
+			font-size: 24upx;
+			font-family: PingFang SC, PingFang SC-Medium;
+			font-weight: 500;
+			text-align: center;
+			color: #999999;
+			line-height: 34upx;
+		}
+	}
+}
+
+.success{
+	&-image{
+		margin: 160upx auto 34upx;
+		image{
+			width: 130upx;
+			height: 130upx;
+			margin: auto;
+		}
+	}
+	&-status{
+		font-size: 40upx;
+		font-family: PingFang SC, PingFang SC-Bold;
+		font-weight: 700;
+		text-align: center;
+		color: $globalColor-style;
+		margin-bottom: 70upx;
+	}
+	&-title{
+		font-size: 28upx;
+		font-family: PingFang SC, PingFang SC-Medium;
+		font-weight: 500;
+		text-align: center;
+		color: #999999;
+		line-height: 50upx;
+	}
+}

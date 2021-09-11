@@ -1,0 +1,59 @@
+.titleBox {
+	position: relative;
+	z-index: 1;
+	margin-bottom: 60upx;
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-title {
+		color: $globalColor-fontStyle;
+		font-size: 36upx;
+		font-weight: bold;
+	}
+
+	&-note {
+		color: #666666;
+		font-size: 24upx;
+		font-weight: 300;
+		margin-top: 8upx;
+	}
+}
+
+.typeBox {
+	&-wrapper {
+	}
+
+	&-title {
+		padding: 0 30upx;
+		&__label {
+			@include initBeforeHolder;
+			font-size: 32upx;
+			color: $globalColor-fontStyle;
+			font-weight: bold;
+		}
+	}
+
+	&-list {
+		@include flexBetween;
+		padding: 30upx;
+		border-bottom: 1upx solid #cccccc;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&__title {
+			@include initMoreLine(1);
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: bold;
+		}
+
+		&__status {
+			color: #cccccc;
+			font-size: 28upx;
+			font-weight: bold;
+		}
+	}
+}

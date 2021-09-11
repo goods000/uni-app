@@ -1,0 +1,56 @@
+.initTabs{
+	&-control {
+		@include flexLeft;
+	
+		&__item {
+			@include initTransition(0.4);
+			@include initShadow;
+			flex: 1;
+			background-color: #e1e1e1;
+			color: #999999;
+			font-size: 28upx;
+			text-align: center;
+			font-weight: bold;
+			padding: 15upx 30upx;
+			position: relative;
+			border-top-left-radius: 18upx;
+			border-top-right-radius: 18upx;
+			margin-right: 4upx;
+			position: relative;
+			// border-bottom: 4upx solid #e1e1e1;
+			
+			&--contract{
+				width: 170upx;
+			}
+				
+			&::after{
+				content: '';
+				@include initTransition(0.4);
+				display: inline-block;
+				width: 100%;
+				height: 4upx;
+				// background-color: #FFFFFF;
+				background-color: #e1e1e1;
+				position: absolute;
+				z-index: 1;
+				bottom: 0;
+				left: 0;
+			}
+			
+			&--active {
+				// background-color: skyblue;
+				color: $globalColor-style;
+				
+				&::after{
+					background-color: $globalColor-style;
+				}
+			}
+		}
+	}
+	
+	&-content{
+		@include initShadow;
+		border-radius: 15upx;
+		background-color: #FFFFFF;
+	}
+}

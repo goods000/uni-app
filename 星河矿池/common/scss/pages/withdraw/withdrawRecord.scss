@@ -1,0 +1,39 @@
+.record{
+	.recordBox{
+		&-list{
+			&-header{
+				@include flexBetween;
+				padding: 30upx 30upx;
+				border-radius: 20upx;
+				margin: 0 30upx;
+				background: $globalColor-white;
+				&-title{
+					color: $globalColor-fontStyle;
+					font-weight: bold;
+					font-size: 32upx;
+					@include initBeforeHolder;
+				}
+				&-price{
+					color: $globalColor-style;
+					font-size: 32upx;
+					font-weight: bold;
+				}
+			}
+			&-item{
+				@include flexBetween;
+				padding: 20upx 30upx;
+				&-title{
+					color: #999999;
+					font-size: 24upx;
+				}
+				&-status{
+					color: $globalColor-fontStyle;
+					font-size: 28upx;
+					word-break: break-all;
+					text-align: right;
+					width: 70%;
+				}
+			}
+		}
+	}
+}

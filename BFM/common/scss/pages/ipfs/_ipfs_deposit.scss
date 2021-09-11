@@ -1,0 +1,98 @@
+.bgBox {
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	@include fullImage;
+}
+
+.main {
+	position: relative;
+	z-index: 1;
+	padding: 0;
+}
+
+.listBox {
+	padding: 30upx;
+
+	&-wrapper {
+		// padding: 60upx;
+	}
+
+	&-list {
+		padding: 45upx;
+		border-radius: 60rpx;
+		margin-bottom: 30upx;
+		padding-right: 90upx;
+		
+		background: url(@/static/public/icon-arrow-right-white.png) no-repeat;
+		background-size: 14upx 26upx;
+		background-position: calc(100% - 45upx) center;
+		background-color: #0F1D1E;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&-content {
+		@include flexLeft;
+		font-size: 0;
+		margin-bottom: 30upx;
+	}
+
+	&-title {
+		font-size: 24rpx;
+		font-family: PingFang SC, PingFang SC-Regular;
+		font-weight: 400;
+		color: #ffffff;
+		margin-right: 15upx;
+	}
+
+	&-desc {
+		font-size: 16rpx;
+		font-weight: 400;
+		color: #2BFFB0;
+		padding: 6upx 20upx;
+		
+		background: #1f4341;
+		border-radius: 4rpx;
+	}
+
+	&-btn {
+		background: linear-gradient(138deg, #2c7be8 8%, #1747a7 94%);
+		border-radius: 20rpx;
+		font-size: 24rpx;
+		font-weight: 700;
+		color: #ffffff;
+		padding: 4upx 40upx;
+	}
+
+	&-itemBox {
+		@include flexLeft;
+		align-items: flex-end;
+
+		&__item {
+			flex: 1;
+
+			&-data {
+				font-size: 32rpx;
+				font-weight: 700;
+				color: #FFFFFF;
+				margin-bottom: 8upx;
+
+				&--style {
+					color: #cd2828;
+				}
+			}
+			&-label {
+				font-size: 24rpx;
+				font-weight: 400;
+				color: #DDDDDD;
+			}
+		}
+	}
+}

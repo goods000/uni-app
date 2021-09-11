@@ -1,0 +1,51 @@
+.infoBox {
+	padding: 0 30upx;
+	&-wrapper {
+		@include flexBetween;
+		padding: 30upx 0;
+		border-bottom: 1upx solid #cccccc;
+	}
+
+	&-label {
+		@include initBeforeHolder;
+		color: #333333;
+		font-size: 32upx;
+		font-weight: 300;
+	}
+
+	&-data {
+		color: $globalColor-style;
+		font-size: 32upx;
+		font-weight: 300;
+	}
+}
+
+.listBox {
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-list {
+		@include flexBetween;
+		align-items: flex-start;
+		margin-bottom: 30upx;
+
+		&__label {
+			color: #999999;
+			font-size: 28upx;
+			width: 300upx;
+		}
+
+		&__data {
+			word-break: break-all;
+			text-align: right;
+			flex: 1;
+			color: #333333;
+			font-size: 28upx;
+			font-weight: 300;
+			&--blue {
+				color: $globalColor-style;
+			}
+		}
+	}
+}

@@ -1,0 +1,80 @@
+page{
+	background-color: $globalColor-bgStyle;
+	/* #ifdef APP-PLUS */
+	min-height: 100vh;
+	/* #endif */
+	overflow: scroll;
+}
+.bgBox{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: $globalColor-style;
+	height: 200upx;
+	z-index: 0;
+}
+
+.header_fixed + view{
+	padding-top: 120upx !important;
+}
+
+.record{
+	.recordBox{
+		margin: 0 30upx;
+		&-list{
+			padding-top: 20upx;
+			margin-bottom: 20upx;
+			border-radius: 20upx;
+			background: $globalColor-white;
+			&-header{
+				@include flexBetween;
+				padding: 0 30upx;
+				&-title{
+					color: $globalColor-fontStyle;
+					font-weight: bold;
+					font-size: 32upx;
+					@include initBeforeHolder;
+				}
+				&-price{
+					color: $globalColor-fontStyle;
+					font-weight: bold;
+					font-size: 28upx;
+					image{
+						width: 16upx;
+					}
+				}
+			}
+			&-box{
+				@include flexLeft;
+			}
+			&-item:nth-child(1){width: 40%;}
+			&-item:nth-last-child(1){@include flexRightColumn;}
+			&-item{
+				@include flexLeftColumn;
+				padding: 20upx 30upx;
+				width: 30%;
+				&-title{
+					color: #999999;
+					font-size: 24upx;
+				}
+				&-status{
+					color: $globalColor-fontStyle;
+					font-size: 28upx;
+					font-weight: bold;
+					word-break: break-all;
+					text-align: right;
+					white-space: nowrap;
+				}
+			}
+			&-hash{
+				border-top: 1px dashed $globalColor-border;
+				border-radius: 0 0 20upx 20upx;
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: bold;
+				padding: 20upx 0upx;
+				margin: 0 26upx;
+			}
+		}
+	}
+}

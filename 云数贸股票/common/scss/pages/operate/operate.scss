@@ -1,0 +1,106 @@
+.loginBox{
+	background: url(../../static/operate/icon-login-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	&-warpper{
+		padding: 10upx 30upx 64upx;
+		&-title{
+			color: $globalColor-white;
+			font-size: 52upx;
+		}
+		&-txt{
+			color: $globalColor-white;
+			font-size: 24upx;
+			margin-top: 10upx;
+		}
+	}
+}
+
+.content{
+	padding: 47upx 30upx;
+	&__title{
+		color: $globalColor-style;
+		font-size: 42upx;
+		font-weight: bold;
+		margin-top: 70upx;
+	}
+	&-warpper{
+		@include flexLeftColumn;
+		&-mt{
+			margin-top: 60upx;
+		}
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			font-weight: bold;
+			margin-top: 70upx;
+			&-mt{
+				margin-top: 20upx;
+			}
+		}
+		&-input{
+			@include flexBetween;
+			border-bottom: 1px solid $globalColor-border;
+			padding: 29upx 0;
+			width: 100%;
+			&-picker{
+				color: #333333;
+				font-size: 32upx;
+				width: 18%;
+				background: url(../../static/operate/icon-operate-next.png) no-repeat;
+				background-position: calc(100% - 20upx) center;
+				background-size: 20upx 20upx;
+			}
+			input{
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				width: 90%;
+			}
+			&__see{
+				width: 44upx;
+			}
+		}
+		&-code{
+			color: $globalColor-style;
+			font-size: 32upx;
+			border-bottom: 1px solid $globalColor-style;
+			white-space: nowrap;
+		}
+	}
+	&-forgetTitle{
+		@include flexRight;
+		&-txt{
+			color: #999999;
+			font-size: 24upx;
+			margin-top: 20upx;
+		}
+	}
+}
+
+.operateBtn{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 52upx;
+	padding: 30upx;
+	width: 100%;
+	&-btn{
+		background: $globalColor-style;
+		color: $globalColor-white;
+		font-size: 36upx;
+		font-weight: bold;
+		padding: 27upx 0;
+		text-align: center;
+		border-radius: 20upx;
+	}
+	&-title{
+		color: $globalColor-fontStyle;
+		font-size: 24upx;
+		margin-top: 44upx;
+		text-align: center;
+		text{
+			color: $globalColor-style;
+			font-size: 24upx;
+		}
+	}
+}

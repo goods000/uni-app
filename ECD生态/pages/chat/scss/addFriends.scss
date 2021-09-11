@@ -1,0 +1,115 @@
+page,.page{
+	background: #EDF1F4;
+	height: 100vh;
+	overflow: scroll;
+}
+.addFriends{
+	&-search{
+		background: $globalColor-white;
+		border-radius: 12upx;
+		padding: 24upx 30upx;
+		margin: 38upx 30upx 32upx;
+		@include flexLeft;
+		&__image{
+			width: 40upx;
+			height: 40upx;
+			margin-right: 16upx;
+		}
+		&.showCloseBtn {
+			.addFriends-search__fixedBox-btn--clear {
+				display: flex;
+			}
+		}
+		input{
+			font-size: 32upx;
+			font-family: DINPro;
+			font-weight: 500;
+			color: #0C1E37;
+			width: 85%;
+		}
+		&--input{
+			font-size: 30upx;
+			color: #CCCCCC;
+		}
+		
+		&__fixedBox {
+			@include flexRight;
+		
+			&-btn {
+				width: 60upx;
+				height: 100%;
+				z-index: 999;
+				@include flexCenter;
+				&--clear {
+					display: none;
+					image {
+						width: 26upx;
+						height: 26upx;
+						@include fullImage;
+					}
+				}
+			}
+		}
+	}
+	&-uid{
+		@include flexCenter;
+		&__num{
+			font-size: 28upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: $globalColor-fontStyle;
+			width: 60%;
+			text-align: center;
+		}
+		image{
+			width: 34upx;
+			height: 34upx;
+			margin-left: 25upx;
+		}
+	}
+	&-wrapper{
+		margin-top: 58upx;
+		background: $globalColor-white;
+	}
+	&-list{
+		@include flexBetween;
+		padding:20upx 30upx 0upx 40upx;
+		&__image{
+			width: 94upx;
+			height: 94upx;
+			margin: 0 30upx 20upx 0;
+			border-radius: 50%;
+		}
+		&__item{
+			width: 80%;
+			@include flexBetween;
+			padding-bottom: 24upx;
+			border-bottom: 1px solid #EDF1F4;
+			// &:nth-last-child(1){border-bottom: none;}
+			&-title{
+				font-size: 32upx;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: $globalColor-fontStyle;
+			}
+			&-uid{
+				font-size: 24upx;
+				font-family: DINPro;
+				font-weight: 400;
+				color: #999999;
+				margin-top: 8upx;
+				white-space: nowrap;
+			}
+		}
+		&__btn{
+			background: $globalColor-style;
+			font-size: 28upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: $globalColor-white;
+			padding: 13upx 36upx;
+			border-radius: 8upx;
+			white-space: nowrap;
+		}
+	}
+}

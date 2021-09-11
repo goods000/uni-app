@@ -1,0 +1,66 @@
+
+.text-input {
+	width: 100%;
+	/* height: 100rpx; */
+	padding: 0;
+	display: block;
+}
+
+.news {
+	width: 100%;
+	font-size: 14px;
+	padding: 10upx 10px;
+	display: inline-block;
+	margin: 10rpx;
+	line-height: 50rpx;
+	position:relative;
+	top: 0;
+	background-color: #EDF1F4;
+	border-radius: 12upx;
+	flex: 1;
+	max-height: 200rpx;
+	min-height: 60rpx;
+	overflow: scroll;
+}
+
+.send_btn {
+	width: 80rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 17px;
+	color: #000;
+	padding: 0;
+	display: inline-block;
+	float: right;
+	margin: 8rpx 16rpx auto auto;
+	background-color: #fff;
+}
+
+.f-row{
+	/* height:100rpx; */
+	display:flex;
+	align-items:center;
+	background-color: #fff;
+}
+.send-btn-style{
+	font-size: 10px;
+	background-color: #2196F3;
+	color: #fff;
+    margin-right: 10px;
+}
+.hover{
+	background-color:#075ca1
+}
+.icon-mic{
+	width: 22px;
+    height: 22px;
+	padding: 5px 10px;
+	position: relative;
+	top: 2px;
+}
+.f-row-x{
+	padding-bottom: 30px;
+	display:flex;
+	align-items:center;
+	background-color: #fff;
+}

@@ -1,0 +1,24 @@
+.noticeDetailBox {
+	position: relative;
+	z-index: 1;
+	padding: 30upx 0;
+	&-wrapper {
+		padding: 0 30upx;
+	}
+	&-title {
+		color: $globalColor-fontStyle;
+		font-size: 42upx;
+		margin-bottom: 30upx;
+		font-weight: 300;
+	}
+	&-date {
+		color: #999999;
+		font-size: 24upx;
+		margin-bottom: 30upx;
+	}
+	&-data {
+		font-size: 28upx;
+		color: #626266;
+		word-break: break-all;
+	}
+}

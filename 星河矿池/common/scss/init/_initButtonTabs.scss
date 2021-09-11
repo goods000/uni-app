@@ -1,0 +1,36 @@
+.initButtonTabs{
+	&-control {
+		@include flexCenter;
+		position: relative;
+		overflow: hidden;
+		&__aniBg {
+			@include initTransition(0.4);
+			display: inline-block;
+			width: 20%;
+			height: 100%;
+			border-bottom:2px solid $globalColor-style;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+	
+		&__item {
+			@include flexCenter;
+			@include initTransition(0.4);
+			color: #101010;
+			font-size: 28upx;
+			font-weight: 300;
+			flex: 1;
+			padding: 20upx 0;
+			position: relative;
+			z-index: 1;
+			font-weight: bold;
+	
+			&--active {
+				color: $globalColor-style;
+				font-weight: bold;
+			}
+		}
+	}
+}

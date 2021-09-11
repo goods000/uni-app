@@ -1,0 +1,82 @@
+@each $theme-name, $theme-map in $themes {
+	[data-theme='#{$theme-name}'] {
+		background-color: map-get($theme-map, 'globalColor-holderStyle');
+	}
+}
+
+.listBox {
+	&-wrapper {
+		padding: 30upx;
+	}
+	
+	&-list {
+		@include themeBgColor('globalColor-bgStyle');
+		@include initShadow;
+		margin-bottom: 30upx;
+		padding: 30upx;
+		border-radius: 24upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&__header {
+			@include flexLeft;
+			margin-bottom: 30upx;
+		}
+
+		&__date {
+			@include initBeforeHolder;
+			@include themeColor('globalColor-fontStyle');
+			font-size: 28upx;
+			font-weight: 300;
+			flex: 1;
+		}
+
+		&__body {
+			@include flexBetween;
+		}
+		
+		&__title {
+			@include initBeforeHolder;
+			color: #333333;
+			font-size: 32upx;
+			font-weight: 300;
+			margin-right: 15upx;
+			padding-left: 20upx;
+		}
+
+		&__period {
+			color: #999999;
+			font-size: 20upx;
+		}
+
+		&__item {
+			flex: 1;
+			
+			&--flex2{
+				flex: 2;
+			}
+
+			&--flex3{
+				flex: 3;
+			}
+			
+			&:last-child{
+				text-align: right;
+			}
+
+			&-label {
+				@include themeColor('globalColor-fontSubStyle');
+				font-size: 24upx;
+				margin-bottom: 8upx;
+			}
+
+			&-data {
+				@include themeColor('globalColor-fontStyle');
+				font-size: 28upx;
+				font-weight: 300;
+			}
+		}
+	}
+}

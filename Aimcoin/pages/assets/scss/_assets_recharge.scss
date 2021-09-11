@@ -1,0 +1,211 @@
+[data-theme='light'] {
+	background-color: #1560cc;
+}
+
+[data-theme='dark'] {
+	background-color: #0d1625;
+}
+
+.infoBox {
+	padding: 30upx;
+	margin-bottom: 30upx;
+}
+
+.titleBox {
+	&-wrapper {
+	}
+
+	&-label {
+		color: #ffffff;
+		font-size: 52upx;
+		font-weight: bold;
+	}
+}
+
+.selectBox {
+	// padding: 30upx 0;
+	&-wrapper {
+		@include themeBgColor('globalColor-bgStyle');
+		@include flexBetween;
+		@include initShadow;
+		padding: 30upx;
+		border-radius: 20upx;
+	}
+
+	&-label {
+		color: #666666;
+		font-weight: bold;
+		font-size: 28upx;
+	}
+
+	&-data {
+		@include themeColor('globalColor-fontStyle');
+		@include flexRight;
+		font-size: 32upx;
+		font-weight: 300;
+		background-image: url(@/static/public/icon-arrow-bottom-grey.png);
+		background-size: 26upx 14upx;
+		background-position: right center;
+		background-repeat: no-repeat;
+		padding-right: 45upx;
+	}
+}
+
+.filterBox {
+	margin-top: 30upx;
+
+	&-label {
+		color: #ffffff;
+		font-size: 28upx;
+		font-weight: bold;
+		margin-bottom: 15upx;
+	}
+
+	&-button {
+		@include flexLeft;
+
+		&__btn {
+			@include themeColor('globalColor-themeStyle');
+			@include themeBorderColor('globalColor-themeStyle');
+			@include initTransition(0.4);
+			@include themeBgColor('globalColor-bgStyle');
+			font-size: 24upx;
+			font-weight: 300;
+			border-radius: 12upx;
+			padding: 8upx 15px;
+			border: 1px solid;
+			margin-right: 15upx;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&--active {
+				@include themeColorValue(#ffffff,#ffffff);
+				@include themeBgColor('globalColor-themeStyle');
+			}
+		}
+	}
+}
+
+.contentBox {
+	padding: 0 90upx;
+	margin-bottom: 30upx;
+
+	&-wrapper {
+		@include themeBgColor('globalColor-bgStyle');
+		@include flexCenterColumn;
+		@include initShadow;
+		padding: 60upx 0;
+	}
+}
+
+.qrcodeBox {
+	@include flexCenter;
+	margin: 0 auto;
+	padding: 30upx;
+	// background-color: #f7f6fb;
+	border-radius: 15upx;
+	overflow: hidden;
+	&-image {
+		// @include fullImage;
+		margin: 0 auto;
+		width: 380upx;
+		image {
+			width: 380upx;
+			height: 380upx;
+		}
+	}
+}
+
+.savaBtn {
+	margin-top: 30rpx;
+
+	&-btn {
+		@include themeBgColor('globalColor-themeStyle');
+		@include flexCenter;
+		color: #ffffff;
+		font-size: 28upx;
+		font-weight: 300;
+		border-radius: 15upx;
+		margin: 0 auto;
+		padding: 25upx 30upx;
+	}
+}
+
+.addressBox {
+	text-align: center;
+	margin-top: 30upx;
+	width: 100%;
+	padding: 0 60upx;
+
+	&-label {
+		@include themeColor('globalColor-fontSubStyle');
+		font-size: 28upx;
+		font-weight: 300;
+		margin-bottom: 15upx;
+	}
+
+	&-data {
+		@include themeColor('globalColor-fontStyle');
+		font-size: 28upx;
+		font-weight: 300;
+		// width: 80%;
+		word-break: break-all;
+		margin: 0 auto;
+		margin-bottom: 15upx;
+	}
+
+	&-info {
+		color: $globalColor-green;
+		font-size: 24upx;
+		margin-bottom: 15upx;
+	}
+
+	&-button {
+		@include fullImage;
+		width: 40upx;
+		margin: 0 auto;
+	}
+}
+
+.tipsBox {
+	text-align: left;
+	padding: 30upx;
+	padding-bottom: calc(constant(safe-area-inset-bottom) + 30upx);
+	padding-bottom: calc(env(safe-area-inset-bottom) + 30upx);
+
+	&-title {
+		color: #FFFFFF;
+		font-size: 32upx;
+		font-weight: 300;
+		margin-bottom: 15upx;
+		text-align: left;
+	}
+
+	&-content {
+		&__list {
+			font-size: 24upx;
+			color: #FFFFFF;
+		}
+	}
+}
+
+.init {
+	padding: 30upx;
+	&-wrapper {
+		box-shadow: 0 0 16upx 0upx rgba(147, 147, 147, 0.27);
+		padding: 30upx;
+	}
+
+	&-title {
+		font-size: 32upx;
+		font-weight: 300;
+		margin-bottom: 15upx;
+	}
+
+	&-input {
+		border-bottom: 1upx solid skyblue;
+		margin-bottom: 15upx;
+	}
+}

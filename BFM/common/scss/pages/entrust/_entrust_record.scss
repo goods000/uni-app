@@ -1,0 +1,121 @@
+.tabsBox {
+	&-control {
+		@include flexCenter;
+		&__item {
+			@include initTransition(0.4);
+			flex: 1;
+			text-align: center;
+			padding: 30upx 0;
+			font-size: 28upx;
+			color: #ffffff;
+			font-weight: bold;
+			position: relative;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 60upx;
+				height: 4upx;
+				border-radius: 15upx;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				background-color: transparent;
+				@include initTransition(0.4);
+			}
+
+			&:after {
+				content: '';
+				display: inline-block;
+				width: 2upx;
+				height: 50%;
+				position: absolute;
+				right: -1upx;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: #333333;
+			}
+
+			&:last-child {
+				&:after {
+					display: none;
+				}
+			}
+
+			&--active {
+				color: $globalColor-style;
+
+				&::before {
+					background-color: $globalColor-style;
+				}
+			}
+		}
+	}
+}
+
+.listBox {
+	&-wrapper {
+		padding: 30upx;
+	}
+	&-list {
+		background-color: #0f1d1f;
+		padding: 30upx;
+		border-radius: 30upx;
+		margin-bottom: 30upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&__content {
+			@include flexCenter;
+		}
+
+		&__logo {
+			width: 170upx;
+			margin-right: 60upx;
+			@include fullImage;
+		}
+
+		&__title {
+			@include initBeforeHolder;
+			color: #ffffff;
+			font-size: 28upx;
+			font-weight: bold;
+			margin-bottom: 30upx;
+		}
+
+		&__list {
+			@include flexLeft;
+			margin-bottom: 15upx;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&-label {
+				color: #999999;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+			&-data {
+				color: #ffffff;
+				font-size: 24upx;
+				font-weight: 300;
+
+				&--highlight {
+					color: $globalColor-style;
+				}
+			}
+		}
+
+		&__btn {
+			color: $globalColor-style;
+			font-size: 28upx;
+			font-weight: bold;
+			text-align: center;
+			margin-top: 30upx;
+			padding-top: 30upx;
+			border-top: 1upx dashed #666666;
+		}
+	}
+}

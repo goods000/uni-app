@@ -1,0 +1,115 @@
+.pages {
+	background: url(../../static/firstPage/img-bg.jpg) no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 100vh;
+}
+
+.main {
+	@include flexCenterColumn;
+	align-items: flex-start;
+	height: 100%;
+	width: 100%;
+	padding: 0 60upx;
+}
+
+.logoBox {
+	margin-bottom: 45upx;
+	// padding: 150upx 0;
+
+	&-img {
+		width: 390upx;
+		@include fullImage;
+	}
+}
+
+.contentBox {
+	margin-bottom: 300upx;
+	&-wrapper {
+	}
+
+	&-title {
+		font-size: 36upx;
+		font-weight: bold;
+		margin-bottom: 15upx;
+		color: #ffffff;
+	}
+
+	&-desc {
+		font-size: 32upx;
+		font-weight: 300;
+		color: #ffffff;
+	}
+}
+
+.agreementBox {
+	&-wrapper {
+		@include flexLeft;
+		padding: 30upx;
+		margin-top: 60upx;
+	}
+
+	&-checkbox {
+		width: 24upx;
+		height: 24upx;
+		border-radius: 50%;
+		border: 1upx solid #fefefe;
+		margin-right: 15upx;
+		position: relative;
+
+		&--active {
+			&::after {
+				content: '';
+				display: inline-block;
+				width: 16upx;
+				height: 16upx;
+				background-color: #fefefe;
+				border-radius: 50%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	&-message {
+		font-size: 28upx;
+		color: #fefefe;
+		text {
+			color: #f28018;
+		}
+	}
+}
+
+.buttonBox {
+	width: 100%;
+	&-wrapper {
+		// @include flexCenter;
+		// padding: 15upx 30upx;
+	}
+
+	&-btn {
+		flex: 1;
+		font-size: 32upx;
+		padding: 30upx 0;
+		border-radius: 60upx;
+		text-align: center;
+		margin-bottom: 30upx;
+		font-weight: 300;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&--orange {
+			background-color: #cb0101;
+			color: #ffffff;
+		}
+
+		&--white {
+			background-color: rgba(255, 255, 255, 0.7);
+			color: #cb0101;
+		}
+	}
+}

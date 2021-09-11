@@ -1,0 +1,28 @@
+.initButton {
+	font-size: 28upx;
+	@include flexCenter;
+	
+	&-btn {
+		flex: 1;
+		padding: 30upx 0;
+		border-radius: 8upx;
+		font-size: 100%;
+		
+		@include flexCenter;
+		
+		+ .initButton-btn{
+			margin-top: 30upx;
+		}
+		
+		&--green {
+			background-color: $globalColor-green;
+			color: #FFFFFF;
+		}
+		
+		&--blue {
+			background-color: $globalColor-blue;
+			box-shadow: 2px 2px 20upx  rgba(58, 121, 222, 0.5);
+			color: #FFFFFF;
+		}
+	}
+}

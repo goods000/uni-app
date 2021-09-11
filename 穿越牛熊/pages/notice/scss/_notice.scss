@@ -1,0 +1,48 @@
+@each $theme-name, $theme-map in $themes {
+	[data-theme='#{$theme-name}'] {
+		background-color: map-get($theme-map, 'globalColor-holderStyle');
+	}
+}
+
+.noticeBox {
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-item {
+		@include themeBgColor('globalColor-bgStyle');
+		@include flexBetween;
+		@include initShadow;
+		border-radius: 24upx;
+		padding: 30upx;
+		margin-bottom: 30upx;
+		
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		&__content {
+			width: 100%;
+			padding-right: 45upx;
+			flex: 1;
+			background: url(@/static/public/icon-arrow-right-grey.png) no-repeat;
+			background-position: right center;
+			background-size: 14upx 26upx;
+		}
+
+		&__title {
+			@include themeColor('globalColor-fontStyle');
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			width: 100%;
+			font-size: 32upx;
+			margin-bottom: 15upx;
+			font-weight: 300;
+		}
+		&__date {
+			@include themeColor('globalColor-fontSubStyle');
+			font-size: 24upx;
+		}
+	}
+}

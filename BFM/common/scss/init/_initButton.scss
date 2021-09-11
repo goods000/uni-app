@@ -1,0 +1,32 @@
+.initButton {
+	font-size: 36upx;
+	@include flexCenterColumn;
+	
+	&--absolute{
+		position: absolute;
+		bottom: 60upx;
+		left: 0;
+		width: 100%;
+	}
+	
+	&-btn {
+		flex: 1;
+		padding: 20upx 0;
+		border-radius: 8upx;
+		font-size: 100%;
+		width: 100%;
+		
+		@include flexCenter;
+		
+		+ .initButton-btn{
+			margin-top: 30upx;
+		}
+		
+		&--style {
+			// @include initButtonGrad;
+			background-color: $globalColor-style;
+			color: #000000;
+			font-weight: bold;
+		}
+	}
+}

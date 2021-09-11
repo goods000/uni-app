@@ -1,0 +1,85 @@
+.safety{
+	&-wrapper{
+		&-item{
+			background: $globalColor-white;
+			padding: 30upx;
+			@include flexBetween;
+			margin-bottom: 20upx;
+			&__title{
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+			}
+			&__operate{
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				@include flexRight;
+				&--edit{
+					color: $globalColor-border;
+					font-size: 32upx;
+				}
+				&--image{
+					margin-left: 10upx;
+					width: 40upx;
+					height: 40upx;
+				}
+			}
+		}
+	}
+}
+
+.content{
+	padding: 0upx 30upx;
+	&__title{
+		color: $globalColor-style;
+		font-size: 42upx;
+		font-weight: bold;
+		margin-top: 70upx;
+	}
+	&-warpper{
+		@include flexLeftColumn;
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			margin-top: 45upx;
+			&-mt{
+				margin-top: 20upx;
+			}
+		}
+		&-input{
+			@include flexBetween;
+			border-bottom: 1px solid $globalColor-border;
+			padding: 29upx 0;
+			width: 100%;
+			&-picker{
+				color: #333333;
+				font-size: 32upx;
+				width: 18%;
+				background: url(../../static/operate/icon-operate-next.png) no-repeat;
+				background-position: calc(100% - 20upx) center;
+				background-size: 20upx 20upx;
+			}
+			input{
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				width: 90%;
+			}
+			&__see{
+				width: 44upx;
+			}
+		}
+		&-code{
+			color: $globalColor-style;
+			font-size: 32upx;
+			border-bottom: 1px solid $globalColor-style;
+			white-space: nowrap;
+		}
+	}
+	&-forgetTitle{
+		@include flexRight;
+		&-txt{
+			color: #999999;
+			font-size: 24upx;
+			margin-top: 20upx;
+		}
+	}
+}

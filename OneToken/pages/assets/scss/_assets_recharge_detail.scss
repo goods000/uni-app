@@ -1,0 +1,31 @@
+.infoBox {
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-price {
+		padding-bottom: 30upx;
+		font-size: 54upx;
+		color: $globalColor-style;
+		font-weight: 300;
+		border-bottom: 1upx solid #eeeeee;
+	}
+
+	&-list {
+		@include flexBetween;
+		padding: 30upx 0;
+		border-bottom: 1upx solid #eeeeee;
+		font-size: 28upx;
+		font-weight: 300;
+		
+		&__title {
+			color: #999999;
+			flex: 1;
+		}
+		&__data {
+			flex: 1;
+			word-break: break-all;
+			text-align: right;
+		}
+	}
+}

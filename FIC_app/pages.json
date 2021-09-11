@@ -1,0 +1,391 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/firstPage/firstPage",
+			"style": {
+				"navigationBarTitleText": "登录状态监测页",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/operate/first",
+			"style": {
+				"navigationBarTitleText": "登录注册页",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "首页",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			} 
+		}, {
+			"path": "pages/operate/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{ 
+			"path": "pages/customer/customer",
+			"style": {
+				"navigationBarTitleText": "在线客服",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": true
+				}
+			}
+		},{
+			"path": "pages/invite/invite",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "邀请好友",
+				"bounce": "none",
+				"app-plus": { 
+					"titleNView": false
+				} 
+			}
+		},  {
+			"path": "pages/team/team",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "我的团队",
+				"bounce": "none",
+				"app-plus": { 
+					"titleNView": false
+				} 
+			}
+		}, {
+			"path": "pages/help/help",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "帮助中心",
+				"bounce": "none",
+				"app-plus": { 
+					"titleNView": false
+				} 
+			}
+		},{
+			"path": "pages/setting/editPay",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "修改交易密码",
+				"bounce": "none",
+				"app-plus": { 
+					"titleNView": false
+				} 
+			}
+		}, {
+			"path": "pages/setting/editLogin",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "修改登录密码",
+				"bounce": "none",
+				"app-plus": { 
+					"titleNView": false
+				} 
+			}
+		},{
+			"path": "pages/setting/setting",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "安全中心",
+				"bounce": "none",
+				"app-plus": { 
+					"titleNView": false
+				} 
+			}
+		}, {
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "我的",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			}
+		},  {
+			"path": "pages/record/record",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "收益记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			}
+		},{
+			"path": "pages/about/about",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "关于我们",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			}
+		}, {
+			"path": "pages/recharge/rechargeRecord",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "充币记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			}
+		}, {
+			"path": "pages/recharge/recharge",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "充币",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			}
+		}, { 
+			"path": "pages/transfer/transferRecord",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "划转记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/transfer/transfer",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "划转",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			}
+		}, {
+			"path": "pages/exchange/exchangeRecord",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "兑换记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			}
+		},{
+			"path": "pages/exchange/exchange",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "兑换",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			}
+		}, {
+			"path": "pages/withdraw/withdrawRecord",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "提币记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			}
+		}, {
+			"path": "pages/withdraw/withdraw",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "提币",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			}
+		}, {
+			"path": "pages/asset/asset",
+			"style": {
+				"navigationBarTitleText": "资产",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			}
+		}, {
+			"path": "pages/asset/assetRecord",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "明细记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			}
+		}, 
+		{
+			"path": "pages/collection/collection",
+			"style": {
+				"navigationBarTitleText": "我的云算力",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/buyCurrency/buyCurrency",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "快捷买排单币",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}	
+		},{
+			"path": "pages/buyCurrency/buyCurrencyRecord",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "购买记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/buyCurrency/buyCurrency",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "购买",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{ 
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "算力购买",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/notice/notice",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "系统公告",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/notice/noticeDetails",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "公告详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/operate/setEmailPassword",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "设置密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/setMobilePassword",
+			"style": {
+				"navigationBarTitleText": "设置密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/mobileRegister",
+			"style": {
+				"navigationBarTitleText": "手机注册",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/emailRegister",
+			"style": {
+				"navigationBarTitleText": "邮箱注册",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/forget",
+			"style": {
+				"navigationBarTitleText": "忘记密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "Filecash",
+		"navigationBarBackgroundColor": "#3D64FF",
+		"backgroundColor": "#E9E9E9"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#1F2F53",
+		"borderStyle": "white",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabbar/icon-tabbar-1.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-1-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/asset/asset",
+				"iconPath": "static/tabbar/icon-tabbar-2.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-2-active.png",
+				"text": "资产"
+			}, {
+				"pagePath": "pages/user/user",
+				"iconPath": "static/tabbar/icon-tabbar-3.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-3-active.png",
+				"text": "我的"
+			}
+		]
+	}
+}

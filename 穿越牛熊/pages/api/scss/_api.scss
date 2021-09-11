@@ -1,0 +1,107 @@
+@each $theme-name, $theme-map in $themes {
+	[data-theme='#{$theme-name}'] {
+		background-color: map-get($theme-map, 'globalColor-holderStyle');
+	}
+}
+
+.listBox {
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-list {
+		@include themeBorderColor('globalColor-bgStyle');
+		@include themeBgColor('globalColor-bgStyle');
+		@include initShadow;
+		border-radius: 24upx;
+		padding: 30upx;
+		margin-bottom: 30upx;
+		border: 1px solid;
+		
+		&--active{
+			@include themeBorderColor('globalColor-themeStyle');
+			border: 1px solid;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		// padding: 30upx 0;
+		// border-bottom: 1upx solid #cccccc;
+		&__title {
+			@include initBeforeHolder;
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			margin-bottom: 15upx;
+			font-weight: bold;
+		}
+	}
+
+	&-itemBox {
+		@include flexCenter;
+
+		&__item {
+			// @include justifiedLayout;
+			flex: 1;
+
+			&:last-child {
+				text-align: right;
+			}
+
+			&--flex2 {
+				flex: 2;
+			}
+
+			&-label {
+				@include themeColor('globalColor-fontSubStyle');
+				font-size: 20upx;
+				font-weight: 300;
+				margin-bottom: 8upx;
+			}
+
+			&-data {
+				@include themeColor('globalColor-fontStyle');
+				font-size: 28upx;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.iconBox {
+	@include flexLeft;
+	&-icon {
+		@include fullImage;
+		width: 24upx;
+		margin-right: 8upx;
+	}
+	&-label {
+		@include themeColor('globalColor-fontStyle');
+		font-size: 28upx;
+		font-weight: 300;
+	}
+}
+
+.pickerBox{
+	&-wrapper{
+		@include themeBgColor('globalColor-bgStyle');
+		position: relative;
+		border-top-left-radius: 20upx;
+		border-top-right-radius: 20upx;
+	}
+	
+	&-list{
+		@include themeColor('globalColor-fontStyle');
+		@include themeBorderColor('globalColor-holderStyle');
+		font-size: 32upx;
+		font-weight: bold;
+		text-align: center;
+		padding: 30upx 0;
+		border-bottom: 1px solid;
+		
+		&:last-child{
+			border-bottom: 0;
+		}
+	}
+}

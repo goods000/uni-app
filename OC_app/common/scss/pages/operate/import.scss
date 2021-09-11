@@ -1,0 +1,178 @@
+.importBox{
+	&-header{
+		padding: 70upx 28upx 36upx;
+		&-left{
+			position: absolute;
+			left: 28upx;
+			top: 100upx;
+			image{
+				width: 40upx;
+			}
+		}
+	}
+	&-title{
+		color: $globalColor-fontStyle;
+		font-size: 64upx;
+		text-align: center;
+	}
+	
+	&-text{
+		margin: 14upx 30upx;
+		padding: 30upx;
+		border-radius: 8upx;
+		background: $globalColor-bgStyle;
+		border: 1px solid #DDE5EE;
+		&-label{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			margin-left: 30upx;
+		}
+		textarea{
+			min-height: 300upx;
+			color: $globalColor-fontStyle;
+		}
+		&-box{
+			min-height: 400upx;
+			color: $globalColor-fontStyle;
+			display: block;
+			flex-wrap: wrap;
+			&__words{
+				position: relative;
+				border: 1px solid $globalColor-bgStyle;
+				background: #FFFFFF;
+				padding: 12upx 32upx;
+				border-radius: 8upx;
+				width: 31.33%;
+				margin: 15upx 2% 0 0;
+				display: inline-block;
+				&--txt{
+					text-align: center;
+					image{
+						position: absolute;
+						right: -5upx;
+						top: -5upx;
+						width: 18upx;
+					}
+				}
+			}
+		}
+	}
+	
+	&-list{
+		@include flexLeft;
+		flex-wrap: wrap;
+		margin: 30upx 30upx 330upx;
+		&-item{
+			width: 100%;
+			border: 1px solid $globalColor-bgStyle;
+			padding: 18upx 32upx;
+			border-radius: 8upx;
+			margin: 12upx 0;
+			position: relative;
+			&-label{
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				margin-top: 15upx;
+			}
+			input{
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				width: 92%;
+			}
+			image{
+				position: absolute;
+				top: 40%;
+				right: 30upx;
+				width: 24upx;
+			}
+		}
+		&-wordsBox{
+			width: 100%;
+			@include flexLeft;
+			flex-wrap: wrap;
+			&-words{
+				position: relative;
+				border: 1px solid $globalColor-bgStyle;
+				padding: 18upx 32upx;
+				border-radius: 8upx;
+				width: 31.33%;
+				margin: 15upx 2% 0 0;
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				text-align: center;
+				&__tips{
+					color: #666666;
+					font-size: 20upx;
+					position: absolute;
+					top: 15upx;
+					right: 15upx;
+				}
+			}
+			&-wordsChioce{
+				background: #EEF2F8;
+				position: relative;
+				border: 1px solid #EEF2F8;
+				padding: 18upx 32upx;
+				border-radius: 8upx;
+				width: 31.33%;
+				margin: 15upx 2% 0 0;
+				color: #DDDDDD;
+				font-size: 32upx;
+				text-align: center;
+			}
+		}
+	}
+	&-btn{
+		padding-bottom: 30upx;
+	}
+	&-txt{
+		margin: 132upx 30upx 60upx;
+		color: $globalColor-fontStyle;
+		font-size: 64upx;
+	}
+}
+
+.setup{
+	margin: 0 30upx;
+	padding-bottom: 30upx;
+	.importBox-list{
+		margin: 30upx 30upx 130upx !important;
+	}
+	&-title{
+		margin: 0 30upx;
+		&-txt{
+			color: #FF4343;
+			font-size: 20upx;
+		}
+	}
+}
+
+.exportBox{
+	@include flexCenterColumn;
+	&-image{
+		margin: 135upx 0 39upx;
+		image{
+			width: 170upx;
+		}
+	}
+	&-title{
+		color: #333333;
+		font-size: 28upx;
+	}
+	&-tips{
+		color: #FF4343;
+		font-size: 20upx;
+		width: 80%;
+		text-align: center;
+		margin: 8upx 0;
+	}
+	&-btn{
+		position: fixed;
+		bottom: 10%;
+		width: 100%;
+	}
+}
+
+
+
+

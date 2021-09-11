@@ -1,0 +1,571 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/firstPage/firstPage",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "登录状态检测",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}  
+		},{
+			"path": "pages/operate/first",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "登录注册选项页",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/setting/account",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "导出助记词",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/import",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "导入钱包",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/setup",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "创建钱包",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/seeWords",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "备份助记词和私钥",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/checkWords",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "验证助记词",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/export",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "导出助记词",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "首页",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/setting/setting",
+			"style": {
+				"navigationBarTitleText": "安全中心",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/setting/editPassword",
+			"style": {
+				"navigationBarTitleText": "修改钱包密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/setting/resetPassword",
+			"style": {
+				"navigationBarTitleText": "重置钱包密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/nodeOrder/nodeOrder",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "节点订单",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/nodeOrder/profitRecord",
+			"style": {
+				"navigationBarTitleText": "收益详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/nodeOrder/nodeRecord",
+			"style": {
+				"navigationBarTitleText": "节点详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/team/team",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "我的团队",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/payment/payment",
+			"style": {
+				"navigationBarTitleText": "收款方式",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/payment/addPayment",
+			"style": {
+				"navigationBarTitleText": "添加收款方式",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/payment/addBank",
+			"style": {
+				"navigationBarTitleText": "添加银行卡",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/payment/addMethods",
+			"style": {
+				"navigationBarTitleText": "添加微信或者银行卡",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/quotation/quotation",
+			"style": {
+				"navigationBarTitleText": "行情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/destruction/destruction",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "OC销毁",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},{
+			"path": "pages/invite/invite",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "邀请好友",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				} 
+			}
+		},{
+			"path": "pages/node/node",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "生态节点",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/chianApply/chianApply",
+			"style": {
+				"navigationBarTitleText": "链改申请",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/business/business",
+			"style": {
+				"navigationBarTitleText": "商家服务",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/business/businessApply",
+			"style": {
+				"navigationBarTitleText": "商家申请",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/business/businessOrder",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "订单详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/business/release",
+			"style": {
+				"navigationBarTitleText": "发布交易",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/business/releaseRecord",
+			"style": {
+				"navigationBarTitleText": "发布记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/business/businessRecord",
+			"style": {
+				"navigationBarTitleText": "交易记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/asset/asset",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "资产",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},{
+			"path": "pages/asset/assetRecord",
+			"style": {
+				"navigationBarTitleText": "资产记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},{
+			"path": "pages/withdraw/withdraw",
+			"style": {
+				"navigationBarTitleText": "提币",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		} ,{
+			"path": "pages/withdraw/withdrawRecord",
+			"style": {
+				"navigationBarTitleText": "提币记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},
+		{
+			"path": "pages/recharge/recharge",
+			"style": {
+				"navigationBarTitleText": "充币",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},{
+			"path": "pages/recharge/rechargeRecord",
+			"style": {
+				"navigationBarTitleText": "充币记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},
+		{
+			"path": "pages/transfer/transfer",
+			"style": {
+				"navigationBarTitleText": "转账",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},{
+			"path": "pages/transfer/transferRecord",
+			"style": {
+				"navigationBarTitleText": "转账记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},{
+			"path": "pages/conversion/conversion",
+			"style": {
+				"navigationBarTitleText": "划转",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},{
+			"path": "pages/conversion/conversionRecord",
+			"style": {
+				"navigationBarTitleText": "划转记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},{
+			"path": "pages/entrustOrder/entrustOrder",
+			"style": {
+				"navigationBarTitleText": "委托订单",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},{
+			"path": "pages/entrustOrder/entrustRecord",
+			"style": {
+				"navigationBarTitleText": "交易明细",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},{
+			"path": "pages/exchange/exchange",
+			"style": {
+				"navigationBarTitleText": "交易",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},{
+			"path": "pages/exchange/exchange_record",
+			"style": {
+				"navigationBarTitleText": "记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		},{
+			"path": "pages/explorer/explorer",
+			"style": {
+				"navigationBarTitleText": "区块浏览器",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": true
+				}
+			} 
+		} ,{
+			"path": "pages/announcement/announcement",
+			"style": {
+				"navigationBarTitleText": "公告",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		} ,{
+			"path": "pages/announcement/announcement_details",
+			"style": {
+				"navigationBarTitleText": "公告详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			} 
+		}, {
+			"path": "pages/workOrder/workOrder",
+			"style": {
+				"navigationBarTitleText": "工单",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/workOrder/workOrder_type",
+			"style": {
+				"navigationBarTitleText": "工单 - 选择类型",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/workOrder/workOrder_apply",
+			"style": {
+				"navigationBarTitleText": "工单 - 提交",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/workOrder/workOrder_detail",
+			"style": {
+				"navigationBarTitleText": "工单 - 详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/openSource/openSource",
+			"style": {
+				"navigationBarTitleText": "开源代码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": true
+				}
+			}
+		}, {
+			"path": "pages/ITO/ITO",
+			"style": {
+				"navigationBarTitleText": "ITO",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ITO/introduction",
+			"style": {
+				"navigationBarTitleText": "XZ简介",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ITO-cash/cash",
+			"style": {
+				"navigationBarTitleText": "闪兑",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ITO-cash/cashRecord",
+			"style": {
+				"navigationBarTitleText": "闪兑记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Bcdex",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#333333",
+		"selectedColor": "#1779F6",
+		"borderStyle": "white",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabbar/icon-tabbar-1.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-1-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/quotation/quotation",
+				"iconPath": "static/tabbar/icon-tabbar-2.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-2-active.png",
+				"text": "行情" 
+			}, {
+				"pagePath": "pages/exchange/exchange",
+				"iconPath": "static/tabbar/icon-tabbar-3.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-3-active.png",
+				"text": "交易"
+			}, {
+				"pagePath": "pages/asset/asset",
+				"iconPath": "static/tabbar/icon-tabbar-4.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-4-active.png",
+				"text": "资产"
+			}
+		]
+	}
+}

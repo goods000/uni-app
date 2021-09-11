@@ -1,0 +1,28 @@
+.initFormBox {
+	padding: 30upx;
+}
+
+.fixedBox {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	
+	&-wrapper {
+		padding: 60upx 30upx;
+	}
+	
+	&-link {
+		@include flexCenter;
+		width: 100%;
+		text-align: center;
+		padding: 30upx;
+		font-size: 24upx;
+		font-family: 300;
+		
+		&__btn{
+			@include themeColor('globalColor-themeStyle');
+			text-decoration: underline;
+		}
+	}
+}

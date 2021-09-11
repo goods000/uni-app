@@ -1,0 +1,39 @@
+.listBox {
+	&-list {
+		padding: 0 30upx;
+		margin-bottom: 30upx;
+		&__header {
+			@include flexBetween;
+			height: 60upx;
+			// background-color: red;
+		}
+
+		&__content {
+			@include flexBetween;
+			padding: 15upx 0;
+		}
+
+		&__title {
+			@include initBeforeHolder;
+			color: #ffffff;
+			font-size: 28upx;
+			font-weight: bold;
+		}
+
+		&__item {
+			@include justifiedLayout;
+			flex: 1;
+
+			&-label {
+				font-size: 24upx;
+				color: #999999;
+				margin-bottom: 8upx;
+			}
+
+			&-data {
+				color: #ffffff;
+				font-size: 26upx;
+			}
+		}
+	}
+}

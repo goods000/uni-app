@@ -1,0 +1,32 @@
+.listBox {
+	&-wrapper {
+		// background-color: #0f1d1f;
+	}
+
+	&-list {
+		@include flexBetween;
+		padding: 30upx;
+		font-size: 28upx;
+		font-weight: 300;
+		color: #ffffff;
+		
+		&__title{
+			@include initBeforeHolder;
+			color: #ffffff;
+			font-size: 28upx;
+			font-weight: 300;
+			margin-bottom: 15upx;
+		}
+		
+		&__date{
+			color: #999999;
+			font-size: 28upx;
+		}
+
+		&__data {
+			font-size: 32upx;
+			font-weight: 300;
+			color: $globalColor-style;
+		}
+	}
+}

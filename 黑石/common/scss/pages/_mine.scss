@@ -1,0 +1,122 @@
+page,.pages{
+	background-color: #ededf2;
+}
+
+.userInfoBox {
+	border-bottom: 16upx solid #ededf2;
+
+	&-wrapper {
+		@include flexLeft;
+		// @include initGradBg;
+		background: url(@/static/mine/img-mine-bg.jpg) no-repeat;
+		background-position: center;
+		background-size: cover;
+		padding: 90upx 30upx;
+	}
+
+	&-avatar {
+		width: 100upx;
+		margin-right: 15upx;
+		@include fullImage;
+	}
+	&-content {
+		font-size: 28upx;
+	}
+
+	&-title {
+		margin-bottom: 10upx;
+		font-size: 36upx;
+		font-weight: bold;
+		color: #ffffff;
+		@include flexBetween;
+	}
+	&-msg {
+		font-size: 28upx;
+		color: #ffffff;
+	}
+
+	&-activeInfo {
+		@include flexRight;
+		font-size: 20upx;
+		margin-left: 30upx;
+
+		&__icon {
+			width: 24upx;
+			@include fullImage;
+			margin-right: 5upx;
+		}
+	}
+
+	&-code {
+		color: #ffffff;
+		font-size: 22upx;
+		position: relative;
+		padding-right: 50upx;
+	}
+
+	&-copy {
+		width: 40upx;
+		height: 40upx;
+		background: url(../../static/public/icon-copy-white.png) no-repeat;
+		background-position: center center;
+		background-size: 40upx 40upx;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&-id {
+		display: inline-block;
+		position: relative;
+		color: #90b5ff;
+		font-size: 22upx;
+		padding-right: 40upx;
+	}
+}
+
+.listBox {
+	&-wrapper {
+		// padding: 0 30upx;
+	}
+
+	&-plane {
+		background-color: #ffffff;
+		margin-bottom: 30upx;
+		border-radius: 15upx;
+	}
+
+	&-list {
+		@include flexLeft;
+		position: relative;
+		padding: 45upx 30upx;
+		font-size: 30upx;
+		color: #101010;
+		font-weight: bold;
+		background-color: #ffffff;
+		border-bottom: 1upx solid #ededf2;
+
+		background-image: url('../../static/public/icon-arrow-right-grey.png');
+		background-size: 14upx 26upx;
+		background-repeat: no-repeat;
+		background-position: calc(100% - 50upx) center;
+
+		&--holder {
+			border-bottom: 16upx solid #ededf2;
+		}
+
+		&__icon {
+			width: 40upx;
+			margin-right: 15upx;
+			@include fullImage;
+		}
+
+		&__data {
+			padding-right: 30upx;
+			font-size: 28upx;
+			color: $globalColor-style;
+			flex: 1;
+			text-align: right;
+		}
+	}
+}

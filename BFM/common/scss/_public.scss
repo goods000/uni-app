@@ -1,0 +1,16 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'DINPro', 'PingFangSC-Regular', 'AvenirBold';
+}
+
+image {
+	height: 0;
+	display: block;
+}
+
+// 全局背景色
+page{
+	background-color: $globalColor-bgStyle;
+}

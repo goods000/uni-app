@@ -1,0 +1,130 @@
+.bgBox {
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	@include fullImage;
+}
+
+.main {
+	position: relative;
+	z-index: 1;
+	padding: 0;
+}
+
+.infoBox {
+	padding: 30upx;
+
+	&-wrapper {
+		padding: 45upx;
+		background: #0f1d1e;
+		border-radius: 60rpx;
+	}
+
+	&-header {
+		@include flexLeft;
+	}
+
+	&-logo {
+		@include fullImage;
+		width: 76upx;
+		margin-right: 15upx;
+	}
+
+	&-content {
+	}
+
+	&-name {
+		font-size: 28rpx;
+		font-weight: 400;
+		color: #ffffff;
+		margin-bottom: 8upx;
+	}
+
+	&-desc {
+		background: #1f4341;
+		border-radius: 4rpx;
+		font-size: 16rpx;
+		font-weight: 400;
+		color: #2bffb0;
+		padding: 6upx 20upx;
+	}
+}
+
+.formBox {
+	padding: 30upx;
+	margin-bottom: 60upx;
+
+	&-wrapper {
+		padding: 45upx;
+		background: #0f1d1e;
+		border-radius: 60rpx;
+	}
+
+	&-title {
+		font-size: 24rpx;
+		font-weight: 400;
+		color: #ffffff;
+		margin-bottom: 30upx;
+	}
+	&-list {
+		&__input {
+			@include flexLeft;
+			padding: 15upx 0;
+			position: relative;
+			border-bottom: 2upx solid #1f4341;
+			margin-bottom: 15upx;
+
+			input {
+				font-size: inherit;
+				flex: 1;
+				font-size: 28rpx;
+				font-weight: 400;
+				color: #ffffff;
+			}
+
+			&-placeholder {
+				font-size: 28rpx;
+				font-weight: 400;
+				color: #999999;
+			}
+
+			&-unit {
+				font-size: 28rpx;
+				font-weight: 700;
+				color: #ffffff;
+			}
+		}
+
+		&__note {
+			font-size: 20rpx;
+			font-weight: 400;
+			color: #cd2828;
+			letter-spacing: 1rpx;
+		}
+	}
+}
+
+.initButton {
+	padding: 0 30upx;
+}
+
+.takeCareBox {
+	padding: 30upx;
+	&-message {
+		font-size: 24rpx;
+		font-weight: 500;
+		color: #666666;
+		padding-left: 36upx;
+		background: url(@/static/ipfs/icon-takeCare.png) no-repeat;
+		background-position: left top;
+		background-size: 28upx 28upx;
+
+		&--highlight {
+			color: #cd2828;
+		}
+	}
+}

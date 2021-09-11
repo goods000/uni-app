@@ -1,0 +1,115 @@
+page,.pages{
+	background: url(../../static/invite/icon-invite-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+.invite{
+	&-title{
+		color: $globalColor-white;
+		font-size: 82upx;
+		font-family: WenYue XinQingNianTi (Authorization Required);
+		font-weight: bold;
+		margin: 60upx auto 95upx;
+		display: block;
+		text-align: center;
+		visibility: hidden;
+	}
+	// &-bg{
+	// 	background: url(../../static/invite/icon-invite-bg.png);
+	// 	background-size: 100% 100%;
+	// 	background-repeat: no-repeat;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	z-index: 1;
+	// 	width: 100%;
+	// 	height: 700upx;
+	// }
+	&-box{
+		background: url(../../static/invite/icon-bg-top.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		border-radius: 20upx;
+		// position: absolute;
+		// z-index: 2;
+		// top: 550upx;
+		width: 80%;
+		margin: auto;
+		padding: 50upx 0 30upx;
+		text-align: center;
+		&-qrcode{
+			position: relative;
+			margin: 50upx auto 0upx;
+			text-align: center;
+			display: inline-block;
+			&__image{
+				width: 240upx;
+				height: 240upx;
+			}
+			.logo{
+				width: 70upx;
+				height: 70upx;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				border-radius:16upx;
+			}
+		}
+		&-title{
+			color: $globalColor-style;
+			font-size: 28upx;
+			width: 38%;
+			position: relative;
+			margin: auto;
+			line-height: 0px;
+			&::after{
+				content: '';
+				width: 50upx;
+				height: 2upx;
+				background: #bfbfbf;
+				position: absolute;
+				left: 0;
+			}
+			&::before{
+				content: '';
+				width: 50upx;
+				height: 2upx;
+				background: #bfbfbf;
+				position: absolute;
+				right: 0;
+			}
+		}
+		&-code{
+			color: $globalColor-style;
+			font-size: 80upx;
+			font-weight: bold;
+			margin: 40upx auto 10upx;
+		}
+		&-tips{
+			color: #999999;
+			font-size: 24upx;
+			width: 80%;
+			margin: auto;
+			line-height: 40upx;
+			padding-bottom: 60upx;
+			border-bottom: 1px dashed $globalColor-border;
+		}
+		&-icon{
+			color: #999999;
+			font-size: 24upx;
+			width: 80%;
+			margin:20upx auto 30upx;
+		}
+		.initBtn{
+			background: $globalColor-style;
+			color: $globalColor-white;
+			letter-spacing: 6upx;
+			border-radius: 10upx;
+			width: 45%;
+			font-size: 24upx;
+			margin: 60upx auto 70upx;
+		}
+	}
+}

@@ -1,0 +1,232 @@
+.highStyleBg{
+	@include themeBgColorValue(#0169ff, #0d1625)
+	width: 100%;
+	height: calc(300upx + var(--status-bar-height));
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+}
+
+.main{
+	position: relative;
+	z-index: 1;
+}
+
+.tabsBox {
+	margin-bottom: 45upx;
+	&-control {
+		@include flexLeft;
+		align-items: flex-end;
+		height: 60upx;
+		padding: 0 30upx;
+		margin-bottom: 15upx;
+
+		&__item {
+			@include initTransition(0.15);
+			color: #FFFFFF;
+			font-size: 32upx;
+			font-weight: bold;
+			margin-right: 30upx;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&--active {
+				@include themeColor('globalColor-themeSubStyle');
+				font-size: 42upx;
+			}
+		}
+	}
+
+	&-wrapper {
+		padding: 0 30upx;
+	}
+}
+
+.frameBox {
+	&-wrapper {
+		position: relative;
+	}
+
+	&-plane {
+		@include themeBgColor('globalColor-bgStyle');
+		@include initShadow;
+		padding: 30upx;
+		border-radius: 20upx;
+		margin-bottom: 30upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&-header {
+		@include flexLeft;
+		margin-bottom: 30upx;
+	}
+
+	&-icon {
+		@include initAvatar(46);
+		margin-right: 8upx;
+	}
+
+	&-label {
+		@include themeColor('globalColor-fontStyle');
+		font-size: 32upx;
+		font-weight: 300;
+	}
+
+	&-price {
+		@include themeColor('globalColor-themeStyle');
+		text-align: right;
+		flex: 1;
+		font-size: 48upx;
+		font-weight: bold;
+	}
+
+	&-itemBox {
+		@include flexCenter;
+
+		&__item {
+			flex: 1;
+
+			&--alignRight {
+				text-align: right;
+			}
+
+			&-label {
+				@include themeColor('globalColor-fontSubStyle');
+				font-size: 24upx;
+				font-weight: 300;
+				margin-bottom: 8upx;
+			}
+			&-data {
+				@include themeColor('globalColor-fontStyle');
+				font-size: 28upx;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.fancyBox {
+	margin-top: 30upx;
+	// padding: 30upx 0;
+	&-wrapper {
+		@include flexCenter;
+	}
+	&-item {
+		@include themeBorderColor('globalColor-themeStyle');
+		@include flexCenter;
+		// @include initButtonGrad;
+		border: 1px solid;
+		flex: 1;
+		border-radius: 15upx;
+		padding: 10upx 0;
+		margin-right: 30upx;
+
+		// width: 33.33%;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&__label {
+			@include themeColor('globalColor-themeStyle');
+			font-size: 26upx;
+			font-weight: bold;
+		}
+	}
+}
+
+.listBox {
+	&-wrapper {
+		padding: 0 30upx 210upx;
+	}
+
+	&-list {
+		@include themeBorderColor('globalColor-holderStyle');
+		padding-bottom: 30upx;
+		margin-bottom: 30upx;
+		border-bottom: 1px solid;
+
+		&:last-child {
+			border-bottom: 0;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		&__info {
+			@include flexBetween;
+			margin-bottom: 15upx;
+		}
+
+		&__title {
+			@include themeColor('globalColor-fontStyle');
+			font-size: 32upx;
+			font-weight: bold;
+		}
+
+		&__date {
+			@include themeColor('globalColor-fontSubStyle');
+			font-size: 24upx;
+		}
+
+		&__itemBox {
+			@include flexBetween;
+			&-item {
+				@include justifiedLayout;
+				flex: 1;
+				font-size: 24upx;
+			}
+
+			&-label {
+				@include themeColor('globalColor-fontSubStyle');
+				font-size: 24upx;
+				font-weight: 300;
+			}
+
+			&-data {
+				@include themeColor('globalColor-fontStyle');
+				font-size: 24upx;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+
+.fixedBox{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	
+	&-wrapper{
+		// @include initShadow;
+		@include themeBgColor('globalColor-pageStyle');
+		@include flexCenter;
+		padding: 30upx 0;
+		padding-bottom: calc(constant(safe-area-inset-bottom) + 30upx);
+		padding-bottom: calc(env(safe-area-inset-bottom) + 30upx);
+	}
+	
+	&-item{
+		@include flexCenterColumn;
+		width: 160upx;
+		
+		&__icon{
+			@include fullImage;
+			width: 86upx;
+		}
+		
+		&__label{
+			@include themeColor('globalColor-fontStyle');
+			font-size: 24upx;
+			font-weight: bold;
+		}
+	}
+}

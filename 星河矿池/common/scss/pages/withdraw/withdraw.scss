@@ -1,0 +1,187 @@
+.withdrawBox{
+	padding: 0 30upx;
+	&-listItem{
+		@include flexBetween;
+		background: #FFFFFF;
+		box-shadow: 0upx 2upx 7upx 0upx rgba(10, 26, 56, 0.1);
+		border-radius: 20upx;
+		margin: 30upx 0;
+		padding: 35upx 30upx;
+		&-title{
+			color: #999999;
+			font-size: 30upx;
+			font-weight: bold;
+		}
+		&-picker{
+			background: url(../../static/operate/icon-record-next.png) no-repeat;
+			background-position: right;
+			background-size: 26upx 26upx;
+			padding-right: 40upx;
+		}
+		.uni-input{
+			font-weight: 500;
+		}
+	}
+	&-list{
+		@include flexLeftColumn;
+		margin: 30upx 0;
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 30upx;
+			font-weight: bold;
+			margin-bottom: 30upx;
+		}
+		&-item{
+			@include flexLeft;
+			margin: 0 0 20upx;
+			&-type{
+				color: $globalColor-fontStyle;
+				background: #F1F5F8;
+				border: 1px solid $globalColor-fontStyle;
+				border-radius: 7upx;
+				padding: 10upx 20upx;
+				margin-right: 20upx;
+				font-size: 24upx;
+				&--active{
+					color: $globalColor-fontStyle;
+					background: $globalColor-style;
+					border: 1px solid $globalColor-style;
+					box-shadow: 3px 3px 10px 0px rgba(188, 130, 0, 0.53);
+					border-radius: 12upx;
+				}
+			}
+		}
+		&-input{
+			position: relative;
+			@include flexLeft;
+			width: 100%;
+			background: #FFFFFF;
+			box-shadow: 0upx 2upx 7upx 0upx rgba(10, 26, 56, 0.1);
+			border-radius: 20upx;
+			padding: 32upx 28upx;
+			input{
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+			}
+			&--address{
+				input{
+					width: 90%;
+				}
+			}
+			&--num{
+				input{
+					width: 70%;
+				}
+			}
+			&-image{
+				position: absolute;
+				right: 28upx;
+				@include flexRight;
+				image{
+					width: 42upx;
+				}
+			}
+			&-u{
+				color: $globalColor-fontStyle;
+				font-size: 30upx;
+				border-right: 1px solid #999999;
+				padding-right: 20upx;
+				margin-right: 20upx;
+				font-weight: 500;
+			}
+			&-all{
+				color: $globalColor-style;
+				font-size: 30upx;
+				text-decoration: underline;
+			}
+			&-send{
+				color: $globalColor-style;
+				font-size: 30upx;
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	&-data{
+		@include flexBetween;
+		padding: 10upx 0 0;
+		&-title{
+			color: #999999;
+			font-size: 26upx;
+		}
+		&-bold{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: bold;
+		}
+	}
+	
+	&-banlance{
+		color: #999999;
+		font-size: 24upx;
+	}
+	
+	&-tips{
+		// background: #F9F9F9;
+		// padding: 40upx 30upx 60upx;
+		margin-bottom: 30upx;
+		display: inline-block;
+		&-title{
+			color: #666666;
+			font-size: 28upx;
+			margin-bottom: 30upx;
+		}
+		&-item{
+			color: #666666;
+			font-size: 24upx;
+			line-height: 40upx;
+		}
+	}
+}
+
+.initBtn{width: 100%;}
+
+.withdrawBox{
+	&-icon{
+		width: 30upx;
+		height: 134upx;
+	}
+	&-operate{
+		margin: 0 23upx;
+		width: 80%;
+		&__item:nth-child(1){border-bottom: 1px solid $globalColor-border;padding-bottom: 20upx;margin-bottom: 20upx;}
+		&__item{
+			@include flexLeft;
+			&-title{
+				color: #999999;
+				font-size: 30upx;
+				margin-right: 40upx;
+			}
+		}
+	}
+	&-inputItem{
+		font-size: 32upx !important;
+		font-weight: bold;
+		color: $globalColor-fontStyle;
+	}
+	&-picker{
+		font-size: 32upx;
+		font-weight: bold;
+		color: $globalColor-styleActive;
+		background: url(../../static/public/icon-next.png);
+		background-size: 30upx 30upx;
+		background-repeat: no-repeat;
+		background-position: center right;
+		width: 75%;
+		&__up{
+			font-size: 32upx;
+			font-weight: bold;
+			color: $globalColor-fontStyle;
+			width: 75%;
+		}
+	}
+	&-exchange{
+		width: 80upx;
+		height: 80upx;
+	}
+}

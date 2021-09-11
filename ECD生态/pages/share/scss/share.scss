@@ -1,0 +1,97 @@
+.pages{
+	background: url(../../static/share/icon-share-bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 100vh;
+	position: relative;
+}
+
+.invite{
+	&-title{
+		color: $globalColor-white;
+		font-size: 82upx;
+		font-family: WenYue XinQingNianTi (Authorization Required);
+		font-weight: bold;
+		margin: 60upx auto 95upx;
+		display: block;
+		text-align: center;
+	}
+	// &-bg{
+	// 	background: url(../../static/invite/icon-invite-bg.png);
+	// 	background-size: 100% 100%;
+	// 	background-repeat: no-repeat;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	z-index: 1;
+	// 	width: 100%;
+	// 	height: 700upx;
+	// }
+	&-box{
+		background: $globalColor-white;
+		border-radius: 40upx;
+		position: absolute;
+		z-index: 2;
+		bottom: 10%;
+		left: 0;right: 0;
+		width: 80%;
+		margin: auto;
+		padding: 96upx 0 30upx;
+		text-align: center;
+		&-qrcode{
+			text-align: center;
+			display: inline-block;
+			position: relative;
+			margin-bottom: 75upx;
+			&__code{
+				width: 326upx;
+				height: 326upx;
+			}
+			&__logo{
+				width: 90upx;
+				height: 90upx;
+				border-radius: 10upx;
+				position: absolute;
+				top: 50%;left: 50%;
+				transform: translate(-50%,-50%);
+			}
+		}
+		&-title{
+			color: #999999;
+			font-size: 28upx;
+			width: 25%;
+			position: relative;
+			margin: auto;
+			line-height: 0px;
+			&::after{
+				content: '';
+				width: 24upx;
+				height: 2upx;
+				background: #999999;
+				position: absolute;
+				left: 0;
+			}
+			&::before{
+				content: '';
+				width: 24upx;
+				height: 2upx;
+				background: #999999;
+				position: absolute;
+				right: 0;
+			}
+		}
+		&-code{
+			color: $globalColor-style;
+			font-size: 59upx;
+			font-weight: bold;
+			margin: 37upx auto 10upx;
+		}
+	}
+	&-btn{
+		color: $globalColor-style;
+		letter-spacing: 4upx;
+		margin: auto;
+		font-size: 24upx;
+		text-align: center;
+		text-decoration: underline;
+	}
+}

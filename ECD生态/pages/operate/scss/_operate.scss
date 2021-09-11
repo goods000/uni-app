@@ -1,0 +1,347 @@
+page{
+	background: $globalColor-white;
+}
+.tabsBox {
+	&-control {
+		@include flexCenter;
+		border-bottom: 1px solid #e6e6e6;
+
+		&__item {
+			color: $globalColor-fontStyle;
+			@include initTransition(0.4);
+			@include flexCenter;
+			padding: 30upx 0;
+			flex: 1;
+			font-size: 28upx;
+			font-weight: bold;
+			position: relative;
+
+			&::after {
+				background-color: $globalColor-style;
+				@include initTransition(0.4);
+				content: '';
+				display: inline-block;
+				width: 0;
+				height: 6upx;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			&--active {
+				color: $globalColor-style;
+
+				&::after {
+					width: 54upx;
+				}
+			}
+		}
+	}
+}
+
+.titleBox {
+	margin-bottom: 60upx;
+	
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-title {
+		color: #FFFFFF;
+		font-size: 52upx;
+		font-weight: 500;
+	}
+
+	&-msg {
+		color: $globalColor-fontStyle;
+		font-size: 36upx;
+		font-weight: bold;
+		margin-top: 60upx;
+	}
+
+	&-note {
+		color: $globalColor-white;
+		font-size: 24upx;
+		font-weight: 300;
+		margin-top: 8upx;
+	}
+}
+
+.main {
+	position: relative;
+	z-index: 1;
+	padding: 0 30upx;
+}
+
+.planeBox {
+	&-wrapper {
+		background-color: $globalColor-white;
+		padding: 30upx;
+		border-bottom-left-radius: 28upx;
+		border-bottom-right-radius: 28upx;
+	}
+}
+
+.operateBox {
+	&-wrapper {
+	}
+
+	&-item {
+		margin-bottom: 30upx;
+		position: relative;
+
+		&__list {
+			@include flexLeft;
+			align-items: stretch;
+		}
+		&__label {
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: bold;
+			margin-bottom: 15upx;
+		}
+
+		&__zone {
+			color: $globalColor-fontStyle;
+			width: 140upx;
+			margin-right: 15upx;
+			// border-right: 1upx solid $globalColor-style;
+			background: url(@/static/public/icon-triangle-bottom-black.png) no-repeat;
+			background-position: calc(100% - 15upx) center;
+			background-size: 24upx 12upx;
+			background-repeat: no-repeat;
+			font-size: 32upx;
+			font-weight: 300;
+			
+		}
+
+		&__input {
+			@include flexLeft;
+			@include initTransition(0.4);
+			background-color: #f0f0f0;
+			background-border: #f0f0f0;
+			border: 1px solid #cccccc;
+			position: relative;
+			border-radius: 18upx;
+			padding: 30upx;
+			flex: 1;
+
+			&.showCloseBtn {
+				.operateBox-item__fixedBox-btn--clear {
+					display: flex;
+				}
+			}
+
+			input {
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				font-weight: 300;
+				flex: 1;
+			}
+		}
+
+		&__placeholder {
+			color: #cccccc;
+			font-size: 32upx;
+			font-weight: 300;
+		}
+
+		&__fixedBox {
+			@include flexRight;
+
+			&-btn {
+				width: 60upx;
+				height: 100%;
+				z-index: 999;
+				@include flexCenter;
+
+				&--clear {
+					display: none;
+					image {
+						width: 30upx;
+						@include fullImage;
+					}
+				}
+
+				&--eye {
+					image {
+						width: 40upx;
+						@include fullImage;
+					}
+				}
+			}
+		}
+
+		&__verify {
+			color: $globalColor-style;
+			border-radius: 20upx;
+			font-size: 32upx;
+			font-weight: bold;
+		}
+	}
+
+	&-button {
+		margin-top: 90upx;
+		padding: 0;
+
+		&__btn {
+			@include initTransition(0.4);
+			background-color: $globalColor-style;
+			padding: 30upx 0;
+			border-radius: 8upx;
+			font-size: 36upx;
+			text-align: center;
+			color: #000f11;
+			font-weight: bold;
+		}
+	}
+
+	&-checkbox {
+		margin-top: 120upx;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		font-size: 24upx;
+		color: #999999;
+
+		.linkColor {
+			color: $globalColor-style;
+			// color: $globalColor-style;
+		}
+	}
+
+	&-row {
+		@include flexBetween;
+		margin-top: 30upx;
+	}
+
+	&-linkBtn {
+		color: #999999;
+		font-size: 24upx;
+		font-weight: 300;
+	}
+
+	&-textButton {
+		color: $globalColor-fontStyle;
+		margin-top: 30upx;
+		width: 100%;
+		text-align: center;
+		font-size: 24upx;
+		font-weight: 300;
+
+		&--style {
+			color: $globalColor-style;
+		}
+	}
+
+	&-btn {
+		margin-top: 150upx;
+	}
+	
+	&-agreement{
+		margin: 0upx 0 27upx;
+		@include flexLeft;
+		label{
+			border: 1px solid $globalColor-border;
+			width: 30upx;
+			height: 30upx;
+			border-radius: 50%;
+			margin-right: 11upx;
+		}
+		.checkbox-active{
+			background: url(../../static/operate/icon-active.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			border: 1px solid transparent;
+			// border: 1px solid $globalColor-style;
+			// .checkbox{
+			// 	margin: 5upx;
+			// 	background: $globalColor-style;
+			// 	width: 18upx;
+			// 	height: 18upx;
+			// 	border-radius: 50%;
+			// }
+		}
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 24upx;
+		}
+		&-name{
+			color: $globalColor-style;
+			font-size: 24upx;
+		}
+	}
+}
+
+.fixedBox {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	&-wrapper {
+		padding: 60upx 30upx;
+	}
+
+	&-link {
+		color: $globalColor-fontStyle;
+		@include flexCenter;
+		width: 100%;
+		text-align: center;
+		padding: 30upx;
+		font-size: 24upx;
+		font-family: 300;
+
+		&__btn {
+			color: $globalColor-style;
+		}
+	}
+}
+
+.copyrightBox {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+	&-wrapper {
+		@include flexCenterColumn;
+		padding: 60upx 0;
+	}
+
+	&-logo {
+		@include fullImage;
+		width: 76upx;
+		position: relative;
+		margin-bottom: 30upx;
+
+		&::before,
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 34upx;
+			height: 1px;
+			background-color: #cccccc;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&::before {
+			left: calc(100% + 30upx);
+		}
+
+		&::after {
+			right: calc(100% + 30upx);
+		}
+	}
+
+	&-title {
+		@include flexCenter;
+		width: 100%;
+		text-align: center;
+		color: #999999;
+		font-size: 20upx;
+		font-family: 300;
+	}
+}

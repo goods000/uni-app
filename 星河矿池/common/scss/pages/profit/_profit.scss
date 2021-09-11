@@ -1,0 +1,185 @@
+.header{
+	height: auto;
+	&_main{
+	background: transparent;
+	}
+	&-tabs{
+		&__title{
+			color: #c06300;
+			width: 20%;
+			text-align: left;
+			&--active{
+				color: $globalColor-white;
+			}
+		}
+	}
+	&-tab{
+		margin-top:15upx;
+		&__item {
+			display: inline-block;
+			flex-wrap: nowrap;
+			// padding-left: 34rpx;
+			// padding-right: 34rpx;
+			width: 20%;
+			text-align: left;
+			color: #c06300;
+			font-size: 30rpx;
+			/* #ifndef APP-PLUS */
+			white-space: nowrap;
+			/* #endif */
+			position: relative;
+			&--active {
+				color: $globalColor-white;
+				padding-bottom: 10upx;
+				&::before{
+					content: '';
+					display: inline-block;
+					height: 4upx;
+					width: 30upx;
+					border-radius: 8upx;
+					position: absolute;
+					left: 16upx;
+					// right:0;
+					bottom: 0;
+					// transform: translateY(-50%);
+					margin: auto;
+					background-color: $globalColor-white;
+				}
+			}
+		}
+		&-scroll{
+			// width: 750rpx;
+			// height: 80rpx;
+			display: flex;
+			flex-direction: row;
+			white-space: nowrap;
+			flex-wrap: nowrap;
+		}
+		&-title {
+			color: #c06300;
+			
+			height: 80rpx;
+			line-height: 80rpx;
+			flex-wrap: nowrap;
+			
+		}
+	}
+}
+.header{
+	padding: 3% 30upx;
+}
+.profitBox{
+	&-assets{
+		position: relative;
+		z-index: 2;
+		background: $globalColor-white;
+		margin: 10upx 30upx 30upx;
+		padding:56upx 25upx 0;
+		border-radius: 0 0 20upx 20upx;
+		&__VIP{
+			position: absolute;
+			top: 20upx;
+			right: 30upx;
+			&-image{
+				width: 45upx;
+			}
+		}
+		&__title{
+			@include flexCenter;
+			text{
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+			}
+			image{
+				width: 30upx;
+				margin-left: 10upx;
+			}
+		}
+		&__data{
+			color: $globalColor-style;
+			font-size: 60upx;
+			@include flexCenter;
+		}
+		&__item{
+			@include flexCenterColumn;
+			padding: 35upx 0 20upx;
+			&-title{
+				color: #999999;
+				font-size: 28upx;
+				position: relative;
+				@include flexCenter;
+				&__tips{
+					width: 14upx;
+					height: 14upx;
+					border-radius: 50%;
+					margin-right: 15upx;
+				}
+				&__tips--1{background: $globalColor-style;}
+				&__tips--2{background: $globalColor-blue;}
+				&__tips--3{background: $globalColor-orange;}
+				&__tips--4{background: $globalColor-styleActive;}
+			}
+			&-num{
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: bold;
+				padding-left: 36upx;
+			}	
+		}
+	}
+	&-wrapper{
+		@include flexBetween;
+		justify-content: space-around;
+	}
+	&-user{
+		border-top: 1px solid $globalColor-border;
+		padding: 30upx 0upx;
+		color: #999999;
+		font-size: 28upx;
+	}
+}
+.tipsBox{
+	&-title{
+		&__label{
+			color:#3C3C3C
+		}
+	}
+}
+
+.profit{
+	&-bg{
+		width: 100%;
+		height: 360upx;
+		position: absolute;
+		top: 0;
+		z-index: 1;
+	}
+	&-list{
+		margin: 20upx 30upx;
+		background: $globalColor-white;
+		border-radius: 20upx;
+		&-box{
+			padding: 0 0 30upx 0;
+			&-item{
+				@include flexBetween;
+				padding: 30upx 0;
+				margin: 0 30upx;
+				border-bottom: 1px solid $globalColor-border;
+				&::nth-last-child(1){border: none;}
+				&-time{
+					color: #999999;
+					font-size: 28upx;
+				}
+				&-price{
+					color: $globalColor-fontStyle;
+					font-size: 28upx;
+				}
+			}
+		}
+	}
+}
+
+.profit-list-height{
+	height: calc(100vh - 500px);
+	width: 100%;
+}

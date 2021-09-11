@@ -1,0 +1,221 @@
+@each $theme-name, $theme-map in $themes {
+	[data-theme='#{$theme-name}'] {
+		background-color: map-get($theme-map, 'globalColor-holderStyle');
+	}
+}
+
+.main{
+	padding-top: var(--status-bar-height);
+}
+
+.userInfoBox {
+	&-wrapper {
+		@include flexLeft;
+		padding: 30upx;
+	}
+
+	&-avatar {
+		@include initAvatar(100);
+		margin-right: 15upx;
+	}
+
+	&-content {
+		flex: 1;
+	}
+
+	&-title {
+		@include themeColor('globalColor-fontStyle');
+		font-size: 36upx;
+		font-weight: bold;
+	}
+
+	&-row {
+		@include flexLeft;
+		margin-bottom: 8upx;
+	}
+
+	&-level {
+		@include fullImage;
+		width: 84upx;
+		margin-left: 30upx;
+	}
+
+	&-msg {
+		@include themeColor('globalColor-fontSubStyle');
+		font-size: 24upx;
+	}
+
+	&-code {
+		@include themeColor('globalColor-fontSubStyle');
+		font-size: 24upx;
+	}
+	
+	&-setting{
+		width: 40upx;
+		height: 40upx;
+		background-size: 28upx 28upx;
+		background-repeat: no-repeat;
+		background-position: right center;
+		@include themeBgImg('@/static/mine/icon-setting-light.png','@/static/mine/icon-setting-dark.png')
+	}
+}
+
+.assetsBox {
+	padding: 0 30upx;
+	margin-bottom: 30upx;
+
+	&-wrapper {
+		padding: 45upx 30upx;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: center;
+		background-image: url(@/static/mine/img-assets-bg.jpg);
+		border-radius: 18upx;
+	}
+
+	&-content {
+		// background-image: url(@/static/public/icon-arrow-right-white.png);
+		// background-repeat: no-repeat;
+		// background-size: 14upx 26upx;
+		// background-position: right top;
+		border-bottom: 1px solid #3983ef;
+		padding-bottom: 30upx;
+		margin-bottom: 30upx;
+	}
+
+	&-label {
+		color: #ffffff;
+		font-size: 26upx;
+		font-weight: 300;
+		margin-bottom: 15upx;
+	}
+
+	&-price {
+		color: #ffdd00;
+		font-size: 46upx;
+		font-weight: bold;
+	}
+
+	&-itemBox {
+		@include flexLeft;
+
+		&__item {
+			flex: 1;
+
+			&-label {
+				color: #ffffff;
+				font-size: 24upx;
+				font-weight: 300;
+				margin-bottom: 4upx;
+			}
+
+			&-data {
+				color: #ffffff;
+				font-size: 30upx;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.fancyBox {
+	padding: 0 30upx;
+	margin-bottom: 30upx;
+	
+	&-wrapper {
+		@include initShadow;
+		@include themeBgColor('globalColor-bgStyle');
+		padding: 30upx;
+		border-radius: 18upx;
+	}
+	
+	&-info{
+		@include flexBetween;
+		@include themeColor('globalColor-fontStyle');
+		font-size: 24upx;
+		font-weight: bold;
+		margin-bottom: 15upx;
+	}
+	
+	&-body{
+		@include flexCenter;
+	}
+
+	&-item {
+		@include themeBgColor('globalColor-themeStyle');
+		@include flexCenter;
+		flex: 1;
+		padding: 15upx 0;
+		margin-right: 30upx;
+		border-radius: 10upx;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&__label {
+			color: #ffffff;
+			font-size: 28upx;
+			font-weight: 300;
+		}
+	}
+}
+
+.listBox {
+	&-wrapper {
+		padding: 0 30upx 30upx;
+	}
+
+	&-plane {
+		@include initShadow;
+		margin-bottom: 30upx;
+		border-radius: 18upx;
+		overflow: hidden;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&-list {
+		@include themeBgColor('globalColor-bgStyle');
+		@include themeBorderColor('globalColor-holderStyle');
+		@include flexLeft;
+		position: relative;
+		padding: 45upx 30upx;
+		border-bottom: 1px solid;
+
+		background-image: url('../../static/public/icon-arrow-right-grey.png');
+		background-size: 14upx 26upx;
+		background-repeat: no-repeat;
+		background-position: calc(100% - 30upx) center;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		&--holder {
+			border-bottom: 16upx solid #ededf2;
+		}
+
+		&__icon {
+			@include fullImage;
+			width: 42upx;
+			margin-right: 15upx;
+		}
+
+		&__label {
+			@include themeColor('globalColor-fontStyle');
+			font-size: 30upx;
+			font-weight: 300;
+		}
+
+		&__data {
+			@include themeColor('globalColor-themeStyle');
+			padding-right: 30upx;
+			font-size: 28upx;
+			flex: 1;
+			text-align: right;
+		}
+	}
+}

@@ -1,0 +1,351 @@
+.bgBox {
+	background: url(@/static/index/img-bg.jpg) no-repeat;
+	background-size: 100% 340upx;
+	background-position: top;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 340upx;
+	z-index: 0;
+}
+
+.swiperBox {
+	height: 278upx;
+	// padding: 0 30upx;
+	position: relative;
+	@include flexCenter;
+
+	&-wrapper {
+		width: 100%;
+	}
+
+	&-swiper {
+		height: 278upx;
+
+		&__item {
+			width: 100%;
+			height: 278upx;
+			padding: 0 30upx;
+			overflow: hidden;
+			border-radius: 24upx;
+			@include flexCenterColumn;
+
+			image {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.noticeBox {
+	padding: 15upx 30upx;
+	font-size: 28upx;
+	// border-bottom: 1upx solid #333333;
+	position: relative;
+	z-index: 1;
+	&-wrapper {
+		@include flexBetween;
+		background: url(@/static/index/icon-notice-more.png) no-repeat;
+		background-position: right center;
+		background-size: 30upx 30upx;
+	}
+
+	&-icon {
+		@include fullImage;
+		margin-right: 15upx;
+		width: 66upx;
+	}
+
+	&-swiper {
+		height: 60upx;
+		flex: 1;
+		padding-right: 45upx;
+
+		&__item {
+			@include flexCenter;
+			&-label {
+				color: #333333;
+				width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				color: $globalColor-fontStyle;
+				font-weight: bold;
+				font-size: 24upx;
+			}
+		}
+	}
+
+	&-btn {
+		background-color: $globalColor-style;
+		color: #ffffff;
+		font-size: 24upx;
+		font-weight: 300;
+		padding: 8upx 15upx;
+		border-radius: 10upx;
+	}
+}
+
+.etiquetaBox {
+	padding: 0 30upx;
+	position: relative;
+	z-index: 2;
+	margin-bottom: 30upx;
+
+	&-wrapper {
+		@include flexCenter;
+		@include initShadow;
+		flex-wrap: wrap;
+		padding: 30upx 0;
+		border-radius: 30upx;
+		background-color: #ffffff;
+	}
+	&-item {
+		// width: 25%;
+		@include flexCenterColumn;
+		padding: 15upx;
+
+		&__icon {
+			@include fullImage;
+			width: 82upx;
+			margin-bottom: 8upx;
+		}
+
+		&__label {
+			font-size: 26upx;
+			font-weight: 300;
+			color: $globalColor-fontStyle;
+		}
+	}
+
+	&-swiper {
+		height: 180upx;
+
+		&__item {
+			width: 100%;
+			height: 180upx;
+			// padding: 0 30upx;
+			overflow: hidden;
+			@include flexCenterColumn;
+
+			image {
+				width: 100%;
+				border-radius: 20upx;
+				// box-shadow: 0 0 10upx 0upx #ffe9a6;
+				// @include initShadow;
+			}
+		}
+	}
+}
+
+.iconItemBox {
+	margin-bottom: 30upx;
+	&-wrapper {
+		@include flexCenter;
+		padding: 30upx;
+	}
+
+	&-item {
+		@include flexLeft;
+		flex: 1;
+
+		&__icon {
+			@include fullImage;
+			@include initShadow;
+			border-radius: 16upx;
+			width: 82upx;
+			margin-right: 15upx;
+		}
+		&__label {
+			font-size: 32upx;
+			font-weight: bold;
+			color: $globalColor-fontStyle;
+			margin-bottom: 8upx;
+		}
+
+		&__data {
+			font-size: 24upx;
+			color: #666666;
+		}
+	}
+}
+
+.rankingBox {
+	margin-bottom: 30upx;
+	&-wrapper {
+		// padding: 30upx 0;
+	}
+
+	&-title {
+		@include flexBetween;
+		padding: 0 30upx;
+		margin-bottom: 30upx;
+
+		&__label {
+			@include initBeforeHolder;
+			font-size: 32upx;
+			color: $globalColor-fontStyle;
+			font-weight: bold;
+		}
+
+		&__more {
+			@include fullImage;
+			width: 30upx;
+			height: 30upx;
+			background: url(@/static/index/icon-notice-more.png) no-repeat;
+			background-size: 30upx 30upx;
+			background-position: center center;
+		}
+	}
+
+	&-swiper {
+		height: 200upx;
+		&__item {
+			height: 100%;
+			padding-right: 18upx;
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+
+	&-plane {
+		@include flexCenterColumn;
+		height: 100%;
+		background-color: #ffffff;
+		padding: 0 15upx;
+		border-radius: 20upx;
+	}
+	&-row {
+		@include flexLeft;
+	}
+
+	&-header {
+		@include flexLeft;
+		width: 100%;
+	}
+
+	&-body {
+		width: 100%;
+	}
+
+	&-avatar {
+		@include fullImage;
+		@include initAvatar(60);
+		margin-right: 8upx;
+	}
+
+	&-name {
+		color: $globalColor-fontStyle;
+		font-size: 26upx;
+		font-weight: 300;
+	}
+
+	&-type {
+		color: #999999;
+		font-size: 20upx;
+		margin-right: 5upx;
+	}
+
+	&-ranking {
+		color: #be7b25;
+		font-size: 18upx;
+		font-weight: bold;
+	}
+
+	&-itemBox {
+		@include flexBetween;
+		margin-top: 15upx;
+
+		&__item {
+			@include justifiedLayout;
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				font-weight: bold;
+
+				&--style {
+					color: #be7b25;
+				}
+			}
+
+			&-label {
+				color: #999999;
+				font-size: 20upx;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.newsBox {
+	// border-top: 16upx solid #f5f6f8;
+	&-wrapper {
+		padding: 0 30upx 30upx;
+	}
+
+	&-title {
+		@include flexBetween;
+		margin-bottom: 30upx;
+
+		&__label {
+			@include initBeforeHolder;
+			font-size: 32upx;
+			color: $globalColor-fontStyle;
+			font-weight: bold;
+		}
+
+		&__more {
+			@include fullImage;
+			width: 30upx;
+			height: 30upx;
+			background: url(@/static/index/icon-notice-more.png) no-repeat;
+			background-size: 30upx 30upx;
+			background-position: center center;
+		}
+	}
+	&-content {
+		@include initShadow;
+		background-color: #ffffff;
+		border-radius: 20upx;
+		height: 600upx;
+	}
+
+	&-list {
+		@include flexBetween;
+		padding: 30upx;
+		border-bottom: 1upx solid #cccccc;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		&__content {
+			flex: 1;
+		}
+
+		&__title {
+			@include initMoreLine(2);
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: bold;
+			margin-bottom: 20upx;
+		}
+
+		&__date {
+			font-size: 24upx;
+			color: #999999;
+			font-weight: 300;
+		}
+
+		&__image {
+			@include fullImage;
+			width: 150upx;
+			overflow: hidden;
+			margin-left: 30upx;
+			border-radius: 6upx;
+		}
+	}
+}

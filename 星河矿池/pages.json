@@ -1,0 +1,518 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/firstPage/firstPage",
+			"style": {
+				"navigationBarTitleText": "登录监测页",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/about/about",
+			"style": {
+				"navigationBarTitleText": "公司简介",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/purchaseRecords/purchaseRecords",
+			"style": {
+				"navigationBarTitleText": "购买记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/safety/realName",
+			"style": {
+				"navigationBarTitleText": "实名认证",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/safety/editEmail",
+			"style": {
+				"navigationBarTitleText": "修改邮箱认证",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/safety/editPhone",
+			"style": {
+				"navigationBarTitleText": "修改手机认证",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/safety/bindPhone",
+			"style": {
+				"navigationBarTitleText": "手机绑定",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/safety/bindEmail",
+			"style": {
+				"navigationBarTitleText": "邮箱绑定",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/safety/editPayPassword",
+			"style": {
+				"navigationBarTitleText": "修改交易密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/safety/editPassword",
+			"style": {
+				"navigationBarTitleText": "修改登录密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/safety/safety",
+			"style": {
+				"navigationBarTitleText": "安全中心",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/invite/invite",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "邀请好友",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{ 
+			"path": "pages/community/structure",
+			"style": {
+				"navigationBarTitleText": "社区结构",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/community/achievement",
+			"style": {
+				"navigationBarTitleText": "社区业绩",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/recharge/recharge",
+			"style": {
+				"navigationBarTitleText": "充币",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/recharge/rechargeRecord",
+			"style": {
+				"navigationBarTitleText": "充币记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/withdraw/withdraw",
+			"style": {
+				"navigationBarTitleText": "提币",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/withdraw/withdrawRecord",
+			"style": {
+				"navigationBarTitleText": "提币记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/exchange/exchange",
+			"style": {
+				"navigationBarTitleText": "闪兑",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/exchange/exchangeRecord",
+			"style": {
+				"navigationBarTitleText": "闪兑记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/withdraw/recordDetails",
+			"style": {
+				"navigationBarTitleText": "记录详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/forget",
+			"style": {
+				"navigationBarTitleText": "忘记密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/mnemonic",
+			"style": {
+				"navigationBarTitleText": "备份助记词",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/mnemonic_words",
+			"style": {
+				"navigationBarTitleText": "验证助记词",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/success",
+			"style": {
+				"navigationBarTitleText": "创建成功",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/announcement/announcement_details",
+			"style": {
+				"navigationBarTitleText": "公告详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/announcement/announcement",
+			"style": {
+				"navigationBarTitleText": "公告",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/product/product",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "产品",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/product/productBuy",
+			"style": {
+				"navigationBarTitleText": "购买",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/product/success",
+			"style": {
+				"navigationBarTitleText": "购买成功",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/product/records",
+			"style": {
+				"navigationBarTitleText": "购买记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/venture/venture",
+			"style": {
+				"navigationBarTitleText": "创投",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/venture/ventureDetails",
+			"style": {
+				"navigationBarTitleText": "参与创投",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/venture/vipRecharge",
+			"style": {
+				"navigationBarTitleText": "VIP充值",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/user/assetRecord",
+			"style": {
+				"navigationBarTitleText": "资产记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/service/service",
+			"style": {
+				"navigationBarTitleText": "专属客服",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": true
+				}
+			}
+		},{
+			"path": "pages/profit/profit",
+			"style": {
+				"navigationBarTitleText": "收益",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/first",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "注册登录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/account/account",
+			"style": {
+				"navigationBarTitleText": "账户管理",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/account/editName",
+			"style": {
+				"navigationBarTitleText": "账户管理---修改钱包名称",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/account/words",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "账户管理---导出助记词、私钥",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/workOrder/workOrder",
+			"style": {
+				"navigationBarTitleText": "工单",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/workOrder/workOrder_type",
+			"style": {
+				"navigationBarTitleText": "工单 - 选择类型",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/workOrder/workOrder_apply",
+			"style": {
+				"navigationBarTitleText": "工单 - 提交",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/workOrder/workOrder_detail",
+			"style": {
+				"navigationBarTitleText": "工单 - 详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/user/platform",
+			"style": {
+				"navigationBarTitleText": "合作平台",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/pool/pool",
+			"style": {
+				"navigationBarTitleText": "激励池",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "星河",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#1F2F53",
+		"borderStyle": "white",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabbar/icon-tabbar-1.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-1-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/product/product",
+				"iconPath": "static/tabbar/icon-tabbar-2.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-2-active.png",
+				"text": "产品"
+			}, {
+				"pagePath": "pages/venture/venture",
+				"iconPath": "static/tabbar/icon-tabbar-3.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-3-active.png",
+				"text": "创投"
+			}, {
+				"pagePath": "pages/profit/profit",
+				"iconPath": "static/tabbar/icon-tabbar-4.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-4-active.png",
+				"text": "收益"
+			}, {
+				"pagePath": "pages/user/user",
+				"iconPath": "static/tabbar/icon-tabbar-5.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-5-active.png",
+				"text": "我的"
+			}
+		]
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}

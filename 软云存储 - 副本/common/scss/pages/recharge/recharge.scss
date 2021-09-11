@@ -1,0 +1,119 @@
+page,.pages{
+	background: #F7F7F7;
+}
+
+.rechargeBox{
+	padding: 0 30upx;
+	&-listItem{
+		@include flexBetween;
+		background: #FFFFFF;
+		box-shadow: 0upx 2upx 7upx 0upx rgba(10, 26, 56, 0.1);
+		border-radius: 20upx;
+		margin: 30upx 0;
+		padding: 35upx 30upx;
+		&-title{
+			color: #999999;
+			font-size: 30upx;
+			font-weight: bold;
+		}
+		&-picker{
+			background: url(../../static/operate/icon-record-next.png) no-repeat;
+			background-position: right;
+			background-size: 26upx 26upx;
+			padding-right: 40upx;
+		}
+		.uni-input{
+			font-weight: 500;
+		}
+	}
+	&-list{
+		@include flexLeftColumn;
+		margin: 30upx 0;
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 30upx;
+			font-weight: bold;
+		}
+		&-item{
+			@include flexLeft;
+			margin: 20upx 0;
+			&-type{
+				color: $globalColor-fontStyle;
+				background: #F1F5F8;
+				border: 1px solid $globalColor-fontStyle;
+				border-radius: 7upx;
+				padding: 10upx 20upx;
+				margin-right: 20upx;
+				font-size: 24upx;
+				&--active{
+					color: $globalColor-fontStyle;
+					background: $globalColor-style;
+					border: 1px solid $globalColor-style;
+					box-shadow: 3px 3px 10px 0px rgba(188, 130, 0, 0.53);
+					border-radius: 12upx;
+				}
+			}
+		}
+	}
+	&-code{
+		@include flexCenterColumn;
+		width: 80%;
+		padding: 49upx;
+		margin: 46upx auto 57upx;
+		background: #FFFFFF;
+		box-shadow: 0upx 2upx 7upx 0upx rgba(10, 26, 56, 0.1);
+		border-radius: 32upx;
+		&-qrcode{
+			padding: 10upx;
+			image{
+				width: 386upx;
+				height: 386upx;
+			}
+		}
+		&-codeBtn{
+			background: $globalColor-style;
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			padding: 25upx;
+			margin: 52upx 0;
+			border-radius: 14upx;;
+		}
+		&-title{
+			color: #999999;
+			font-size: 28upx;
+		}
+		&-box{
+			@include flexCenterColumn;
+			&-num{
+				color: $globalColor-fontStyle;
+				word-break: break-all;
+				text-align: center;
+				margin-bottom: 22upx;
+			}
+			&-image{
+				margin-left: 13upx;
+				image{
+					width: 31upx;
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+	&-tips{
+		// background: #F9F9F9;
+		// padding: 40upx 30upx 60upx;
+		&-title{
+			color: #666666;
+			font-size: 28upx;
+			margin-bottom: 30upx;
+		}
+		&-item{
+			color: #666666;
+			font-size: 24upx;
+			line-height: 40upx;
+		}
+	}
+}

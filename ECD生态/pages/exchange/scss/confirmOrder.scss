@@ -1,0 +1,260 @@
+page{
+	background: $globalColor-white;
+}
+
+.confirmOrder{
+	padding-bottom: 120upx;
+	&-header{
+		@include flexBetween;
+		padding: 30upx;
+		border-bottom: 1px solid $globalColor-border;
+		&__item{
+			@include flexLeftColumn;
+			&-name{
+				font-size: 36upx;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: $globalColor-fontStyle;
+			}
+			&-tips{
+				font-size: 24upx;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+				margin-top: 11upx;
+			}
+		}
+		&__ways{
+			@include flexRight;
+			image{
+				width: 40upx;
+				height: 40upx;
+				margin-left: 20upx;
+			}
+		}
+	}
+	&-content{
+		padding: 30upx;
+		&__item{
+			@include flexLeft;
+			padding: 10upx 0 0;
+			&-title{
+				font-size: 28upx;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+				&--width{
+					width: 30%;
+				}
+			}
+			&-num{
+				font-size: 28upx;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: $globalColor-fontStyle;
+				position: relative;
+				&--position{
+					position: absolute;
+					right: 30upx;
+				}
+			}
+		}
+		&__cny{
+			font-size: 36upx;
+			font-family: DINPro;
+			font-weight: bold;
+			color: $globalColor-style;
+			margin: 10upx 0;
+		}
+	}
+	&-ways{
+		.initTilte{
+			margin-top:0;
+		}
+		border: 20upx solid #F5F5F5;
+		border-left: none;
+		border-right: none;
+		padding: 30upx 0 0;
+		&__item{
+			padding: 30upx 0 30upx;
+			margin: 0 30upx;
+			border-bottom: 1px solid #E6E6E6;
+			position: relative;
+			&:nth-last-child(1){
+				border-bottom: none;
+			}
+			&-box{
+				@include flexLeft;
+				background: #F0F0F0;
+				border: 1px solid $globalColor-border;
+				border-radius: 12upx;
+				padding: 30upx 23upx;
+				margin-bottom: 10upx;
+				input{
+					font-weight: 500;
+					font-size: 32upx;
+					color: $globalColor-fontStyle;
+				}
+				&--input{
+					font-size: 34upx;
+					font-family: PingFang SC;
+					font-weight: 500;
+					color: #CCCCCC;
+				}
+			}
+			&-tips{
+				margin-top: 30upx;
+				font-size: 24upx;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+				line-height: 38upx;
+				text{
+					color: $globalColor-style;
+				}
+			}
+			&-content{
+				@include flexLeft;
+				margin-bottom: 30upx;
+			}
+			&-name{
+				font-size: 28upx;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: $globalColor-style;
+				line-height: 38upx;
+				margin-right: 15upx;
+				overflow: hidden;
+				width: 140upx;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			&-words{
+				font-size: 28upx;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+				line-height: 38upx;
+			}
+			&-code{
+				position: absolute;
+				top: 30upx;
+				right: 30upx;
+				image{
+					width: 118upx;
+					height: 118upx;
+				}
+			}
+		}
+		&__title{
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: #999999;
+			width: 38%;
+		}
+		&__news{
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: $globalColor-fontStyle;
+		}
+		&__image{
+			width: 32upx;
+			height: 32upx;
+			position: absolute;
+			right: 30upx;
+		}
+	}
+	&-chioce{
+		margin: 0upx 81upx 30upx 0;
+		@include flexLeft;
+		label{
+			border-radius: 50%;
+			margin-right: 11upx;
+			width: 30upx;
+			height: 30upx;
+		}
+		&__box{
+			width: 30upx;
+			height: 30upx;
+			background: url(../../static/public/icon-noChioce.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			&--active{
+				background: url(../../static/public/icon-chioce.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+		}
+		&__title{
+			font-weight: bold;
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+		}
+	}
+	&-upload{
+		padding: 30upx;
+		&__title{
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: $globalColor-fontStyle;
+			line-height: 38upx;
+			text{
+				color: #E13B37;
+				font-size: 24upx;
+			}
+		}
+		&__image{
+			border: 1px solid #F0F0F0;
+			background: #F0F0F0;
+			width: 140upx;
+			height: 140upx;
+			margin: 30upx 0;
+			&-bg{
+				text-align: center;
+				width: 100%;
+				height: 100%;
+				background-size: 100% 100% !important;
+				background-repeat: no-repeat !important;
+				background-position: center center !important;
+				position: relative;
+				image{
+					width: 46upx;
+					height: 46upx;
+					position: absolute;
+					top: 50%;right: 46upx;
+					transform: translate(0%,-50%);
+				}
+			}
+		}
+	}
+	&-btn{
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		@include flexBetween;
+		& > view{
+			padding: 35upx 0;
+			text-align: center;
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: #FFFFFF;
+			line-height: 38upx;
+		}
+		&__disable{
+			width: 30%;
+			background: #545352;
+		}
+		&__style{
+			width: 70%;
+			background: $globalColor-style;
+		}
+		&__style——1{
+			width: 70%;
+			background: #CCCCCC;
+		}
+	}
+}

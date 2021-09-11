@@ -1,0 +1,279 @@
+.businessOrder{
+	&-header{
+		background: url(../../static/index/icon-index-bg.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		padding: 32upx 0;
+		position: relative;
+		&-status{
+			color: $globalColor-white;
+			font-size: 60upx;
+			margin-top: 56upx;
+			padding: 0 32upx;
+		}
+		&-txt{
+			color: $globalColor-white;
+			font-size: 28upx;
+			padding: 0 32upx;
+			margin:10upx 0 40upx;
+		}
+		&-end{
+			color: $globalColor-white;
+			font-size: 28upx;
+			background: #63A4F6;
+			padding: 6upx 32upx;
+			margin:10upx 0 40upx;
+		}
+		&-mode{
+			@include flexCenterColumn;
+			position: absolute;
+			right: 32upx;
+			bottom: 80upx;
+			image{
+				width: 32upx;
+				height: 32upx;
+			}
+			&__title{
+				margin-top: 5upx;
+				font-size: 20upx;
+				color: $globalColor-white;
+			}
+		}
+	}
+	&-wrapper{
+		margin-top: -40upx;
+		position: relative;
+		z-index: 2;
+		&-box{
+			@include flexBetween;
+			padding:43upx 32upx 0;
+			&__item{
+				&-cny{
+					color: $globalColor-style;
+					font-size: 40upx;
+				}
+			}
+			image{
+				width: 86upx;
+				height: 86upx;
+			}
+		}
+	}
+	&-pay{
+		margin-top: 12upx;
+		padding: 42upx 32upx;
+		@include flexLeft;
+		width: 100%;
+		background: $globalColor-white;
+		border-bottom: 1px solid $globalColor-bgStyle;
+		image{
+			width: 32upx;
+			height: 32upx;
+			margin-right: 12upx;
+		}
+		&-picker{
+			background: url(../../static/public/icon-next.png);
+			background-size: 22upx 22upx;
+			background-repeat: no-repeat;
+			background-position: center right 0upx;
+			@include flexBetween;
+			flex: 1;
+			position: relative;
+		}
+		&__title{
+			color:$globalColor-fontStyle;
+			font-size: 28upx;
+		}
+		&__txt{
+			color: $globalColor-style;
+			font-size: 24upx;
+			position: absolute;
+			right: 24upx;
+			bottom: 6upx;
+		}
+	}
+	&-list{
+		@include flexBetween;
+		padding: 36upx 32upx;
+		background: $globalColor-white;
+		border-bottom: 1px solid $globalColor-bgStyle;
+		&-label{
+			color: #666666;
+			font-size: 28upx;
+		}
+		.chioce{color: #C7564D;}
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			@include flexRight;
+			text{
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+			}
+			&-copy{
+				width: 18upx;
+				height: 18upx;
+				margin-left: 12upx;
+			}
+			&-img{
+				width: 32upx;
+				height: 32upx;
+				margin-left: 12upx;
+			}
+		}
+	}
+	&-bottom{
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		padding: 32upx;
+		background: $globalColor-white;
+		border-top: 1px solid $globalColor-bgStyle;
+		&-box{
+			@include flexBetween;
+		}
+		&-btn{
+			width: 45%;
+			padding: 20upx 0;
+			border-radius: 8upx;
+			text-align: center;
+			border: 1px solid #999999;
+			color: #999999;
+		}
+		&-choice{
+			width: 45%;
+			padding: 20upx 0;
+			border-radius: 8upx;
+			text-align: center;
+			border: 1px solid $globalColor-style;
+			color: $globalColor-white;
+			background: $globalColor-style;
+		}
+		&-apply{
+			width: 45%;
+			padding: 20upx 0;
+			border-radius: 8upx;
+			text-align: center;
+			border: 1px solid #C7564D;
+			color: $globalColor-white;
+			background: #C7564D;
+		}
+		&-anniu{
+			background: #C7564D;
+			color: $globalColor-white;
+			font-size: 32upx;
+			width: 100%;
+			padding: 20upx 0;
+			border-radius: 8upx;
+			text-align: center;
+		}
+		&-cancel{
+			border:1px solid #999999;
+			color: #999999;
+			font-size: 32upx;
+			width: 100%;
+			padding: 20upx 0;
+			border-radius: 8upx;
+			text-align: center;
+		}
+	}
+}
+.business{
+	&-list{
+		&-box{
+			border-radius: 40upx 40upx 0 0;
+			background: $globalColor-white;
+			padding: 28upx 0 0;
+			&-header{
+				border-bottom: 1px solid rgba(0,0,0,0.10);
+				padding:0 32upx 16upx;
+			}
+		}
+	}
+}
+.oppupBusiness{
+	&-list{
+		padding: 0 32upx;
+	}
+}
+.formBox{
+	margin: 12upx 0;
+	background: $globalColor-white;
+	&-input{
+		padding: 24upx 34upx 0;
+		&-label{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			margin-bottom: 22upx;
+		}
+		textarea{width: 100%;max-height: 60upx;
+			color: $globalColor-fontStyle;font-size: 24upx;
+		}
+	}
+}		
+	
+.oppupBox{
+	&-form{
+		&-picker{
+			padding: 24upx 0;
+			font-size: 24upx;
+			color: $globalColor-fontStyle;
+			background: url(../../static/business/icon-selected.png) no-repeat;
+			background-size: 24upx 12upx;
+			background-position: center right 20upx;
+		}
+		input{
+			width: 100%;
+			color: $globalColor-fontStyle;font-size: 28upx;
+		}
+	}
+}		
+		
+.oppupBoxicon{
+	// max-height: 80vh;
+	// overflow: auto;
+	background: $globalColor-white;
+	padding: 30upx;
+	border-radius: 30upx;
+	position: relative;
+	
+	.header-right{
+		image{
+			width: 28upx;
+			height: 28upx;
+		}
+	}
+	
+	&-close{
+		position: absolute;
+		right: -48upx;
+		top: -48upx;
+		
+		width: 48upx;
+		height: 48upx;
+		
+		// @include fullImage;
+		z-index: 9;
+		background: url(@/static/public/icon-close-white.png) no-repeat;
+		background-position: center center;
+		background-size: 40upx 40upx;
+	}
+	
+	&-image{
+		width: 500upx;
+		// width: 60%;
+		margin: 0 auto;
+		image{
+			width: 100%;
+			height: auto;
+		}
+	}
+}		
+		
+		
+		
+		
+		
+		
+		
+		

@@ -1,0 +1,108 @@
+page,.pages{
+	background: $globalColor-white;
+}
+
+.initTilte{
+		margin-top: 0;
+	}
+.release{
+	// background: $globalColor-white;
+	display: flow-root;
+}
+.initTabs{
+	@include flexBetween;
+	background: $globalColor-white;
+	padding:31upx 0 12upx;
+	border-bottom: 1px solid $globalColor-border;
+	&-title{
+		width: 50%;
+		text-align: center;
+		font-size: 32upx;
+		font-family: DINPro;
+		font-weight: bold;
+		color: $globalColor-fontStyle;
+		position: relative;
+		&--active{
+			color: $globalColor-style;
+			&::before{
+				content: '';
+				background: $globalColor-style;
+				width: 32upx;
+				height: 4upx;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: -12upx;
+			}
+		}
+	}
+}
+
+.releaseBox{
+	@include flexBetween;
+	padding: 0 30upx 30upx;
+	&-title{
+		font-size: 28upx;
+		font-family: DINPro;
+		font-weight: 500;
+		color: $globalColor-fontStyle;
+	}
+}
+
+.releaseMian{
+	margin: 30upx 0;
+	padding: 35upx 0;
+	border-top: 20upx solid $globalColor-bgStyle;
+	border-left: none;
+	border-right: none;
+	background: $globalColor-white;
+	&-ways{
+		@include flexLeft;
+		padding: 38upx 30upx 0;
+		width: 100%;
+		&__txtNo{
+			text-align: center;
+			color: #999999;
+			font-size: 28upx;
+		}
+		&__forBox{
+			margin-right: 34upx;
+			&:nth-last-child(1){
+				margin-right: 0upx;
+			}
+		}
+		&__item{
+			@include flexCenter;
+			padding: 18upx 34upx;
+			border: 1px dashed $globalColor-border;
+			border-radius: 10upx;
+			&--active{
+				border: 1px solid $globalColor-style;
+			}
+			image{
+				width: 44upx;
+				height: 44upx;
+				margin-right: 7upx;
+			}
+			&-title{
+				font-size: 32upx;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #CCCCCC;
+				&--active{
+					color: $globalColor-fontStyle;
+				}
+			}
+		}
+	}
+	&-tipsBox{
+		padding: 38upx 30upx;
+		&__tips{
+			font-size: 28upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: #666666;
+			line-height: 45upx;
+		}
+	}
+}

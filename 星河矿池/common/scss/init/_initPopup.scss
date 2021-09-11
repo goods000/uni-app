@@ -1,0 +1,146 @@
+// 中间弹出模块样式
+.initPopup {
+	&-wrapper {
+		border-radius: 15upx;
+		padding: 30upx;
+		background-color: $globalColor-bgStyle;
+		width: 600upx;
+	}
+
+	&-title {
+		@include initBeforeHolder;
+		font-size: 32upx;
+		color: $globalColor-fontStyle;
+		font-weight: bold;
+		margin-bottom: 30upx;
+
+		.initPopup--danger &{
+			color: #ff2c4f;
+		}
+	}
+
+	&-desc {
+		font-size: 28upx;
+		color: #999999;
+		font-weight: 300;
+		margin-bottom: 30upx;
+
+		&--highlight {
+			color: $globalColor-style;
+		}
+	}
+
+	&-listBox {
+		width: 100%;
+		margin-bottom: 30upx;
+		&__list {
+			@include flexBetween;
+			padding: 15upx 0;
+			&-label {
+				font-size: 28upx;
+				font-weight: 300;
+				color: #99999d;
+			}
+			&-data {
+				font-size: 28upx;
+				font-weight: 300;
+				color: $globalColor-fontStyle;
+			}
+			&-input {
+				@include flexLeft;
+				flex: 1;
+				border-bottom: 1upx solid $globalColor-style;
+				padding-bottom: 15upx;
+				color: $globalColor-fontStyle;
+				input {
+					flex: 1;
+				}
+			}
+			
+			&-textarea{
+				// @include flexLeft;
+				width: 100%;
+				background-color: #FFFFFF;
+				padding: 30upx;
+				border-radius: 20upx;
+				flex: 1;
+				color: $globalColor-fontStyle;
+				height: 160upx;
+				
+				&--long{
+					height: 360upx;
+				}
+				
+				textarea {
+					height: calc(100% - 30upx);
+					width: 100%;
+					font-size: 28upx;
+					font-weight: 300;
+					color: $globalColor-fontStyle;
+				}
+			}
+			
+			&-max{
+				font-size: 28upx;
+				font-weight: 300;
+				color: $globalColor-fontStyle;
+				text-align: right;
+			}
+
+			&-placeholder {
+				color: #666666;
+				font-size: 32upx;
+			}
+		}
+		
+		
+		&__note {
+			color: #999999;
+			font-size: 22upx;
+		
+			&--highlight {
+				color: #ffffff;
+			}
+		}
+	}
+
+	&-buttonBox {
+		@include flexCenter;
+		@include calcMargin(15);
+		&__btn {
+			@include flexCenter;
+			flex: 1;
+			color: #99999d;
+			padding: 15upx 0;
+			border-radius: 8upx;
+			font-size: 32upx;
+			margin: 15upx;
+
+			&--cancel {
+				border: 2upx solid $globalColor-style;
+				color: $globalColor-style;
+				
+				
+				.initPopup--danger &{
+					@include initButtonGrad;
+					border: 2upx solid transparent;
+					color: #ffffff;
+				}
+			}
+
+			&--confirm {
+				// @include initButtonGrad;
+				background-color: $globalColor-style;
+				border: 2upx solid transparent;
+				color: #ffffff;
+				
+				.initPopup--danger &{
+					background: none;
+					background-color: #ff2c4f;
+					border: 2upx solid transparent;
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}

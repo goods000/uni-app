@@ -1,0 +1,94 @@
+.tabsSelectBox {
+	&-wrapper {
+	}
+	&-scroll {
+		width: 750rpx;
+		flex-direction: row;
+		white-space: nowrap;
+	}
+
+	&-item {
+		display: inline-block;
+		padding: 12upx 30upx;
+		font-size: 28upx;
+		font-weight: 700;
+		color: #999999;
+		
+		position: relative;
+
+		&::after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+			width: 24rpx;
+			height: 6rpx;
+			border-radius: 4rpx;
+			background-color: transparent;
+			@include initTransition(0.4);
+		}
+
+		&--active {
+			color: #2BFFB0;
+
+			&::after {
+				background-color: #2BFFB0;
+			}
+		}
+	}
+}
+
+.listBox {
+	padding: 30upx;
+
+	&-wrapper {
+		// padding: 60upx;
+	}
+
+	&-title {
+		background: url(@/static/ipfs/icon-calcPower-list-title.png) no-repeat;
+		background-position: left center;
+		background-size: 40upx 40upx;
+		padding-left: 50upx;
+		margin-bottom: 30upx;
+		font-size: 28rpx;
+		font-weight: 700;
+		color: #ffffff;
+	}
+
+	&-list {
+		@include flexBetween;
+		padding: 30upx 45upx;
+		background: #0F1D1E;
+		border-radius: 30rpx;
+		margin-bottom: 30upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&__content {
+		}
+
+		&__title {
+			font-size: 32rpx;
+			text-align: left;
+			color: #ffffff;
+			margin-bottom: 8upx;
+		}
+
+		&__date {
+			font-size: 24rpx;
+			font-weight: 400;
+			color: #DDDDDD;
+		}
+
+		&__price {
+			font-size: 32rpx;
+			font-weight: 700;
+			color: #2BFFB0;
+		}
+	}
+}

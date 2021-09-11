@@ -1,0 +1,64 @@
+.listBox {
+	&-wrapper {
+		padding: 0 30upx;
+	}
+	&-list {
+		@include flexBetween;
+		@include initShadow;
+		background-color: #ffffff;
+		align-items: stretch;
+		padding: 0 30upx;
+		margin-bottom: 30upx;
+		border-radius: 20upx;
+		height: 110upx;
+
+		&__label {
+			@include flexCenterColumn;
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			font-weight: 300;
+		}
+
+		&__data {
+			@include flexCenterColumn;
+			font-size: 32upx;
+			color: #999999;
+			font-weight: 300;
+			padding-right: 30upx;
+			background: url(@/static/public/icon-arrow-right-grey.png) no-repeat;
+			background-size: 14upx 26upx;
+			background-position: right center;
+
+			&--white {
+				color: #ffffff;
+			}
+
+			&--black {
+				color: #000000;
+			}
+
+			&--style {
+				color: $globalColor-style;
+			}
+			
+			&--small{
+				font-size: 24upx;
+			}
+
+			&--noArrow {
+				background: none;
+				padding-right: 0;
+			}
+		}
+		&__avatar {
+			width: 70upx;
+			height: 70upx;
+			border-radius: 50%;
+			overflow: hidden;
+			image {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,181 @@
+.highStyleBg {
+	@include themeBgColorValue(#EC6B00, #171D24) width: 100%;
+	height: calc(300upx + var(--status-bar-height));
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.main {
+	position: relative;
+	z-index: 1;
+	padding: 0 30upx 30upx;
+}
+
+.planeBox {
+	margin-bottom: 30upx;
+
+	&-wrapper {
+		@include themeBgColor('globalColor-bgStyle');
+		@include initShadow;
+		border-bottom-left-radius: 28upx;
+		border-bottom-right-radius: 28upx;
+		padding: 30upx;
+		position: relative;
+	}
+
+	&-level {
+		@include fullImage;
+		position: absolute;
+		right: 0;
+		top: 30upx;
+		width: 114upx;
+		height: 40upx;
+	}
+
+	&-header {
+		margin-bottom: 45upx;
+		text-align: center;
+	}
+
+	&-info {
+		&__label {
+			@include themeColor('globalColor-fontStyle');
+			font-size: 24upx;
+			font-weight: 300;
+			margin-bottom: 8upx;
+		}
+
+		&__data {
+			@include themeColor('globalColor-themeStyle');
+			display: inline-block;
+			font-size: 46upx;
+			font-weight: 300;
+			background-image: url(@/static/public/icon-arrow-right-grey.png);
+			background-position: right center;
+			background-size: 14upx 26upx;
+			background-repeat: no-repeat;
+			padding-right: 24upx;
+		}
+	}
+
+	&-dataBox {
+		@include flexCenter;
+		// padding: 45upx 0;
+
+		&__item {
+			@include flexCenterColumn;
+			flex: 1;
+
+			&-data {
+				@include themeColor('globalColor-fontStyle');
+				font-size: 32upx;
+				font-weight: bold;
+				margin-bottom: 15upx;
+
+				background-image: url(@/static/public/icon-arrow-right-grey.png);
+				background-position: right center;
+				background-size: 8upx 16upx;
+				background-repeat: no-repeat;
+				padding-right: 20upx;
+			}
+
+			&-label {
+				@include themeColor('globalColor-fontSubStyle');
+				font-size: 24upx;
+				font-weight: 300;
+			}
+			&-num {
+				@include themeColor('globalColor-fontStyle');
+				font-size: 32upx;
+				font-weight: bold;
+				margin: 15upx;
+				padding-right: 20upx;
+			}
+		}
+	}
+
+	&-buttonBox {
+		@include flexCenter;
+		margin-top: 30upx;
+
+		&__btn {
+			@include flexCenter;
+			flex: 1;
+			font-size: 28upx;
+			font-weight: bold;
+			border-radius: 10upx;
+			padding: 20upx 0;
+			margin-right: 30upx;
+			
+			&:last-child{
+				margin-right: 0;
+			}
+
+			&:nth-child(2n + 1) {
+				color: #EC6B00;
+				background-color: #b3cdf2;
+			}
+
+			&:nth-child(2n + 2) {
+				color: #ffffff;
+				background-color: #EC6B00;
+			}
+		}
+	}
+}
+
+.listBox {
+	&-wrapper {
+	}
+
+	&-content {
+		@include themeBgColor('globalColor-bgStyle');
+		@include initShadow;
+		padding: 0 30upx;
+		border-radius: 18upx;
+	}
+
+	&-title {
+		margin-bottom: 30upx;
+	}
+
+	&-list {
+		@include themeBorderColorValue(#e6e6e6,#2d343d);
+		padding: 30upx 0;
+		border-bottom: 1px solid;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		&__title {
+			@include themeColor('globalColor-themeStyle');
+			font-size: 32upx;
+			font-weight: 300;
+			margin-bottom: 30upx;
+		}
+	}
+
+	&-itemBox {
+		@include flexBetween;
+
+		&__item {
+			@include justifiedLayout;
+			flex: 1;
+
+			&-label {
+				@include themeColor('globalColor-fontSubStyle');
+				font-size: 24upx;
+				font-weight: 300;
+			}
+
+			&-data {
+				@include themeColor('globalColor-fontStyle');
+				font-size: 28upx;
+				font-weight: 300;
+			}
+		}
+	}
+}

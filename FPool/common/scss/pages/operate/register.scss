@@ -1,0 +1,202 @@
+page,.pages{
+	overflow: scroll;
+	height: 100vh;
+}
+
+.firstBox{
+	&-titleBox{
+		margin: 40upx 31upx ;
+		&-wrapper{
+			font-size: 52upx;
+			font-family: PingFang SC;
+			font-weight: bold;
+			color: $globalColor-fontStyle;
+		}
+		&-title{
+			font-size: 24upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: #999999;
+		}
+	}
+}
+
+.operateBox{
+	&-flex{
+		@include flexBetween;
+	}
+	&-bg{
+		background: $globalColor-style;
+		border-radius: 0px 0px 10px 10px;
+		min-height: 310upx;
+	}
+	&-tabs{
+		display: block;
+		margin: 0upx 31upx 100upx;
+		&-item{
+			@include flexLeft;
+			align-items: flex-end;
+			margin: 0 0 24upx;
+			&__title{
+				width: 26%;
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: bold;
+				position: relative;
+				padding-bottom: 6upx;
+				&--active::before{
+					content: '';
+					width: 36upx;
+					height: 6upx;
+					background: $globalColor-style;
+					position: absolute;
+					bottom: 0;
+					transform: translateX(50%);
+				}
+			}
+		}
+	}
+	&-formBox{
+		&-list{
+			&-title{
+				color: #333333;
+				font-size: 32upx;
+				font-weight: bold;
+				width: 18%;
+				background: url(../../static/operate/icon-operate-next.png) no-repeat;
+				background-position: calc(100% - 20upx) center;
+				background-size: 20upx 12upx;
+			}
+			&-header{
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: bold;
+				margin: 24upx 0;
+			}
+			@include flexLeft;
+			width: 100%;
+			background: #FFFFFF;
+			box-shadow: 4upx 6upx 21upx 0upx rgba(147, 147, 147, 0.27);
+			border-radius: 20upx;
+			padding: 32upx 28upx;
+			&.showCloseBtn {
+				.operateBox-formBox-list-image__clear--active{
+					display: flex;
+				}
+			}
+			input{
+				flex: 1;
+				font-size: 32upx;
+				border: none;
+			}
+			&-image{
+				@include flexRight;
+				&__clear{
+					margin-right: 14upx;
+					image{
+						width: 30upx;
+						height: 30upx;
+					}
+					&--active{
+						display: none;
+					}
+				}
+				&__see{
+					image{
+						width: 44upx;
+						height: 44upx;
+					}
+				}
+			}
+		}
+		&-lists{
+			width: 70%;
+		}
+		.code{
+			width: 25%;
+			background: $globalColor-style;
+			color: $globalColor-fontStyle;
+			border-radius: 20upx;
+			font-size: 32upx;
+			padding: 32upx 28upx;
+			text-align: center;
+			white-space: nowrap;
+		}
+	}
+	&-btn{
+		&-chioce{
+			width: 100%;
+			font-size: 32upx;
+			text-align: center;
+			padding: 25upx;
+			border-radius: 20upx;
+			font-weight: bold;
+			letter-spacing: 8upx;
+			border: 1px solid $globalColor-style;
+			background: $globalColor-style;
+			color: $globalColor-fontStyle;
+			margin:32upx 0 24upx;
+		}
+	}
+	
+	&-bottom{
+		@include flexCenter;
+		&-title{
+			color: #666666;
+			font-size: 24upx;
+		}	
+		&-choice{
+			color: $globalColor-style;
+			font-size: 24upx;
+			margin-left: 10upx;
+		}
+	}
+	&-agreement{
+		margin: 40upx 0 0;
+		@include flexLeft;
+		label{
+			border: 1px solid $globalColor-border;
+			width: 30upx;
+			height: 30upx;
+			border-radius: 50%;
+			margin-right: 11upx;
+		}
+		.checkbox-active{
+			background: url(../../static/operate/icon-active.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			border: 1px solid transparent;
+			// .checkbox{
+			// 	margin: 5upx;
+			// 	background: $globalColor-style;
+			// 	width: 18upx;
+			// 	height: 18upx;
+			// 	border-radius: 50%;
+			// }
+		}
+		&-title{
+			color: #666666;
+			font-size: 24upx;
+		}
+		&-name{
+			color: $globalColor-style;
+			font-size: 24upx;
+		}
+	}
+	&-bottomBox{
+		margin: 15% auto 50upx;
+		// position: absolute;
+		bottom: 50upx;
+		width: 100%;
+		padding: 0 31upx;
+	}
+	&-bottomBoxFor{
+		position: absolute;
+		bottom: 50upx;
+		width: 100%;
+		padding: 0 31upx;
+	}
+}
+
+
+.uni-picker-action-confirm{color: $globalColor-style !important;}

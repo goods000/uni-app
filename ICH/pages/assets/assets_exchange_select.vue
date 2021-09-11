@@ -1,0 +1,91 @@
+<template>
+	<view class="pages">
+		<view class="initHeader initHeader--bgWhite initHeader--line initHeader--black">
+			<view class="initHeader-wrapper">
+				<view class="initHeader-back" @click="$tools.back(1)"></view>
+				<view class="initHeader-title">选择账户</view>
+			</view>
+		</view>
+		<view class="main">
+			<view class="formBox">
+				<view class="formBox-wrapper">
+					<view class="formBox-list" v-for="(item, index) in assetsModeList" :key="index" @click="selectMode(item.key)">
+						<view class="formBox-list__label">{{ item.name }}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+export default {
+	data() {
+		return {
+			assetsModeList: []
+		};
+	},
+	onShow() {
+		this.init();
+	},
+	methods: {
+		init() {
+			this.getAssetsMode();
+		},
+		getAssetsMode(assetType) {
+			this.$Ajax('/search/assertList', {}, res => {
+				if (res.code == 0) {
+					this.assetsModeList = res.obj;
+					this.assetsModeList.forEach((item, key)=>{
+						if(item.key == 1){
+							this.assetsModeList.splice(key,1);
+						}
+					})
+					console.log(JSON.stringify(this.assetsModeList));
+				}
+			});
+		},
+		selectMode(key){
+			uni.setStorageSync('assetsMode', key);
+			this.$tools.back();
+		}
+	}
+};
+</script>
+
+<style lang="scss" scoped>
+page,.pages {
+	background-color: #f7f8fc;
+}
+.formBox {
+	&-list {
+		@include flexBetween;
+		padding: 30upx;
+		border-bottom: 1upx solid #c6d2e4;
+		border-top: 1upx solid #c6d2e4;
+		background-color: #ffffff;
+		margin-bottom: 15upx;
+		&__label {
+			font-size: 32upx;
+			color: #101010;
+		}
+		&__switch {
+			@include flexRight;
+			transform: translateX(15upx);
+		}
+		&__data {
+			background-position: right center;
+			background-repeat: no-repeat;
+			background-size: 14upx 26upx;
+			background-image: url(../../static/public/icon-arrow-right-grey.png);
+			color: #99999d;
+			font-size: 28upx;
+			padding-right: 30upx;
+		}
+
+		&:first-child {
+			border-top: 0;
+		}
+	}
+}
+</style>

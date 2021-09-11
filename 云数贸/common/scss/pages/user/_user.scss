@@ -1,0 +1,56 @@
+.indexBox{
+	&-drawer{
+		// height: 100vh;
+		z-index: 9999;
+		&-header{
+			padding: 34upx 48upx 34upx;
+			color: $globalColor-white;
+			font-size: 46upx;
+			font-weight: bold;
+			background: $globalColor-bgColor;
+			margin-bottom: 28upx;
+			text{
+				font-size: 24upx;
+				font-family: PingFang SC;
+				font-weight: 400;
+				color: $globalColor-white;
+				display: block;
+				margin-top: 10upx;
+			}
+		}
+		&-userList{
+			background: $globalColor-bgColor;
+			padding-bottom: 25%;
+			&__item{
+				padding: 34upx 0;
+				margin: 0 26upx 0 40upx ;
+				@include flexBetween;
+				border-bottom: 1px solid $globalColor-border;
+				&--left{
+					@include flexLeft;
+					image{width: 36upx;height: 32upx;}
+					&_txt{
+						color: $globalColor-white;
+						font-size: 30upx;
+						margin-left: 23upx;
+						font-weight: bold;
+					}
+				}
+				&--right{
+					@include flexRight;
+					image{width: 44upx;height: 44upx;}
+					&_txt{
+						color: #666666;
+						font-size: 20upx;
+						margin-right: 12upx;
+						@include flexLeft;
+						image{width: 30upx;height: 30upx;}
+						&-chioce{
+							color: $globalColor-style;
+						}
+					}
+				}
+			}
+		}
+	}
+}

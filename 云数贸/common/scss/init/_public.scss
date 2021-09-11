@@ -1,0 +1,151 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'DINPro', 'PingFangSC-Regular', 'AvenirBold';
+}
+
+image {
+	height: 0;
+	display: block;
+}
+
+// /deep/ .uni-picker-container .uni-picker-action.uni-picker-action-confirm{
+// 	color: $globalColor-style;
+// }
+
+// 全局背景色
+page{
+	background-color: $globalColor-bgStyle;
+}
+.pages{
+	background-color: $globalColor-bgStyle;
+	/* #ifdef APP-PLUS */
+	min-height: 100vh;
+	/* #endif */
+	overflow: scroll;
+}
+.inputColor{
+	color: #592725;		
+}
+.contentBg{
+	background: $globalColor-bgColor;
+	min-height: 100vh;
+	/* #ifdef APP-PLUS */
+	min-height: 100vh;
+	/* #endif */
+	overflow: scroll;
+}
+
+.mb-border{
+	border-bottom: 16upx solid $globalColor-bgStyle;
+	padding-bottom: 40upx;
+}
+
+.tipsBox {
+	position: relative;
+	@include flexBetween;
+	// border-top: 16upx solid #f5f6f8;
+	&-wrapper {
+		// padding: 0 30upx;
+	}
+
+	&-title {
+		@include flexBetween;
+
+		padding: 30upx;
+
+		&__label {
+			@include initBeforeHolder;
+			font-size: 28upx;
+			color: $globalColor-white;
+			font-weight: bold;
+		}
+		
+		&__txt {
+			font-size: 28upx;
+			color: $globalColor-white;
+			font-weight: bold;
+		}
+
+		&__more {
+			color: #999999;
+			font-size: 24upx;
+		}
+	}
+	&-operate{
+		padding-right: 40upx;
+		position: absolute;
+		right: 10upx;
+		width: 60%;
+		&-title{
+			color: $globalColor-white;
+			font-size: 28upx;
+			font-weight: 500;
+			text-align: right;
+		}
+		&--active{
+			font-size: 48upx;
+			font-family: DINPro;
+			font-weight: bold;
+			text-align: right;
+			color: $globalColor-style;
+			padding-right: 40upx;
+		}
+	}
+	&-right{
+		background: url(../../static/user/icon-user-next.png);
+		background-size: 40upx 40upx;
+		background-repeat: no-repeat;
+		background-position: right;
+		padding-right: 40upx;
+		position: absolute;
+		right: 10upx;
+		width: 40upx;
+		height: 40upx;
+		&-title{
+			color: $globalColor-white;
+			font-size: 32upx;
+			font-weight: 500;
+		}
+	}
+}	
+
+.mt-bg{
+	background-color: $globalColor-bgStyle;
+	width: 100%;
+	height: 20upx;
+	display: block;
+}
+
+.initBtn{
+	background: $globalColor-style;
+	border: 1px solid $globalColor-style;
+	color: $globalColor-white;
+	margin: 60upx auto 20upx;
+	text-align: center;
+	// border-radius: 50upx;
+	width: 90%;
+	font-size: 32upx;
+	padding: 20upx 0;
+	font-weight: bold;
+	letter-spacing: 8upx;
+}
+
+.orderBtn{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 30upx 30upx 52upx;
+	width: 100%;
+	&-btn{
+		background: $globalColor-style;
+		color: $globalColor-white;
+		font-size: 32upx;
+		font-weight: bold;
+		padding: 22upx 0;
+		text-align: center;
+		// border-radius: 50upx;
+	}
+}

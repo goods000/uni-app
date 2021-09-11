@@ -1,0 +1,111 @@
+.main {
+	// padding: 30upx;
+}
+
+.listBox {
+	padding-top: 30upx;
+
+	&-wrapper {
+		padding: 0 30upx 30upx;
+	}
+
+	&-list {
+		@include themeBgColor('globalColor-bgStyle');
+		@include initShadow;
+		padding: 30upx;
+		border-radius: 24upx;
+		margin-bottom: 30upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&__header {
+			@include flexLeft;
+			margin-bottom: 15upx;
+		}
+
+		&__info {
+			flex: 1;
+		}
+
+		&__row {
+			@include flexLeft;
+		}
+
+		&__icon {
+			@include fullImage;
+			width: 42upx;
+			margin-right: 15upx;
+		}
+
+		&__type {
+			@include themeColor('globalColor-fontStyle');
+			font-size: 32upx;
+			font-weight: 300;
+			margin-right: 8upx;
+			
+			&--green{
+				@include themeColor('globalColor-green');
+			}
+			
+			&--red{
+				@include themeColor('globalColor-red');
+			}
+		}
+		
+		&__quantity{
+			@include themeColor('globalColor-fontStyle');
+			font-size: 32upx;
+			font-weight: 300;
+			margin-right: 8upx;
+		}
+
+		&__currencyName {
+			@include themeColor('globalColor-themeStyle');
+			font-size: 32upx;
+			font-weight: 300;
+		}
+
+		&__label {
+			@include themeColor('globalColor-fontSubStyle');
+			flex: 1;
+			font-size: 20upx;
+			font-weight: 300;
+
+			&:first-child {
+				text-align: left;
+			}
+
+			&:last-child {
+				text-align: right;
+			}
+		}
+	}
+
+	&-itemBox {
+		&__wrapper {
+			@include flexCenter;
+		}
+		&__item {
+			@include justifiedLayout;
+			flex: 1;
+
+			&-data {
+				@include themeColor('globalColor-fontStyle');
+				font-size: 28upx;
+				font-weight: bold;
+
+				&--style {
+					@include themeColor('globalColor-themeStyle');
+				}
+			}
+
+			&-label {
+				@include themeColor('globalColor-fontSubStyle');
+				font-size: 20upx;
+				font-weight: 300;
+			}
+		}
+	}
+}

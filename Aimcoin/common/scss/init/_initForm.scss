@@ -1,0 +1,242 @@
+.initFormBox {
+	position: relative;
+	z-index: 1;
+
+	&-item {
+		margin-bottom: 30upx;
+		position: relative;
+
+		&__list {
+			@include flexLeft;
+			align-items: stretch;
+		}
+
+		&__label {
+			@include themeColor('globalColor-fontStyle');
+			font-size: 28upx;
+			font-weight: bold;
+			margin-bottom: 15upx;
+		}
+
+		&__subLabel {
+			@include themeColor('globalColor-fontSubStyle');
+			font-size: 28upx;
+			font-weight: 300;
+			margin-bottom: 15upx;
+		}
+
+		&__zone {
+			@include themeColor('globalColor-fontStyle');
+			width: 140upx;
+			margin-right: 15upx;
+			// border-right: 1upx solid $globalColor-style;
+			// background: url(@/static/public/icon-triangle-bottom-black.png) no-repeat;
+			background-position: calc(100% - 15upx) center;
+			background-size: 24upx 12upx;
+			background-repeat: no-repeat;
+			font-size: 32upx;
+			font-weight: 300;
+
+			@include themeBgImg('@/static/public/icon-triangle-bottom-black.png', '@/static/public/icon-triangle-bottom-white.png');
+		}
+
+		&__input {
+			@include flexLeft;
+			@include initTransition(0.4);
+			@include themeBgColor('globalColor-inputBgStyle');
+			@include themeBorderColor('globalColor-inputBorderStyle');
+			border: 1px solid;
+			position: relative;
+			border-radius: 18upx;
+			padding: 30upx;
+			flex: 1;
+
+			&.showCloseBtn {
+				.initFormBox-item__fixedBox-btn--clear {
+					display: flex;
+				}
+			}
+
+			input {
+				@include themeColor('globalColor-fontStyle');
+				font-size: 32upx;
+				font-weight: 300;
+				flex: 1;
+			}
+		}
+
+		&__placeholder {
+			@include themeColor('globalColor-placeholderStyle');
+			font-size: 32upx;
+			font-weight: 300;
+		}
+
+		&__fixedBox {
+			@include flexRight;
+
+			&-btn {
+				width: 60upx;
+				height: 100%;
+				z-index: 999;
+				@include flexCenter;
+
+				&--clear {
+					display: none;
+					image {
+						width: 40upx;
+						@include fullImage;
+					}
+				}
+
+				&--eye {
+					image {
+						width: 40upx;
+						@include fullImage;
+					}
+				}
+			}
+		}
+
+		&__type {
+			@include themeColor('globalColor-fontStyle');
+			font-size: 30upx;
+			font-weight: 300;
+		}
+
+		&__btn {
+			@include themeColor('globalColor-themeStyle');
+			font-size: 30upx;
+			font-weight: 300;
+			margin-left: 30upx;
+		}
+
+		&__note {
+			@include themeColor('globalColor-fontSubStyle');
+			margin-top: 8upx;
+			font-size: 24upx;
+			font-weight: 300;
+		}
+
+		&__tips {
+			color: $globalColor-style;
+			margin-top: 8upx;
+			font-size: 24upx;
+			font-weight: 300;
+		}
+
+		&__verify {
+			@include themeColor('globalColor-themeStyle');
+			border-radius: 20upx;
+			font-size: 32upx;
+			font-weight: bold;
+		}
+
+		&__note {
+			color: #999999;
+			font-size: 24upx;
+			font-weight: 300;
+			margin-top: 15upx;
+		}
+
+		&__scan {
+			width: 32upx;
+			@include fullImage;
+		}
+
+		&__unit {
+			@include themeColor('globalColor-fontStyle');
+			font-size: 30upx;
+			font-weight: 300;
+		}
+
+		&__code {
+			@include themeColor('globalColor-themeStyle');
+			font-size: 30upx;
+			font-weight: 300;
+			margin-left: 30upx;
+		}
+	}
+
+	&-info {
+		padding: 30upx 0;
+		&__list {
+			@include flexBetween;
+			margin-bottom: 15upx;
+
+			&-label {
+				@include themeColor('globalColor-fontStyle');
+				font-weight: 300;
+				font-size: 24upx;
+			}
+
+			&-data {
+				@include themeColor('globalColor-fontSubStyle');
+				font-weight: 300;
+				font-size: 24upx;
+			}
+		}
+	}
+
+	&-tips {
+		text-align: left;
+		padding: 30upx 0;
+
+		&__title {
+			@include themeColor('globalColor-fontStyle');
+			font-size: 32upx;
+			font-weight: 300;
+			margin-bottom: 15upx;
+			text-align: left;
+		}
+
+		&__list {
+			@include themeColor('globalColor-fontSubStyle');
+			font-size: 22upx;
+			font-weight: 300;
+		}
+	}
+
+	&-button {
+		margin-top: 90upx;
+		padding: 0;
+		&__btn {
+			@include initTransition(0.4);
+			padding: 30upx 0;
+			border-radius: 8upx;
+			font-size: 36upx;
+			text-align: center;
+			color: #000f11;
+			font-weight: bold;
+			background-color: $globalColor-style;
+			// @include initButtonGrad;
+		}
+	}
+
+	&-checkbox {
+		margin-top: 120upx;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		font-size: 24upx;
+		color: #999999;
+		.linkColor {
+			color: $globalColor-style;
+		}
+	}
+
+	&-rightButton {
+		color: #999999;
+		font-size: 24upx;
+		font-weight: 300;
+		text-align: right;
+		padding-top: 30upx;
+	}
+
+	&-textButton {
+		width: 100%;
+		text-align: center;
+		padding: 30upx;
+		color: $globalColor-style;
+		font-size: 24upx;
+	}
+}

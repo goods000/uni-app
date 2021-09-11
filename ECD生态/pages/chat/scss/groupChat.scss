@@ -1,0 +1,96 @@
+page{
+	background: $globalColor-white;
+}
+.groupChat{
+	&-search{
+		background: #EDF1F4;
+		border-radius: 12upx;
+		padding: 24upx 30upx;
+		margin: 38upx 30upx 32upx;
+		@include flexLeft;
+		position: relative;
+		&__image{
+			position: absolute;
+			left: 35%;
+			width: 40upx;
+			height: 40upx;
+			margin-right: 16upx;
+			&--active{
+				display: none;
+			}
+		}
+		&.showCloseBtn {
+			.groupChat-search__fixedBox-btn--clear {
+				display: flex;
+			}
+		}
+		input{
+			font-size: 32upx;
+			font-family: DINPro;
+			font-weight: 500;
+			color: #0C1E37;
+			width: 95%;
+			text-align: center;
+		}
+		&--input{
+			font-size: 30upx;
+			color: #CCCCCC;
+		}
+		
+		&__fixedBox {
+			@include flexRight;
+		
+			&-btn {
+				width: 60upx;
+				height: 100%;
+				z-index: 999;
+				@include flexCenter;
+				&--clear {
+					display: none;
+					image {
+						width: 26upx;
+						height: 26upx;
+						@include fullImage;
+					}
+				}
+			}
+		}
+	}
+	&-height{
+		height: calc(100vh - 17vh);
+	}
+	&-wrapper{
+		// margin-top: 58upx;
+		background: $globalColor-white;
+	}
+	&-list{
+		@include flexLeft;
+		padding:20upx 0upx 0upx 40upx;
+		&__image{
+			width: 74upx;
+			height: 74upx;
+			margin: 0 30upx 20upx 0;
+			border-radius: 50%;
+		}
+		&__item{
+			width: 90%;
+			@include flexBetween;
+			padding-bottom: 30upx;
+			border-bottom: 1px solid #EDF1F4;
+			// &:nth-last-child(1){border-bottom: none;}
+			&-title{
+				font-size: 32upx;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: $globalColor-fontStyle;
+			}
+		}
+		&__tips{
+			font-size: 24upx;
+			font-family: DINPro;
+			font-weight: 500;
+			color: #999999;
+			padding-right:30upx;
+		}
+	}
+}

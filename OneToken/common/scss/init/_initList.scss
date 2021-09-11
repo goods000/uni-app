@@ -1,0 +1,68 @@
+.initListBox {
+	font-size: 28upx;
+
+	&-header {
+		// background-color: #fcfcfc;
+		// padding: 15upx 30upx;
+		color: #acb1b0;
+		font-size: 22upx;
+	}
+
+	&-wrapper {
+		padding: 0 30upx;
+		background-color: #ffffff;
+	}
+
+	&-list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 30upx 0;
+		border-bottom: 2upx solid #f9f9f9;
+
+		.initListBox-header & {
+			padding: 0;
+			border-bottom: 0;
+			font-size: 28upx;
+		}
+
+		&__data {
+			flex: 1;
+			text-align: center;
+			
+			&:first-child {
+				text-align: left;
+			}
+			&:last-child {
+				text-align: right;
+			}
+
+			&--long {
+				flex: 2;
+			}
+			
+			&--nav{
+				font-weight: bold;
+				color: #999999;
+			}
+		}
+	}
+
+	&-noData {
+		@include flexCenterColumn;
+		padding: 120upx 0;
+		&__icon {
+			width: 80upx;
+			margin-bottom: 15upx;
+			@include fullImage;
+		}
+		&__content {
+			color: #999999;
+			font-size: 26upx;
+			.highlight {
+				margin: 0 5upx;
+				color: $globalColor-green;
+			}
+		}
+	}
+}

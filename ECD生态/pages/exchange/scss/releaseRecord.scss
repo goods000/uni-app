@@ -1,0 +1,101 @@
+page{
+	// background: #FAF8F5;
+	background: $globalColor-bgStyle;
+}
+
+.initTabs{
+	@include flexBetween;
+	background: $globalColor-white;
+	padding:31upx 0 12upx;
+	&-title{
+		width: 50%;
+		text-align: center;
+		font-size: 32upx;
+		font-family: DINPro;
+		font-weight: bold;
+		color: $globalColor-fontStyle;
+		position: relative;
+		&--active{
+			color: $globalColor-style;
+			&::before{
+				content: '';
+				background: $globalColor-style;
+				width: 32upx;
+				height: 4upx;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: -12upx;
+			}
+		}
+	}
+}
+
+.record{
+	.recordBox{
+		margin: 30upx;
+		&-list{
+			padding-top: 20upx;
+			margin-bottom: 20upx;
+			border-radius: 20upx;
+			background: $globalColor-white;
+			&-header{
+				@include flexBetween;
+				padding: 0 30upx;
+				&-title{
+					color: $globalColor-fontStyle;
+					font-weight: bold;
+					font-size: 32upx;
+					@include initBeforeHolder;
+					@include flexLeft;
+				}
+				&-price{
+					@include flexRight;
+					color: $globalColor-fontStyle;
+					font-weight: bold;
+					font-size: 28upx;
+					&-image{
+						width: 16upx;
+					}
+				}
+				&--status{
+					background: $globalColor-style;
+					border-radius: 0 18upx 0 18upx;
+					color: $globalColor-white;
+					font-size: 20upx;
+					padding: 4upx 26upx;
+					margin-left: 20upx;
+				}
+			}
+			&-box{
+				@include flexLeft;
+			}
+			&__num{
+				font-size: 32upx;
+				font-family: DINPro;
+				font-weight: 500;
+				color: $globalColor-style;
+				line-height: 36upx;
+				padding: 28upx 30upx 27upx;
+			}
+			&__operate{
+				@include flexBetween;
+				padding: 0 30upx 30upx;
+				&-title{
+					font-size: 24upx;
+					font-family: PingFang SC;
+					font-weight: 500;
+					color: $globalColor-fontStyle;
+				}
+			}
+		}
+		&-waysList{
+			@include flexLeft;
+			image{
+				width: 44upx;
+				height: 44upx;
+				margin-right: 20upx;
+			}
+		}
+	}
+}

@@ -1,0 +1,1036 @@
+// 头部按钮样式
+.headerButtonTabs {
+	padding: 30upx 0;
+	
+	/* #ifdef APP-PLUS */
+	padding-top: calc(var(--status-bar-height) + 30upx);
+	/* #endif */
+
+	&-wrapper {
+		@include flexCenter;
+	}
+	
+	&-btn {
+		@include flexCenter;
+		@include initTransition(0.4);
+		color: #99999d;
+		background-color: #eef1f6;
+		padding: 15upx 30upx;
+		border-radius: 8upx;
+		font-size: 28upx;
+
+		&--active {
+			background-color: #3a79de;
+			color: #ffffff;
+		}
+	}
+	
+	& + .initHeader{
+		/* #ifdef APP-PLUS */
+		height: $global-header-height;
+		padding-top: 0;
+		/* #endif */
+	}
+}
+
+// 仪表盘样式
+.platformBox {
+	border-top: 16upx solid #f7f8fc;
+
+	&-wrapper {
+		
+	}
+	
+	&-content{
+		@include flexCenter;
+		align-items: stretch;
+		width: 100%;
+	}
+
+	&-operateBox {
+		width: 370upx;
+		margin-right: 30upx;
+	}
+	&-sheetBox {
+		width: 290upx;
+	}
+
+	&-tabs {
+		padding: 0 30upx;
+		&__control {
+			@include flexCenter;
+			border-bottom: 1upx solid #c6d2e4;
+			&-item {
+				@include initTransition(0.4);
+				text-align: center;
+				flex: 1;
+				font-size: 32upx;
+				font-weight: bold;
+				color: #999999;
+				// margin-right: 30upx;
+				padding: 30upx 0;
+				position: relative;
+				&:after {
+					content: '';
+					display: block;
+					width: 30upx;
+					height: 4upx;
+					background-color: transparent;
+					position: absolute;
+					bottom: -1upx;
+					left: 50%;
+					transform: translateX(-50%);
+					@include initTransition(0.4);
+				}
+				&--active {
+					color: $globalColor-blue;
+					&:after {
+						background-color: $globalColor-blue;
+					}
+				}
+			}
+		}
+	}
+
+	&-wrapper {
+		@include flexCenter;
+		align-items: stretch;
+		padding: 30upx;
+	}
+
+	&-buttonBox {
+		@include flexCenter;
+		margin-bottom: 30upx;
+		&__btn {
+			@include flexCenter;
+			@include initTransition(0.4);
+			flex: 1;
+			color: #99999d;
+			background-color: #eef1f6;
+			padding: 15upx 0;
+			border-radius: 8upx;
+			font-size: 32upx;
+
+			&--green {
+				&.platformBox-buttonBox__btn--active {
+					background-color: $globalColor-green;
+					color: #ffffff;
+				}
+			}
+
+			&--red {
+				&.platformBox-buttonBox__btn--active {
+					color: #ffffff;
+					background-color: $globalColor-red;
+				}
+			}
+		}
+	}
+
+	&-pickerBox {
+		margin-bottom: 30upx;
+		&__wrapper {
+			@include flexCenter;
+			// @include calcMargin(5);
+		}
+		&__item {
+			flex: 1;
+			color: #101010;
+			padding: 15upx;
+			border: 1upx solid #949599;
+			border-radius: 8upx;
+			// margin: 0 5upx;
+			font-size: 32upx;
+			padding-right: 30upx;
+			background-image: url(@/static/public/icon-triangle-bottom-blue.png);
+			background-size: 24upx 12upx;
+			background-repeat: no-repeat;
+			background-position: calc(100% - 15upx) center;
+			margin-right: 10upx;
+			&:last-child {
+				margin-right: 0;
+			}
+			&--flex2 {
+				flex: 2;
+			}
+		}
+	}
+
+	&-formBox {
+		margin-bottom: 30upx;
+		&__list {
+			@include flexBetween;
+			@include clearLastMargin;
+			margin-bottom: 30upx;
+			padding: 15upx;
+			border: 1upx solid #949599;
+			border-radius: 8upx;
+			
+			&--disabled{
+				color: #99999d;
+				font-size: 32upx;
+				background-color: #eef1f6;
+			}
+			
+			&-placeholder {
+				font-size: 32upx;
+				color: #99999d;
+			}
+			&-input {
+				flex: 1;
+				font-size: 32upx;
+				color: 101010;
+				input {
+					font-size: inherit;
+				}
+			}
+			&-type {
+				font-size: 32upx;
+				color: #636366;
+			}
+		}
+	}
+
+	&-infoBox {
+		margin-bottom: 30upx;
+		&__list {
+			@include flexBetween;
+			@include clearLastMargin;
+			margin-bottom: 30upx;
+			color: #626366;
+			font-size: 24upx;
+		}
+	}
+
+	&-sliderBox {
+		slider {
+			margin: 0;
+			padding: 15upx;
+		}
+			uni-slider .uni-slider-handle, uni-slider .uni-slider-thumb{
+				background-color: red;
+			}
+		
+		&__button{
+			margin-top: 15upx;
+			@include flexCenter;
+			// @include calcMargin(45);
+			border: 1upx solid #999999;
+			border-radius: 15upx;
+			&-btn{
+				flex: 1;
+				font-size: 16upx;
+				color: #999999;
+				text-align: center;
+				padding: 15upx 0;
+				border-right: 1upx solid #999999;
+				
+				&:last-child{
+					border-right: 0;
+				}
+			}
+		}
+	}
+
+	&-enterBox {
+		margin-top: 30upx;
+
+		&__button {
+			padding: 15upx 0;
+			border-radius: 8upx;
+			color: #ffffff;
+			text-align: center;
+			font-size: 28upx;
+			@include initTransition(0.4);
+			&--green {
+				background-color: $globalColor-green;
+			}
+
+			&--red {
+				background-color: $globalColor-red;
+			}
+		}
+	}
+
+	&-sheetHeader {
+		@include flexBetween;
+		margin-bottom: 15upx;
+		font-size: 22upx;
+		color: #99999d;
+	}
+	
+	&-sheetContent{
+		@include flexCenterColumn;
+	}
+
+	&-resourceBox {
+		margin: 15upx 0;
+		width: 100%;
+		
+		&--sell{
+			order: 1;
+		}
+		&--buy{
+			order: 10;
+		}
+
+		&__list {
+			position: relative;
+			// height: 40upx;
+			padding: 5upx 0;
+			@include flexBetween;
+
+			&--red {
+				.platformBox-resourceBox__price {
+					color: $globalColor-red;
+				}
+
+				.platformBox-resourceBox__chart-line {
+					background-color: rgba(243, 55, 55, 0.16);
+				}
+			}
+
+			&--green {
+				.platformBox-resourceBox__price {
+					color: $globalColor-green;
+				}
+
+				.platformBox-resourceBox__chart-line {
+					background-color: rgba(0, 163, 94, 0.13);
+				}
+			}
+		}
+
+		&__content {
+			@include flexBetween;
+			position: relative;
+			z-index: 3;
+			width: 100%;
+		}
+
+		&__price {
+			font-size: 24upx;
+		}
+
+		&__quantity {
+			font-size: 24upx;
+			color: #626366;
+		}
+
+		&__chart {
+			width: 100%;
+			// height: 40upx;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 1;
+			@include flexRight;
+
+			&-line {
+				height: 100%;
+			}
+		}
+	}
+
+	&-sheetInfo {
+		border-top: 1upx solid #eef1f6;
+		border-bottom: 1upx solid #eef1f6;
+		padding: 15upx 0;
+		width: 100%;
+		order: 5;
+		&__price {
+			font-size: 32upx;
+			&--green {
+				color: $globalColor-green;
+			}
+			&--red {
+				color: $globalColor-red;
+			}
+		}
+		&__money {
+			font-size: 24upx;
+			color: #99999d;
+		}
+	}
+
+	&-toolsBox {
+		margin: 30upx 0;
+		&__wrapper {
+			@include flexCenter;
+		}
+		&__item {
+			flex: 1;
+			color: #626366;
+			padding: 15upx;
+			border: 1upx solid #949599;
+			border-radius: 8upx;
+			// margin: 0 5upx;
+			font-size: 28upx;
+			padding-right: 30upx;
+			background-image: url(@/static/public/icon-triangle-bottom-grey.png);
+			background-size: 24upx 12upx;
+			background-repeat: no-repeat;
+			background-position: calc(100% - 15upx) center;
+			margin-right: 10upx;
+			&:last-child {
+				margin-right: 0;
+			}
+			&--flex2 {
+				flex: 2;
+			}
+		}
+	}
+
+	&-messageBox{
+		padding: 30upx;
+		
+		&__wrapper{
+			border-radius: 15upx;
+			background-color: #ccdcf6;
+			padding: 30upx;
+		}
+		
+		&__title{
+			font-size: 28upx;
+			color: $globalColor-blue;
+		}
+		
+		&__data{
+			font-size: 24upx;
+			color: $globalColor-blue;
+		}
+	}
+}
+
+// 记录切换条样式
+.recordTabsBox {
+	padding: 0 30upx;
+	border-top: 16upx solid #f7f8fc;
+	&-control {
+		@include flexLeft;
+		position: relative;
+		border-bottom: 1upx solid #c6d2e4;
+		&__item {
+			font-size: 32upx;
+			color: #99999d;
+			position: relative;
+			padding: 30upx 0;
+			margin-right: 30upx;
+			@include initTransition(0.4);
+
+			&:after {
+				content: '';
+				display: inline-block;
+				width: 40upx;
+				height: 4upx;
+				background-color: $globalColor-style;
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				transform: translateX(-50%);
+				@include initTransition(0.4);
+			}
+
+			&--active {
+				color: $globalColor-blue;
+				&:after {
+					background-color: $globalColor-blue;
+				}
+			}
+		}
+
+		&__record {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 80upx;
+			height: 100%;
+			background: url(@/static/public/icon-record-black.png) no-repeat;
+			background-size: 40upx 40upx;
+			background-position: center;
+			z-index: 9;
+		}
+	}
+}
+
+// 记录总样式
+.ticketBox {
+	&-noData {
+		padding: 30upx 0;
+		font-size: 32upx;
+		color: #999999;
+	}
+	&-list {
+		padding: 30upx 0;
+		border-bottom: 1upx solid #c6d2e4;
+	}
+	&-info {
+		@include flexLeft;
+		margin-bottom: 15upx;
+		&__type {
+			color: #ffffff;
+			font-size: 24upx;
+			padding: 15upx;
+			border-radius: 8upx;
+			margin-right: 15upx;
+			font-weight: bold;
+			&--buy{
+				background-color: $globalColor-green;
+			}
+			&--sell{
+				background-color: $globalColor-red;
+			}
+		}
+		&__content {
+			flex: 1;
+			&-label {
+				font-size: 28upx;
+				color: #101010;
+				@include flexLeft;
+			}
+			&-date {
+				font-size: 24upx;
+				color: #999b9e;
+			}
+			&-lever{
+				color: #3a79de;
+				background-color: #ccdcf6;
+				font-size: 24upx;
+				padding: 5upx 10upx;
+				border-radius: 15upx;
+				margin-left: 15upx;
+			}
+		}
+
+		&__button {
+			margin-left: 15upx;
+			&-btn {
+				color: #3a79de;
+				padding: 10upx 15upx;
+				font-size: 28upx;
+				border: 1upx solid #3a79de;
+				border-radius: 15upx;
+			}
+		}
+	}
+
+	&-itemBox {
+		&__wrapper {
+			@include flexCenter;
+			flex-wrap: wrap;
+			align-items: stretch;
+		}
+		&__item {
+			// @include justifiedLayout;
+			&:nth-child(3n+1){
+				text-align: left;
+			}
+			&:nth-child(3n+2){
+				text-align: center;
+			}
+			&:nth-child(3n+3){
+				text-align: right;
+			}
+			width: 33.33%;
+			padding: 15upx;
+			&-label {
+				color: #99999d;
+				font-size: 24upx;
+			}
+			&-data {
+				color: #101010;
+				font-size: 28upx;
+			}
+		}
+	}
+
+	&-button {
+		@include flexCenter;
+		@include calcMargin(15);
+		&__btn {
+			@include flexCenter;
+			flex: 1;
+			background-color: #eef1f6;
+			padding: 15upx 0;
+			border-radius: 30upx;
+			font-size: 32upx;
+			margin: 15upx;
+			color: #ffffff;
+
+			&--blue {
+				background-color: #3a79de;
+				box-shadow: 2px 2px 20upx rgba(58, 121, 222, 0.5);
+			}
+
+			&--green {
+				background-color: #00b8ae;
+				box-shadow: 2px 2px 20upx rgba(0, 184, 174, 0.5);
+			}
+		}
+	}
+}
+
+// 右上角更多样式
+.moreBox {
+	&-mask {
+		position: fixed;
+		z-index: 998;
+		width: 100vw;
+		height: 100vh;
+		left: 0;
+		top: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	&-wrapper {
+		position: fixed;
+		top: calc(var(--status-bar-height) + #{$global-header-height} + 30upx);
+		right: 30upx;
+		box-sizing: border-box;
+		width: 260upx;
+		padding: 15upx 30upx;
+		border-radius: 15px;
+		background-color: #ffffff;
+		z-index: 999;
+	}
+
+	&-list {
+		@include flexLeft;
+		padding: 15upx 0;
+		&__icon {
+			@include fullImage;
+			width: 50upx;
+			margin-right: 15upx;
+		}
+		&__label {
+			color: #101010;
+			font-size: 28upx;
+		}
+	}
+}
+
+// 左滑块菜单样式
+.menuDrawerBox {
+	background-color: #ffffff;
+	height: 100%;
+	&-wrapper {
+		@include flexCenterColumn;
+		/* #ifdef APP-PLUS */
+		padding-top: var(--status-bar-height)!important;
+		/* #endif */
+		height: 100%;
+	}
+
+	&-title {
+		font-size: 44upx;
+		color: $globalColor-blue;
+		padding: 30upx;
+		border-bottom: 2upx solid #c6d2e4;
+		width: 100%;
+		text-align: left;
+	}
+
+	&-listBox {
+		padding: 0 30upx;
+		flex: 1;
+		text-align: left;
+		width: 100%;
+		&__list {
+			@include flexBetween;
+			padding: 30upx 0;
+			border-bottom: 1upx solid #c6d2e4;
+			font-size: 32upx;
+			&-label {
+				font-weight: bold;
+				color: #101010;
+			}
+			&-data {
+				&--green {
+					color: $globalColor-green;
+				}
+
+				&--red {
+					color: $globalColor-red;
+				}
+			}
+		}
+	}
+}
+
+// 中间弹出模块样式
+.centerModal {
+	&-wrapper {
+		border-radius: 30upx;
+		padding: 30upx;
+		background-color: #ffffff;
+		width: 500upx;
+	}
+
+	&-title {
+		font-size: 32upx;
+		color: #101010;
+		font-weight: bold;
+		margin-bottom: 30upx;
+	}
+
+	&-desc {
+		font-size: 28upx;
+		color: #99999d;
+		font-weight: bold;
+		margin-bottom: 30upx;
+	}
+
+	&-listBox {
+		width: 100%;
+		margin-bottom: 30upx;
+		&__list {
+			@include flexBetween;
+			font-size: 28upx;
+			padding: 15upx 0;
+			&-label {
+				color: #99999d;
+			}
+			&-data {
+				color-rendering: #101010;
+			}
+		}
+	}
+
+	&-buttonBox {
+		@include flexCenter;
+		@include calcMargin(15);
+		&__btn {
+			@include flexCenter;
+			flex: 1;
+			color: #99999d;
+			background-color: #eef1f6;
+			padding: 15upx 0;
+			border-radius: 15upx;
+			font-size: 32upx;
+			margin: 15upx;
+
+			&--cancel {
+				background-color: #ffffff;
+				border: 1upx solid #99999d;
+				color: #99999d;
+			}
+
+			&--confirm {
+				background-color: #3a79de;
+				border: 1upx solid #3a79de;
+				color: #ffffff;
+			}
+		}
+	}
+}
+
+// 平仓样式
+.cleanPopup {
+	&-wrapper {
+		width: 100%;
+		border-top-left-radius: 30upx;
+		border-top-right-radius: 30upx;
+		overflow: hidden;
+		background-color: #ffffff;
+	}
+
+	&-info {
+		background-color: #f7f8fc;
+		padding: 0 30upx;
+		@include flexLeft;
+	}
+	&-name,
+	&-type {
+		width: 200upx;
+		font-size: 32upx;
+		color: #101010;
+	}
+	&-tabs {
+		flex: 1;
+		&__control {
+			@include flexCenter;
+			&-item {
+				@include initTransition(0.4);
+				text-align: center;
+				flex: 1;
+				font-size: 32upx;
+				color: #999999;
+				// margin-right: 30upx;
+				padding: 30upx 0;
+				position: relative;
+				&:after {
+					content: '';
+					display: block;
+					width: 30upx;
+					height: 4upx;
+					background-color: transparent;
+					position: absolute;
+					bottom: -1upx;
+					left: 50%;
+					transform: translateX(-50%);
+					@include initTransition(0.4);
+				}
+				&--active {
+					color: $globalColor-blue;
+					&:after {
+						background-color: $globalColor-blue;
+					}
+				}
+			}
+		}
+	}
+
+	&-content {
+		padding: 30upx;
+	}
+
+	&-form {
+		&__list {
+			@include flexCenter;
+			border: 1upx solid #99999d;
+			// padding: 15upx;
+			overflow: hidden;
+			border-radius: 15upx;
+			margin-bottom: 30upx;
+			
+			&--disabled{
+				color: #99999d;
+				background-color: #eef1f6;
+			}
+			
+			&-placeholder {
+				color: #99999d;
+				font-size: 28upx;
+			}
+			&-input {
+				flex: 1;
+				font-size: 28upx;
+				padding: 30upx;
+				input {
+					font-size: inherit;
+					width: 100%;
+				}
+			}
+			&-type {
+				font-size: 28upx;
+				color: #99999d;
+				padding: 30upx;
+			}
+
+			&-btn {
+				@include flexCenter;
+				// min-width: 100upx;
+				flex: 1;
+				font-size: 28upx;
+				color: #99999d;
+				padding: 30upx 15upx;
+				border-right: 1upx solid #99999d;
+				&:last-child{
+					border-right: 0;
+				}
+			}
+		}
+
+		&__note {
+			color: #99999d;
+			margin-bottom: 30upx;
+			font-size: 24upx;
+			&--highlight {
+				color: #101010;
+			}
+		}
+	}
+}
+
+// 止盈止损样式
+.stopPopup {
+	&-wrapper {
+		width: 100%;
+		border-top-left-radius: 30upx;
+		border-top-right-radius: 30upx;
+		overflow: hidden;
+		padding: 30upx;
+		background-color: #ffffff;
+	}
+
+	&-title {
+		color: #101010;
+		font-size: 32upx;
+		margin-bottom: 30upx;
+	}
+
+	&-detailBox {
+		background-color: #f7f8fc;
+		padding: 30upx;
+		margin-bottom: 30upx;
+		border-radius: 30upx;
+		&__wrapper {
+			@include flexLeft;
+		}
+		&__type {
+			font-size: 28upx;
+			color: #ffffff;
+			background-color: #00a35e;
+			padding: 10upx 15upx;
+			border-radius: 15upx;
+			margin-right: 30upx;
+		}
+		&__lever {
+			font-size: 32upx;
+			color: #101010;
+			margin-right: 60upx;
+		}
+
+		&__itemBox {
+			flex: 1;
+			text-align: center;
+			@include flexCenter;
+			&-item{
+				flex: 1;
+			}
+			&-data {
+				font-size: 32upx;
+				color: #101010;
+				margin-bottom: 15upx;
+			}
+			&-label {
+				font-size: 24upx;
+				color: #99999d;
+			}
+		}
+	}
+
+	&-form {
+		
+		&__switch{
+			@include flexLeft;
+			font-size: 28upx;
+			margin-bottom: 15upx;
+			&-label{
+				color: #99999d;
+			}
+		}
+		&__list {
+			@include flexCenter;
+			border: 1upx solid #99999d;
+			border-radius: 15upx;
+			margin-bottom: 15px;
+			&-placeholder {
+				color: #99999d;
+				font-size: 28upx;
+			}
+			&-input {
+				flex: 1;
+				font-size: 28upx;
+				padding: 30upx;
+				input {
+					font-size: inherit;
+					width: 100%;
+				}
+			}
+			&-type {
+				font-size: 28upx;
+				color: #99999d;
+				padding: 30upx;
+			}
+
+			&-btn {
+				@include flexCenter;
+				min-width: 100upx;
+				font-size: 28upx;
+				color: #99999d;
+				padding: 30upx 15upx;
+				border-left: 1upx solid #99999d;
+			}
+		}
+
+		&__desc {
+			color: #99999d;
+			margin-bottom: 30upx;
+			font-size: 24upx;
+			&--highlight {
+				color: #101010;
+			}
+		}
+		
+		
+		
+		&__button {
+			@include flexCenter;
+			@include calcMargin(15);
+			&-btn {
+				@include flexCenter;
+				flex: 1;
+				color: #99999d;
+				background-color: #eef1f6;
+				padding: 15upx 0;
+				border-radius: 15upx;
+				font-size: 32upx;
+				margin: 15upx;
+		
+				&--cancel {
+					background-color: #ffffff;
+					border: 1upx solid #99999d;
+					color: #99999d;
+				}
+		
+				&--confirm {
+					background-color: #3a79de;
+					border: 1upx solid #3a79de;
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}
+
+
+/* 以上更新与20200728 */
+
+.holdBox{
+	flex: 1;
+	width: 100%;
+	&-filterBox{
+		width: 100%;
+		@include flexCenter;
+		border-bottom: 1upx solid #c6d2e4;
+		&__item{
+			flex: 1;
+			padding: 30upx 0 ;
+			font-size: 28upx;
+			color: #101010;
+			text-align: center;
+			position: relative;
+			@include flexCenter;
+			
+			&:after {
+				content: '';
+				display: inline-block;
+				width: 2upx;
+				height: 50%;
+				position: absolute;
+				right: -1upx;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: #c6d2e4;
+			}
+			
+			&:last-child {
+				&:after {
+					display: none;
+				}
+			}
+			
+			&-label{
+				margin-right: 30upx;
+			}
+			
+			&-arrow{
+				width: 30upx;
+				@include fullImage;
+			}
+		}
+	}
+}

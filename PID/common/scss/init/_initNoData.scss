@@ -1,0 +1,38 @@
+.initNoData{ 
+	font-size: 28upx;
+	color: $globalColor-style;
+	text-align: center;
+	padding: 60upx 0;
+	// background: $globalColor-white;
+	
+	&::before{
+		content: '';
+		width: 100%;
+		height: 310upx;
+		display: inline-block;
+		background-image: url('~@/static/public/icon-noopen-image.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 234upx 278upx;
+	}
+}
+
+.initNoOpen{ 
+	font-size: 28upx;
+	color: $globalColor-style;
+	text-align: center;
+	padding: 195upx 0;
+	background: $globalColor-white;
+	min-height: 80vh;
+	
+	&::before{
+		content: '';
+		width: 100%;
+		height: 310upx;
+		display: inline-block;
+		background-image: url('~@/static/public/icon-noopen-image.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 234upx 278upx;
+	}
+}

@@ -1,0 +1,39 @@
+.initButtonTabs{
+	&-control {
+		@include flexCenter;
+		position: relative;
+		border-radius: 18upx;
+		overflow: hidden;
+		background-color: #ffffff;
+		&__aniBg {
+			@include initTransition(0.4);
+			display: inline-block;
+			border-radius: 18upx;
+			width: 50%;
+			height: 100%;
+			background-color: $globalColor-style;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	
+		&__item {
+			@include flexCenter;
+			@include initTransition(0.4);
+			color: #101010;
+			font-size: 28upx;
+			font-weight: 300;
+			flex: 1;
+			padding: 20upx 0;
+			position: relative;
+			z-index: 1;
+			font-weight: bold;
+	
+			&--active {
+				color: #101010;
+				font-weight: bold;
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+.formBox{
+	&-form{
+		padding: 24upx 0;
+		border-bottom: 1px dashed #999999;
+		&-label{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+		}
+		input{
+			margin: 24upx 0 0;
+		}
+	}	
+}

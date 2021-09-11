@@ -1,0 +1,159 @@
+.form{
+	&-wrapper{
+		position: relative;
+		margin:  32upx 32upx 0;
+		border-bottom: 1px solid rgba(0,0,0,0.10);
+		&-picker{
+			border-bottom: none;
+			background: url(../../static/public/icon-select.png);
+			background-size: 22upx 22upx;
+			background-repeat: no-repeat;
+			background-position: center right 20upx;
+			background-color: #F5F5F5;
+			@include flexBetween;
+			flex: 1;
+			padding: 20upx;
+			margin: 74upx 32upx 0;
+			position: relative;
+		}
+		&__title{
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			font-weight: 700;
+		}
+		&__txt{
+			color: #666666;
+			font-size: 24upx;
+			position: absolute;
+			right: 50upx;
+			bottom: 25upx;
+		}
+		&-label{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: 700;
+		}
+		input{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			margin: 30upx 0 27upx;
+			// text-transform: lowercase;
+		}
+		image{
+			position: absolute;
+			right: 0upx;
+			bottom: 27upx;
+			width: 28upx;
+			height: 28upx;
+		}
+		&-txt{
+			position: absolute;
+			right: 0upx;
+			bottom: 27upx;
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			&-01{
+				position: absolute;
+				right: 80upx;
+				bottom: 27upx;
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+			}
+			&__text{
+				margin-left: 10upx;
+			}
+		}
+		
+	}
+	&-item{
+		color: #999999;
+		font-size: 20upx;
+		margin: 16upx 32upx 0;
+	}
+	&-tips{
+		margin: 60upx 32upx;
+		&-txt{
+			color: #FF4343;
+			font-size: 20upx;
+			line-height: 35upx;
+		}
+	}
+	&-flex{
+		margin: 32upx 32upx 0;
+		border-bottom: none;
+		@include flexBetween;
+		& > view{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+		}
+	}
+	.initBtn{
+		margin: 22upx auto 60upx;
+	}
+}
+
+.formBg{
+	background: url(../../static/public/icon-recharge-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	padding: 40upx 0 130upx;
+	margin: 34upx 32upx;
+	picker{margin-top: 0;}
+	.recharge{
+		&-code{
+			&-qrcode{
+				width: 312upx;
+				height: 312upx;
+				border-radius: 12upx;
+				padding: 6upx;
+				background: #CDE4FF;
+				margin: 66upx auto;
+				display: block;
+				image{
+					width: 100%;
+					height: 100%;
+					border-radius: 8upx;
+					background: $globalColor-white;
+					padding: 6upx;
+				}
+			}
+		}
+		&-box{
+			@include flexCenterColumn;
+			margin: auto;
+			text-align: center;
+		}
+		&-btn{
+			background: $globalColor-style;
+			color: $globalColor-white;
+			font-size: 24upx;
+			padding: 14upx 46upx 12upx;
+			text-align: center;
+			border-radius: 8upx;
+		}
+		&-border{
+			border-bottom: 1px solid #F5F5F5;
+			display: block;
+			width: 70%;
+			margin: 57upx auto 43upx;
+		}
+		&-title{
+			font-size: 24upx;
+		}
+		&-addr{
+			font-size: 24upx;
+			color: #999999;
+			width: 70%;
+			margin: 4upx 0 24upx;
+			word-break: break-all;
+		}
+		&-copy{
+			color: #666666;
+			font-size: 20upx;
+			background: #DDDDDD;
+			padding: 8upx 28upx;
+			border-radius: 8upx;
+			width: 20%;
+		}
+	}
+}

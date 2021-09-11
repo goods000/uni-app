@@ -1,0 +1,61 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'DINPro', 'PingFangSC-Regular', 'AvenirBold';
+}
+
+image {
+	height: 0;
+	display: block;
+}
+
+// 全局背景色
+page{
+	background-color: $globalColor-bgStyle;
+	// overflow: scroll;
+}
+.pages{
+	background-color: $globalColor-bgStyle;
+	/* #ifdef APP-PLUS */
+	min-height: 100vh;
+	/* #endif */
+	overflow: scroll;
+}
+.contentBg{
+	background: $globalColor-white;
+	/* #ifdef APP-PLUS */
+	min-height: 100vh;
+	/* #endif */
+	overflow: scroll;
+}
+.tipsBox {
+	background: $globalColor-white;
+	@include flexCenter;
+	padding-top: 10upx;
+	&-box{
+		width: 32%;
+		background: url(../../static/public/icon-tips-bg.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		color: #333333;
+		font-size: 30upx;
+		font-family: PingFang SC, PingFang SC-Bold;
+		font-weight: 700;
+		text-align: center;
+	}
+}	
+
+.initBtn{
+	background: $globalColor-style;
+	border: 1px solid $globalColor-style;
+	color: $globalColor-white;
+	margin: 60upx auto;
+	text-align: center;
+	border-radius: 12upx;
+	width: 92%;
+	font-size: 34upx;
+	padding: 20upx 0;
+	font-weight: bold;
+	&--bottom{margin-top: 40%;position: absolute;bottom: 46upx;left: 0;right: 0;margin: auto;}
+}

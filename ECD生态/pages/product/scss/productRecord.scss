@@ -1,0 +1,97 @@
+
+.initTabs{
+	@include flexBetween;
+	background: $globalColor-white;
+	padding:31upx 0 12upx;
+	&-title{
+		width: 50%;
+		text-align: center;
+		font-size: 32upx;
+		font-family: DINPro;
+		font-weight: bold;
+		color: $globalColor-fontStyle;
+		position: relative;
+		&--active{
+			color: $globalColor-style;
+			&::before{
+				content: '';
+				background: $globalColor-style;
+				width: 32upx;
+				height: 4upx;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: -12upx;
+			}
+		}
+	}
+}
+
+.record{
+	.recordBox{
+		margin: 30upx;
+		&-list{
+			padding-top: 20upx;
+			margin-bottom: 20upx;
+			border-radius: 20upx;
+			background: $globalColor-white;
+			&-header{
+				@include flexBetween;
+				padding: 0 30upx;
+				&-title{
+					color: $globalColor-fontStyle;
+					font-weight: bold;
+					font-size: 32upx;
+					// @include initBeforeHolder;
+					@include flexLeft;
+				}
+				&-price{
+					color: $globalColor-fontStyle;
+					font-weight: bold;
+					font-size: 28upx;
+					image{
+						width: 16upx;
+					}
+				}
+				&--status{
+					background: $globalColor-style;
+					border-radius: 0 18upx 0 18upx;
+					color: $globalColor-white;
+					font-size: 20upx;
+					padding: 4upx 26upx;
+					margin-left: 20upx;
+				}
+			}
+			&-box{
+				@include flexLeft;
+			}
+			&-item:nth-child(1){width: 40%;}
+			&-item:nth-last-child(1){@include flexRightColumn;}
+			&-item{
+				@include flexLeftColumn;
+				padding: 20upx 30upx;
+				width: 30%;
+				&-title{
+					color: #999999;
+					font-size: 24upx;
+				}
+				&-status{
+					color: $globalColor-fontStyle;
+					font-size: 28upx;
+					font-weight: bold;
+					word-break: break-all;
+					text-align: right;
+					white-space: nowrap;
+				}
+			}
+			&-hash{
+				background: #faf6f0;
+				border-radius: 0 0 20upx 20upx;
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: bold;
+				padding: 20upx 30upx;
+			}
+		}
+	}
+}

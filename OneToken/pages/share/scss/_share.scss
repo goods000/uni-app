@@ -1,0 +1,82 @@
+.main {
+	// @include flexCenterColumn;
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+}
+
+.planeBox {
+	padding: 0 30upx;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+
+	&-wrapper {
+		@include flexCenterColumn;
+		width: 690upx;
+		height: 545upx;
+		background: url(../../static/share/img-plane-bg.png) no-repeat;
+		background-size: 690upx 545upx;
+		background-position: center top;
+		position: relative;
+		padding: 60upx 90upx 0;
+	}
+	
+	&-title{
+		@include fullImage;
+		width: 478upx;
+		margin-bottom: 45upx;
+	}
+	
+	&-body{
+		@include flexCenter;
+		@include initShadow;
+		padding: 30upx 0;
+		width: 100%;
+		border-radius: 20upx;
+		background-color: #FFFFFF;
+	}
+	
+	&-qrcode {
+		@include fullImage;
+	}
+
+	&-code{
+		margin-left: 30upx;
+		text-align: center;
+		
+		&__label{
+			color: #c80406;
+			font-size: 36upx;
+			font-weight: bold;
+			margin-bottom: 15upx;
+		}
+		
+		&__data{
+			color: #c80406;
+			font-size: 36upx;
+			font-weight: bold;
+			background-color: #ecb4b4;
+			padding: 8upx 45upx;
+			border-radius: 60upx;
+		}
+	}
+	
+	&-bottom{
+		@include flexBetween;
+		width: 100%;
+		margin-top: 30upx;
+	}
+
+	&-btn {
+		@include flexCenter;
+		width: 100%;
+		border: 1px solid #c60309;
+		color: #c60309;
+		font-size: 26upx;
+		font-weight: 300;
+		padding: 15upx;
+		border-radius: 10upx;
+	}
+}

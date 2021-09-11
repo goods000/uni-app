@@ -1,0 +1,290 @@
+	
+.indexTop{
+	background: url(../../static/index/icon-index-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	/* #ifdef H5 */
+	padding: 40upx 30upx;
+	/* #endif */
+	/* #ifdef APP-PLUS */
+	padding: 80upx 30upx 40upx;
+	/* #endif */
+	&-header{
+		@include flexBetween;
+		&-left{
+			@include flexLeft;
+			&__image{
+				width: 60upx;
+				height: 60upx;
+				margin-right: 22upx;
+			}
+			&__account{
+				color: $globalColor-white;
+				font-size: 42upx;
+			}
+		}
+		&-right{
+			&__image{
+				width: 40upx;
+				height: 40upx;
+			}
+		}
+	}
+	&-title{
+		color: $globalColor-white;
+		font-size: 28upx;
+		position: relative;
+		padding: 20upx 18upx;
+		&:after{
+			content: '';
+			width: 8upx;
+			height: 32upx;
+			background: $globalColor-white;
+			border-radius: 4upx;
+			position: absolute;
+			left: 0;
+			top: 24upx;
+		}
+	}
+	&-wrapper{
+		@include flexBetween;
+		&-left{
+			@include flexLeftColumn;
+			&__num{
+				color: #FFB70A;
+				font-size: 46upx;
+				font-weight: bold;
+				text{
+					font-size: 28upx;
+				}
+			}
+			&__txt{
+				color: $globalColor-white;
+				font-size: 24upx;
+				opacity: 0.6;
+				margin-top: 4upx;
+			}
+		}
+		&-right{
+			&__image{
+				width: 40upx;
+				height: 40upx;
+			}
+		}
+	}
+	&-titleBox{
+		@include flexLeft;
+		margin-top: 30upx;
+		&-info{
+			color: $globalColor-white;
+			font-size: 20upx;
+			opacity: 0.6;
+			&:nth-child(2){
+				margin-left: 50upx;
+			}
+		}
+	}
+}
+
+.contentBox{
+	@include flexBetween;
+	padding: 30upx 30upx;
+	border-bottom: 1px solid $globalColor-border;
+	&-wrapper{
+		width: 65%;
+		&-image{
+			image{
+				width: 266upx;
+			}
+		}
+		&-title{
+			color: #333333;
+			font-size: 24upx;
+			margin: 9upx 0 25upx;
+		}
+		&-txt{
+			color: #999999;
+			font-size: 18upx;
+		}
+	}
+	&-ringBox{
+		padding-bottom: 20upx;
+	}
+}
+.titleBox{
+	padding: 41upx 30upx 0;
+	@include flexLeftColumn;
+	&-title{
+		color: #333333;
+		font-size: 28upx;
+		line-height: 50upx;
+	}
+}
+
+.contentTitle{
+	padding: 50upx 30upx 30upx;
+	@include flexLeft;
+	
+	&-txt{
+		color: #999999;
+		font-size: 28upx;
+	}
+	&-num{
+		color: $globalColor-style;
+		font-size: 28upx;
+	}
+}
+
+.contentInput{
+	@include flexLeftColumn;
+	padding: 0 30upx;
+	&-txt{
+		color: #333333;
+		font-size: 24upx;
+		margin-bottom: 30upx;
+	}
+	&-wrapper{
+		@include flexBetween;
+		border-radius: 50upx;
+		padding: 6upx 6upx;
+		background: #ECECEC;
+		border: 1px solid #dddddd;
+		width: 100%;
+		&-input{
+			padding-left: 50upx;
+		}
+		&-btn{
+			border-radius: 50upx;
+			background: $globalColor-style;
+			color: $globalColor-white;
+			font-size: 26upx;
+			padding: 30upx 30upx;
+		}
+	}
+}
+
+.contentCode{
+	margin: 90upx auto;
+	text-align: center;
+	&-title{
+		color: #333333;
+		font-size: 28upx;
+		position: relative;
+		width: 25%;
+		margin: auto;
+		margin-bottom: 36upx;
+		line-height: 0px;
+		&::after{
+			content: '';
+			width: 24upx;
+			height: 2upx;
+			background: #333333;
+			position: absolute;
+			left: 0;
+		}
+		&::before{
+			content: '';
+			width: 24upx;
+			height: 2upx;
+			background: #333333;
+			position: absolute;
+			right: 0;
+		}
+	}
+	&-image{
+		display: block;
+		image{
+			margin: auto;
+			width: 278upx;
+			height: 278upx;
+		}
+	}
+}
+
+.indexBox{
+	&-drawer{
+		height: 100vh;z-index: 9999;
+		&-header{
+			padding: 90upx 30upx;
+			color: $globalColor-fontStyle;
+			font-size: 46upx;
+			font-weight: bold;
+		}
+		&-userList{
+			background: $globalColor-white;
+			&__item{
+				padding: 34upx 0;
+				margin: 0 26upx 0 40upx ;
+				@include flexBetween;
+				border-bottom: 1px solid #EFEFEF;
+				&--left{
+					@include flexLeft;
+					image{width: 44upx;height: 44upx;}
+					&_txt{
+						color: $globalColor-fontStyle;
+						font-size: 30upx;
+						margin-left: 23upx;
+						font-weight: bold;
+					}
+				}
+				&--right{
+					@include flexRight;
+					image{width: 44upx;height: 44upx;}
+					&_txt{
+						color: #666666;
+						font-size: 20upx;
+						margin-right: 12upx;
+						@include flexLeft;
+						image{width: 30upx;height: 30upx;}
+						&-chioce{
+							color: $globalColor-style;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.oppupBox-popup{width: 100vw;}
+.oppupBox{background-color: #FFFFFF;border-radius: 20upx;text-align: center;margin: auto;padding:110upx 50upx 88upx;box-sizing: border-box;
+	width: 70%;position: relative;}
+
+.oppupBox{
+	&-header{
+		// background: url(../../static/index/icon-index-noticeBg.png);
+		// background-repeat: no-repeat;
+		// background-size: 100% 100%;
+		position: absolute;top: -20upx;left: 0;right: 0;
+		image{
+			width: 284upx;
+			height: 60upx;
+			margin: auto;
+		}
+	}
+	&-height{
+		min-height: 8vh;
+		max-height: 65vh;
+		overflow: scroll;
+	}
+	&-title{
+		color: #393536;
+		font-size: 28upx;
+		text-align: center;
+		font-weight: bold;
+		// min-height: 8vh;
+		// max-height: 65vh;
+		// overflow: scroll;
+	}
+	&-btn{
+		margin: 10% auto 0;
+		display: block;
+		text-align: center;
+		image{
+			width: 50upx;
+			height: 50upx;
+			margin: auto;
+		}
+	}
+}
+

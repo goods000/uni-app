@@ -1,0 +1,238 @@
+
+
+.main{
+	position: relative;
+	z-index: 1;
+	// background: #111111;
+}
+
+.userBg{
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+.userInfoBox {
+	position: relative;
+	background: #0755C3;
+	// background: url(../../static/user/icon-user-topBg.png);
+	// background-repeat: no-repeat;
+	// background-size: 100% 100%;
+	&-wrapper {
+		@include flexLeft;
+		padding: 35upx 40upx 45upx !important;
+	}
+	
+	&-row{
+		margin-right: 28upx;
+	}
+
+	&-level{
+		image{
+			width: 110upx;
+			height: 110upx;
+			border-radius: 50%;
+		}
+	}
+	
+	&-title {
+		font-size: 35rpx;
+		font-family: PingFang SC, PingFang SC-Heavy;
+		font-weight: 700;
+		color: #ffffff;
+		margin: 14upx 0 0;
+		@include flexLeft;
+		image{
+			height: 32upx;
+			margin-left: 22upx;
+		}
+		&__image--1{
+			width: 96upx;
+		}
+		&__image--2{
+			width: 148upx;
+		}
+	}
+	
+	&-loginBtn{
+		background: $globalColor-style;
+		color: #232323;
+		font-size: 23upx;
+		padding: 4upx 35upx;
+		border-radius: 8upx;
+	}
+	
+	&-code {
+		color: #ffffff;
+		font-size: 22upx;
+		position: relative;
+		padding-right: 60upx;
+	}
+	
+	&-main{
+		@include flexLeftColumn;
+	}
+
+	&-id {
+		font-size: 24rpx;
+		font-family: PingFang SC, PingFang SC-Medium;
+		color: $globalColor-white;
+		padding-right: 45upx;
+		position: relative;
+		display: inline-block;
+	}
+
+	&-tourist{
+		font-size: 32upx;
+		font-family: PingFang SC;
+		font-weight: 500;
+		color: $globalColor-white;
+		// padding: 0 0upx 18upx;
+		display: inline-block;
+		border-radius: 4upx;
+	}
+	
+	&-image{
+		position: absolute;
+		right: 40upx;
+		top: 65%;
+		transform: translateY(-50%);
+		width: 16upx;
+		height: 16upx;
+		image{
+			width: 100%;
+		}
+	}
+}
+
+.fancyBox {
+	margin-bottom: 45upx;
+	&-wrapper {
+		@include flexLeft;
+		padding: 0 30upx;
+	}
+	
+	&-item {
+		@include flexCenter;
+		border-radius: 30upx;
+		background-color: #413E3C;
+		border: 2upx solid #707070;
+		padding: 15upx 30upx;
+		margin-right: 45upx;
+		font-size: 18rpx;
+		font-family: PingFang SC, PingFang SC-Medium;
+		font-weight: 500;
+		color: #e9cb96;
+		
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+.listBox {
+	background: $globalColor-white;
+	&-wrapper{
+		border-bottom: 18upx solid $globalColor-bgStyle;
+	}
+	
+	&-list {
+		.active{
+			color: #FF002D;
+		}
+		@include flexLeft;
+		position: relative;
+		padding: 30upx 38upx;
+		background-image: url(@/static/public/icon-arrow-right-grey.png);
+		background-size: 14upx 26upx;
+		background-repeat: no-repeat;
+		background-position: right 40upx center;
+		border-bottom: 1px solid #EDF1F4;
+		
+		&--no{
+			background-image: none;
+		}
+		&--padding{
+			padding: 50upx 38upx;
+		}
+		
+		&:last-child{
+			border-bottom: 0;
+		}
+
+		&--noArrow {
+			background: none;
+			padding-right: 8upx;
+		}
+
+		&__icon {
+			@include fullImage;
+			width: 47upx;
+			height: 47upx;
+			margin-right: 23upx;
+		}
+		
+		&__label{
+			font-size: 32upx;
+			font-family: PingFang SC, PingFang SC-Medium;
+			font-weight: 500;
+			color: $globalColor-fontStyle;
+		}
+
+		&__data {
+			padding-right: 30upx;
+			font-size: 28upx;
+			color: $globalColor-style;
+			flex: 1;
+			text-align: right;
+		}
+		&__version{
+			font-size: 28upx;
+			font-family: DINPro;
+			font-weight: 500;
+			color: $globalColor-style;
+			position: absolute;
+			right: 40upx;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&__phone{
+			font-size: 32upx;
+			font-family: DINPro;
+			font-weight: 500;
+			color: #666666;
+			position: absolute;
+			right: 40upx;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&__edit{
+			font-size: 32upx;
+			font-family: DINPro;
+			font-weight: 400;
+			color: #666666;
+			position: absolute;
+			right: 90upx;
+			top: 50%;
+			transform: translateY(-50%);
+			image{
+				width: 110upx;
+				height: 110upx;
+				border-radius: 50%;
+			}
+			&--width{
+				width: 65%;
+				text-align: right;
+			}
+		}
+		&__copy{
+			position: absolute;
+			right: 30upx;
+			top: 50%;
+			transform: translateY(-50%);
+			image{
+				width: 34upx;
+				height: 34upx;
+			}
+		}
+	}
+}

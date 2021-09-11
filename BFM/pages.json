@@ -1,0 +1,598 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/firstPage/firstPage",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "登录状态检测",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/videoContent/videoContent",
+			"style": {
+				"navigationBarTitleText": "启动页",
+				"navigationBarTextStyle": "white",
+				"bounce": "none", //禁止回弹
+				"app-plus": {
+					"titleNView": false,
+					"subNVues": [{
+						"id": "videoContent", // 唯一标识  
+						"path": "pages/videoContent/subnvue/videoContent", // 页面路径  
+						"style": {
+							"position": "absolute",
+							"dock": "static",
+							"height": "100%",
+							"top": "25px",
+							"background": "transparent"
+						}
+					}]
+				}
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/quotes/quotes",
+			"style": {
+				"navigationBarTitleText": "行情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/exchange/exchange",
+			"style": {
+				"navigationBarTitleText": "币币交易",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/exchange/exchange_record",
+			"style": {
+				"navigationBarTitleText": "币币交易 - 记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/ecology/ecology",
+			"style": {
+				"navigationBarTitleText": "生态",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "我的",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/announcement/announcement",
+			"style": {
+				"navigationBarTitleText": "资讯",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/announcement/announcement_details",
+			"style": {
+				"navigationBarTitleText": "资讯详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/operate/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/operate/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/operate/register_next",
+			"style": {
+				"navigationBarTitleText": "注册 - 下一步",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/operate/forget",
+			"style": {
+				"navigationBarTitleText": "忘记密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/operate/forget_next",
+			"style": {
+				"navigationBarTitleText": "忘记密码 - 下一步",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/assets/assets",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "我的资产",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/assets/assets_info",
+			"style": {
+				"navigationBarTitleText": "财务记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/assets/assets_takeOut",
+			"style": {
+				"navigationBarTitleText": "我的资产 - 提币",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/assets/assets_takeOut_record",
+			"style": {
+				"navigationBarTitleText": "我的资产 - 提币记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/assets/assets_topUp",
+			"style": {
+				"navigationBarTitleText": "我的资产 - 充币",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/assets/assets_topUp_record",
+			"style": {
+				"navigationBarTitleText": "我的资产 - 充币记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/assets/assets_topUp_details",
+			"style": {
+				"navigationBarTitleText": "我的资产 - 充币详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/assets/assets_exchange",
+			"style": {
+				"navigationBarTitleText": "我的资产 - 划转",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/assets/assets_exchange_record",
+			"style": {
+				"navigationBarTitleText": "我的资产 - 划转记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/assets/assets_exchange_select",
+			"style": {
+				"navigationBarTitleText": "我的资产 - 选择账户",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/assets/assets_transfer",
+			"style": {
+				"navigationBarTitleText": "转账",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/assets/assets_transfer_record",
+			"style": {
+				"navigationBarTitleText": "转账 - 记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/assets/assets_transfer_detail",
+			"style": {
+				"navigationBarTitleText": "转账 - 记录详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/service/service",
+			"style": {
+				"navigationBarTitleText": "客服",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/safety/safety",
+			"style": {
+				"navigationBarTitleText": "安全中心",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/safety/safety_authentication",
+			"style": {
+				"navigationBarTitleText": "实名认证",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/safety/safety_authentication_next",
+			"style": {
+				"navigationBarTitleText": "实名认证 - 下一步",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/safety/safety_changeLoginPsw",
+			"style": {
+				"navigationBarTitleText": "修改登录密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/safety/safety_changeTradePsw",
+			"style": {
+				"navigationBarTitleText": "修改交易密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/community/community",
+			"style": {
+				"navigationBarTitleText": "我的社区",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/share/share",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "分享APP",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/miningPool/miningPool",
+			"style": {
+				"navigationBarTitleText": "矿池",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/miningPool/miningPool_record",
+			"style": {
+				"navigationBarTitleText": "矿池 - 记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/team/team",
+			"style": {
+				"navigationBarTitleText": "我的团队",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/entrust/entrust",
+			"style": {
+				"navigationBarTitleText": "一键委托",
+				"enablePullDownRefresh": false,
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/entrust/entrust_record",
+			"style": {
+				"navigationBarTitleText": "一键委托 - 记录",
+				"enablePullDownRefresh": false,
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/cloudMining/cloudMining",
+			"style": {
+				"navigationBarTitleText": "云矿机",
+				"enablePullDownRefresh": false,
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/cloudMining/cloudMining_record",
+			"style": {
+				"navigationBarTitleText": "云矿机 - 记录",
+				"enablePullDownRefresh": false,
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/destruction/destruction",
+			"style": {
+				"navigationBarTitleText": "销毁记录",
+				"enablePullDownRefresh": false,
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ipfs/ipfs",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "IPFS云算力",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ipfs/ipfs_calcPower",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "IPFS云算力 - 列表",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ipfs/ipfs_calcPower_buy",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "IPFS云算力 - 购买",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ipfs/ipfs_calcPower_list",
+			"style": {
+				"navigationBarTitleText": "IPFS云算力 - 记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ipfs/ipfs_calcPower_detail",
+			"style": {
+				"navigationBarTitleText": "IPFS云算力 - 记录详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ipfs/ipfs_deposit",
+			"style": {
+				"navigationBarTitleText": "IPFS云算力 - 定存",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ipfs/ipfs_deposit_info",
+			"style": {
+				"navigationBarTitleText": "IPFS云算力 - 定存套餐信息",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ipfs/ipfs_deposit_buy",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "IPFS云算力 - 定存套餐购买",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ipfs/ipfs_deposit_list",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "IPFS云算力 - 定存套餐记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ipfs/ipfs_deposit_detail",
+			"style": {
+				"navigationBarTitleText": "IPFS云算力 - 定存套餐纪录详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ipfs/ipfs_rewardList",
+			"style": {
+				"navigationBarTitleText": "IPFS云算力 - 我的收益",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/ipfs/ipfs_privacyService",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "IPFS云算力 - 用户协议",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "BFM",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF",
+		"bounce": "none",
+		"enablePullDownRefresh": false,
+		"app-plus": {
+			"titleNView": false,
+			"background": "#040408"
+		}
+
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#2bffb0",
+		"borderStyle": "white",
+		"backgroundColor": "#000f11",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tarbar/icon-tarbar-1.png",
+				"selectedIconPath": "static/tarbar/icon-tarbar-1-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/exchange/exchange",
+				"iconPath": "static/tarbar/icon-tarbar-2.png",
+				"selectedIconPath": "static/tarbar/icon-tarbar-2-active.png",
+				"text": "交易"
+			},
+			{
+				"pagePath": "pages/ecology/ecology",
+				"iconPath": "static/tarbar/icon-tarbar-3.png",
+				"selectedIconPath": "static/tarbar/icon-tarbar-3-active.png",
+				"text": "生态"
+			},
+			{
+				"pagePath": "pages/assets/assets",
+				"iconPath": "static/tarbar/icon-tarbar-4.png",
+				"selectedIconPath": "static/tarbar/icon-tarbar-4-active.png",
+				"text": "资产"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/tarbar/icon-tarbar-5.png",
+				"selectedIconPath": "static/tarbar/icon-tarbar-5-active.png",
+				"text": "我的"
+			}
+		]
+	}
+}

@@ -1,0 +1,98 @@
+.profitBox{
+	background: url('../../static/profit/icon-profit-bg.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	/* #ifdef H5 */
+	padding: 60upx 30upx;
+	/* #endif */
+	/* #ifdef APP-PLUS */
+	padding: 120upx 30upx 60upx;
+	/* #endif */
+	&-header{
+		color: #999999;
+		font-size: 48upx;
+		font-weight: bold;
+	}
+	&-tips{
+		color: #999999;
+		font-size: 28upx;
+		font-weight: bold;
+		margin: 30upx 0 5upx;
+	}
+	&-totls{
+		color: #FF7C30;
+		font-size: 44upx;
+		font-weight: bold;
+	}
+	&-assets{
+		background: $globalColor-white;
+		margin: 30upx;
+		padding:20upx 0;
+		border-radius: 20upx;
+		@include flexLeft;
+		flex-wrap: wrap;
+		&__item{
+			@include flexCenter;
+			padding: 35upx 0;
+			width: 50%;
+			&--data{
+				@include flexLeftColumn;
+				&-title{
+					color: #999999;
+					font-size: 24upx;
+				}
+				&-num{
+					color: $globalColor-fontStyle;
+					font-size: 28upx;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	&-charts{
+		// width: 50%;
+		margin-right: 17upx;
+		image{
+			width: 104upx;
+			height: 75upx;
+		}
+	}
+}
+.tipsBox{
+	&-title{
+		&__label{
+			color:#3C3C3C
+		}
+	}
+}
+
+.profit{
+	&-list{
+		margin: 20upx 30upx;
+		background: $globalColor-white;
+		border-radius: 20upx;
+		&-box{
+			padding: 0 0 30upx 0;
+			&-item{
+				@include flexBetween;
+				padding: 30upx 0;
+				margin: 0 30upx;
+				border-bottom: 1px solid $globalColor-border;
+				&::nth-last-child(1){border: none;}
+				&-time{
+					color: #999999;
+					font-size: 28upx;
+				}
+				&-price{
+					color: $globalColor-fontStyle;
+					font-size: 28upx;
+				}
+			}
+		}
+	}
+}
+
+.profit-list-height{
+	height: calc(100vh - 530px);
+	width: 100%;
+}

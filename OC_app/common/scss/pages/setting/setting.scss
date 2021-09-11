@@ -1,0 +1,74 @@
+.user-list{
+	background: #FFFFFF;
+	@include flexBetweenColumn;
+	&:nth-last-child(1){border-bottom: none;}
+	&-type{
+		width: 100%;
+		@include flexBetween;
+		padding: 36upx 30upx;
+		border-bottom: 1px solid #E9E9E9;
+		}
+	&-left{
+		@include flexCenter;
+	}	
+	&-right{
+		@include flexRight;
+	}
+	&-name{color:#333333;font-size: 15px;}
+}
+.next_img{width: 22upx;height: 22upx;}
+
+.formBox{
+	@include flexLeftColumn;
+	&-group{
+		width: 100%;
+		padding: 36upx 34upx;
+		border-bottom: 1px solid $globalColor-bgStyle;
+		&:nth-last-child(1){border: none;}
+		input{
+			flex: 1;
+		}
+	}
+	&-input{
+		width: 100%;
+	}
+	&-tips{
+		padding: 0 32upx;
+		&-title{
+			color: #999999;
+			font-size: 20upx;
+		}
+	}
+}
+
+.oppupBox{
+	background: $globalColor-white;
+	padding: 15upx 32upx 48upx;
+	width: 100%;
+	border-radius: 24upx 24upx 0 0;
+	&-form{
+		padding: 24upx 0;
+		border-bottom: 1px dashed #666666;
+		&-label{
+			
+		}
+		input{
+			margin: 24upx 0 0;
+		}
+		textarea{width: 100%;}
+	}	
+	&-forget{
+		color: $globalColor-style;
+		font-size: 24upx;
+		margin: 25upx 0;
+	}
+	.initBtn{
+		width: 100%;
+	}
+}
+.oppupBox .header-right{
+	image{
+		width: 29upx;
+		height: 29upx;
+	}
+}

@@ -1,0 +1,110 @@
+// 中间弹出模块样式
+.initPopup {
+	&-wrapper {
+		border-radius: 15upx;
+		padding: 30upx;
+		background-color: #18181b;
+		width: 600upx;
+	}
+
+	&-title {
+		font-size: 32upx;
+		color: #ffffff;
+		font-weight: bold;
+		margin-bottom: 30upx;
+
+		.initPopup--danger &{
+			color: #ff2c4f;
+		}
+	}
+
+	&-desc {
+		font-size: 28upx;
+		color: #999999;
+		margin-bottom: 30upx;
+
+		&--highlight {
+			color: $globalColor-style;
+		}
+	}
+
+	&-listBox {
+		width: 100%;
+		margin-bottom: 30upx;
+		&__list {
+			@include flexBetween;
+			font-size: 32upx;
+			padding: 15upx 0;
+			&-label {
+				color: #99999d;
+			}
+			&-data {
+				color: #ffffff;
+			}
+			&-input {
+				@include flexLeft;
+				flex: 1;
+				border-bottom: 1upx solid #ffffff;
+				padding-bottom: 15upx;
+				color: #ffffff;
+				input {
+					flex: 1;
+				}
+			}
+
+			&-placeholder {
+				color: #666666;
+				font-size: 32upx;
+			}
+		}
+		
+		
+		&__note {
+			color: #999999;
+			font-size: 22upx;
+		
+			&--highlight {
+				color: #ffffff;
+			}
+		}
+	}
+
+	&-buttonBox {
+		@include flexCenter;
+		@include calcMargin(15);
+		&__btn {
+			@include flexCenter;
+			flex: 1;
+			color: #99999d;
+			padding: 15upx 0;
+			border-radius: 15upx;
+			font-size: 32upx;
+			margin: 15upx;
+
+			&--cancel {
+				border: 1upx solid $globalColor-style;
+				color: $globalColor-style;
+				
+				
+				.initPopup--danger &{
+					@include initButtonGrad;
+					border: 1upx solid transparent;
+					color: #ffffff;
+				}
+			}
+
+			&--confirm {
+				@include initButtonGrad;
+				border: 1upx solid transparent;
+				color: #ffffff;
+				
+				.initPopup--danger &{
+					background: none;
+					background-color: #ff2c4f;
+					border: 1upx solid transparent;
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}

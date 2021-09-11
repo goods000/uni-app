@@ -1,0 +1,563 @@
+.pages {
+	max-width: 750px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.bgBox {
+	max-width: 750px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	// height: 100%;
+	background: url(../../static/index/img-bg.jpg) no-repeat;
+	background-position: center top;
+	background-size: 100% 100%;
+}
+
+.main {
+	position: relative;
+	z-index: 1;
+}
+
+.logoBox {
+	width: 280upx;
+	padding: 30upx;
+	@include fullImage;
+}
+
+.titleBox {
+	padding-top: 150upx;
+	width: 100%;
+	&-wrapper {
+		width: 100%;
+		// transform: translateX(100%);
+		@include flexRight;
+		// @include initTransition(0.4);
+		
+		animation: initAniRight 0.5s ease-out;
+		// &--show{
+		// 	transform: translateX(0);
+		// }
+	}
+
+	&-image {
+		width: 650upx;
+		@include fullImage;
+	}
+}
+
+.infoBox {
+	margin-top: 180upx;
+	&-wrapper {
+		padding: 30upx;
+		color: #ffffff;
+		
+		animation: initAniLeft 0.5s ease-out;
+	}
+
+	&-title {
+		font-size: 32upx;
+		font-weight: bold;
+		margin-bottom: 15upx;
+	}
+
+	&-desc {
+		font-size: 28upx;
+		padding-right: 120upx;
+	}
+}
+
+.operateBox {
+	&-wrapper {
+		padding: 30upx;
+		animation: initAniLeft 0.5s ease-out;
+		// @include flexLeft;
+	}
+
+	&-button {
+		@include flexLeft;
+		border-radius: 8upx;
+		overflow: hidden;
+		&__btn {
+			font-size: 32upx;
+			padding: 30upx 60upx;
+			cursor: pointer;
+
+			&--blue {
+				border-top-left-radius: 8upx;
+				border-bottom-left-radius: 8upx;
+				color: #ffffff;
+				background-color: #01dcf8;
+			}
+			&--white {
+				border-top-right-radius: 8upx;
+				border-bottom-right-radius: 8upx;
+				color: #01dcf8;
+				background-color: #ffffff;
+			}
+		}
+	}
+	
+	&-user{
+		@include flexLeft;
+	}
+	
+	&-message{
+		color: #FFFFFF;
+		font-size: 32upx;
+		font-weight: bold;
+		margin-right: 30upx;
+	}
+	
+	&-invite{
+		font-size: 24upx;
+		color: #FFFFFF;
+		padding-right: 50upx;
+		background: url(@/static/public/icon-copy-white.png) no-repeat;
+		background-size: 40upx 40upx;
+		background-position: right center;
+		cursor: pointer;
+	}
+	
+	&-linkBtn{
+		@include flexLeft;
+		margin-top: 15upx;
+		&__btn{
+			color: white;
+			font-size: 24upx;
+			margin-right: 30upx;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+}
+
+.stepBox {
+	width: 100%;
+	&-wrapper {
+		@include flexCenter;
+		padding: 60upx 0;
+		animation: initAniArrow 1s ease-out infinite;
+	}
+
+	&-image {
+		width: 128upx;
+		@include fullImage;
+	}
+}
+
+.subTitleBox {
+	width: 100%;
+	&-wrapper {
+		@include flexCenterColumn;
+	}
+
+	&-image {
+		width: 400upx;
+		@include fullImage;
+	}
+
+	&-desc {
+		color: rgba(255, 255, 255, 0.3);
+		font-size: 22upx;
+		margin-bottom: 30upx;
+	}
+
+	&-list {
+		@include flexCenter;
+	}
+
+	&-label {
+		color: #ffffff;
+		font-size: 24upx;
+		margin-right: 30upx;
+	}
+
+	&-linkBtn {
+		color: #01dcf8;
+		font-size: 24upx;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
+
+.cardBox {
+	margin-bottom: 30upx;
+	&-wrapper {
+		padding: 30upx;
+		@include flexCenter;
+	}
+
+	&-item {
+		background: url(@/static/index/icon-card-bg.png) no-repeat;
+		background-position: center center;
+		background-size: 100% 100%;
+		padding: 30upx 60upx;
+		margin: 0 15upx;
+		flex: 1;
+		@include flexCenterColumn;
+
+		&__title {
+			color: #ffffff;
+			font-size: 24upx;
+			font-weight: bold;
+			margin-bottom: 15upx;
+		}
+
+		&__code {
+			width: 200upx;
+			margin-bottom: 30upx;
+			@include fullImage;
+		}
+
+		&__btn {
+			color: $globalColor-style;
+			border: 2upx solid $globalColor-style;
+			padding: 15upx 30upx;
+			font-size: 20upx;
+			border-radius: 60upx;
+			cursor: pointer;
+		}
+	}
+}
+
+.addressBox {
+	&-wrapper {
+		text-align: center;
+		padding: 0 60upx;
+	}
+
+	&-list {
+		&__label {
+			color: #ffffff;
+			font-size: 28upx;
+			margin-bottom: 15upx;
+		}
+
+		&__data {
+			color: $globalColor-style;
+			font-size: 24upx;
+			margin-bottom: 15upx;
+		}
+	}
+}
+
+.nodeBox {
+	padding: 30upx;
+	&-wrapper {
+		background: url(@/static/index/icon-node-bg.png) no-repeat;
+		background-position: center center;
+		background-size: 100% 100%;
+		padding: 60upx;
+	}
+
+	&-header {
+		border-bottom: 1upx solid $globalColor-style;
+		padding-bottom: 20upx;
+		margin-bottom: 20upx;
+		color: #ffffff;
+	}
+
+	&-date {
+		@include initBeforeHolder;
+		font-size: 28upx;
+		padding-left: 20upx;
+	}
+
+	&-content {
+		// padding: 30upx;
+		color: #ffffff;
+	}
+
+	&-itemBox {
+		@include flexBetween;
+		font-size: 24upx;
+		margin-bottom: 30upx;
+	}
+
+	&-subTitle {
+		@include initBeforeHolder;
+		font-size: 28upx;
+		padding-left: 20upx;
+		margin-bottom: 15upx;
+	}
+
+	&-progress {
+		background-color: #787878;
+		height: 20upx;
+		border-radius: 30upx;
+		margin-top: 30upx;
+		margin-bottom: 15upx;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		box-shadow: 0 0 20upx 2upx rgba(255,255,255,0.5);
+		&__bar {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			border-radius: 30upx;
+			
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0840a7+0,00deff+100 */
+			background: rgb(8,64,167); /* Old browsers */
+			background: -moz-linear-gradient(left, rgba(8,64,167,1) 0%, rgba(0,222,255,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left, rgba(8,64,167,1) 0%,rgba(0,222,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right, rgba(8,64,167,1) 0%,rgba(0,222,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0840a7', endColorstr='#00deff',GradientType=1 ); /* IE6-9 */
+		}
+	}
+
+	&-btn {
+		background-color: $globalColor-style;
+		color: #ffffff;
+		padding: 15upx 0;
+		text-align: center;
+		border-radius: 8upx;
+		cursor: pointer;
+	}
+}
+
+// 中间弹出模块样式
+.centerModal {
+	&-wrapper {
+		border-radius: 15upx;
+		padding: 60upx;
+		width: 680upx;
+
+		background: url(@/static/index/icon-node-bg.png) no-repeat;
+		background-position: center center;
+		background-size: 100% 100%;
+		position: relative;
+	}
+	
+	&-close{
+		width: 90upx;
+		height: 90upx;
+		position: absolute;
+		right: 0;
+		top: -80upx;
+		background: url(@/static/index/icon-close.png) no-repeat;
+		background-position: center center;
+		background-size: 90upx 90upx;
+		cursor: pointer;
+	}
+
+	&-title {
+		@include initBeforeHolder;
+		padding-left: 20upx;
+		font-size: 32upx;
+		color: #ffffff;
+		font-weight: bold;
+		margin-bottom: 30upx;
+	}
+
+	&-desc {
+		font-size: 28upx;
+		color: #99999d;
+		font-weight: bold;
+		margin-bottom: 30upx;
+	}
+
+	&-listBox {
+		width: 100%;
+		margin-bottom: 30upx;
+		&__list {
+			font-size: 28upx;
+			padding: 15upx 0;
+			&-label {
+				color: #ffffff;
+				margin-bottom: 15upx;
+			}
+			&-data {
+				color-rendering: #ffffff;
+			}
+			&-input {
+				@include flexLeft;
+				flex: 1;
+				border-bottom: 1upx solid #ffffff;
+				padding-bottom: 15upx;
+				color: #ffffff;
+				input {
+					flex: 1;
+				}
+			}
+
+			&-placeholder {
+				color: #999999;
+				font-size: 28upx;
+			}
+		}
+
+		&__note {
+			color: #ffffff;
+			font-size: 24upx;
+			text-align: right;
+			cursor: pointer;
+		}
+	}
+
+	&-buttonBox {
+		@include flexCenter;
+		&__btn {
+			@include flexCenter;
+			flex: 1;
+			color: #99999d;
+			background-color: #eef1f6;
+			padding: 15upx 0;
+			border-radius: 8upx;
+			font-size: 32upx;
+			cursor: pointer;
+
+			&--cancel {
+				background-color: #ffffff;
+				border: 1upx solid #99999d;
+				color: #99999d;
+			}
+
+			&--confirm {
+				background-color: $globalColor-style;
+				border: 1upx solid $globalColor-style;
+				color: #ffffff;
+			}
+		}
+	}
+
+	&-linkBtn {
+		color: $globalColor-style;
+		font-size: 20upx;
+		text-align: center;
+		margin-top: 30upx;
+	}
+}
+
+.recordBox{
+	&-scroll{
+		height: 400upx;
+	}
+	
+	&-header{
+		@include flexCenter;
+		color: #999999;
+		font-size: 28upx;
+	}
+	
+	&-noData{
+		color: #FFFFFF;
+		font-size: 28upx;
+		padding: 20upx 0;
+	}
+	
+	&-list{
+		@include flexCenter;
+		color: #FFFFFF;
+		font-size: 28upx;
+		border-bottom: 1upx solid #FFFFFF;
+		padding: 20upx 0;
+	}
+	
+	&-data{
+		flex: 1;
+		
+		&--long{
+			flex: 2;
+		}
+		&:last-child{
+			text-align: right;
+		}
+	}
+}
+
+.nodeRecordBox{
+	&-date{
+		color: #ffffff;
+		font-size: 28upx;
+		margin-bottom: 30upx;
+	}
+	
+	&-header{
+		@include flexCenter;
+		color: #999999;
+		font-size: 28upx;
+	}
+	
+	&-noData{
+		color: #FFFFFF;
+		font-size: 28upx;
+		padding: 20upx 0;
+	}
+	
+	&-list{
+		color: #FFFFFF;
+		font-size: 28upx;
+		
+		&__header{
+			@include flexCenter;
+			border-bottom: 1upx solid #FFFFFF;
+			padding: 20upx 0;
+			margin-bottom: 20upx;
+		}
+	}
+	
+	&-data{
+		flex: 1;
+		&:last-child{
+			text-align: right;
+		}
+	}
+}
+
+.footerBox {
+	width: 100%;
+	margin-top: 30upx;
+	&-wrapper {
+		@include flexCenter;
+	}
+
+	&-image {
+		width: 100%;
+		@include fullImage;
+	}
+}
+
+@keyframes initAniArrow{
+	0%{
+		transform: translateY(-30upx);
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(30upx);
+		opacity: 0.2;
+	}
+}
+
+
+@keyframes initAniRight{
+	0%{
+		transform: translateX(100%);
+	}
+	95%{
+		transform: translateX(-5%);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+
+@keyframes initAniLeft{
+	0%{
+		transform: translateX(-100%);
+	}
+	95%{
+		transform: translateX(5%);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}

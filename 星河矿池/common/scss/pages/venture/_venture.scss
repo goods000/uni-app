@@ -1,0 +1,260 @@
+.header_fixed + view{
+	/* #ifdef APP-PLUS */
+	padding-top: 180upx;
+	/* #endif */
+}
+
+.header{
+	&-right{position: absolute;font-size: 12px;right: 30upx;top:6px;color: $globalColor-fontStyle;@include flexRight;
+		image{width: 70upx;height: 70upx;}
+	}
+}
+
+.bgBox{
+	background:url(../../static/product/icon-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 400upx;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+.initButtonTabs{ 
+	&-control {
+		width: 85%;
+	}
+}
+
+.productBox{
+	&-list{
+		margin: 0upx 30upx 30upx;
+		&-item{
+			background: $globalColor-white;
+			border-radius: 20upx;
+			position: relative;
+			// padding-bottom: 10upx;
+			margin-bottom: 20upx;
+		}
+		&-time{
+			color: #999999;
+			font-size: 20upx;
+			position: absolute;
+			right: 30upx;
+			top: 40upx;
+		}
+		&-status{
+			&-image{
+				position: absolute;
+				right: 0upx;
+				top: 0;
+			}
+			&--active{
+				border-radius: 0 20upx 0 20upx;
+				background: $globalColor-styleActive;
+				color: $globalColor-white;
+				font-size: 20upx;
+				padding: 10upx;
+			}
+			&--end{
+				border-radius: 0 20upx 0 20upx;
+				background: #f0f0f0;
+				color: #cccccc;
+				font-size: 20upx;
+				padding: 10upx;
+			}
+			@include flexLeft;
+			margin: 0 30upx;
+			border-top: 1px solid $globalColor-border;
+			&  > view {
+				font-size:20upx;
+				padding: 4upx 10upx;
+				margin-right: 15upx;
+			}
+			&-dividend{
+				border-radius:6upx;
+				border: 1px solid #FFC033;
+				background: #FFF3D9;
+				color: #FFC033;
+			}
+			&-old{
+				border-radius:6upx;
+				border: 1px solid #00AC8F;
+				background: #C4F5EB;
+				color: #00AC8F;
+			}
+			&-time{
+				@include flexCenter;
+				border-radius:6upx;
+				border: 1px solid #EB2929;
+				background: #FFD6D6;
+				image{
+					width: 22upx;
+					height: 22upx;
+					margin-right: 10upx;
+				}
+			}
+			&-title{
+				color: #EB2929;
+			}
+		}
+		&-data{
+			@include flexBetween;
+			margin: 20upx 30upx;
+			&-title{
+				@include flexLeft
+				font-size:30upx;
+				color: #666666;
+			}
+			&-image{
+				width: 15upx;
+				margin-right: 10upx;
+			}
+			&-yellow{
+				width: 0;
+				height: 0;
+				border: 12upx solid;
+				border-radius: 40upx;
+				margin-bottom: 15upx;
+				margin-right: 5upx;
+				border-color: transparent transparent #FFC033 transparent;
+			}
+			.yellow{color: #FFC033;}
+			&-price{
+				font-size:30upx;
+				color: #999999;
+			}
+		}
+		&-content{
+			margin: 15upx 30upx 30upx;
+			position: relative;
+			background: #EDEDF2;
+			border-radius: 30upx;
+			height: 10upx;
+			&__chart {
+				width: 100%;
+				// height: 40upx;
+				height: 100%;
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 1;
+				@include flexLeft;
+				&-line {
+					height: 100%;
+					background-color: #FFC033;
+					border-radius: 30upx;
+				}
+			}
+		}
+	}
+	&-btn{
+		background: #f0f0f0;
+		color: #d5d5d5;
+		text-align: center;
+		padding: 26upx 0;
+		border-radius: 0 0 20upx 20upx;
+		font-size: 32upx;
+		font-weight: bold;
+		&--active{
+			background: #faf6f0;
+			color: $globalColor-style;
+		}
+	}
+}
+
+.ventureBox{
+	margin: 30upx;
+	&-wrapper{
+		background: $globalColor-white;
+		border-radius: 20upx;
+		padding: 30upx;
+		margin: 0 0 30upx;
+	}
+	&-headerTitle{
+		color: $globalColor-fontStyle;
+		font-size: 35upx;
+		font-weight: bold;
+	}
+	&-form{
+		margin: 96upx 31upx;
+		@include flexCenterColumn;
+		&-item{
+			@include flexLeftColumn;
+			width: 100%;
+			&-title{
+				margin: 24upx 0;
+				font-size: 28upx;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: $globalColor-fontStyle;
+			}
+			&-input{
+				position: relative;
+				border-bottom: 1px solid $globalColor-border;
+				padding: 20upx 0upx;
+				width: 100%;
+				@include flexLeft;
+				input{
+					// flex: 1;
+					font-size: 50upx;
+					color: $globalColor-styleActive;
+					font-weight: bold;
+				}
+				&.showCloseBtn {
+					.ventureBox-form-item-image__clear--active{
+						display: flex;
+					}
+				}
+			}
+			&-b{
+				color: #999;
+				font-size: 30upx;
+				font-weight: bold;
+				margin-top: 15upx;
+			}
+			&-image{
+				@include flexRight;
+				position: absolute;
+				right: 0;
+				&__clear{
+					margin-right: 14upx;
+					image{
+						width: 30upx;
+						height: 30upx;
+					}
+					&--active{
+						display: none;
+					}
+				}
+			}
+		}
+		&-next{
+			width: 100%;
+			display: block;
+			text-align: right;
+			margin-top: 20upx;
+			&-title{
+				color: #999999;
+				font-size: 24upx;
+			}
+		}
+	}
+	&-using{
+		color: $globalColor-fontStyle;
+		font-size: 26upx;
+		margin: 20upx 0;
+	}
+	&-tips{
+		color: $globalColor-fontStyle;
+		font-size: 26upx;
+		line-height: 40upx;
+	}
+	&-headerNum{
+		font-size: 45upx;
+		font-weight: bold;
+		color: $globalColor-fontStyle;
+		margin-top: 20upx;
+	}
+}

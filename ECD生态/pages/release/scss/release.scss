@@ -1,0 +1,45 @@
+.releaseBox{
+	@include flexLeft;
+	flex-wrap: wrap;
+}
+.release{
+	&-textarea{
+		background: $globalColor-white;
+		padding: 48upx 30upx;
+		textarea{
+			width: 100%;
+			height: 15vh;
+			overflow: scroll;
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: $globalColor-fontStyle;
+		}
+		&--input{
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: #CCCCCC;
+		}
+	}
+	&-tips{
+		text-align: right;
+		font-size: 28upx;
+		color: #CCCCCC;
+	}
+	&__image{
+		// background: #F0F0F0;
+		border: 1px solid $globalColor-border;
+		width: 196upx;
+		height: 196upx;
+		margin: 38upx 0 30upx 40upx;
+		&-bg{
+			text-align: center;
+			width: 100%;
+			height: 100%;
+			background-size: 100% 100% !important;
+			background-repeat: no-repeat !important;
+			background-position: center center !important;
+		}
+	}
+}

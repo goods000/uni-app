@@ -1,0 +1,17 @@
+.initNoData{ 
+	font-size: 28upx;
+	color: #333333;
+	text-align: center;
+	padding: 285upx 0 311upx;
+	
+	&::before{
+		content: '';
+		width: 100%;
+		height: 140upx;
+		display: inline-block;
+		background-image: url('~@/static/public/icon-nodata-image.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 127upx 125upx;
+	}
+}

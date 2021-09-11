@@ -1,0 +1,196 @@
+.setting{
+	&-box:nth-last-child(1){border-bottom: none;}
+	&-box{
+		margin: 24upx 30upx 0;
+		padding:0upx 5upx;
+		background: $globalColor-white;
+		box-shadow: 0upx 2upx 7upx 0upx rgba(10, 26, 56, 0.1);
+		border-radius: 20px;
+		&-item:nth-last-child(1){border-bottom: none;}
+		&-item{
+			@include flexBetween;
+			padding: 36upx 30upx;
+			border-bottom: 1px solid $globalColor-border;
+			&-title{
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+			}
+			&-edit{
+				color: #999999;
+				font-size: 31upx;
+				background: url(../../static/public/icon-next.png) no-repeat;
+				background-size: 20upx 20upx;
+				background-position: center right 13upx; 
+				padding-right: 40upx;
+			}
+			.hava{
+				color: $globalColor-fontStyle;
+				// background:none;
+				// padding-right: 20upx;
+			}
+			.chioce{color: #F92929;font-size: 32upx;}
+		}
+	}
+}
+
+.safety{
+	&-phone{
+		color: $globalColor-fontStyle;
+		font-size: 32upx;
+		text-align: center;
+		margin: 39upx auto;
+		font-weight: bold;
+	}
+	&-list{
+		@include flexLeftColumn;
+		margin: 30upx;
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 30upx;
+			font-weight: bold;
+			margin: 24upx 0;
+		}
+		&-item{
+			@include flexLeft;
+			margin: 20upx 0;
+			&-type{
+				color: $globalColor-style;
+				background: #FFFFFF;
+				border: 1px solid $globalColor-style;
+				border-radius: 7upx;
+				padding: 10upx 20upx;
+				margin-right: 20upx;
+				&--active{
+					color: #FFFFFF;
+					background: $globalColor-style;
+					border: 1px solid $globalColor-style;
+					border-radius: 7upx;
+				}
+			}
+		}
+		&-input{
+			position: relative;
+			@include flexLeft;
+			width: 100%;
+			background: #FFFFFF;
+			box-shadow: 0upx 2upx 7upx 0upx rgba(10, 26, 56, 0.1);
+			border-radius: 20upx;
+			padding: 32upx 28upx;
+			input{
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				width: 95%;
+			}
+			&-image{
+				position: absolute;
+				right: 30upx;
+				@include flexRight;
+				image{
+					width: 33upx;
+				}
+			}
+			&-u{
+				color: #999999;
+				font-size: 24upx;
+				border-right: 1px solid #999999;
+				padding-right: 10upx;
+				margin-right: 10upx;
+			}
+			&-all{
+				color: $globalColor-style;
+				font-size: 32upx;
+				text-decoration: underline;
+			}
+			&-picker{
+				color: #333333;
+				font-size: 32upx;
+				width: 15%;
+				background: url(../../static/operate/icon-operate-next.png) no-repeat;
+				background-position: calc(100% - 10upx) center;
+				background-size: 20upx 12upx;
+				// margin-left: 30upx;
+			}
+		}
+	}
+}
+
+.realName{
+	padding: 55upx 30upx;
+	&-title{
+		color: $globalColor-fontStyle;
+		font-size: 30upx;
+		font-weight: bold;
+	}
+	&-box{
+		margin: 60upx auto 0;
+		background: url(../../static/realName/icon-realName-bg.png) no-repeat;
+		background-size: 100% 100%;
+		width: 400upx;
+		height: 264upx;
+		padding: 16upx;
+		&-bg{
+			width: 100%;
+			height: 100%;
+			position: relative;
+			z-index: 1;
+			    background-size: 100% 100%;
+				background-position: center center;
+				background-repeat: repeat;
+			
+			&__photo{
+				image{
+					width: 68upx;
+					height: 68upx;
+					position: absolute !important;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					z-index: 2;
+				}
+			}
+		}
+	}
+	&-end{
+		text-align: center;
+	}
+	&-status{
+		margin-top: 247upx;
+		image{
+			width: 120upx;
+			height: 120upx;
+			margin: auto;
+		}
+	}
+	&-result{
+		color: $globalColor-fontStyle;
+		font-size: 32upx;
+		margin: 39upx 0 86upx;
+		font-weight: bold;
+	}
+	&-title{
+		// color: #999999;
+		font-size: 32upx;
+		line-height: 40upx;
+		font-weight: 400;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

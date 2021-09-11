@@ -1,0 +1,105 @@
+.release_tabs{
+	background: $globalColor-white;
+	padding:  20upx 94upx 0;
+	margin-bottom: 12upx;
+	&-list{
+		@include flexBetween;
+		// padding: 0 94upx;
+		&-txt{
+			// margin-right: 68upx;
+			color: #999999;
+			font-size: 28upx;
+			padding-bottom: 12upx;
+			border-bottom:2px solid transparent;
+		}
+		.active{
+			color: $globalColor-style;
+			border-bottom:2px solid $globalColor-style;
+		}
+	}
+}
+
+.releaseRecord{
+	&-box{
+		padding: 21upx 32upx;
+		border-bottom: 1px solid rgba(0,0,0,0.10);
+		background: $globalColor-white;
+		&-header{
+			@include flexBetween;
+			&__title{
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				.buy{color: #38C467;font-weight: 800;}
+				.sell{color: #FF4343;font-weight: 800;}
+			}
+			&__btn{
+				color: $globalColor-white;
+				font-size: 26upx;
+				background: $globalColor-style;
+				border-radius: 8upx;
+				padding: 8upx 0;
+				width: 15%;
+				text-align: center;
+			}
+			&__end{
+				color: #666666;
+				font-size: 26upx;
+				padding: 8upx 0;
+			}
+			&__status{
+				background: url(../../static/public/icon-next.png) no-repeat;
+				background-size: 20upx 20upx;
+				background-position: center right 0upx;
+				padding-right: 20upx;
+				&--end{
+					color: #666666;
+					font-size: 26upx;
+				}
+				&--hand{
+					color: $globalColor-style;
+					font-size: 26upx;
+				}
+				&--appeal{
+					color: #FF4343;
+					font-size: 26upx;
+				}
+			}
+		}
+		&-price{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			margin: 24upx 0 10upx;
+		}
+		&-info{
+			@include flexBetween;
+			& > view{
+				color: #666666;
+				font-size: 24upx;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

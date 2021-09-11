@@ -1,0 +1,245 @@
+// 中间弹出模块样式
+.initPopup {
+	position: relative;
+	&-wrapper {
+		background-color: $globalColor-white;
+		border-radius: 15upx;
+		padding: 30upx;
+		width: 690upx;
+	}
+
+	&-title {
+		@include initBeforeHolder;
+		color: $globalColor-fontStyle;
+		font-size: 32upx;
+		font-weight: bold;
+		margin-bottom: 30upx;
+	}
+	
+	&-headerTitle {
+		color: $globalColor-fontStyle;
+		font-size: 32upx;
+		font-weight: bold;
+		margin-bottom: 30upx;
+		text-align: center;
+	}
+	
+
+	&-desc {
+		color: #999999;
+		font-size: 28upx;
+		font-weight: 300;
+		margin-bottom: 30upx;
+
+		&--style {
+			color: $globalColor-style;
+		}
+	}
+
+	&-msg {
+		color: $globalColor-fontStyle;
+		font-size: 28upx;
+		font-weight: 300;
+		margin-bottom: 30upx;
+	}
+
+	&-listBox {
+		width: 100%;
+		margin-bottom: 30upx;
+		
+		&__list {
+			@include flexLeftColumn;
+			padding: 15upx 0;
+			
+			&-label {
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: 500;
+			}
+			&-title {
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: 500;
+				text-align: center;
+				width: 100%;
+			}
+			
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: 300;
+			}
+			
+			&-input {
+				width: 100%;
+				@include flexLeft;
+				@include initTransition(0.4);
+				background-color: #f0f0f0;
+				background-border: #f0f0f0;
+				border: 1px solid #cccccc;
+				position: relative;
+				border-radius: 18upx;
+				padding: 30upx;
+				flex: 1;
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				font-weight: bold;
+				margin: 32upx 0 24upx;
+				input {
+					flex: 1;
+				}
+				&--class{
+					font-size: 32upx;
+					font-family: PingFang SC;
+					font-weight: 500;
+					color: #CCCCCC;
+				}
+			}
+			
+			&-textarea{
+				// @include flexLeft;
+				width: 100%;
+				background-color: #f7f6fb;
+				padding: 30upx;
+				border-radius: 20upx;
+				flex: 1;
+				color: $globalColor-fontStyle;
+				height: 160upx;
+				
+				&--long{
+					height: 360upx;
+				}
+				
+				textarea {
+					height: calc(100% - 30upx);
+					width: 100%;
+					color: $globalColor-fontStyle;
+					font-size: 28upx;
+					font-weight: 300;
+				}
+			}
+			
+			&-max{
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: 300;
+				text-align: right;
+			}
+
+			&-placeholder {
+				color: #33333f;
+				font-size: 32upx;
+				font-weight: bold;
+			}
+
+			&-verify {
+				color: $globalColor-style;
+				font-size: 28upx;
+				font-weight: bold;
+			}
+			
+			&-using{
+				@include flexLeft;
+				&__image{
+					width: 24upx;
+					height: 24upx;
+					margin-right: 9upx;
+				}
+				&__balance{
+					font-size: 24upx;
+					font-family: PingFang SC;
+					font-weight: 500;
+					color: #999999;
+				}
+			}
+		}
+
+		&__note {
+			color: #999999;
+			font-size: 22upx;
+
+			&--highlight {
+				color: #ffffff;
+			}
+		}
+	}
+
+	&-buttonBox {
+		@include flexCenter;
+		
+		&__btn {
+			@include flexCenter;
+			flex: 1;
+			color: #999999;
+			font-size: 31upx;
+			font-weight: 300;
+			padding: 28upx 0;
+			border-radius: 14upx;
+			margin-right: 30upx;
+			border: 1px solid;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&--cancel {
+				color: #999999;
+				border-color: #999999;
+			}
+
+			&--confirm {
+				background-color: $globalColor-style;
+				border-color: $globalColor-style;
+				color: #ffffff;
+			}
+		}
+	}
+	
+	.initBox{
+		width: 100vw;
+		background: $globalColor-white;
+		border-radius: 20upx 20upx 0 0;
+		@include flexLeftColumn;
+		&-form{
+			padding: 30upx 0;
+			text-align: center;
+			width: 100%;
+			border-bottom: 1px solid $globalColor-border;
+			&:nth-last-child(1){border-bottom: none;}
+			&__label{
+				color: $globalColor-fontStyle;
+				font-family: DINPro;
+				font-weight: 500;
+				font-size: 36upx;
+			}
+		}
+	}
+	
+	.initImage{
+		width: 100%;
+		// height: 80vh;
+		// overflow: scroll;
+		// background: #fff;
+		@include flexCenterColumn;
+		&-codeImg{
+			width: 520upx;
+			height: 520upx;
+			// position: absolute;
+			// top: 50%;
+			// right: 50%;
+			// transform: translate(-50%,-50%);
+		}
+		&-closeImg{
+			width: 40upx;
+			height: 40upx;
+		}
+		&-title{
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: $globalColor-white;
+			margin: 45upx auto;
+			text-align: center;
+		}
+	}
+}

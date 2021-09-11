@@ -1,0 +1,355 @@
+.contents{
+	background: $globalColor-bgStyle;
+}
+.userBox{
+	margin: 30upx;
+	@include flexLeft;
+	&-image{
+		image{
+			width: 100upx;
+			border-radius: 50%;
+		}
+	}
+	&-newBox{
+		@include flexLeftColumn;
+	}
+	&-name{
+		color: $globalColor-fontStyle;
+		margin: 0 15upx;
+		font-weight: bold;
+		white-space: nowrap;
+	}
+	&-inviteCode{
+		color: #999999;
+		font-size: 24upx;
+		margin: 0 15upx;
+		white-space: nowrap;
+	}
+	&-level{
+		@include flexLeft;
+		&--activ{
+			width: 40upx;
+			height: 40upx;
+			margin-right: 14upx;
+		}
+		&--team{
+			width: 140upx;
+		}
+		& > view{
+			padding: 2upx 6upx;
+			font-size: 20upx;
+			text-align: center;
+			margin-right: 10upx;
+			white-space: nowrap;
+			border-radius:6upx;
+		}
+		&-province{
+			border: 1px solid #EB2929;
+			background: #FFD6D6;
+			color: #EB2929;
+		}
+		&-city{
+			border: 1px solid #00AC8F;
+			background: #C4F5EB;
+			color: #00AC8F;
+		}
+		&-area{
+			border: 1px solid #13bbf9;
+			background: #c6eaf7;
+			color: #13bbf9;
+		}
+		&-vip{
+			border: 1px solid #FFC033;
+			background: #FFF3D9;
+			color: #FFC033;
+		}
+	}
+}
+
+.userAsset{
+	margin: 15upx;
+	&-Box{
+		position: relative;
+		z-index: 2;
+		background: url(../../static/user/icon-user-bg.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		padding: 30upx;
+		&-header{
+			position: relative;
+			@include flexBetween;
+			&-title{
+				@include flexLeft;
+				&-image{
+					margin-right: 15upx;
+					image{
+						width: 45upx;
+					}
+				}
+			}
+			&-name{
+				color: $globalColor-fontColor;
+				font-size: 28upx;
+				font-weight: bold;
+			}
+			&-see{
+				position: relative;
+				z-index: 2;
+				image{
+					width: 30upx;
+				}
+			}
+		}
+		&-middle{
+			color: $globalColor-fontColor;
+			font-size: 24upx;
+			margin: 40upx 0 10upx;
+		}
+		&-data{
+			@include flexBetween;
+			&-item:nth-child(1){@include flexLeftColumn;}
+			// &-item:nth-last-child(1){@include flexRightColumn;}
+			&-item{
+				&-num{
+					color: #FFFFFF;
+					font-size: 44upx;
+				}
+				&-num_p{
+					color: #FFFFFF;
+					font-size: 32upx;
+				}
+				&-price{
+					color: #FFFFFF;
+					font-size: 24upx;
+				}
+			}
+		}
+		&-open{
+			@include flexCenter
+			margin: 10upx auto 0;
+			image{
+				width: 25upx;
+				-webkit-transform: rotate(180deg); /* 旋转角度 Chrome, Safari, Opera */
+				transform: rotate(180deg);/* 旋转角度*/
+			}
+			&--active{
+				// animation: ;
+				-webkit-transform: rotate(180deg); /* 旋转角度 Chrome, Safari, Opera */
+				transform: rotate(180deg);/* 旋转角度*/
+			}
+		}
+	}
+	&-list-box{
+		z-index: 1;
+		margin:-38upx 10upx 30upx;
+		padding: 30upx 0upx 20upx;
+		background: #F0F0F0;
+		border-radius: 20upx;
+		border: 1px solid $globalColor-border;
+	}
+	&-list:nth-last-child(1){border-bottom: none;}
+	&-list{
+		border-bottom: 1px solid $globalColor-border;
+		padding: 20upx 0;
+		&-header{
+			position: relative;
+			@include flexBetween;
+			padding: 0 20upx;
+			&-title{
+				@include flexLeft;
+				&-image{
+					margin-right: 15upx;
+					image{
+						width: 45upx;
+						border-radius: 50%;
+					}
+				}
+			}
+			&-name{
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+			}
+			&-see{
+				image{
+					width: 30upx;
+				}
+			}
+		}
+		&-data{
+			@include flexBetween;
+			padding: 30upx 20upx 0;
+			&-item:nth-child(1){width: 40%;}
+			&-item:nth-child(2){width: 20%;}
+			&-item:nth-last-child(1){@include flexRightColumn;width: 40%;}
+			&-item{
+				@include flexLeftColumn;
+				&-title{
+					color: #777777;
+					font-size: 24upx;
+				}
+				&-num{
+					color: $globalColor-fontStyle;
+					font-size: 28upx;
+					font-weight: bold;
+				}
+				&-num_cny{
+					color: #999999;
+					font-size: 28upx;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+.userBtn{
+	@include flexBetween;
+	margin: 30upx;
+	& > view{
+		width: 46%;
+		font-size: 32upx;
+		text-align: center;
+		padding: 15upx;
+		border-radius: 18upx;
+		font-weight: bold;
+	}
+	&-btn{
+		border: 1px solid #999999;
+		&-chioce{
+			border: 1px solid $globalColor-style;
+			background: $globalColor-style;
+			color: $globalColor-white;
+		}
+	}
+}
+
+.userBg{
+	background: $globalColor-white;
+	margin: 20upx 30upx;
+	border-radius: 20upx;
+	&-list{
+		@include flexLeft;
+		padding: 0upx 30upx 20upx;
+		&-item{
+			@include flexCenterColumn;
+			width: 25%;
+			&-image{
+				text-align: center;
+				image{
+					width: 72upx;
+					height: 72upx;
+				}
+			}
+			&-name{
+				color: $globalColor-fontStyle;
+				font-size: 26upx;
+				margin-top: 17upx;
+			}
+		}
+	}
+}
+
+.listBox {
+	position: relative;
+	z-index: 1;
+	&-wrapper {
+		padding: 0 30upx 30upx;
+	}
+
+	&-plane {
+		// @include initShadow;
+		margin-bottom: 30upx;
+		overflow: hidden;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&-list:nth-child(1) {border-radius: 20upx 20upx 0 0;border-bottom: 1upx solid #cccccc;}
+	&-list:nth-last-child(2) {margin-bottom: 20upx;border-radius: 0 0 20upx 20upx;}
+	&-list:nth-child(2) {margin-bottom: 20upx;border-radius: 0 0 20upx 20upx;}
+	&-list:nth-child(3) {border-radius: 20upx 20upx 0 0;border-bottom: 1upx solid #cccccc;}
+	&-list:nth-child(4) {border-radius: 0;border-bottom: 1upx solid #cccccc;}
+	&-list {
+		background-color: #ffffff;
+		border-radius: 20upx;
+		@include flexLeft;
+		position: relative;
+		padding: 35upx 30upx;
+		font-size: 30upx;
+		color: $globalColor-fontStyle;
+		font-weight: 300;
+		background-image: url('@/static/public/icon-next.png');
+		background-size: 25upx 24upx;
+		background-repeat: no-repeat;
+		background-position: calc(100% - 30upx) center;
+		&--holder {
+			border-bottom: 16upx solid #ededf2;
+		}
+		&__icon {
+			width: 40upx;
+			margin-right: 15upx;
+			@include fullImage;
+		}
+		&__data {
+			padding-right: 30upx;
+			font-size: 28upx;
+			color: $globalColor-style;
+			flex: 1;
+			text-align: right;
+		}
+		&__title {
+			color: $globalColor-fontStyle;
+			font-size: 30upx;
+			font-weight: bold;
+		}
+	}
+}
+
+.oppupBox{
+	background: $globalColor-white;
+	border-radius: 20upx;
+	padding: 68upx;
+	@include flexCenterColumn;
+	&-title{
+		color: $globalColor-fontStyle;
+		font-weight: bold;
+		padding: 30upx 0;
+		text-align: center;
+		font-size: 28upx;
+	}
+	&-btn{
+		@include flexBetween;
+		width: 80%;
+		margin-top: 30upx;
+		& > view{
+			color: $globalColor-fontStyle;
+			border-radius: 18upx;
+			width: 40%;
+			padding: 18upx 0;
+			font-weight: bold;
+			text-align: center;
+		}
+		&-close{
+			border: 1px solid #999999;
+		}
+		&-config{
+			background: $globalColor-style;
+			border: 1px solid $globalColor-style;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,240 @@
+page{
+	background: $globalColor-white;
+}
+
+.exchangeDetails{
+	.initTilte{
+		margin-top: 0;
+	}
+	&-bg{
+		background: $globalColor-style;
+	}
+	&-status{
+		padding: 40upx 30upx;
+		@include flexBetween;
+		&__item{
+			@include flexLeftColumn;
+			&-statuTitle{
+				font-size: 40upx;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: $globalColor-white;
+			}
+			&-statuTips{
+				font-size: 24upx;
+				font-family: PingFang SC;
+				color: $globalColor-white;
+			}
+		}
+		&__image{
+			width: 74upx;
+			height: 74upx;
+		}
+	}
+	&-content{
+		padding: 30upx;
+		&__item{
+			@include flexLeft;
+			padding: 10upx 0 0;
+			&-title{
+				font-size: 28upx;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+				&--width{
+					width: 30%;
+				}
+			}
+			&-num{
+				font-size: 28upx;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: $globalColor-fontStyle;
+				position: relative;
+				&--position{
+					position: absolute;
+					right: 30upx;
+				}
+			}
+		}
+		&__cny{
+			font-size: 36upx;
+			font-family: DINPro;
+			font-weight: bold;
+			color: $globalColor-style;
+			margin: 10upx 0;
+		}
+	}
+	&-wrapper{
+		padding: 0 30upx;
+	}
+	&-list{
+		@include flexCenterColumn;
+		&__item{
+			@include flexBetween;
+			width: 100%;
+			padding: 10upx 30upx 20upx;
+			position: relative;
+			&-box{
+				@include flexRight;
+			}
+			&-title{
+				color: #999999;
+				font-size: 28upx;
+				width: 35%;
+			}
+			&-news{
+				color: #162B26;
+				font-size: 28upx;
+				font-family: DINPro;
+				font-weight: 500;
+			}
+			&-cny{
+				color: $globalColor-style;
+				font-size: 28upx;
+				font-family: DINPro;
+				font-weight: 500;
+			}
+			&-copy{
+				color: $globalColor-style;
+				font-size: 28upx;
+				text-decoration: underline;
+				&--disable{
+					color: #999999;
+				}
+			}
+			&-image{
+				width: 24upx;
+				height: 24upx;
+				margin-left: 12upx;
+				&--active{
+					-webkit-transform: rotate(180deg); /* 旋转角度 Chrome, Safari, Opera */
+					transform: rotate(180deg);/* 旋转角度*/
+				}
+			}
+			&-boxImage{
+				width: 40upx;
+				height: 40upx;
+				margin-left: 12upx;
+			}
+		}
+	}
+	&-btn{
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		@include flexBetween;
+		& > view{
+			padding: 35upx 0;
+			text-align: center;
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: #FFFFFF;
+			line-height: 38upx;
+		}
+		&__contact{
+			width: 30%;
+			background: #545352;
+		}
+		&__style{
+			width: 70%;
+			background: $globalColor-style;
+		}
+		&__disable{
+			width: 70%;
+			background: #CCCCCC;
+		}
+	}
+	&-padding{
+		border-top: 20upx solid #F5F5F5;
+		padding: 45upx 0;
+	}
+}
+.orderBox{
+	border-top: 20upx solid #F5F5F5;
+	padding: 45upx 0 18%;
+	.initTilte{
+		margin-top: 0;
+	}
+	&-list{
+		@include flexCenterColumn;
+		&-item{
+			@include flexLeft;
+			align-items: flex-start;
+			width: 100%;
+			padding: 10upx 30upx 20upx;
+			position: relative;
+			&-title{
+				color: #999999;
+				font-size: 28upx;
+				width: 35%;
+			}
+			&-news{
+				color: #162B26;
+				font-size: 28upx;
+				font-family: DINPro;
+				font-weight: 500;
+			}
+			&-copy{
+				color: $globalColor-style;
+				font-size: 28upx;
+				position: absolute;
+				right: 30upx;
+				text-decoration: underline;
+			}
+		}
+	}
+	&-progress{
+		@include flexLeftColumn;
+		&__item{
+			@include flexLeft;
+			border-left: 2upx solid #CCCCCC;
+			padding-left: 12upx;
+			padding-bottom: 39upx;
+			&:nth-last-child(1){
+				padding-bottom: 5upx;
+			}
+			&-tips{
+				height: 14upx;
+				width: 14upx;
+				padding-top: 10upx;
+				position: relative;
+				&::before {
+					content: '';
+					display: inline-block;
+					height: 14upx;
+					width: 14upx;
+					border-radius: 50%;
+					position: absolute;
+					left: -20upx;
+					top: 0%;
+					background: #CCCCCC;
+				}
+				&--active{
+					color: $globalColor-style;
+					&::before {
+						content: '';
+						display: inline-block;
+						height: 14upx;
+						width: 14upx;
+						border-radius: 50%;
+						position: absolute;
+						left: -20upx;
+						top: 0%;
+						background: $globalColor-style;
+					}
+				}
+			}
+			&-title{
+				font-size: 28upx;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+				&--active{
+					color: $globalColor-style;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+@each $theme-name, $theme-map in $themes {
+	[data-theme='#{$theme-name}'] {
+		background-color: map-get($theme-map, 'globalColor-themeStyle');
+	}
+}
+
+.main{
+	@include flexCenterColumn;
+	padding-top: calc(var(--status-bar-height) + 260upx);
+}
+
+.iconBox{
+	@include fullImage;
+	width: 498upx;
+}
+
+.textBox{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 30upx;
+	padding-bottom: calc(constant(safe-area-inset-bottom) + 30upx);
+	padding-bottom: calc(env(safe-area-inset-bottom) + 30upx);
+	
+	&-label{
+		text-align: center;
+		color: #FFFFFF;
+		font-size: 44upx;
+		font-weight: 300;
+	}
+}

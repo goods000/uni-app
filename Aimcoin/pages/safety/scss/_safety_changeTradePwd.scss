@@ -1,0 +1,11 @@
+.infoBox {
+	@include themeColor('globalColor-fontStyle');
+	padding: 30upx;
+	text-align: center;
+	font-size: 32upx;
+	font-weight: bold;
+}
+
+.initFormBox {
+	padding: 30upx;
+}

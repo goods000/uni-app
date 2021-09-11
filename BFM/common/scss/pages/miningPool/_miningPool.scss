@@ -1,0 +1,121 @@
+page,.pages{
+	background-color: #0f1d1f;
+}
+
+.bgBox {
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	@include fullImage;
+}
+
+.main{
+	position: relative;
+	z-index: 1;
+}
+
+.titleBox {
+	position: relative;
+	z-index: 1;
+	&-wrapper {
+		@include flexBetween;
+		padding: 30upx;
+	}
+
+	&-info {
+		flex: 1;
+
+		&__title {
+			font-size: 24upx;
+			color: #ffffff;
+			font-weight: 300;
+			margin-bottom: 15upx;
+		}
+
+		&__data {
+			color: #ffffff;
+			font-size: 52upx;
+			font-weight: 300;
+		}
+	}
+}
+
+.tabsBox {
+	&-control {
+		@include flexCenter;
+		border-top-left-radius: 30upx;
+		border-top-right-radius: 30upx;
+		background-color: #0f1d1f;
+		&__item {
+			flex: 1;
+			text-align: center;
+			font-size: 28upx;
+			font-weight: bold;
+			color: #ffffff;
+			// margin-right: 30upx;
+			padding: 30upx 0;
+			position: relative;
+			@include initTransition(0.4);
+			&:after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 8upx;
+				background-color: transparent;
+				position: absolute;
+				bottom: -1upx;
+				left: 50%;
+				transform: translateX(-50%);
+				border-radius: 4upx;
+				@include initTransition(0.4);
+			}
+			&--active {
+				color: $globalColor-style;
+				&:after {
+					width: 100%;
+					background-color: $globalColor-style;
+				}
+			}
+		}
+	}
+}
+
+.listBox {
+	&-wrapper {
+		background-color: #0f1d1f;
+	}
+
+	&-list {
+		@include flexBetween;
+		padding: 30upx;
+		font-size: 28upx;
+		font-weight: 300;
+		color: #ffffff;
+		
+		&__date{
+			@include initBeforeHolder;
+			color: #ffffff;
+			font-size: 28upx;
+			font-weight: 300;
+			margin-bottom: 15upx;
+		}
+		
+		&__remark{
+			color: #999999;
+			font-size: 28upx;
+		}
+
+		&__data {
+			text-align: right;
+			width: 200upx;
+			margin-left: 30upx;
+			font-size: 32upx;
+			font-weight: 300;
+			color: $globalColor-style;
+		}
+	}
+}

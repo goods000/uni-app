@@ -1,0 +1,95 @@
+.header{
+	position: absolute;
+	top: 0;
+}
+
+.invite{
+	&_bg{
+		width: 100%;
+	}
+}
+
+.inviteBox{
+	@include flexCenterColumn;
+	padding: 28upx 39upx;
+	position: relative;
+	margin: 23upx ;
+	&-image{
+		position: absolute;
+		top: 0;
+		width: 316upx;
+		height: 84upx;
+	}
+	&-item{
+		@include flexCenterColumn;
+		@include initShadow;
+		border-radius: 41upx;
+		margin: auto;
+		padding: 100upx 0 72upx;
+		width: 100%;
+		&-qrcode{
+			border: 1px solid $globalColor-style;
+			border-radius: 10upx;
+			position: relative;
+			padding: 20upx;
+			&-code{
+				width: 388upx;
+				height: 388upx;
+			}
+			&-logo{
+				position: absolute;
+				top: 50%;left: 50%;
+				transform: translate(-50%,-50%);
+				width: 100upx;
+				height: 100upx;
+				border-radius: 20upx;
+			}
+		}
+		&-coin{
+			color: #999999;
+			font-size: 24upx;
+			position: relative;
+			margin: 50upx auto 30upx;
+			width: 30%;
+			text-align: center;
+			&::after{
+				content: '';
+				width: 32upx;
+				height: 2upx;
+				background: #999999;
+				position: absolute;
+				left: 0;top: 50%;
+			}
+			&::before{
+				content: '';
+				width: 42upx;
+				height: 2upx;
+				background: #999999;
+				position: absolute;
+				right: 0;top: 50%;
+			}
+		}
+		&-code{
+			color: $globalColor-style;
+			font-size: 59upx;
+			font-weight: bold;
+		}
+		&-btn{
+			color: $globalColor-style;
+			font-size: 24upx;
+			text-decoration: underline;
+		}
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+

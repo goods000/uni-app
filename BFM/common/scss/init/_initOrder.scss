@@ -1,0 +1,72 @@
+.initOrder {
+	font-size: 28upx;
+	&-list {
+		// background-color: #FFFFFF;
+		padding: 30upx;
+		border-bottom: 2upx solid #35364a;
+		&__top {
+			@include flexBetween;
+			margin-bottom: 30upx;
+		}
+		&__info {
+			@include flexLeft;
+			flex: 1;
+		}
+		&__type {
+			font-weight: bold;
+			margin-right: 10upx;
+			&--sell {
+				color: $globalColor-kline-red;
+			}
+			&--buy {
+				color: $globalColor-kline-green;
+			}
+		}
+		&__title {
+			margin-right: 10upx;
+			font-weight: bold;
+			color: #333333;
+		}
+		&__date {
+			font-size: 24upx;
+			color: #999999;
+		}
+		&__status {
+			font-size: 24upx;
+			color: #999999;
+			padding-right: 20upx;
+			background-image: url(@/static/public/icon-arrow-right-grey.png);
+			background-repeat: no-repeat;
+			background-position: center right;
+			background-size: 8upx 15upx;
+
+			&--green {
+				color: $globalColor-green;
+			}
+			&--red {
+				color: $globalColor-red;
+			}
+			&--grey {
+				color: #999999;
+			}
+		}
+	}
+	&-itemBox {
+		@include flexBetween;
+
+		&__item {
+			flex: 1;
+			font-size: 24upx;
+			&--long {
+				flex: 2;
+			}
+			@include justifiedLayout;
+			&-label {
+				color: #999999;
+			}
+			&-data {
+				color: #ffffff;
+			}
+		}
+	}
+}

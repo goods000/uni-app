@@ -1,0 +1,43 @@
+@each $theme-name, $theme-map in $themes {
+	[data-theme='#{$theme-name}'] {
+		background-color: map-get($theme-map, 'globalColor-bgStyle');
+	}
+}
+
+.accountBox {
+	@include themeBorderColor('globalColor-holderStyle');
+	border-bottom: 16upx solid;
+	margin-bottom: 30upx;
+	
+	&-wrapper {
+		@include themeBgColor('globalColor-bgStyle');
+		@include flexBetween;
+		padding: 30upx;
+	}
+
+	&-label {
+		@include themeColor('globalColor-fontStyle');
+		font-weight: 300;
+		font-size: 32upx;
+	}
+
+	&-data {
+		@include themeColor('globalColor-themeStyle');
+		@include flexRight;
+		font-size: 32upx;
+		font-weight: bold;
+		background-image: url(@/static/public/icon-arrow-bottom-grey.png);
+		background-size: 26upx 14upx;
+		background-position: right center;
+		background-repeat: no-repeat;
+		padding-right: 45upx;
+	}
+}
+
+.initFormBox{
+	padding: 0 30upx;
+}
+
+.initButton {
+	// padding: 0 30upx;
+}

@@ -1,0 +1,198 @@
+.titleBox {
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-title {
+		color: #ffffff;
+		font-size: 52upx;
+		font-weight: bold;
+		margin-bottom: 15upx;
+	}
+
+	&-desc {
+		color: #999999;
+		font-size: 28upx;
+	}
+}
+
+.wordBox {
+	padding: 30upx;
+	&-wrapper {
+		@include flexLeft;
+		align-items: flex-start;
+		align-content: flex-start;
+		flex-wrap: wrap;
+		background-color: #18181b;
+		border: 1upx solid #333333;
+		border-radius: 8upx;
+		padding: 30upx;
+		height: 420upx;
+	}
+	&-item {
+		@include flexCenter;
+		color: #FFFFFF;
+		font-size: 32upx;
+		height: 90upx;
+		width: 33.33%;
+		font-weight: bold;
+	}
+}
+
+.wordFillBox {
+	padding: 30upx;
+	&-wrapper {
+		@include flexLeft;
+		@include calcMargin(15);
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+	&-item {
+		@include flexCenter;
+		color: $globalColor-style;
+		font-size: 32upx;
+		background-color: #18181b;
+		height: 90upx;
+		width: calc(33.33% - 30upx);
+		margin: 15upx;
+		font-weight: bold;
+	}
+}
+
+.formBox {
+	&-wrapper {
+		padding: 30upx;
+	}
+	&-list {
+		margin-bottom: 30upx;
+		position: relative;
+		&__placeholder {
+			color: #333333;
+			font-size: 32upx;
+		}
+
+		&__label {
+			color: #ffffff;
+			font-size: 32upx;
+			margin-bottom: 15upx;
+		}
+
+		&__input {
+			@include flexLeft;
+			@include initTransition(0.4);
+			font-size: 32upx;
+			padding: 15upx 0;
+			position: relative;
+			border-bottom: 2upx solid #999999;
+			color: #ffffff;
+
+			&--active {
+				border-bottom: 2upx solid $globalColor-style;
+			}
+
+			&.showCloseBtn {
+				.formBox-list__fixedBox-btn--clear {
+					display: flex;
+				}
+			}
+
+			input {
+				font-size: inherit;
+				flex: 1;
+			}
+		}
+
+		&__fixedBox {
+			@include flexRight;
+
+			&-btn {
+				width: 60upx;
+				height: 100%;
+				z-index: 999;
+				@include flexCenter;
+
+				&--clear {
+					display: none;
+					image {
+						width: 30upx;
+						@include fullImage;
+					}
+				}
+
+				&--eye {
+					image {
+						width: 40upx;
+						@include fullImage;
+					}
+				}
+			}
+
+			&-verification {
+				padding: 0 15upx;
+				color: $globalColor-blue;
+			}
+		}
+	}
+}
+
+.buttonBox {
+	margin-top: 120upx;
+	padding: 30upx;
+	@include flexCenter;
+
+	&-btn {
+		flex: 1;
+		font-size: 36upx;
+		padding: 20upx 0;
+		border-radius: 8upx;
+		text-align: center;
+		color: #ffffff;
+		@include initButtonGrad;
+	}
+}
+
+
+.successBox{
+	&-wrapper{
+		@include flexCenterColumn;
+		padding: 120upx 0;
+	}
+	
+	&-icon{
+		width: 130upx;
+		margin-bottom: 15upx;
+		@include fullImage;
+	}
+	
+	&-title{
+		font-size: 40upx;
+		color: #333333;
+		margin-bottom: 30upx;
+	}
+	
+	&-desc{
+		font-size: 28upx;
+		color: #999999;
+		text-align: center;
+	}
+}
+
+.textareaBox{
+	padding: 30upx;
+	&-wrapper{
+		// padding: 30upx;
+		border: 1upx solid #666666;
+		background-color: #17171b;
+		border-radius: 8upx;
+	}
+	
+	&-placeholder{
+		color: 	#333333;
+	}
+	textarea{
+		color: #FFFFFF;
+		font-size: 32upx;
+		padding: 30upx;
+		width: 100%;
+	}
+}

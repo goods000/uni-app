@@ -1,0 +1,44 @@
+*{color: $globalColor-white;}
+.invite{
+	background: url(../../static/invite/icon-invite-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	@include flexCenterColumn;
+	height: 100vh;
+	
+	&-title{
+		margin-top: 210upx;
+		font-size: 92upx;
+	}
+	&-txt{
+		font-size: 28upx;
+		margin: 32upx 0 142upx;
+	}
+	
+	&-code{
+		&-qrcode{
+			border-radius: 28upx;
+			padding: 14upx;
+			background: #5DA2F9;
+			image{
+				width: 360upx;
+				height: 360upx;
+				border-radius: 28upx;
+				background: $globalColor-white;
+				padding: 18upx;
+			}
+		}
+	}
+	
+	&-bottom{
+		text-align: center;
+		&-title{
+			margin-top: 238upx;
+			font-size: 44upx;
+		}
+		&-txt{
+			font-size: 28upx;
+			margin: 20upx 0;
+		}
+	}
+}

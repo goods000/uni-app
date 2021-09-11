@@ -1,0 +1,15 @@
+.initBg {
+	@include fullImage;
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	
+	& + view{
+		position: relative;
+		z-index: 1;
+	}
+}

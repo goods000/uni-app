@@ -1,0 +1,85 @@
+.main {
+	padding: 0 30upx;
+}
+
+
+
+.followBox {
+	&-wrapper {
+		padding: 30upx 0;
+	}
+	
+	&-list {
+		@include initShadow;
+		background-color: #ffffff;
+		border-radius: 20upx;
+		padding: 30upx;
+		margin-bottom: 20upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&-plane {
+		@include flexCenterColumn;
+		width: 100%;
+		height: 100%;
+		background-color: #ffffff;
+	}
+	
+	&-row {
+		@include flexLeft;
+	}
+
+	&-header {
+		@include flexLeft;
+		width: 100%;
+	}
+
+	&-body {
+		width: 100%;
+	}
+
+	&-avatar {
+		@include fullImage;
+		@include initAvatar(60);
+		margin-right: 8upx;
+	}
+
+	&-name {
+		color: $globalColor-fontStyle;
+		font-size: 26upx;
+		font-weight: 300;
+	}
+
+	&-type {
+		color: #999999;
+		font-size: 20upx;
+		margin-right: 5upx;
+	}
+
+	&-itemBox {
+		@include flexBetween;
+		margin-top: 15upx;
+
+		&__item {
+			@include justifiedLayout;
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				font-weight: bold;
+
+				&--style {
+					color: #be7b25;
+				}
+			}
+
+			&-label {
+				color: #999999;
+				font-size: 20upx;
+				font-weight: 300;
+			}
+		}
+	}
+}

@@ -1,0 +1,357 @@
+.bgBox {
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	@include fullImage;
+}
+
+.main {
+	position: relative;
+	z-index: 1;
+	padding: 30upx 0;
+}
+
+.titleInfoBox {
+	margin-bottom: 60upx;
+	padding: 0 30upx;
+	&-wrapper {
+		@include flexLeft;
+		background-color: #0F1D1E;
+		border-radius: 60upx;
+		padding: 30upx;
+	}
+
+	&-icon {
+		@include fullImage;
+		width: 216upx;
+		margin-right: 45upx;
+	}
+
+	&-content {
+		flex: 1;
+	}
+
+	&-info {
+		@include flexLeft;
+		margin-bottom: 15upx;
+
+		&__label {
+			font-size: 24upx;
+			font-weight: bold;
+			margin-right: 15upx;
+			color: #FFFFFF;
+		}
+
+		&__level {
+			font-size: 16upx;
+			font-weight: 500;
+			color: #FF2C4F;
+			border: 1upx solid #FF2C4F;
+			border-radius: 14rpx;
+			padding: 2upx 14upx;
+		}
+	}
+
+	&-price {
+		font-size: 52rpx;
+		font-weight: 700;
+		color: #2BFFB0;
+		margin-bottom: 30upx;
+	}
+
+	&-listBox {
+		&__list {
+			@include flexBetween;
+			margin-bottom: 15upx;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&-label {
+				font-size: 24rpx;
+				font-weight: 500;
+				color: #FFFFFF;
+
+				&::before {
+					content: '';
+					display: inline-block;
+					width: 16rpx;
+					height: 16rpx;
+					background: #2BFFB0;
+					border-radius: 4rpx;
+					margin-right: 15upx;
+				}
+			}
+
+			&-data {
+				font-size: 28rpx;
+				font-weight: 700;
+				color: #FFFFFF;
+			}
+		}
+	}
+}
+
+.itemBox {
+	margin-bottom: 60upx;
+	&-wrapper {
+		@include flexCenter;
+	}
+
+	&-item {
+		@include flexCenterColumn;
+		flex: 1;
+		&__icon {
+			@include fullImage;
+			width: 60upx;
+			margin-bottom: 8upx;
+		}
+
+		&__label {
+			font-size: 28rpx;
+			font-weight: 400;
+			color: #FFFFFF;
+		}
+	}
+}
+
+.subTitleInfoBox {
+	margin-bottom: 60upx;
+	padding: 0 30upx;
+
+	&-wrapper {
+		@include flexLeft;
+		background-color: #0F1D1E;
+		border-radius: 60upx;
+		padding: 30upx 60upx;
+	}
+
+	&-icon {
+		@include fullImage;
+		width: 140upx;
+		margin-left: 30upx;
+	}
+
+	&-title {
+		@include fullImage;
+		font-size: 0;
+		width: 257upx;
+		color: #FFFFFF;
+
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 14rpx;
+			height: 6rpx;
+			background: #2BFFB0;
+			margin: 8upx 0;
+		}
+	}
+
+	&-desc {
+		font-size: 18rpx;
+		font-weight: 500;
+		text-align: left;
+		color: #cccccc;
+		margin-bottom: 15upx;
+	}
+
+	&-button {
+		@include flexLeft;
+		&__btn {
+			font-size: 24rpx;
+			font-weight: 700;
+			color: #ffffff;
+			padding: 4upx 40upx;
+			border-radius: 20rpx;
+			background: linear-gradient(138deg,#12f7f0 8%, #36f9a8 94%);
+		}
+	}
+}
+
+.assetsBox {
+	padding: 0 30upx;
+	&-wrapper {
+	}
+
+	&-title {
+		background: url(@/static/ipfs/icon-asset.png) no-repeat;
+		background-position: left center;
+		background-size: 40upx 40upx;
+		padding-left: 50upx;
+		margin-bottom: 30upx;
+		font-size: 28rpx;
+		font-weight: 700;
+		color: #FFFFFF;
+	}
+
+	&-content {
+		padding: 45upx 30upx;
+		background: #0F1D1E;
+		border-radius: 60rpx;
+		box-shadow: 0rpx 0rpx 12rpx 0rpx rgba(44, 123, 232, 0.2);
+	}
+
+	&-list {
+		@include flexBetween;
+		padding: 30upx 0;
+		border-bottom: 2upx solid #313435;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		&__label {
+			font-size: 32rpx;
+			font-weight: 700;
+			color: #FFFFFF;
+		}
+
+		&__data {
+			font-size: 32rpx;
+			font-weight: 700;
+			color: #2BFFB0;
+		}
+	}
+}
+
+// 左滑块菜单样式
+.menuDrawerBox {
+	background-color: #000F12;
+	height: 100%;
+	&-wrapper {
+		@include flexCenterColumn;
+		/* #ifdef APP-PLUS */
+		// padding-top: var(--status-bar-height) !important;
+		/* #endif */
+		height: 100%;
+	}
+
+	&-info {
+		@include flexLeft;
+		width: 100%;
+		padding: 90upx 60upx 60upx;
+		background: url(@/static/ipfs/img-menu-bg.jpg) no-repeat;
+		background-size: 100% 100%;
+		background-position: center;
+
+		&__avatarBox {
+			margin-right: 45upx;
+			position: relative;
+			&-avatar {
+				@include fullImage;
+				font-size: 0;
+				width: 100upx;
+			}
+			&-level {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				background: url(@/static/ipfs/icon-level-bg.png) no-repeat;
+				background-size: 156upx 46upx;
+				background-position: center;
+				width: 156upx;
+				height: 46upx;
+				
+				font-size: 18rpx;
+				font-weight: 500;
+				text-align: center;
+				color: #ffffff;
+			}
+		}
+
+		&__content {
+			flex: 1;
+		}
+
+		&__name {
+			font-size: 32upx;
+			font-weight: 800;
+			color: #ffffff;
+			// margin-bottom: 15upx;
+		}
+
+		&__id {
+			font-size: 20rpx;
+			font-weight: 400;
+			color: #ffffff;
+		}
+	}
+
+	&-title {
+		font-size: 44upx;
+		color: $globalColor-blue;
+		padding: 30upx;
+		border-bottom: 2upx solid #c6d2e4;
+		width: 100%;
+		text-align: left;
+	}
+
+	&-listBox {
+		flex: 1;
+		text-align: left;
+		width: 100%;
+		
+		
+		&__plane {
+			flex: 1;
+			background-color: #0F1D1E;
+			margin-bottom: 30upx;
+			padding: 0 30upx;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&__list {
+			@include flexLeft;
+			padding: 30upx 0;
+			border-bottom: 1upx solid #313435;
+			background: url(@/static/public/icon-arrow-right-grey.png) no-repeat;
+			background-position: right center;
+			background-size: 14upx 26upx;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+
+			&-icon {
+				@include fullImage;
+				width: 40upx;
+				margin-right: 8upx;
+			}
+
+			&-label {
+				font-size: 28upx;
+				font-weight: bold;
+				color: #FFFFFF;
+			}
+		}
+	}
+	
+	&-endBox{
+		@include flexCenter;
+		width: 100%;
+		padding: 60upx 0;
+		background-color: #0F1D1E;
+		
+		&__icon{
+			@include fullImage;
+			width: 28upx;
+			margin-right: 15upx;
+		}
+		
+		&__label{
+			font-size: 28rpx;
+			font-weight: 700;
+			text-align: left;
+			color: #FFFFFF;
+		}
+	}
+}

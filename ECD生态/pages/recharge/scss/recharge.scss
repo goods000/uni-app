@@ -1,0 +1,121 @@
+page{
+	background: $globalColor-style;
+	/* #ifdef APP-PLUS */
+	min-height: 100vh;
+	/* #endif */
+	overflow: scroll;
+}
+
+.rechargeBox{
+	padding: 0 30upx;
+	&-listItem{
+		@include flexBetween;
+		margin: 33upx 0 0;
+		&-title{
+			color: #999999;
+			font-size: 30upx;
+			font-weight: bold;
+		}
+		&-picker{
+			background: url(../../static/public/icon-select-white.png) no-repeat;
+			background-position: right;
+			background-size: 26upx 26upx;
+			padding-right: 40upx;
+		}
+		.uni-input{
+			font-size: 52upx;
+			font-family: DINPro;
+			font-weight: bold;
+			color: $globalColor-white;
+		}
+	}
+	&-list{
+		@include flexLeftColumn;
+		margin: 30upx 0;
+		box-shadow: 3px 4px 12px 0px rgba(147, 147, 147, 0.16);
+		&-title{
+			color: $globalColor-white;
+			font-size: 30upx;
+			font-weight: bold;
+		}
+		&-item{
+			@include flexLeft;
+			margin: 20upx 0;
+			&-type{
+				color: $globalColor-white;
+				border: 1px solid $globalColor-white;
+				border-radius: 8upx;
+				padding: 10upx 20upx;
+				margin-right: 20upx;
+				font-size: 24upx;
+				&--active{
+					color: $globalColor-fontStyle;
+					background: $globalColor-white;
+					border: 1px solid $globalColor-white;
+				}
+			}
+		}
+	}
+	&-code{
+		@include flexCenterColumn;
+		width: 85%;
+		padding: 49upx;
+		margin: 46upx auto 57upx;
+		background: #FFFFFF;
+		box-shadow: 0upx 2upx 7upx 0upx rgba(10, 26, 56, 0.1);
+		&-qrcode{
+			padding: 10upx;
+			image{
+				width: 386upx;
+				height: 386upx;
+			}
+		}
+		&-codeBtn{
+			background: $globalColor-style;
+			color: $globalColor-white;
+			font-size: 28upx;
+			padding: 25upx;
+			margin: 52upx 0;
+			border-radius: 14upx;;
+		}
+		&-title{
+			color: #999999;
+			font-size: 28upx;
+		}
+		&-box{
+			@include flexCenterColumn;
+			&-num{
+				color: $globalColor-fontStyle;
+				word-break: break-all;
+				text-align: center;
+				margin: 23upx 0 21upx;
+				font-weight: 500;
+				font-size: 28upx;
+			}
+			&-image{
+				margin-left: 13upx;
+				image{
+					width: 31upx;
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+	&-tips{
+		// background: #F9F9F9;
+		// padding: 40upx 30upx 60upx;
+		&-title{
+			color: $globalColor-white;
+			font-size: 32upx;
+			margin-bottom: 20upx;
+		}
+		&-item{
+			color: $globalColor-white;
+			font-size: 24upx;
+			line-height: 45upx;
+		}
+	}
+}

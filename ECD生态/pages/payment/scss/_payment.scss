@@ -1,0 +1,42 @@
+.initBtn{margin-top: 40%;position: absolute;bottom: 46upx;left: 0;right: 0;margin: auto;}
+
+.formBox{
+	background: $globalColor-white;
+	&-group{
+	@include flexLeft;
+		width: 100%;
+		padding: 36upx 34upx;
+		border-bottom: 1px solid $globalColor-bgStyle;
+		&:nth-last-child(1){border: none;}
+		&__label{
+			width: 30%;
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: $globalColor-fontStyle;
+		}
+		input{
+			flex: 1;
+			font-size: 32upx;
+			font-family: DINPro;
+			font-weight: 500;
+			color: $globalColor-fontStyle
+		}
+		&--input{
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: #CCCCCC;
+		}
+	}
+	&-input{
+		width: 100%;
+	}
+	&-tips{
+		padding: 0 32upx;
+		&-title{
+			color: #999999;
+			font-size: 20upx;
+		}
+	}
+}

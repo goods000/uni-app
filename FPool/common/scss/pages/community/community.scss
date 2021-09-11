@@ -1,0 +1,57 @@
+.communityBox{
+	margin: 30upx;
+	&-list{
+		background: #FFFFFF;
+		border-radius: 20upx;
+		@include initShadow;
+		padding: 30upx;
+		@include flexBetween;
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 30upx;
+		}
+		&-price{
+			color: $globalColor-style;
+			font-size: 30upx;
+		}
+	}
+	
+	.tipsBox{
+		background: none;
+	}
+	
+	&-box{
+		.tipsBox{
+			&-right{
+				background-image: url('@/static/public/icon-next.png');
+				background-size: 25upx 24upx;
+				background-repeat: no-repeat;
+				background-position: right;
+				padding-right: 30upx;
+				&-title{
+					color: #3C3C3C;
+				}
+			}
+		}
+		&-list{
+			&:nth-child(1){border-top: none;}
+			border-top: 1px solid rgba(255, 192, 51, 1);
+			&__item{
+				margin: 0 56upx;
+				&-type{
+					@include flexLeft;
+					margin: 0 0 30upx;
+				}
+				image{
+					width: 60upx;
+					border-radius: 50%;
+				}
+				&-title{
+					color: #3C3C3C;
+					font-size: 28upx;
+					margin-left: 36upx;
+				}
+			}
+		}
+	}
+}

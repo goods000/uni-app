@@ -1,0 +1,93 @@
+.bgBox{
+	background: url(@/static/destruction/img-bg.jpg) no-repeat;
+	background-size: 100% 100%;
+	background-position: center top;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+.logoBox{
+	&-wrapper{
+		padding: 60upx 30upx;
+	}
+	
+	&-logo{
+		@include fullImage;
+		width: 252upx;
+	}
+}
+
+.planeBox{
+	&-wrapper{
+		@include flexCenterColumn;
+		min-height: 650upx;
+		width: 100%;
+		position: relative;
+	}
+	
+	&-content{
+		@include flexCenterColumn;
+	}
+	
+	&-bg{
+		width: 650upx;
+		height: 650upx;
+		background-image: url(@/static/destruction/icon-plane-bg.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 650upx 650upx;
+		// animation: zhaunquan 30s linear infinite;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	&-title{
+		@include fullImage;
+		width: 204upx;
+	}
+	
+	
+	/deep/ .digital-rolling{
+		height: 90upx;
+		margin: 15upx 0;
+	}
+	
+	/deep/ .digital-rolling-each-item{
+		height: 90upx;
+	}
+	
+	/deep/ .digital-rolling-each-item-cur-item{
+		font-family: 'destroyFont';
+		color: #2bffb0;
+		font-size: 72upx;
+	}
+	
+	&-label{
+		@include fullImage;
+		width: 266upx;
+	}
+}
+
+.copyrightBox{
+	margin-top: 90upx;
+	&-wrapper{
+		@include flexCenter;
+		width: 100%;
+	}
+	
+	&-img{
+		@include fullImage;
+		width: 100%;
+	}
+}
+
+@keyframes zhaunquan{
+	0%{transform:rotate(0deg) translate(-50%, -50%);}
+	100%{transform:rotate(360deg) translate(-50%, -50%);}
+}

@@ -1,0 +1,27 @@
+/* 暂时处理 var(--status-bar-height)不生效 */
+$initStatusBarHeight: 25px;
+
+/* 导航条高度 */
+$global-header-height: 100upx;
+
+/* 颜色 */
+$globalColor-bgStyle: #F2F2F2;
+$globalColor-style: #0755C3;
+$globalColor-fontStyle: #0C1E37;
+$globalColor-titleStyle: #FFD679;
+$globalColor-subStyle: #0755C3;
+
+$globalColor-white: #FFFFFF;
+$globalColor-blue: #315fd7;
+$globalColor-green: #4080FF;
+$globalColor-red: #ff2c4f;
+
+$globalColor-black: #141918;
+$globalColor-blur: rgba(255, 255, 255, 0.5);
+
+$globalColor-kline-green: #4080FF;
+$globalColor-kline-red: #ff2c4f;
+
+$globalColor-border-light-grey: #f9f9f9;
+$globalColor-border-light: #fbfefd;
+$globalColor-border: #CCCCCC;

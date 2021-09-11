@@ -1,0 +1,166 @@
+.infoBox {
+	padding: 30upx;
+}
+
+.selectBox {
+	// padding: 30upx 0;
+	&-wrapper {
+		@include flexBetween;
+		@include initShadow;
+		padding: 30upx;
+		border-radius: 20upx;
+		background-color: #FFFFFF;
+	}
+
+	&-label {
+		color: #666666;
+		font-weight: bold;
+		font-size: 28upx;
+	}
+
+	&-data {
+		@include flexRight;
+		color: $globalColor-fontStyle;
+		font-size: 32upx;
+		font-weight: 300;
+		background-image: url(@/static/public/icon-arrow-bottom-grey.png);
+		background-size: 26upx 14upx;
+		background-position: right center;
+		background-repeat: no-repeat;
+		padding-right: 45upx;
+	}
+}
+
+.formBox {
+	margin-bottom: 30upx;
+	
+	&-wrapper {
+		padding: 0 30upx;
+	}
+
+	&-title {
+		color: #101010;
+		font-weight: 300;
+		font-size: 42upx;
+		margin-bottom: 15upx;
+	}
+
+	&-list {
+		margin-bottom: 30upx;
+
+		&__label {
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: 300;
+			margin-bottom: 15upx;
+		}
+		
+		&__subLabel{
+			font-size: 24upx;
+			color: #acb1b0;
+			margin-top: 15upx;
+			margin-bottom: 15upx;
+		}
+
+		// color: $globalColor-fontStyle;
+
+		&__input {
+			@include flexCenter;
+			@include initShadow;
+			background-color: #FFFFFF;
+			border-radius: 20upx;
+			padding: 30upx;
+
+			input {
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: 300;
+				flex: 1;
+				text-align: left;
+			}
+
+			&-type {
+				color: $globalColor-fontStyle;
+				font-size: 30upx;
+				font-weight: 300;
+				padding: 0 15upx;
+				border-right: 2upx solid #cccccc;
+			}
+			&-btn {
+				color: $globalColor-style;
+				font-size: 30upx;
+				font-weight: 300;
+				padding-left: 15upx;
+			}
+			
+			&-code {
+				color: $globalColor-style;
+				font-size: 30upx;
+				font-weight: 300;
+			}
+		}
+
+		&__placeholder {
+			color: #cccccc;
+			font-size: 28upx;
+			font-weight: 300;
+		}
+
+		&__scan {
+			width: 32upx;
+			@include fullImage;
+		}
+
+		&__label {
+			color: $globalColor-fontStyle;
+		}
+
+		&__note {
+			font-size: 24upx;
+			color: #acb1b0;
+			margin-top: 15upx;
+		}
+	}
+	&-info {
+		padding: 30upx 0;
+		&__list {
+			@include flexBetween;
+			margin-bottom: 15upx;
+			color: $globalColor-fontStyle;
+			
+			&-label{
+				color: $globalColor-fontStyle;
+				font-weight: 300;
+				font-size: 24upx;
+			}
+			
+			&-data {
+				color: #999999;
+				font-weight: 300;
+				font-size: 24upx;
+			}
+		}
+	}
+	&-tips{
+		text-align: left;
+		padding: 30upx 0;
+		
+		&__title {
+			font-size: 32upx;
+			font-weight: 300;
+			margin-bottom: 15upx;
+			text-align: left;
+			color: $globalColor-fontStyle;
+		}
+		
+		&__list {
+			font-size: 22upx;
+			color: #666666;
+			font-weight: 300;
+		}
+	}
+}
+
+.initButton {
+	padding: 30upx;
+}

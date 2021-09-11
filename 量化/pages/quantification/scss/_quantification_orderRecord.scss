@@ -1,0 +1,224 @@
+.main {
+	// padding: 30upx;
+}
+
+.initScrollTabsBox {
+	@include themeBgColor('globalColor-bgStyle');
+	margin-bottom: 30upx;
+	position: fixed;
+	top: calc(var(--status-bar-height) + #{$global-header-height});
+	left: 0;
+	width: 100%;
+	z-index: 9;
+	border-bottom: 1px solid;
+	@include themeBorderColorValue(#e6e6e6, #2d343d);
+}
+
+.listBox {
+	padding-top: 90upx;
+
+	&-wrapper {
+		padding: 0 30upx 30upx;
+	}
+
+	&-list {
+		@include themeBgColor('globalColor-bgStyle');
+		@include initShadow;
+		padding: 30upx;
+		border-radius: 24upx;
+		margin-bottom: 30upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&__header {
+			@include flexLeft;
+			margin-bottom: 15upx;
+		}
+
+		&__info {
+			flex: 1;
+		}
+
+		&__row {
+			@include flexLeft;
+		}
+
+		&__icon {
+			@include fullImage;
+			width: 42upx;
+			margin-right: 15upx;
+		}
+
+		&__type {
+			@include themeColor('globalColor-fontStyle');
+			font-size: 32upx;
+			font-weight: 300;
+			margin-right: 8upx;
+			
+			&--green{
+				@include themeColor('globalColor-green');
+			}
+			
+			&--red{
+				@include themeColor('globalColor-red');
+			}
+		}
+		
+		&__quantity{
+			@include themeColor('globalColor-fontStyle');
+			font-size: 32upx;
+			font-weight: 300;
+			margin-right: 8upx;
+		}
+		
+		&__currencyName {
+			@include themeColor('globalColor-themeStyle');
+			font-size: 32upx;
+			font-weight: 300;
+		}
+
+		&__label {
+			@include themeColor('globalColor-fontSubStyle');
+			flex: 1;
+			font-size: 20upx;
+			font-weight: 300;
+
+			&:first-child {
+				text-align: left;
+			}
+
+			&:last-child {
+				text-align: right;
+			}
+		}
+	}
+
+	&-itemBox {
+		&__wrapper {
+			@include flexCenter;
+		}
+		&__item {
+			@include justifiedLayout;
+			flex: 1;
+
+			&-data {
+				@include themeColor('globalColor-fontStyle');
+				font-size: 28upx;
+				font-weight: bold;
+
+				&--style {
+					@include themeColor('globalColor-themeStyle');
+				}
+			}
+
+			&-label {
+				@include themeColor('globalColor-fontSubStyle');
+				font-size: 20upx;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.filterBox {
+	&-wrapper {
+		@include themeBgColor('globalColor-bgStyle');
+		position: relative;
+		border-bottom-left-radius: 20upx;
+		border-bottom-right-radius: 20upx;
+		padding-top: var(--status-bar-height);
+	}
+
+	&-title {
+		@include themeBorderColor('globalColor-holderStyle');
+		@include themeColor('globalColor-fontStyle');
+		font-size: 36upx;
+		font-weight: bold;
+		padding: 30upx;
+		border-bottom: 1px solid;
+		text-align: center;
+	}
+
+	&-body {
+		padding: 30upx;
+	}
+
+	&-plane {
+		margin-bottom: 30upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&-label {
+		@include themeColor('globalColor-fontStyle');
+		font-size: 32upx;
+		font-weight: bold;
+		margin-bottom: 15upx;
+	}
+
+	&-itemBox {
+		@include flexLeft;
+
+		&__item {
+			@include themeColor('globalColor-fontStyle');
+			@include themeBorderColorValue(#0b1d38, #2d343d);
+			@include flexCenter;
+			flex: 1;
+			border: 1px solid;
+			padding: 15upx 0;
+			border-radius: 12upx;
+			font-size: 24upx;
+			font-weight: 300;
+			margin-right: 30upx;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&--active {
+				@include themeBgColor('globalColor-themeStyle');
+				@include themeBorderColor('globalColor-themeStyle');
+				color: #ffffff!important;
+			}
+		}
+	}
+
+	&-datePicker {
+		@include flexCenter;
+
+		&__data {
+			@include themeColor('globalColor-fontStyle');
+			@include themeBgColor('globalColor-cardStyle');
+			@include themeBorderColorValue(#0b1d38, #2d343d);
+			@include flexCenter;
+			flex: 1;
+			font-size: 24upx;
+			font-weight: 300;
+			border: 1px solid;
+			padding: 15upx 0;
+			border-radius: 12upx;
+		}
+
+		&__label {
+			@include themeColor('globalColor-fontStyle');
+			font-size: 24upx;
+			font-weight: 300;
+			margin: 0 30upx;
+		}
+	}
+
+	&-btn {
+		@include themeBgColor('globalColor-themeStyle');
+		@include flexCenter;
+		border-radius: 16upx;
+		color: #ffffff;
+		font-size: 32upx;
+		font-weight: bold;
+		padding: 20upx 0;
+		margin-top: 45upx;
+	}
+}

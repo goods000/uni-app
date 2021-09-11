@@ -1,0 +1,166 @@
+.main{
+	padding-bottom: 20upx;
+	&-image{
+		width: 50%;
+		margin: 42upx auto;
+	}
+	&-title{
+		position: relative;
+		padding: 0 30upx 110upx;
+		&__word{
+			font-size: 24upx;
+			font-family: PingFang SC, PingFang SC-Regular;
+			font-weight: 400;
+			text-align: left;
+			color: $globalColor-fontStyle;
+			line-height: 52upx;
+		}
+		image{
+			width: 50%;
+			position: absolute;
+			bottom: 0;
+			right: 30upx;
+		}
+	}
+}
+.contentBox{
+	background: url(../../static/ITO/icon-ITO-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin: 10upx;
+	padding: 0 42upx 52upx;
+	&-header{
+		font-size: 30upx;
+		font-family: PingFang SC, PingFang SC-Bold;
+		font-weight: 700;
+		text-align: center;
+		color: $globalColor-white;
+	}
+	&-wrapper{
+		@include flexBetween;
+		overflow: scroll;
+	}
+	&-list{
+		@include flexBetweenColumn;
+		margin-top: 80upx;
+		background: $globalColor-white;
+		border: 2upx solid #ebebeb;
+		border-radius: 22upx;
+		box-shadow: 0upx 0upx 12upx 0upx rgba(0,0,0,0.05); 
+		padding: 60upx 30upx 32upx;
+		width: 48%;
+		margin-right: 4%;
+		&__header{
+			font-size: 30upx;
+			font-family: PingFang SC, PingFang SC-Bold;
+			font-weight: 700;
+			text-align: center;
+			color: $globalColor-fontStyle;
+			position: relative;
+			&::before{
+				content: '';
+				width: 26upx;
+				height: 6upx;
+				background: #b3bdcd;
+				position: absolute;bottom: -4upx;left: 50%;right: 0;transform: translate(-50%);
+			}
+		}
+		&__item{
+			position: relative;
+			// border:20upx solid #EFD09A;
+			// border-radius: 50%;
+			padding: 20upx;
+			margin: 18upx 0 0upx;
+			&-box{
+				@include flexCenterColumn;
+				position: relative;
+				top: 25%;left: 50%;right: 0;
+				transform: translate(-50%);
+				position: absolute;top: 33%;
+			}
+			&-type{
+				// border:20upx solid #EFD09A;
+				border-radius: 50%;
+			}
+		}
+		&__title{
+			font-size: 24upx;
+			font-family: PingFang SC, PingFang SC-Bold;
+			font-weight: 700;
+			text-align: center;
+			color: $globalColor-fontStyle;
+		}
+		&__data{
+			font-size: 36upx;
+			font-family: PingFang SC, PingFang SC-Heavy;
+			font-weight: 800;
+			text-align: center;
+			color: #1779f6;
+		}
+		&__i{
+			font-size: 24upx;
+			font-family: PingFang SC, PingFang SC-Bold;
+			font-weight: 700;
+			text-align: center;
+			color: #b3bdcd;
+		}
+		&__dataBox{
+			@include flexLeftColumn;
+			&-item{
+				font-size: 24upx;
+				font-family: PingFang SC, PingFang SC-Bold;
+				font-weight: 700;
+				text-align: left;
+				color: $globalColor-fontStyle;
+				position: relative;
+				padding-left: 35upx;
+				margin-top: 4upx;
+				&:nth-child(1)::before{
+					content: '';
+					width: 20upx;
+					height: 20upx;
+					background: $globalColor-style;
+					border-radius: 2upx;
+					position: absolute;
+					left: 0;
+					top: 8upx;
+				}
+				&:nth-child(2)::before{
+					content: '';
+					width: 20upx;
+					height: 20upx;
+					background: #EFD09A;
+					border-radius: 2upx;
+					position: absolute;
+					left: 0;
+					top: 8upx;
+				}
+			}
+		}
+		&__btn{
+			color: $globalColor-white;
+			background: #DDDDDD;
+			border-radius: 26upx;
+			font-size: 26upx;
+			box-shadow: 0upx 0upx 12upx 0upx rgba(0,0,0,0.05); 
+			text-align: center;
+			width: 90%;
+			padding: 8upx 0;
+			margin-top: 36upx;
+			&--active{
+				background: $globalColor-style;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

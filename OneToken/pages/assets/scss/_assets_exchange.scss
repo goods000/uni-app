@@ -1,0 +1,162 @@
+.main {
+	// padding: 30upx;
+}
+
+.infoBox {
+	padding: 30upx;
+}
+
+.selectBox {
+	// padding: 30upx 0;
+	&-wrapper {
+		@include flexBetween;
+		@include initShadow;
+		padding: 30upx;
+		border-radius: 20upx;
+		background-color: #FFFFFF;
+	}
+
+	&-label {
+		color: #666666;
+		font-weight: bold;
+		font-size: 28upx;
+	}
+
+	&-data {
+		@include flexRight;
+		color: $globalColor-fontStyle;
+		font-size: 32upx;
+		font-weight: 300;
+		background-image: url(@/static/public/icon-arrow-bottom-grey.png);
+		background-size: 26upx 14upx;
+		background-position: right center;
+		background-repeat: no-repeat;
+		padding-right: 45upx;
+	}
+}
+
+.conversionBox {
+	padding: 0 30upx;
+	margin-bottom: 60upx;
+
+	&-wrapper {
+		padding: 0 30upx;
+		// border: 2upx solid #333333;
+		display: flex;
+		justify-content: stretch;
+		border-radius: 30upx;
+		overflow: hidden;
+		position: relative;
+		background: url(@/static/assets/icon-conversion-label.png) no-repeat;
+		background-position: 30upx center;
+		background-size: 14upx 100upx;
+		background-color: #FFFFFF;
+	}
+
+	&-select {
+		flex: 1;
+		padding-left: 45upx;
+
+		&__list {
+			@include flexLeft;
+			padding: 30upx 0;
+			border-bottom: 1upx solid #cccccc;
+			// background-color: #18181b;
+			flex: 1;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+
+			&-label {
+				color: #999999;
+				font-size: 32upx;
+				font-weight: 300;
+			}
+
+			&-data {
+				flex: 1;
+				color: $globalColor-fontStyle;
+				&--arrow {
+					background: url(../../static/public/icon-arrow-right-grey.png) no-repeat;
+					background-position: right center;
+					background-size: 14upx 26upx;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+
+	&-plane {
+		position: absolute;
+		left: 180upx;
+		top: 0;
+		flex: 1;
+		height: 100%;
+		width: calc(390upx);
+		&__wrapper {
+			position: relative;
+			height: 100%;
+			width: 100%;
+		}
+		&__list {
+			@include flexLeft;
+			@include initTransition(0.2);
+			height: 50%;
+			width: 100%;
+			color: $globalColor-fontStyle;
+			position: absolute;
+			left: 0;
+			padding-right: 60upx;
+			font-size: 32upx;
+			font-weight: 300;
+
+			&--first {
+				top: 0;
+			}
+			&--last {
+				top: 50%;
+			}
+
+			&--arrow {
+				background: url(../../static/public/icon-arrow-right-grey.png) no-repeat;
+				background-position: calc(100% - 30upx) center;
+				background-size: 14upx 26upx;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+
+	&-button {
+		flex-basis: 80upx;
+		// background: url('@/static/assets/icon-conversion-btn.png') no-repeat;
+		// background-position: center;
+		// background-size: 70upx 70upx;
+		// background-color: rgba(41, 124, 246, 0.3);
+		// border-left: 2upx solid #333333;
+		position: relative;
+		margin-left: 30upx;
+		overflow: hidden;
+		// @include initGradBg;
+
+		&::after {
+			content: '';
+			@include initShadow;
+			border-radius: 50%;
+			display: inline-block;
+			width: 70upx;
+			height: 70upx;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			background: url('@/static/assets/icon-conversion-btn.png') no-repeat;
+			background-position: center;
+			background-size: 70upx 70upx;
+		}
+	}
+}
+
+.initFormBox{
+	padding: 0 30upx;
+}

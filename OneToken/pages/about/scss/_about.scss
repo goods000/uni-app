@@ -1,0 +1,66 @@
+.infoBox {
+	@include flexCenterColumn;
+	padding: 60upx 0;
+
+	&-wrapper {
+		text-align: center;
+	}
+
+	&-logo {
+		width: 160upx;
+		margin-bottom: 15upx;
+		border-radius: 30upx;
+		overflow: hidden;
+		@include fullImage;
+	}
+
+	&-title {
+		margin-bottom: 8upx;
+		font-size: 28upx;
+		color: #101010;
+		font-weight: 300;
+	}
+	&-version {
+		font-size: 22upx;
+		color: #999999;
+	}
+}
+
+.listBox {
+	padding: 30upx;
+	&-wrapper {
+	}
+	&-list {
+		@include initShadow;
+		background: url(../../static/public/icon-arrow-right-grey.png) no-repeat;
+		background-size: 14upx 26upx;
+		background-position: calc(100% - 30upx) center;
+		background-color: #ffffff;
+		font-size: 32upx;
+		color: #101010;
+		font-weight: 300;
+		padding: 30upx;
+		border-radius: 20upx;
+		margin-bottom: 30upx;
+	}
+}
+
+.copyrightBox {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	&-wrapper {
+		padding: 60upx 0;
+	}
+	
+	&-title {
+		@include flexCenter;
+		width: 100%;
+		text-align: center;
+		padding: 30upx;
+		font-size: 20upx;
+		font-family: 300;
+		color: #999999;
+	}
+}

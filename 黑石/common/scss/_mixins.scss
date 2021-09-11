@@ -1,0 +1,167 @@
+/* 快捷布局 */
+@mixin flexCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flexLeft {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@mixin flexRight {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+@mixin flexBetween {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin flexCenterColumn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+@mixin flexLeftColumn {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+}
+
+@mixin flexRightColumn {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	flex-direction: column;
+}
+
+@mixin justifiedLayout {
+	text-align: center;
+	&:first-child {
+		text-align: left;
+	}
+	&:last-child {
+		text-align: right;
+	}
+}
+
+@mixin fullImage {
+	image {
+		width: 100%;
+	}
+}
+
+@mixin calcMargin($val) {
+	width: calc(100% + ((2 * #{$val}) * 1upx));
+	margin-left: calc((-1 * #{$val}) * 1upx);
+}
+
+/* 清除末尾 */
+@mixin clearLastMargin {
+	&:last-child {
+		margin: 0;
+	}
+}
+
+@mixin clearLastBorder {
+	&:last-child {
+		border-bottom: 0;
+	}
+}
+
+/* 省略号 */
+@mixin initOneLine{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+@mixin initMoreLine($val){
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $val;
+	-webkit-box-orient: vertical;
+}
+
+
+/* 动画时长 */
+@mixin initTransition($val) {
+	transition: ($val * 1s) all;
+}
+
+/* 阴影 */
+@mixin initShadow {
+	box-shadow: 0upx 1upx 24upx 15upx rgba(43,174,135,0.3);
+}
+
+/* 艺术标题 */
+@mixin initBeforeHolder {
+	position: relative;
+	padding-left: 20upx;
+	
+	&::before{
+		content: '';
+		display: inline-block;
+		height: 30upx;
+		width: 8upx;
+		border-radius: 8upx;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#39e687+0,1cc893+100 */
+		background: rgb(57,230,135); /* Old browsers */
+		background: -moz-linear-gradient(top, rgba(57,230,135,1) 0%, rgba(28,200,147,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(57,230,135,1) 0%,rgba(28,200,147,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(57,230,135,1) 0%,rgba(28,200,147,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39e687', endColorstr='#1cc893',GradientType=0 ); /* IE6-9 */
+	}
+}
+
+/* 渐变 */
+@mixin initGradBg {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#39e687+0,1cc893+100 */
+	background: rgb(57,230,135); /* Old browsers */
+	background: -moz-linear-gradient(left, rgba(57,230,135,1) 0%, rgba(28,200,147,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(57,230,135,1) 0%,rgba(28,200,147,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(57,230,135,1) 0%,rgba(28,200,147,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39e687', endColorstr='#1cc893',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin initButtonGrad {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#39e687+0,1cc893+100 */
+	background: rgb(57,230,135); /* Old browsers */
+	background: -moz-linear-gradient(left, rgba(57,230,135,1) 0%, rgba(28,200,147,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(57,230,135,1) 0%,rgba(28,200,147,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(57,230,135,1) 0%,rgba(28,200,147,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39e687', endColorstr='#1cc893',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin initButtonGradRed {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff4f4f+0,dc3c56+100 */
+	background: rgb(255,79,79); /* Old browsers */
+	background: -moz-linear-gradient(left, rgba(255,79,79,1) 0%, rgba(220,60,86,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(255,79,79,1) 0%,rgba(220,60,86,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(255,79,79,1) 0%,rgba(220,60,86,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4f4f', endColorstr='#dc3c56',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin initButtonGradGreen {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2acf9e+0,0eba85+100 */
+	background: rgb(42,207,158); /* Old browsers */
+	background: -moz-linear-gradient(left, rgba(42,207,158,1) 0%, rgba(14,186,133,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(42,207,158,1) 0%,rgba(14,186,133,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(42,207,158,1) 0%,rgba(14,186,133,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2acf9e', endColorstr='#0eba85',GradientType=1 ); /* IE6-9 */
+}

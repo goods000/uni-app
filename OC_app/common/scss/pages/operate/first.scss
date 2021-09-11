@@ -1,0 +1,65 @@
+.first{
+	&-header{
+		@include flexCenterColumn;
+		padding: 110upx 0 24upx;
+		&-image{
+			image{
+				width: 160upx;
+				margin: 24upx 0;
+			}
+		}
+		&-icon{
+			image{
+				width: 310upx;
+				margin: 7upx 0;
+			}
+		}
+		&-title{
+			color: #999999;
+			font-size: 14upx;
+		}
+	}
+	
+	&-btn{
+		@include flexCenterColumn;
+		padding: 400upx 64upx 109upx;
+		&-box{
+			width: 100%;
+			padding: 28upx 0;
+			border-radius: 4upx;
+			color: $globalColor-white;
+			text-align: center;
+			margin: 16upx 0;
+			&-login{
+				background: $globalColor-style;
+			}
+			&-register{
+				background: $globalColor-blue;
+			}
+		}
+		&-title{
+			@include flexCenter;
+			&-name{
+				color: #999999;
+				font-size: 24upx;
+			}
+			&-xie{
+				color: #FF4343;
+				font-size: 24upx;
+			}
+			
+		}
+	}
+	&-bottom{
+		position: fixed;
+		bottom: 20upx;
+		left: 0;right: 0;
+		width: 80%;
+		margin: auto;
+		text-align: center;
+		&-title{
+			font-size: 10upx;
+			color: #999999;
+		}
+	}
+}

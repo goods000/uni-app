@@ -1,0 +1,88 @@
+@import '@/common/scss/_themes.scss';
+
+//遍历主题map
+@mixin themeify {
+	@each $theme-name, $theme-map in $themes {
+		//!global 把局部变量强升为全局变量
+		$theme-map: $theme-map !global;
+		//判断html的data-theme的属性值  #{}是sass的插值表达式
+		//& sass嵌套里的父容器标识   @content是混合器插槽，像vue的slot
+		[data-theme='#{$theme-name}'] & {
+			@content;
+		}
+	}
+}
+
+//声明一个根据Key获取颜色的function
+@function themed($key) {
+	@return map-get($theme-map, $key);
+}
+
+//获取元素背景颜色
+@mixin themeBgColor($color) {
+	@include themeify {
+		// @include initTransition(0.4);
+		background-color: themed($color);
+	}
+}
+//获取元素字体颜色
+@mixin themeColor($color) {
+	@include themeify {
+		// @include initTransition(0.4);
+		color: themed($color);
+	}
+}
+//获取元素字体颜色
+@mixin themeBorderColor($color) {
+	@include themeify {
+		// @include initTransition(0.4);
+		border-color: themed($color);
+	}
+}
+
+//主题颜色处理
+@mixin themeColorValue($lightColorValue, $darkColorValue) {
+	[data-theme='light'] & {
+		color: $lightColorValue;
+	}
+	[data-theme='dark'] & {
+		color: $darkColorValue;
+	}
+}
+
+//主题颜色处理
+@mixin themeBgColorValue($lightColorValue, $darkColorValue) {
+	[data-theme='light'] & {
+		background-color: $lightColorValue;
+	}
+	[data-theme='dark'] & {
+		background-color: $darkColorValue;
+	}
+}
+
+//主题颜色处理
+@mixin themeBorderColorValue($lightColorValue, $darkColorValue) {
+	[data-theme='light'] & {
+		border-color: $lightColorValue;
+	}
+	[data-theme='dark'] & {
+		border-color: $darkColorValue;
+	}
+}
+
+//主题背景图片处理
+@mixin themeBgImg($lightImg, $darkImg) {
+	[data-theme='light'] & {
+		background-image: url($lightImg);
+	}
+	[data-theme='dark'] & {
+		background-image: url($darkImg);
+	}
+}
+
+// 页面背景色
+@each $theme-name, $theme-map in $themes {
+	[data-theme='#{$theme-name}'] {
+		background-color: map-get($theme-map, 'globalColor-pageStyle');
+	}
+}

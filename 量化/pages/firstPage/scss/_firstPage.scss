@@ -1,0 +1,20 @@
+.imgBox{
+	@include fullImage;
+	width: 100%;
+}
+
+.fixedTitleBox{
+	@include flexCenter;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 30upx;
+	padding-bottom: calc(constant(safe-area-inset-bottom) + 30upx);
+	padding-bottom: calc(env(safe-area-inset-bottom) + 30upx);
+	
+	&-logo{
+		@include fullImage;
+		width: 262upx;
+	}
+}

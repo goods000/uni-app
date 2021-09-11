@@ -1,0 +1,28 @@
+page{
+	background: $globalColor-white;
+}
+.noticeDetailBox {
+	position: relative;
+	z-index: 1;
+	padding: 30upx 0;
+	&-wrapper {
+		padding: 0 30upx;
+	}
+	&-title {
+		color: $globalColor-fontStyle;
+		font-size: 36upx;
+		font-family: PingFang SC;
+		font-weight: 500;
+	}
+	&-date {
+		color: #999999;
+		font-size: 24upx;
+		margin-bottom: 30upx;
+	}
+	&-data {
+		font-size: 28upx;
+		color: #333333;
+		font-weight: 300;
+		word-break: break-all;
+	}
+}

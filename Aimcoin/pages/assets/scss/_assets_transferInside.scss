@@ -1,0 +1,93 @@
+@each $theme-name, $theme-map in $themes {
+	[data-theme='#{$theme-name}'] {
+		background-color: map-get($theme-map, 'globalColor-bgStyle');
+	}
+}
+
+.accountBox {
+	@include themeBorderColor('globalColor-holderStyle');
+	border-bottom: 16upx solid;
+	
+	&-wrapper {
+		@include themeBgColor('globalColor-bgStyle');
+		@include flexBetween;
+		padding: 30upx;
+	}
+
+	&-label {
+		@include themeColor('globalColor-fontSubStyle');
+		font-size: 32upx;
+		font-weight: 300;
+	}
+
+	&-data {
+		@include themeColor('globalColor-themeStyle');
+		@include flexRight;
+		font-size: 32upx;
+		font-weight: bold;
+		background-image: url(@/static/public/icon-arrow-bottom-grey.png);
+		background-size: 26upx 14upx;
+		background-position: right center;
+		background-repeat: no-repeat;
+		padding-right: 45upx;
+	}
+}
+
+.conversionBox {
+	margin-bottom: 30upx;
+
+	&-wrapper {
+		@include themeBgColor('globalColor-bgStyle');
+		// border: 2upx solid #333333;
+		display: flex;
+		justify-content: stretch;
+		overflow: hidden;
+		position: relative;
+		background: url(@/static/assets/icon-conversion-label.png) no-repeat;
+		background-position: 30upx center;
+		background-size: 16upx 100upx;
+	}
+
+	&-select {
+		flex: 1;
+		padding-left: 76upx;
+
+		&__list {
+			@include themeBorderColorValue(#e6e6e6, #2d343d);
+			@include flexLeft;
+			padding: 30upx 0;
+			border-bottom: 1px solid;
+			flex: 1;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+
+			&-label {
+				@include themeColor('globalColor-fontSubStyle');
+				font-size: 32upx;
+				font-weight: 300;
+			}
+
+			&-data {
+				@include themeColor('globalColor-fontStyle');
+				flex: 1;
+				font-size: 32upx;
+				font-weight: 300;
+			}
+		}
+	}
+	
+	&-button {
+		flex-basis: 110upx;
+		background: url('@/static/assets/icon-conversion-btn.png') no-repeat;
+		background-position: calc(100% - 30upx) center;
+		background-size: 72upx 72upx;
+		position: relative;
+		margin-left: 30upx;
+	}
+}
+
+.initFormBox{
+	padding: 0 30upx;
+}

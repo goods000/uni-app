@@ -1,0 +1,133 @@
+.planeBox {
+	margin-bottom: 30upx;
+	padding: 0 30upx;
+	&-wrapper {
+		@include initShadow;
+		background-color: #ffffff;
+		padding: 30upx;
+		border-radius: 30upx;
+	}
+
+	&-header {
+		width: 100%;
+		margin-bottom: 45upx;
+	}
+
+	&-body {
+		width: 100%;
+	}
+
+	&-info {
+		@include flexBetween;
+
+		&__label {
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			font-weight: bold;
+		}
+
+		&__data {
+			color: #be7b25;
+			font-size: 48upx;
+			font-weight: 300;
+		}
+	}
+
+	&-itemBox {
+		@include flexBetween;
+		margin-top: 15upx;
+
+		&__item {
+			@include justifiedLayout;
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: 300;
+
+				&--style {
+					color: #be7b25;
+				}
+			}
+
+			&-label {
+				color: #999999;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.buttonBox {
+	margin-bottom: 30upx;
+	&-wrapper {
+		@include flexCenter;
+		padding: 0 30upx;
+	}
+
+	&-btn {
+		@include flexCenterColumn;
+		flex: 1;
+		color: #ffffff;
+		font-size: 28upx;
+		font-weight: bold;
+		margin-right: 15upx;
+		padding: 20upx 0;
+		border-radius: 12upx;
+		background-color: #cb0101;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.listBox {
+	&-wrapper {
+		padding: 0 30upx 30upx;
+	}
+
+	&-list {
+		padding-bottom: 30upx;
+		margin-bottom: 30upx;
+		border-bottom: 1upx solid #cccccc;
+
+		&:last-child {
+			border-bottom: 0;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		&__info {
+			@include flexBetween;
+			margin-bottom: 15upx;
+		}
+
+		&__title {
+			color: #be7b25;
+			font-size: 32upx;
+			font-weight: 300;
+		}
+
+		&__itemBox {
+			@include flexBetween;
+			&-item {
+				@include justifiedLayout;
+				flex: 1;
+				font-size: 24upx;
+			}
+
+			&-label {
+				color: #999999;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+		}
+	}
+}

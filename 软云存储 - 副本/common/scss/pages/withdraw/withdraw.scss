@@ -1,0 +1,130 @@
+.withdrawBox{
+	padding: 0 30upx;
+	&-listItem{
+		@include flexBetween;
+		background: #FFFFFF;
+		box-shadow: 0upx 2upx 7upx 0upx rgba(10, 26, 56, 0.1);
+		border-radius: 20upx;
+		margin: 30upx 0;
+		padding: 35upx 30upx;
+		&-title{
+			color: #999999;
+			font-size: 30upx;
+			font-weight: bold;
+		}
+		&-picker{
+			background: url(../../static/operate/icon-record-next.png) no-repeat;
+			background-position: right;
+			background-size: 26upx 26upx;
+			padding-right: 40upx;
+		}
+		.uni-input{
+			font-weight: 500;
+		}
+	}
+	&-list{
+		@include flexLeftColumn;
+		margin: 30upx 0;
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 30upx;
+			font-weight: bold;
+			margin: 24upx 0;
+		}
+		&-item{
+			@include flexLeft;
+			margin: 20upx 0;
+			&-type{
+				color: $globalColor-style;
+				background: #FFFFFF;
+				border: 1px solid $globalColor-style;
+				border-radius: 7upx;
+				padding: 10upx 20upx;
+				margin-right: 20upx;
+				&--active{
+					color: #FFFFFF;
+					background: $globalColor-style;
+					border: 1px solid $globalColor-style;
+					border-radius: 7upx;
+				}
+			}
+		}
+		&-input{
+			position: relative;
+			@include flexLeft;
+			width: 100%;
+			background: #FFFFFF;
+			box-shadow: 0upx 2upx 7upx 0upx rgba(10, 26, 56, 0.1);
+			border-radius: 20upx;
+			padding: 32upx 28upx;
+			input{
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+			}
+			&-image{
+				position: absolute;
+				right: 28upx;
+				@include flexRight;
+				image{
+					width: 42upx;
+				}
+			}
+			&-u{
+				color: $globalColor-fontStyle;
+				font-size: 30upx;
+				border-right: 1px solid #999999;
+				padding-right: 10upx;
+				margin-right: 10upx;
+				font-weight: 500;
+			}
+			&-all{
+				color: $globalColor-style;
+				font-size: 30upx;
+				text-decoration: underline;
+			}
+			&-send{
+				color: $globalColor-style;
+				font-size: 30upx;
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	&-data{
+		@include flexBetween;
+		padding: 10upx 0 0;
+		&-title{
+			color: #999999;
+			font-size: 26upx;
+		}
+		&-bold{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: bold;
+		}
+	}
+	
+	&-banlance{
+		color: #999999;
+		font-size: 24upx;
+	}
+	
+	&-tips{
+		// background: #F9F9F9;
+		// padding: 40upx 30upx 60upx;
+		margin-bottom: 30upx;
+		display: inline-block;
+		&-title{
+			color: #666666;
+			font-size: 28upx;
+			margin-bottom: 30upx;
+		}
+		&-item{
+			color: #666666;
+			font-size: 24upx;
+			line-height: 40upx;
+		}
+	}
+}
+
+.initBtn{width: 100%;}

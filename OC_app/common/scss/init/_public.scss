@@ -1,0 +1,65 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'DINPro', 'PingFangSC-Regular', 'AvenirBold';
+}
+
+image {
+	height: 0;
+	display: block;
+}
+
+// 全局背景色
+page{
+	background-color: $globalColor-bgStyle;
+}
+
+.tipsBox {
+	position: relative;
+	// border-top: 16upx solid #f5f6f8;
+	&-wrapper {
+		// padding: 0 30upx;
+	}
+
+	&-title {
+		@include flexBetween;
+
+		padding: 30upx;
+
+		&__label {
+			@include initBeforeHolder;
+			font-size: 32upx;
+			color: $globalColor-fontStyle;
+			font-weight: bold;
+		}
+
+		&__more {
+			color: #999999;
+			font-size: 24upx;
+		}
+	}
+	&-right{
+		position: absolute;
+		right: 10upx;
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			font-weight: 500;
+		}
+	}
+}	
+
+.initBtn-box{margin: 20% auto;}
+.initBtn{
+	background: $globalColor-style;
+	border: 1px solid $globalColor-style;
+	color: $globalColor-white;
+	margin: 60upx auto;
+	text-align: center;
+	border-radius: 10upx;
+	width: 90%;
+	font-size: 32upx;
+	padding: 18upx 0;
+}
+.mt{height: 10upx;background: $globalColor-bgStyle;}

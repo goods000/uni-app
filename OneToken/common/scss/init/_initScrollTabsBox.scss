@@ -1,0 +1,63 @@
+.initScrollTabsBox{
+	&-control{
+		border-bottom: 1upx solid #cccccc;
+        width: 750rpx;
+        flex-direction: row;
+        white-space: nowrap;
+		
+		&__tabs{
+			@include initTransition(0.4);
+			display: inline-block;
+			padding: 30upx;
+			font-size: 28upx;
+			font-weight: 300;
+			color: #282828;
+			position: relative;
+			
+			&::after{
+				content: '';
+				display: inline-block;
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				transform: translateX(-50%);
+				height: 10upx;
+				width: 38upx;
+				border-radius: 30upx;
+				background-color: transparent;
+				@include initTransition(0.4);
+			}
+			
+			&--active{
+				color: #623bff;
+				
+				&::after{
+					background-color: #623bff;
+				}
+			}
+		}
+	}
+	
+	&-content{
+		padding: 30upx;
+	}
+	
+	&-itemBox{
+		@include flexLeft;
+		
+		&__item {
+			@include flexCenterColumn;
+			width: 25%;
+			&-icon {
+				width: 100upx;
+				margin-bottom: 20upx;
+				@include fullImage;
+			}
+			&-label {
+				color: #282828;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+		}
+	}
+}

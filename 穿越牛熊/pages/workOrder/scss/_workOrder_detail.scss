@@ -1,0 +1,117 @@
+.main{
+	
+}
+
+.titleInfoBox {
+	position: relative;
+	z-index: 1;
+	
+	position: fixed;
+	right: 0;
+	top: calc(var(--status-bar-height) + #{$global-header-height});
+	width: 100%;
+	background-color: $globalColor-bgStyle;
+	// background-color: orange;
+	height: 120upx;
+	
+	
+	&-wrapper {
+		@include flexCenterColumn;
+		height: 100%;
+		align-items: flex-start;
+		padding: 0 30upx;
+	}
+
+	&-title {
+		color: $globalColor-fontStyle;
+		font-size: 32upx;
+		font-weight: bold;
+	}
+
+	&-date {
+		color: #999999;
+		font-size: 24upx;
+		font-weight: 300;
+		margin-top: 8upx;
+	}
+}
+
+
+.messageBox{
+	padding-top: 120upx;
+	// padding-bottom: 140upx;
+	&-wrapper{
+		// background-color: skyblue;
+		// height: 100vh;
+		// padding: 30upx 0;
+		// height: calc(100vh  - var(--status-bar-height) + #{$global-header-height});
+		// height: 900upx;
+	}
+	
+	&-content{
+		padding: 30upx 0;
+	}
+	
+	&-list{
+		padding: 0 30upx;
+		margin-bottom: 30upx;
+		
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		&__date {
+			width: 100%;
+			color: $globalColor-fontStyle;
+			font-size: 22upx;
+			font-weight: 300;
+			text-align: center;
+			margin-bottom: 15upx;
+		}
+
+		&__plane {
+			width: 100%;
+			&--left {
+				@include flexRight;
+			}
+			&--right {
+				@include flexRight;
+			}
+		}
+		
+		&__content{
+			@include initShadow;
+			width: 100%;
+			max-width: 550upx;
+			background-color: #ffffff;
+			border-top-left-radius: 30upx;
+			border-bottom-right-radius: 30upx;
+			padding: 30upx;
+			color: #666666;
+			font-size: 28upx;
+			font-weight: 300;
+			text-align: justify;
+			word-break: break-all;
+			
+			&-pic{
+				@include fullImage;
+				width: 100%;
+				margin-bottom: 15upx;
+			}
+		}
+	}
+}
+
+.fixedBox{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+	height: 140upx;
+	// opacity: 0.2;
+	&-wrapper{
+		padding: 30upx;
+		background-color: $globalColor-bgStyle;
+	}
+}

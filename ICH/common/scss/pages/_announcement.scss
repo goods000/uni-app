@@ -1,0 +1,74 @@
+.announcement {
+	padding: 0 30upx;
+
+	&-title {
+		font-size: 32upx;
+		margin-bottom: 15upx;
+	}
+
+	&-item {
+		padding: 30upx 0;
+		display: flex;
+		justify-content: space-between;
+		color: #101010;
+		overflow: hidden;
+		border-bottom: 1upx solid #c6d2e4;
+
+		&--done {
+			color: #78849a;
+
+			.announcement-item__icon {
+				background-image: url('@/static/notice/icon-sign-done.png');
+			}
+			.announcement-item__date {
+				background-image: url('@/static/notice/icon-date-done.png');
+			}
+			.announcement-item__arrow {
+				background-image: url('@/static/notice/icon-arrow-done.png');
+			}
+		}
+
+		&__icon {
+			flex-basis: 80upx;
+			margin-right: 30upx;
+			background-color: rgba(59, 61, 78, 0.5);
+			border-radius: 50%;
+			width: 80upx;
+			height: 80upx;
+			background-size: 40upx;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url('@/static/notice/icon-sign.png');
+		}
+
+		&__content {
+			flex: 1;
+			width: 80%;
+		}
+
+		&__title {
+			font-size: 32upx;
+			margin-bottom: 30upx;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		&__date {
+			padding-left: 30upx;
+			background-image: url('@/static/notice/icon-date.png');
+			background-position: left;
+			background-size: 20upx;
+			background-repeat: no-repeat;
+			font-size: 20upx;
+			color: #898d8c;
+		}
+
+		&__arrow {
+			background-image: url('@/static/notice/icon-arrow.png');
+			background-size: 17upx 24upx;
+			background-position: center;
+			width: 30upx;
+			background-repeat: no-repeat;
+		}
+	}
+}

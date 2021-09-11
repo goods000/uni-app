@@ -1,0 +1,114 @@
+page,
+.pages {
+	background-color: #2537d7;
+}
+
+.main {
+	@include flexCenterColumn;
+	overflow: hidden;
+	// min-height: calc(100vh - (var(--status-bar-height) + #{$global-header-height}));
+	min-height: 100vh;
+	position: relative;
+	z-index: 1;
+	padding-top: calc(var(--status-bar-height) + #{$global-header-height});
+	padding-bottom: 60upx;
+	
+	background-image: url(@/static/share/img-share-01.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	// padding-bottom: 30upx;
+}
+
+.planeBox {
+	width: 100%;
+	position: relative;
+
+	&-wrapper {
+		@include flexCenterColumn;
+		@include initShadow;
+		background-color: #ffffff;
+		border-radius: 10upx;
+		padding: 60upx;
+		width: 600upx;
+		margin: 0 auto;
+		position: relative;
+	}
+}
+
+.logoBox {
+	padding: 0 30upx;
+
+	&-wrapper {
+		@include fullImage;
+		width: 244upx;
+	}
+}
+
+.infoBox {
+	@include flexCenter;
+	padding: 0 60upx;
+	margin-bottom: 30upx;
+
+	&-wrapper {
+		@include fullImage;
+		width: 100%;
+	}
+}
+
+.shareCodeBox {
+	&-wrapper {
+		@include flexLeft;
+		padding: 0 60upx;
+	}
+
+	&-label {
+		color: #ffffff;
+		font-size: 40upx;
+		font-weight: 300;
+	}
+	
+	&-copy{
+		@include fullImage;
+		width: 40upx;
+		margin-left: 15upx;
+	}
+}
+
+.qrcodeBox{
+	position: absolute;
+	bottom: 0;
+	right: 60upx;
+	
+	&-wrapper{
+		position: relative;
+		background-color: red;
+		
+		&::after{
+			content: '';
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+			background-image: url(@/static/share/icon-liner-bg.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			z-index: 1;
+			position: absolute;
+			left: -8upx;
+			bottom: -8upx;
+		}
+	}
+	
+	&-code{
+		background-color: #FFFFFF;
+		padding: 4upx;
+		position: relative;
+		z-index: 2;
+		
+		.tki-qrcode{
+			position: relative;
+			z-index: 2;
+		}
+	}
+}

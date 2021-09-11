@@ -1,0 +1,46 @@
+.paymentBox{
+	&-list{
+		padding: 36upx 32upx;
+		border-bottom: 1px solid $globalColor-bgStyle;
+		background: $globalColor-white;
+		&__item{
+			@include flexBetween;
+			&--operate{
+				@include flexLeft;
+				image{
+					width: 32upx;
+					height: 32upx;
+				}
+				&-name{
+					color: $globalColor-fontStyle;
+					font-size: 28upx;
+					margin-left: 12upx;
+				}
+				&-del{
+					width: 24upx;height: 24upx;
+				}
+			}
+		}
+		&__info{
+			@include flexLeftColumn;
+			padding: 32upx 0 0 34upx;
+			position: relative;
+			&--username{
+				color: $globalColor-fontStyle;
+				font-size: 20upx;
+				width: 100%;
+			}
+			&--number{
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				image{
+					width: 20upx;
+					height: 20upx;
+					position: absolute;
+					right: 0;
+					bottom: 10upx;
+				}
+			}
+		}
+	}
+}

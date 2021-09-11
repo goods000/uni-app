@@ -1,0 +1,103 @@
+.first{
+	background: url(../../static/operate/icon-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 100vh;
+	position: relative;
+}
+
+.firstBox{
+	min-height: 504upx;
+	&-bg{
+		&-color{
+			border-radius: 0 0 100% 100%;
+			padding-bottom: 80upx;
+			position: relative;
+			z-index: 2;
+		}
+		&-image{
+			padding: 300upx 0 0;
+			text-align: center;
+			margin: auto;
+			image{
+				width: 260upx;
+				margin: auto;
+				display: block;
+			}
+		}
+	}
+}
+	
+.operateBox{
+	position: absolute;
+	bottom: 150upx;
+	padding: 0 31upx;
+	&-title{
+		font-size: 36upx;
+		font-family: HelloFont FangHuaTi;
+		font-weight: 600;
+		color: #FFFFFF;
+	}
+	&-txt{
+		font-size: 32upx;
+		font-family: PingFang SC;
+		font-weight: 500;
+		color: #FFFFFF;
+		margin: 41upx 0 68upx;
+		width: 68%;
+	}
+	&-btn{
+		@include flexLeft;
+		margin: 76upx 0 30upx;
+		& > view{
+			font-size: 28upx;
+			border-radius: 50upx;
+			width: 38%;
+			padding: 25upx 0;
+			text-align: center;
+			margin-right: 27upx;
+		}
+		&-register{
+			border: 1px solid $globalColor-style;
+			background: $globalColor-style;
+			color: #FFFFFF;
+		}
+		&-login{
+			border: 1px solid $globalColor-style;
+			color: $globalColor-style;
+		}
+	}
+	&-agreement{
+		margin: 40upx 0 0;
+		@include flexLeft;
+		label{
+			border: 1px solid $globalColor-border;
+			width: 30upx;
+			height: 30upx;
+			border-radius: 50%;
+			margin-right: 11upx;
+		}
+		.checkbox-active{
+			background: url(../../static/operate/icon-active.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			border: 1px solid transparent;
+			// border: 1px solid $globalColor-style;
+			// .checkbox{
+			// 	margin: 5upx;
+			// 	background: $globalColor-style;
+			// 	width: 18upx;
+			// 	height: 18upx;
+			// 	border-radius: 50%;
+			// }
+		}
+		&-title{
+			color: #FEFEFE;
+			font-size: 24upx;
+		}
+		&-name{
+			color: #FEFEFE;
+			font-size: 24upx;
+		}
+	}
+}

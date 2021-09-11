@@ -1,0 +1,174 @@
+.titleBox {
+	position: relative;
+	z-index: 1;
+	margin-bottom: 30upx;
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-title {
+		color: $globalColor-fontStyle;
+		font-size: 36upx;
+		font-weight: bold;
+	}
+
+	&-note {
+		color: #666666;
+		font-size: 24upx;
+		font-weight: 300;
+		margin-top: 8upx;
+	}
+}
+.formBox {
+	&-wrapper {
+		padding: 0 30upx;
+	}
+
+	&-title {
+		color: #101010;
+		font-weight: 300;
+		font-size: 42upx;
+		margin-bottom: 15upx;
+	}
+
+	&-list {
+		margin-bottom: 30upx;
+
+		&__label {
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: bold;
+			margin-bottom: 15upx;
+		}
+
+		&__input {
+			@include flexCenter;
+			background-color: #ffffff;
+			border-radius: 20upx;
+			box-shadow: 0 0 16upx 0upx rgba(147, 147, 147, 0.27);
+			padding: 30upx;
+
+			input {
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: 300;
+				flex: 1;
+				text-align: left;
+			}
+
+			&-type {
+				color: $globalColor-fontStyle;
+				font-size: 30upx;
+				font-weight: 300;
+				padding: 0 15upx;
+				border-right: 2upx solid #cccccc;
+			}
+			&-btn {
+				color: $globalColor-style;
+				font-size: 30upx;
+				font-weight: 300;
+				padding-left: 15upx;
+			}
+
+			&-code {
+				color: $globalColor-style;
+				font-size: 30upx;
+				font-weight: 300;
+			}
+		}
+
+		&__textarea {
+			background-color: #ffffff;
+			border-radius: 20upx;
+			box-shadow: 0 0 16upx 0upx rgba(147, 147, 147, 0.27);
+			padding: 30upx;
+
+			textarea {
+				width: 100%;
+				height: 300upx;
+				font-size: 28upx;
+				font-weight: 300;
+				color: $globalColor-fontStyle;
+				margin-bottom: 15upx;
+			}
+
+			&-max {
+				font-size: 28upx;
+				font-weight: 300;
+				color: $globalColor-fontStyle;
+				text-align: right;
+			}
+		}
+
+		&__placeholder {
+			color: #cccccc;
+			font-size: 28upx;
+			font-weight: 300;
+		}
+	}
+}
+
+.imageBox {
+	position: relative;
+	&-wrapper {
+		@include flexLeft;
+		position: relative;
+		padding: 0 30upx;
+		flex-wrap: wrap;
+	}
+
+	&-item {
+		position: relative;
+		width: calc((100% - 90upx) / 4);
+		background-position: center;
+		background-size: 100% 100%;
+		background-color: #ffffff;
+		border-radius: 20upx;
+		box-shadow: 0 0 16upx 0upx rgba(147, 147, 147, 0.27);
+		margin-right: 30upx;
+		margin-bottom: 30upx;
+		overflow: hidden;
+		font-size: 0;
+		
+
+		&::after {
+			content: '';
+			display: inline-block;
+			padding-bottom: 100%;
+			width: 100%;
+		}
+
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+
+		&--add {
+			position: relative;
+			z-index: 1;
+			background: url(@/static/workOrder/icon-add.png) no-repeat;
+			background-position: center;
+			background-size: 46upx 46upx;
+			background-color: #ffffff;
+		}
+
+		&__delete {
+			position: absolute;
+			z-index: 1;
+			width: 40upx;
+			height: 40upx;
+			right: 0;
+			top: 0;
+			// border-radius: 20upx;
+			overflow: hidden;
+			background: url(@/static/workOrder/icon-delete.png) no-repeat;
+			background-position: center;
+			background-size: 40upx 40upx;
+			background-color: #ffffff;
+		}
+	}
+}
+
+.initButton{
+	padding: 0 30upx;
+	margin-top: 120upx;
+}

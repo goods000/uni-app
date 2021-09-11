@@ -1,0 +1,130 @@
+.first{
+	position: relative;
+	height: 100vh;
+}
+.firstBox{
+	&-titleBox{
+		margin: 40upx 31upx ;
+		&-wrapper{
+			font-size: 52upx;
+			font-family: PingFang SC;
+			font-weight: bold;
+			color: $globalColor-fontStyle;
+		}
+		&-title{
+			font-size: 24upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: #999999;
+		}
+	}
+	&-btn{
+		@include flexCenterColumn;
+		& > view{
+			width: 100%;
+			font-size: 32upx;
+			text-align: center;
+			padding: 25upx;
+			border-radius: 20upx;
+			font-weight: bold;
+			letter-spacing: 8upx;
+		}
+		&-item{
+			@include flexLeftColumn;
+			&-chioce{
+				border: 1px solid $globalColor-style;
+				background: $globalColor-style;
+				color: $globalColor-fontStyle;
+				margin-bottom: 24upx;
+			}
+			&-color{
+				border: 1px solid $globalColor-style;
+				background: $globalColor-style;
+				color: #101010;
+				margin-bottom: 24upx;
+			}
+		}
+	}
+	
+	
+	&-form{
+		margin: 96upx 31upx;
+		@include flexCenterColumn;
+		&-item{
+			@include flexLeftColumn;
+			width: 100%;
+			&-title{
+				margin: 24upx 0;
+				font-size: 28upx;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: $globalColor-fontStyle;
+			}
+			&-input{
+				box-shadow: 4upx 6upx 21upx 0upx rgba(147, 147, 147, 0.27);
+				border-radius: 20upx;
+				padding: 32upx 28upx;
+				width: 100%;
+				@include flexLeft;
+				input{
+					flex: 1;
+					font-size: 32upx;
+				}
+				&.showCloseBtn {
+					.firstBox-form-item-image__clear--active{
+						display: flex;
+					}
+				}
+			}
+			&-image{
+				@include flexRight;
+				&__clear{
+					margin-right: 14upx;
+					image{
+						width: 30upx;
+						height: 30upx;
+					}
+					&--active{
+						display: none;
+					}
+				}
+				&__see{
+					image{
+						width: 44upx;
+						height: 44upx;
+					}
+				}
+			}
+		}
+		&-next{
+			width: 100%;
+			display: block;
+			text-align: right;
+			margin-top: 20upx;
+			&-title{
+				color: #999999;
+				font-size: 24upx;
+			}
+		}
+	}
+	
+	&-bottom{
+		@include flexCenter;
+		&-title{
+			color: #999999;
+			font-size: 24upx;
+			&-choice{
+				color: $globalColor-style;
+				font-size: 24upx;
+				margin-left: 10upx;
+			}
+		}
+	}
+	
+	&-bottomBox{
+		position: absolute;
+		bottom: 50upx;
+		width: 100%;
+		padding: 0 31upx;
+	}
+}

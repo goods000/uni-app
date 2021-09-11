@@ -1,0 +1,162 @@
+.bgBox {
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	@include fullImage;
+}
+
+.main {
+	padding-top: 380upx;
+	position: relative;
+	z-index: 1;
+}
+
+.itemBox{
+	padding: 0 30upx;
+	margin-bottom: 30upx;
+	
+	&-wrapper{
+		@include flexCenter;
+		background-color: #0f1d1f;
+		padding: 30upx;
+		border-radius: 15upx;
+	}
+	
+	&-item{
+		text-align: center;
+		flex: 1;
+		position: relative;
+		
+		&:last-child{
+			&:after{
+				display: none;
+			}
+		}
+		
+		&:after{
+			content: '';
+			display: inline-block;
+			width: 2upx;
+			height: 80%;
+			position: absolute;
+			right: -1upx;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: #333333;
+		}
+		
+		&__data{
+			color: $globalColor-style;
+			font-size: 36upx;
+			font-weight: 300;
+			margin-bottom: 15upx;
+		}
+
+		&__label {
+			font-size: 24upx;
+			color: #ffffff;
+		}
+	}
+}
+
+
+.infoBox {
+	position: relative;
+	z-index: 1;
+	padding: 0 30upx;
+	
+	&-wrapper {
+		padding: 30upx 0;
+		border-bottom: 1upx solid #333333;
+	}
+
+	&-title {
+		@include initBeforeHolder;
+		color: #ffffff;
+		font-size: 32upx;
+		font-weight: bold;
+		margin-bottom: 15upx;
+	}
+
+	&-price {
+		color: #ffffff;
+		font-size: 26upx;
+		font-weight: 300;
+		
+		&--highlight{
+			margin-left: 8upx;
+			color: $globalColor-style;
+		}
+	}
+}
+
+.formBox {
+	position: relative;
+	z-index: 1;
+
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-list {
+		&__label {
+			font-size: 32upx;
+			margin-bottom: 15upx;
+			font-weight: bold;
+			color: #ffffff;
+		}
+
+		&__input {
+			@include flexLeft;
+			margin-bottom: 15upx;
+			padding: 30upx;
+			border: 1upx solid #666666;
+			background-color: #0f1d1f;
+			border-radius: 8upx;
+			input {
+				flex: 1;
+				color: #ffffff;
+				font-size: 28upx;
+				font-weight: 300;
+			}
+		}
+
+		&__placeholder {
+			color: #cccccc;
+			font-size: 28upx;
+			font-weight: 300;
+		}
+
+		&__note {
+			color: #666666;
+			font-size: 24upx;
+			font-weight: 300;
+		}
+	}
+
+	&-info {
+		@include flexBetween;
+		margin-bottom: 60upx;
+
+		&__label {
+			color: #999999;
+			font-size: 32upx;
+			font-weight: bold;
+		}
+
+		&__data {
+			color: $globalColor-style;
+			font-size: 32upx;
+			font-weight: bold;
+		}
+	}
+}
+
+.initButton {
+	padding: 0 30upx;
+	margin-top: 120upx;
+}

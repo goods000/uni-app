@@ -1,0 +1,62 @@
+.titleBox {
+	position: relative;
+	z-index: 1;
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-title {
+		color: $globalColor-fontStyle;
+		font-size: 36upx;
+		font-weight: bold;
+	}
+
+	&-note {
+		color: #666666;
+		font-size: 24upx;
+		font-weight: 300;
+		margin-top: 8upx;
+	}
+}
+
+
+.formBox {
+	&-wrapper {
+		padding: 0 30upx;
+	}
+
+	&-title {
+		color: #101010;
+		font-weight: 300;
+		font-size: 42upx;
+		margin-bottom: 15upx;
+	}
+
+	&-list {
+		margin-bottom: 30upx;
+
+		&__label {
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: 300;
+			margin-bottom: 15upx;
+		}
+
+		// color: $globalColor-fontStyle;
+		&__input {
+			@include flexCenter;
+			@include initShadow;
+			background-color: #FFFFFF;
+			border-radius: 20upx;
+			padding: 30upx;
+
+			input {
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: 300;
+				flex: 1;
+				text-align: left;
+			}
+		}
+	}
+}

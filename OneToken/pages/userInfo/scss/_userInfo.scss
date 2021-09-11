@@ -1,0 +1,651 @@
+.userInfoBox {
+	padding: 0 30upx;
+	margin-bottom: 30upx;
+
+	&-wrapper {
+		@include initShadow;
+		padding: 30upx;
+		background-color: #ffffff;
+		border-radius: 20upx;
+	}
+
+	&-header {
+		@include flexLeft;
+		width: 100%;
+		margin-bottom: 30upx;
+	}
+
+	&-body {
+		margin-bottom: 30upx;
+		width: 100%;
+	}
+
+	&-avatar {
+		@include fullImage;
+		@include initAvatar(100);
+		margin-right: 15upx;
+	}
+
+	&-name {
+		color: $globalColor-fontStyle;
+		font-size: 36upx;
+		font-weight: 300;
+	}
+
+	&-strategy {
+		@include flexLeft;
+		align-items: flex-start;
+
+		&__label {
+			color: #999999;
+			font-size: 24upx;
+			font-weight: 300;
+			width: 90upx;
+		}
+
+		&__data {
+			flex: 1;
+			color: $globalColor-fontStyle;
+			font-size: 24upx;
+			font-weight: 300;
+		}
+	}
+
+	&-type {
+		color: #999999;
+		font-size: 20upx;
+		margin-right: 5upx;
+	}
+
+	&-itemBox {
+		@include flexBetween;
+		margin-top: 15upx;
+
+		&__item {
+			@include justifiedLayout;
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				font-weight: bold;
+
+				&--style {
+					color: #be7b25;
+				}
+			}
+
+			&-label {
+				color: #999999;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+		}
+	}
+
+	&-button {
+		@include flexCenter;
+		flex: 1;
+
+		&__btn {
+			@include initShadow;
+			@include flexCenterColumn;
+			flex: 1;
+			color: #ffffff;
+			font-size: 32upx;
+			font-weight: bold;
+			margin-right: 30upx;
+			border-radius: 18upx;
+			padding: 15upx 0;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&--red {
+				background-color: #cb0101;
+			}
+
+			&--orange {
+				background-color: #be7b25;
+			}
+		}
+	}
+}
+
+.tabsBox {
+	&-control {
+		@include flexLeft;
+		align-items: flex-end;
+		height: 60upx;
+		padding: 0 30upx;
+		margin-bottom: 15upx;
+
+		&__item {
+			@include initTransition(0.15);
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			font-weight: bold;
+			margin-right: 30upx;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&--active {
+				font-size: 42upx;
+				color: $globalColor-style;
+			}
+		}
+	}
+
+	&-wrapper {
+		padding: 30upx 0;
+	}
+}
+
+.followBox {
+	&-wrapper {
+		padding: 0 30upx;
+	}
+
+	&-title {
+		@include flexBetween;
+		margin-bottom: 30upx;
+
+		&__label {
+			@include initBeforeHolder;
+			font-size: 32upx;
+			color: $globalColor-fontStyle;
+			font-weight: bold;
+		}
+
+		&__more {
+			@include fullImage;
+			width: 30upx;
+			height: 30upx;
+			background: url(@/static/index/icon-notice-more.png) no-repeat;
+			background-size: 30upx 30upx;
+			background-position: center center;
+		}
+	}
+
+	&-item {
+		margin-bottom: 45upx;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&-content {
+		// min-height: 200upx;
+		max-height: 700upx;
+	}
+
+	&-list {
+		background-color: #ffffff;
+		border-radius: 20upx;
+		padding: 30upx;
+		margin-bottom: 20upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&-plane {
+		@include flexCenterColumn;
+		width: 100%;
+		height: 100%;
+		background-color: #ffffff;
+		// padding: 0 15upx;
+		// border-radius: 10upx;
+	}
+	&-row {
+		@include flexLeft;
+	}
+
+	&-header {
+		@include flexLeft;
+		width: 100%;
+	}
+
+	&-body {
+		width: 100%;
+	}
+
+	&-avatar {
+		@include fullImage;
+		@include initAvatar(60);
+		margin-right: 8upx;
+	}
+
+	&-name {
+		color: $globalColor-fontStyle;
+		font-size: 26upx;
+		font-weight: 300;
+	}
+
+	&-type {
+		color: #999999;
+		font-size: 20upx;
+		margin-right: 5upx;
+	}
+
+	&-itemBox {
+		@include flexBetween;
+		margin-top: 15upx;
+
+		&__item {
+			@include justifiedLayout;
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				font-weight: bold;
+
+				&--style {
+					color: #be7b25;
+				}
+			}
+
+			&-label {
+				color: #999999;
+				font-size: 20upx;
+				font-weight: 300;
+			}
+		}
+	}
+
+	&-button {
+		flex: 1;
+		@include flexRight;
+
+		&__btn {
+			color: #be7b25;
+			border-radius: 6upx;
+			border: 1upx solid #be7b25;
+			font-size: 26upx;
+			font-weight: 300;
+			padding: 10upx 15upx;
+		}
+	}
+}
+
+.realPlaneBox{
+	&-wrapper{
+		padding: 0 30upx;
+	}
+	
+	&-account{
+		@include flexLeft;
+		flex-wrap: wrap;
+		&__item{
+			@include flexLeft;
+			@include initShadow;
+			padding: 30upx;
+			border-radius: 20upx;
+			background-color: #FFFFFF;
+			width: calc(50% - 16upx);
+			margin-bottom: 30upx;
+			margin-right: 30upx;
+			
+			&:nth-child(2n){
+				margin-right: 0;
+			}
+		}
+		
+		&__icon{
+			@include fullImage;
+			width: 42upx;
+			margin-right: 15upx;
+		}
+		
+		&__name{
+			color: $globalColor-fontStyle;
+			font-size: 26upx;
+			font-weight: 300;
+		}
+		
+		&__type{
+			color: #999999;
+			font-size: 20upx;
+			font-weight: 300;
+		}
+	}
+	
+	&-plane{
+		@include initShadow;
+		border-radius: 20upx;
+		background-color: #FFFFFF;
+		padding: 30upx;
+	}
+	
+	&-select{
+		@include flexLeft;
+		&::after{
+			content: '';
+			display: inline-block;
+			margin-left: 15upx;
+			width: 26upx;
+			height: 14upx;
+			background: url(@/static/public/icon-arrow-bottom-black.png) no-repeat;
+			background-size: 26upx 14upx;
+			background-position: center center;
+		}
+		
+		&__label{
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			font-weight: bold;
+		}
+	}
+	
+	&-itemBox{
+		@include flexLeft;
+		flex-wrap: wrap;
+		&__item{
+			padding: 15upx 0;
+			width: 33.33%;
+			
+			&:nth-child(3n){
+				text-align: right;
+			}
+			
+			&-data{
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				font-weight: bold;
+				margin-bottom: 8upx;
+				
+				&--style{
+					color: #be7b25;
+				}
+			}
+			
+			&-label{
+				color: #999999;
+				font-size: 20upx;
+				font-weight: 300;
+			}
+		}
+	}
+	
+	&-echartsBox{
+		margin-top: 45upx;
+	}
+}
+
+.recordBox {
+	&-wrapper {
+		padding: 0 30upx;
+	}
+
+	&-title {
+		@include flexBetween;
+		margin-bottom: 30upx;
+
+		&__label {
+			@include initBeforeHolder;
+			font-size: 32upx;
+			color: $globalColor-fontStyle;
+			font-weight: bold;
+		}
+
+		&__more {
+			@include fullImage;
+			width: 30upx;
+			height: 30upx;
+			background: url(@/static/index/icon-notice-more.png) no-repeat;
+			background-size: 30upx 30upx;
+			background-position: center center;
+		}
+	}
+
+	&-item {
+		margin-bottom: 45upx;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&-content {
+		max-height: 700upx;
+	}
+
+	&-list {
+		background-color: #ffffff;
+		border-radius: 20upx;
+		padding: 30upx;
+		margin-bottom: 20upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&-plane {
+		@include flexCenterColumn;
+		width: 100%;
+		height: 100%;
+		background-color: #ffffff;
+	}
+	&-row {
+		@include flexLeft;
+	}
+
+	&-header {
+		@include flexLeft;
+		width: 100%;
+	}
+
+	&-body {
+		width: 100%;
+	}
+
+	&-avatar {
+		@include fullImage;
+		@include initAvatar(60);
+		margin-right: 8upx;
+	}
+
+	&-name {
+		color: $globalColor-fontStyle;
+		font-size: 32upx;
+		font-weight: 300;
+		margin-right: 8upx;
+	}
+
+	&-type {
+		color: #999999;
+		font-size: 32upx;
+		font-weight: 300;
+		
+		&--green{
+			color: #269b29;
+		}
+
+		&--red {
+			color: #cb0101;
+		}
+	}
+
+	&-date {
+		color: #999999;
+		font-size: 24upx;
+		flex: 1;
+		text-align: right;
+	}
+
+	&-itemBox {
+		@include flexBetween;
+		margin-top: 15upx;
+
+		&__item {
+			@include justifiedLayout;
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				font-weight: bold;
+
+				&--style {
+					color: #be7b25;
+				}
+			}
+
+			&-label {
+				color: #999999;
+				font-size: 20upx;
+				font-weight: 300;
+			}
+		}
+	}
+
+	&-button {
+		flex: 1;
+		@include flexRight;
+
+		&__btn {
+			color: #be7b25;
+			border-radius: 6upx;
+			border: 1upx solid #be7b25;
+			font-size: 26upx;
+			font-weight: 300;
+			padding: 10upx 15upx;
+		}
+	}
+}
+
+.otherBox {
+	padding: 0 30upx;
+	&-wrapper {
+		@include initShadow;
+		background-color: #ffffff;
+		border-radius: 20upx;
+		padding: 30upx;
+	}
+
+	&-list {
+		@include flexBetween;
+		margin-bottom: 30upx;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		
+		&__label{
+			color: #666666;
+			font-size: 28upx;
+			font-weight: 300;
+		}
+		
+		&__data{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: 300;
+		}
+	}
+}
+
+.dynamicBox {
+	padding: 0 30upx 30upx;
+	&-wrapper {
+		padding: 0 30upx;
+		border-left: 2upx solid #101010;
+	}
+
+	&-list {
+		margin-bottom: 30upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&__date {
+			color: #101010;
+			font-size: 32upx;
+			font-weight: 300;
+			margin-bottom: 25upx;
+			position: relative;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				height: 20upx;
+				width: 20upx;
+				position: absolute;
+				left: -40upx;
+				top: 50%;
+				transform: translateY(-50%);
+				background: url(@/static/information/icon-step.png) no-repeat;
+				background-position: center center;
+				background-size: 20upx 20upx;
+			}
+		}
+
+		&__plane {
+			@include initShadow;
+			background-color: #ffffff;
+			border-radius: 20upx;
+			padding: 30upx;
+		}
+
+		&__message {
+			color: #101010;
+			font-size: 28upx;
+			font-weight: 300;
+		}
+		
+		&__imageList{
+			margin-top: 15upx;
+			@include flexLeft;
+			
+			&-image{
+				font-size: 0;
+				margin-right: 30upx;
+				width: calc((100% - 60upx) / 3);
+				background-position: center;
+				background-size: 100% 100%;
+				
+				
+				&::after {
+					content: '';
+					display: inline-block;
+					padding-bottom: 100%;
+					width: 100%;
+				}
+				
+				&:last-child{
+					margin-right: 0;
+				}
+				
+				// image{
+				// 	width: 100%;
+				// 	height: 100%;
+				// }
+			}
+		}
+
+		&__button {
+			border-top: 1upx solid #cccccc;
+			margin-top: 15upx;
+			padding-top: 15upx;
+			@include flexRight;
+
+			&-btn {
+				@include flexCenterColumn;
+				color: $globalColor-fontStyle;
+				font-size: 26upx;
+				font-weight: 300;
+				height: 40upx;
+				margin-left: 30upx;
+				padding-left: 42upx;
+
+				background-repeat: no-repeat;
+				background-size: 40upx 40upx;
+				background-position: left center;
+				background-image: url(@/static/information/icon-like.png);
+
+				&--active {
+					background-image: url(@/static/information/icon-like-active.png);
+				}
+			}
+		}
+	}
+}

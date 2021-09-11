@@ -1,0 +1,166 @@
+.initFormBox {
+	position: relative;
+	z-index: 1;
+
+	&-item {
+		margin-bottom: 30upx;
+		position: relative;
+
+		&__list {
+			@include flexLeft;
+			align-items: stretch;
+		}
+		&__label {
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: bold;
+			margin-bottom: 15upx;
+		}
+
+		&__zone {
+			width: 140upx;
+			margin-right: 15upx;
+			// border-right: 1upx solid $globalColor-style;
+			background: url(@/static/public/icon-triangle-bottom-brown.png) no-repeat;
+			background-position: calc(100% - 15upx) center;
+			background-size: 24upx 12upx;
+		}
+
+		&__input {
+			@include flexLeft;
+			@include initShadow;
+			@include initTransition(0.4);
+			position: relative;
+			border-radius: 20upx;
+			background-color: #ffffff;
+			padding: 30upx;
+			flex: 1;
+
+			&.showCloseBtn {
+				.operateBox-item__fixedBox-btn--clear {
+					display: flex;
+				}
+			}
+
+			input {
+				color: #101010;
+				font-size: 32upx;
+				font-weight: 300;
+				flex: 1;
+			}
+			
+			
+			&-type {
+				color: $globalColor-fontStyle;
+				font-size: 30upx;
+				font-weight: 300;
+				padding: 0 15upx;
+				border-right: 2upx solid #cccccc;
+			}
+			&-btn {
+				color: $globalColor-style;
+				font-size: 30upx;
+				font-weight: 300;
+				padding-left: 15upx;
+			}
+		}
+
+		&__placeholder {
+			color: #cccccc;
+			font-size: 32upx;
+			font-weight: 300;
+		}
+
+		&__fixedBox {
+			@include flexRight;
+
+			&-btn {
+				width: 60upx;
+				height: 100%;
+				z-index: 999;
+				@include flexCenter;
+
+				&--clear {
+					display: none;
+					image {
+						width: 30upx;
+						@include fullImage;
+					}
+				}
+
+				&--eye {
+					image {
+						width: 40upx;
+						@include fullImage;
+					}
+				}
+			}
+		}
+
+		&__verify {
+			@include flexCenterColumn;
+			background-color: #957c52;
+			width: 180upx;
+			margin-left: 30upx;
+			border-radius: 20upx;
+			padding: 0 15upx;
+			color: #ffffff;
+		}
+		
+		&__note{
+			color: #999999;
+			font-size: 24upx;
+			font-weight: 300;
+			margin-top: 15upx;
+		}
+		
+		&__scan{
+			width: 32upx;
+			@include fullImage;
+		}
+	}
+
+	&-button {
+		margin-top: 90upx;
+		padding: 0;
+		&__btn {
+			@include initTransition(0.4);
+			padding: 30upx 0;
+			border-radius: 8upx;
+			font-size: 36upx;
+			text-align: center;
+			color: #000f11;
+			font-weight: bold;
+			background-color: $globalColor-style;
+			// @include initButtonGrad;
+		}
+	}
+
+	&-checkbox {
+		margin-top: 120upx;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		font-size: 24upx;
+		color: #999999;
+		.linkColor {
+			color: $globalColor-style;
+		}
+	}
+
+	&-rightButton {
+		color: #999999;
+		font-size: 24upx;
+		font-weight: 300;
+		text-align: right;
+		padding-top: 30upx;
+	}
+
+	&-textButton {
+		width: 100%;
+		text-align: center;
+		padding: 30upx;
+		color: $globalColor-style;
+		font-size: 24upx;
+	}
+}

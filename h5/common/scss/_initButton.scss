@@ -1,0 +1,43 @@
+.initButton {
+	font-size: 28upx;
+	@include flexCenterColumn;
+	
+	&-btn {
+		flex: 1;
+		padding: 30upx 0;
+		border-radius: 8upx;
+		font-size: 100%;
+		width: 100%;
+		
+		@include flexCenter;
+		
+		+ .initButton-btn{
+			margin-top: 30upx;
+		}
+		
+		&--green {
+			background-color: $globalColor-green;
+			color: #FFFFFF;
+		}
+		
+		&--blue {
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3180ff+0,313fb1+100 */
+			background: rgb(49,128,255); /* Old browsers */
+			background: -moz-linear-gradient(left, rgba(49,128,255,1) 0%, rgba(49,63,177,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left, rgba(49,128,255,1) 0%,rgba(49,63,177,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right, rgba(49,128,255,1) 0%,rgba(49,63,177,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3180ff', endColorstr='#313fb1',GradientType=1 ); /* IE6-9 */
+			color: #FFFFFF;
+		}
+		
+		&--golden{
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcd86a+0,d7982a+100 */
+			background: rgb(252,216,106); /* Old browsers */
+			background: -moz-linear-gradient(left, rgba(252,216,106,1) 0%, rgba(215,152,42,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left, rgba(252,216,106,1) 0%,rgba(215,152,42,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right, rgba(252,216,106,1) 0%,rgba(215,152,42,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcd86a', endColorstr='#d7982a',GradientType=1 ); /* IE6-9 */
+			color: #FFFFFF;
+		}
+	}
+}

@@ -1,0 +1,143 @@
+page,.pages{
+	// background-color: #ededf2;
+}
+
+.bgBox {
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	@include fullImage;
+}	
+
+.userInfoBox {
+	// border-bottom: 16upx solid #ededf2;
+	position: relative;
+	z-index: 1;
+	&-wrapper {
+		@include flexLeft;
+		// @include initGradBg;
+		// background: url(@/static/mine/img-mine-bg.jpg) no-repeat;
+		// background-position: center;
+		// background-size: cover;
+		padding: 90upx 30upx 30upx;
+	}
+
+	&-avatar {
+		width: 100upx;
+		margin-right: 15upx;
+		@include fullImage;
+	}
+	&-content {
+		// @include flexBetween;
+		flex: 1;
+		font-size: 28upx;
+	}
+
+	&-title {
+		@include flexBetween;
+		flex: 1;
+		margin-bottom: 10upx;
+		font-size: 36upx;
+		font-weight: bold;
+		color: $globalColor-fontStyle;
+	}
+	
+	&-level{
+		font-size: 24upx;
+		color: $globalColor-style;
+	}
+	
+	&-msg {
+		font-size: 28upx;
+		color: $globalColor-style;
+	}
+
+	&-activeInfo {
+		@include flexRight;
+		font-size: 20upx;
+
+		&__icon {
+			width: 24upx;
+			@include fullImage;
+			margin-right: 5upx;
+		}
+	}
+
+	&-code {
+		color: $globalColor-fontStyle;
+		font-size: 22upx;
+		position: relative;
+		padding-right: 50upx;
+	}
+
+	&-copy {
+		width: 40upx;
+		height: 40upx;
+		background: url(../../static/public/icon-copy-green.png) no-repeat;
+		background-position: center center;
+		background-size: 40upx 40upx;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&-id {
+		display: inline-block;
+		position: relative;
+		color: #afafaf;
+		font-size: 22upx;
+		padding-right: 40upx;
+	}
+}
+
+.listBox {
+	position: relative;
+	z-index: 1;
+	&-wrapper {
+		padding: 0 30upx 30upx;
+	}
+	
+	&-plane {
+		background-color: #142224;
+		margin-bottom: 30upx;
+		border-radius: 15upx;
+		overflow: hidden;
+	}
+
+	&-list {
+		@include flexLeft;
+		position: relative;
+		padding: 45upx 30upx;
+		font-size: 30upx;
+		color: #FFFFFF;
+		font-weight: bold;
+
+		background-image: url('../../static/public/icon-arrow-right-grey.png');
+		background-size: 14upx 26upx;
+		background-repeat: no-repeat;
+		background-position: calc(100% - 30upx) center;
+
+		&--holder {
+			border-bottom: 16upx solid #ededf2;
+		}
+
+		&__icon {
+			width: 40upx;
+			margin-right: 15upx;
+			@include fullImage;
+		}
+
+		&__data {
+			padding-right: 30upx;
+			font-size: 28upx;
+			color: $globalColor-style;
+			flex: 1;
+			text-align: right;
+		}
+	}
+}

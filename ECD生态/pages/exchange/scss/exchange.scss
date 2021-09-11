@@ -1,0 +1,170 @@
+.exchange{
+	&-wrapper{
+		
+	}
+	&-list{
+		background: $globalColor-white;
+		padding: 30upx;
+		margin-bottom: 18upx;
+		&__header{
+			@include flexBetween;
+			align-items: flex-start;
+			position: relative;
+			&-news{
+				@include flexLeft;
+			}
+			&-image{
+				width: 80upx;
+				height: 80upx;
+				border-radius: 50%;
+				margin-right: 18upx;
+			}
+			&-box{
+				@include flexLeftColumn;
+			}
+			&-title{
+				font-size: 28upx;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: $globalColor-fontStyle;
+			}
+			&-tips{
+				margin-top: 8upx;
+				font-size: 20upx;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: $globalColor-fontStyle;
+				white-space: nowrap;
+				text{
+					width: 2upx;
+					height: 16upx;
+					background: #CCCCCC;
+					margin: 0 13upx;
+				}
+			}
+			&-time{
+				font-size: 24upx;
+				font-family: DINPro;
+				font-weight: 500;
+				color: #666666;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+		&__operate{
+			@include flexBetween;
+			align-items: flex-end;
+			&-item{
+				@include flexLeftColumn;
+				&:nth-last-child(1){
+					@include flexRightColumn;
+				}
+			}
+			&-title{
+				font-size: 24upx;
+				font-family: PingFang SC;
+				font-weight: 500;
+				color: #999999;
+				margin-bottom: 9upx;
+			}
+			&-num{
+				font-size: 36upx;
+				font-family: DINPro;
+				font-weight: bold;
+				color: $globalColor-style;
+			}
+			&-ways{
+				@include flexCenter;
+				image{
+					width: 42upx;
+					height: 42upx;
+					margin: 0 9upx;
+				}
+			}
+			&-unit{
+				font-size: 20upx;
+				font-family: DINPro;
+				font-weight: bold;
+				color: #999999;
+				text-align: right;
+			}
+			&-price{
+				font-size: 24upx;
+				font-family: DINPro;
+				font-weight: bold;
+				color: $globalColor-style;
+				text-align: right;
+				// margin: 6upx 0;
+			}
+			&-btn{
+				font-size: 28upx;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: #FFFFFF;
+				padding: 13upx 39upx;
+				background: $globalColor-style;
+				border-radius: 6upx;
+			}
+		}
+	}
+}
+
+.initBox{
+	.initTilte{
+		margin-top: 40upx;
+	}
+	&-priceBox{
+		@include flexBetween;
+		width: 100%;
+		padding: 20upx 30upx 33upx;
+		border-bottom: 1px solid $globalColor-border;
+		&__price{
+			font-size: 28upx;
+			font-family: PingFang SC;
+			font-weight: bold;
+			color: $globalColor-fontStyle;
+			text{
+				color: $globalColor-style;
+			}
+		}
+		&__ways{
+			@include flexRight;
+			image{
+				width: 40upx;
+				height: 40upx;
+				margin-left: 20upx;
+			}
+		}
+	}
+	&-inputItem{
+		width: 100%;
+		&__item{
+			@include flexBetween;
+			padding: 0 30upx;
+			&-title{
+				font-size: 32upx;
+				font-family: PingFang SC;
+				font-weight: bold;
+				color: $globalColor-fontStyle;
+			}
+			&-style{
+				font-size: 32upx;
+				font-family: DINPro;
+				font-weight: 500;
+				color: $globalColor-style;
+			}
+		}
+		&__balance{
+			@include flexBetween;
+			width: 100%;
+			margin-top: 18upx;
+			&-title{
+				font-size: 24upx;
+				font-family: DINPro;
+				font-weight: 400;
+				color: #999999;
+			}
+		}
+	}
+}

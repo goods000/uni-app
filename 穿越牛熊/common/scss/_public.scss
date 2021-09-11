@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'DINPro', 'PingFangSC', 'AvenirBold';
+}
+
+image {
+	height: 0;
+	display: block;
+}
+
+// 全局背景色
+page {
+	// background-color: $globalColor-bgStyle;
+}
+
+// 20201203出现的bug，使用page不生效
+.pages{
+	min-height: 100vh;
+}
+
+/* #ifdef H5 */
+// .pages{
+// 	&::before{
+// 		content: '';
+// 		display: inline-block;
+// 		height: 25upx;
+// 		width: 750upx;
+// 		background: url(@/static/public/icon-batteryBar-black.png) no-repeat;
+// 		background-position: center center;
+// 		background-size: 750upx 25upx;
+// 		position: relative;
+// 		z-index: 9;
+// 	}
+// }
+/* #endif */
+

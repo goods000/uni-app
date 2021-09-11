@@ -1,0 +1,348 @@
+.frameBox {
+	// background-color: #0185f0;
+	// @include initGradBg;
+	background: url(@/static/assets/img-assets-bg.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 120upx 30upx 30upx;
+
+	&-wrapper {
+		position: relative;
+	}
+
+	&-eye {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 40upx;
+		height: 40upx;
+		background-image: url(@/static/public/icon-eye-open-white.png);
+		background-size: 40upx 40upx;
+		background-repeat: no-repeat;
+
+		&--open {
+			background-image: url(@/static/public/icon-eye-open-white.png);
+		}
+		&--close {
+			background-image: url(@/static/public/icon-eye-close-white.png);
+		}
+	}
+
+	&-label {
+		color: #ffffff;
+		font-size: 24upx;
+	}
+
+	&-price {
+		color: #00a371;
+		font-size: 24upx;
+		&__highlight {
+			font-size: 52upx;
+			color: #ffffff;
+			font-weight: bold;
+			margin-right: 15upx;
+		}
+	}
+
+	&-income {
+		color: #ffffff;
+		font-size: 28upx;
+		&__highlight {
+			color: #ffffff;
+			margin-right: 15upx;
+		}
+	}
+}
+
+.fancyBox {
+	// background-color: #0185f0;
+	margin-top: 30upx;
+	// padding: 30upx 0;
+	&-wrapper {
+		@include flexCenter;
+		@include calcMargin(15);
+	}
+	&-item {
+		@include flexCenter;
+		// @include initButtonGrad;
+		border: 1upx solid #ffffff;
+		background-color: rgba(255, 255, 255, 0.4);
+		flex: 1;
+		font-size: 26upx;
+		border-radius: 8upx;
+		color: #00a371;
+		padding: 15upx 0;
+		margin: 0 15upx;
+	}
+}
+
+.tabsBox {
+	&-control {
+		@include flexCenter;
+		border-bottom: 1upx solid #333333;
+		&__item {
+			flex: 1;
+			text-align: center;
+			font-size: 26upx;
+			font-weight: bold;
+			color: #ffffff;
+			// margin-right: 30upx;
+			padding: 30upx 0;
+			position: relative;
+			@include initTransition(0.4);
+			&:after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 8upx;
+				background-color: transparent;
+				position: absolute;
+				bottom: -1upx;
+				left: 50%;
+				transform: translateX(-50%);
+				border-radius: 4upx;
+				@include initTransition(0.4);
+			}
+			&--active {
+				color: $globalColor-style;
+				&:after {
+					width: 100%;
+					background-color: $globalColor-style;
+				}
+			}
+		}
+	}
+}
+
+.filterBox {
+	padding: 30upx;
+	&-wrapper {
+		padding: 30upx;
+		background-color: #18181b;
+		border-radius: 15upx;
+		background-image: url(@/static/assets/icon-wallet-info-bg.png);
+		background-repeat: no-repeat;
+		background-size: 120upx 120upx;
+		background-position: right center;
+	}
+
+	&-label {
+		color: #999b9e;
+		font-size: 24upx;
+	}
+
+	&-price {
+		color: #999b9e;
+		font-size: 22upx;
+		&__highlight {
+			font-size: 36upx;
+			color: #ffffff;
+			margin-right: 15upx;
+		}
+	}
+
+	&-button {
+		@include flexLeft;
+		padding: 15upx 30upx;
+		border-radius: 60upx;
+		background-color: #eef1f6;
+		margin-top: 15upx;
+		&__icon {
+			@include fullImage;
+			width: 24upx;
+			margin-right: 15upx;
+		}
+		&__label {
+			color: $globalColor-style;
+			font-size: 22upx;
+		}
+	}
+}
+
+.currencyBox {
+	// border-top: 12upx solid #eef1f6;
+	&-wrapper {
+		// padding: 0 30upx;
+	}
+	&-list {
+		padding: 30upx;
+		border-bottom: 1upx solid #cccccc;
+
+		&__header {
+			@include flexLeft;
+			margin-bottom: 30upx;
+			background-image: url(@/static/public/icon-arrow-right-grey.png);
+			background-size: 14upx 26upx;
+			background-repeat: no-repeat;
+			background-position: right center;
+			min-width: 14upx;
+			padding-right: 30upx;
+
+			&-icon {
+				width: 50upx;
+				margin-right: 15upx;
+				border-radius: 50%;
+				overflow: hidden;
+				@include fullImage;
+			}
+
+			&-title {
+				color: #101010;
+				font-size: 32upx;
+				font-weight: bold;
+			}
+			&-data {
+				@include flexCenterColumn;
+				font-size: 24upx;
+				color: $globalColor-style;
+			}
+		}
+
+		&__label {
+			color: #101010;
+			font-size: 32upx;
+			margin-bottom: 15upx;
+			font-weight: bold;
+			// &--arrow{
+			// 	background-image: url(@/static/public/icon-arrow-right-grey.png);
+			// 	background-size: 14upx 26upx;
+			// 	background-repeat: no-repeat;
+			// 	background-position: right center;
+			// }
+			background-image: url(@/static/public/icon-arrow-right-grey.png);
+			background-size: 14upx 26upx;
+			background-repeat: no-repeat;
+			background-position: right center;
+		}
+
+		&__content {
+			@include flexCenter;
+		}
+
+		&__item {
+			flex: 1;
+			text-align: left;
+			&--alignRight {
+				text-align: right;
+			}
+
+			&-label {
+				color: #99999d;
+				font-size: 24upx;
+				margin-bottom: 15upx;
+			}
+			&-data {
+				color: #101010;
+				font-size: 28upx;
+			}
+		}
+	}
+}
+
+.buttonBox {
+	// @include flexCenter;
+	&-wrapper {
+		@include flexLeft;
+		margin-bottom: 30upx;
+		padding: 0 30upx;
+		overflow: hidden;
+	}
+
+	&-btn {
+		@include flexCenter;
+		@include initTransition(0.4);
+		border: 1upx solid $globalColor-style;
+		color: $globalColor-style;
+		padding: 5upx 30upx;
+		font-size: 28upx;
+		border-radius: 60upx;
+		margin-right: 30upx;
+
+		&--active {
+			@include initButtonGrad;
+			border: 1upx solid transparent;
+			color: #ffffff;
+		}
+	}
+}
+
+// 中间弹出模块样式
+.centerModal {
+	&-wrapper {
+		border-radius: 15upx;
+		padding: 30upx;
+		background-color: #ffffff;
+		width: 600upx;
+	}
+
+	&-title {
+		font-size: 32upx;
+		color: #ffffff;
+		font-weight: bold;
+		margin-bottom: 30upx;
+	}
+
+	&-desc {
+		font-size: 28upx;
+		color: #99999d;
+		font-weight: bold;
+		margin-bottom: 30upx;
+	}
+
+	&-listBox {
+		width: 100%;
+		margin-bottom: 30upx;
+		&__list {
+			@include flexBetween;
+			font-size: 32upx;
+			padding: 15upx 0;
+			&-label {
+				color: #99999d;
+			}
+			&-data {
+				color-rendering: #ffffff;
+			}
+			&-input {
+				@include flexLeft;
+				flex: 1;
+				border-bottom: 1upx solid #cccccc;
+				padding-bottom: 15upx;
+				input {
+					flex: 1;
+				}
+			}
+
+			&-placeholder {
+				color: #cccccc;
+				font-size: 32upx;
+			}
+		}
+	}
+
+	&-buttonBox {
+		@include flexCenter;
+		@include calcMargin(15);
+		&__btn {
+			@include flexCenter;
+			flex: 1;
+			color: #99999d;
+			background-color: #eef1f6;
+			padding: 15upx 0;
+			border-radius: 15upx;
+			font-size: 32upx;
+			margin: 15upx;
+
+			&--cancel {
+				background-color: #ffffff;
+				border: 1upx solid #99999d;
+				color: #99999d;
+			}
+
+			&--confirm {
+				background-color: $globalColor-style;
+				border: 1upx solid $globalColor-style;
+				color: #ffffff;
+			}
+		}
+	}
+}

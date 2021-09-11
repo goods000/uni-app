@@ -1,0 +1,94 @@
+.teamBox{
+	margin: 0 30upx;
+	padding: 30upx 0 8vh;
+	&-wrapper{
+		&-item:nth-last-child(1){border-bottom: none;}
+		&-item{
+			background: $globalColor-bgColor;
+			margin-bottom: 30upx;
+			&-list{
+				@include flexBetween;
+				padding: 20upx 30upx 30upx;
+			}
+		}
+	}
+	&-list:nth-child(1){@include flexLeftColumn;}
+	&-list:nth-child(2){@include flexCenterColumn;}
+	&-list:nth-child(3){@include flexRightColumn;}
+	&-list{
+		&-title{
+			color: #999999;
+			font-size: 24upx;
+		}
+		&-num{
+			color: $globalColor-white;
+			font-size: 28upx;
+			margin-top: 10upx;
+		}
+	}
+}
+
+.initBtnBox{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: $globalColor-bgColor;
+	border-top: 1px solid $globalColor-border;
+	padding: 20upx 0;
+	&-type{
+		@include flexBetween;
+		.initBtn{
+			width: 40%;
+		}
+	}
+	.initBtn{
+		margin: 0 auto;
+	}
+}
+
+.oppupBox{background-color: #FFFFFF;border-radius: 20upx;text-align: center;margin: auto;padding: 50upx;box-sizing: border-box;width: 90%;
+ animation:myfirst 1s;-webkit-animation:myfirst 1s;animation-fill-mode: forwards;}
+ @-webkit-keyframes myfirst {
+     0%   { bottom:-100vh;}
+     50%   {bottom:-50vh;}
+     100%  {bottom:0px;}
+} 
+
+.oppupBox{
+	&-header{
+		color: #393536;
+		font-size: 32upx;
+		text-align: center;
+		font-weight: bold;
+	}
+	&-title{
+		color: #393536;
+		font-size: 28upx;
+		text-align: center;
+		font-weight: bold;
+		width: 60%;
+		margin: 50upx auto 88upx;
+	}
+	&-btn{
+		background: $globalColor-style;
+		border-radius: 50upx;
+		color: $globalColor-white;
+		padding: 24upx 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,569 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/firstPage/firstPage",
+			"style": {
+				"navigationBarTitleText": "登录监测页",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/login",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "登录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/operate/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/operate/register_next",
+			"style": {
+				"navigationBarTitleText": "注册 - 下一步",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/operate/forget",
+			"style": {
+				"navigationBarTitleText": "忘记密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/operate/forget_next",
+			"style": {
+				"navigationBarTitleText": "忘记密码 - 下一步",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "首页",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/information/information",
+			"style": {
+				"navigationBarTitleText": "热点资讯",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/information/information_details",
+			"style": {
+				"navigationBarTitleText": "资讯详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/product/product",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "理财",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/product/productRecord",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "理财记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/product/recordDetails",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "理财记录 --- 记录详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "我的",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/account/account",
+			"style": {
+				"navigationBarTitleText": "个人信息",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/account/username",
+			"style": {
+				"navigationBarTitleText": "个人信息 ---- 昵称",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/safety/realName",
+			"style": {
+				"navigationBarTitleText": "实名认证",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/safety/editPayPassword",
+			"style": {
+				"navigationBarTitleText": "修改交易密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/safety/editPassword",
+			"style": {
+				"navigationBarTitleText": "修改登录密码",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/safety/safety",
+			"style": {
+				"navigationBarTitleText": "安全中心",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/payment/payment",
+			"style": {
+				"navigationBarTitleText": "收款信息",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/payment/addPayment",
+			"style": {
+				"navigationBarTitleText": "添加收款方式",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/payment/addBank",
+			"style": {
+				"navigationBarTitleText": "添加---绑定银行卡",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/exchange/exchange",
+			"style": {
+				"navigationBarTitleText": "C2C",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/exchange/confirmOrder",
+			"style": {
+				"navigationBarTitleText": "C2C ---- 确认订单",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/exchange/release",
+			"style": {
+				"navigationBarTitleText": "C2C ---- 买卖单发布",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/exchange/releaseRecord",
+			"style": {
+				"navigationBarTitleText": "C2C ---- 买卖单记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/exchange/releaseDetails",
+			"style": {
+				"navigationBarTitleText": "买卖单记录 --- 记录详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/exchange/orderDetails",
+			"style": {
+				"navigationBarTitleText": "C2C ---- 下单成功",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/exchange/exchangeRecord",
+			"style": {
+				"navigationBarTitleText": "C2C ---- 记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/exchange/exchangeDetails",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "C2C --- 订单详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/exchange/upload",
+			"style": {
+				"navigationBarTitleText": "C2C --- 上传付款凭证",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/exchange/appeal",
+			"style": {
+				"navigationBarTitleText": "C2C --- 申诉",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/payment/addMethods",
+			"style": {
+				"navigationBarTitleText": "添加微信或者银行卡",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/release/release",
+			"style": {
+				"navigationBarTitleText": "发布动态",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/asset/asset",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "我的资产",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/recharge/recharge",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "充币",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/recharge/rechargeRecord",
+			"style": {
+				"navigationBarTitleText": "充币记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/withdraw/withdraw",
+			"style": {
+				"navigationBarTitleText": "提币",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/withdraw/withdrawRecord",
+			"style": {
+				"navigationBarTitleText": "提币记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/withdraw/recordDetails",
+			"style": {
+				"navigationBarTitleText": "提币记录 ---- 详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/myCircle/myCircle",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "我的朋友圈",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/chat/chat",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "聊天",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false 
+				}
+			}
+		},{
+			"path": "pages/chat/groupChat",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "群聊",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false 
+				}
+			}
+		},{
+			"path": "pages/chat/addGroupChat",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "发起群聊",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false 
+				}
+			}
+		},{
+			"path": "pages/chat/addFriends",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "添加好友",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false 
+				}
+			}
+		},{
+			"path": "pages/chat/more",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "更多",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false 
+				}
+			}
+		},{
+			"path": "pages/chat/myCircle",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "朋友圈",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/chat/people",
+			"style": {
+				"navigationBarTitleText": "查看更多群成员",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false 
+				}
+			}
+		},{
+			"path": "pages/chat/morePeople",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "个人信息",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false 
+				}
+			}
+		},{
+			"path": "pages/chatroom/chatroom", 
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "聊天室 ---- 单聊",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/groupChatRoom/groupChatRoom", 
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "聊天室 ---- 群聊",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/chat/editGroupName", 
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "聊天室 ---- 修改群名称",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/operate/login",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "登录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/emedia/index",
+			"style": {
+				"navigationBarTitleText": "会议",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/service/service",
+			"style": {
+				"navigationBarTitleText": "在线客服",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": true
+				}
+			}
+		},{
+			"path": "pages/share/share",
+			"style": {
+				"navigationBarTitleText": "邀请好友",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "ECD生态",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		"color": "#A5A5A5",
+		"selectedColor": "#0755C3",
+		"borderStyle": "rgba(0, 34, 122, 0.1)",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabbar/icon-tabbar-1.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-1-active.png",
+				"text": "首页"
+			}, {
+				"pagePath": "pages/product/product",
+				"iconPath": "static/tabbar/icon-tabbar-2.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-2-active.png",
+				"text": "理财"
+			}, {
+				"pagePath": "pages/chat/chat",
+				"iconPath": "static/tabbar/icon-tabbar-3.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-3-active.png",
+				"text": "社交"
+			},{
+				"pagePath": "pages/exchange/exchange",
+				"iconPath": "static/tabbar/icon-tabbar-4.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-4-active.png",
+				"text": "C2C"
+			},{
+				"pagePath": "pages/user/user",
+				"iconPath": "static/tabbar/icon-tabbar-5.png",
+				"selectedIconPath": "static/tabbar/icon-tabbar-5-active.png",
+				"text": "我的"
+			}
+		]
+	}
+}

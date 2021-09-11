@@ -1,0 +1,115 @@
+.main {
+	@include flexCenterColumn;
+	height: 100vh;
+}
+
+.bgBox {
+	text-align: center;
+	width: 100%;
+	background: url(../../static/share/img-share-01.jpg);
+	background-size: 100% auto;
+	background-position: center top;
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	left: 0;
+	top: 0;
+
+	&-wrapper {
+		@include fullImage;
+	}
+}
+
+.titleBox {
+	margin-top: 120upx;
+	margin-bottom: 240upx;
+	&-wrapper {
+		width: 750upx;
+		@include fullImage;
+	}
+}
+
+.planeBox {
+	// // position: absolute;
+	// bottom: 30upx;
+	position: relative;
+	width: 100%;
+	flex: 1;
+	padding: 0 30upx;
+
+	&-wrapper {
+		@include flexCenterColumn;
+		background-color: #142224;
+		border-radius: 15upx;
+		padding: 60upx;
+		padding-top: 240upx;
+	}
+	
+	&-gift{
+		width: 100%;
+		@include fullImage;
+		position: absolute;
+		top: -180upx;
+	}
+
+	&-shareBox {
+		text-align: center;
+		&__label {
+			color: #333333;
+			font-size: 32upx;
+			margin-bottom: 15upx;
+		}
+
+		&__data {
+			@include flexCenter;
+			color: #333333;
+			font-size: 44upx;
+			font-weight: 300;
+			position: relative;
+		}
+
+		&__copy {
+			position: absolute;
+			right: -50upx;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 40upx;
+			@include fullImage;
+		}
+	}
+
+	&-qrcode {
+		width: 100%;
+		&__wrapper {
+			@include flexCenterColumn;
+			padding: 30upx;
+			border-radius: 15upx;
+		}
+
+		&__code {
+			width: 280upx;
+			padding: 15upx;
+			background-color: #ffffff;
+			border-radius: 15upx;
+			margin-bottom: 30upx;
+			@include fullImage;
+		}
+
+		&__note {
+			@include flexCenter;
+			color: #ffffff;
+			text-align: center;
+			font-size: 28upx;
+			text {
+				margin-right: 15upx;
+			}
+			image {
+				width: 40upx;
+			}
+		}
+	}
+
+	&-button {
+		width: 100%;
+	}
+}

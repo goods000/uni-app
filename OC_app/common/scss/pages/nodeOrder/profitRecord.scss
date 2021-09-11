@@ -1,0 +1,43 @@
+.profitRecord{
+	&-list{
+		&-header{
+			background: $globalColor-white;
+			margin-bottom: 20upx;
+			&-title{
+				padding: 26upx 32upx;
+				color: $globalColor-style;
+				font-size: 28upx;
+				text{
+					color: #666666;
+					font-size: 24upx;
+					margin-left: 10upx;
+				}
+			}
+			&__item{
+				border-bottom: 1px solid $globalColor-border;
+				margin: 0 20upx;
+				&--info{
+					@include flexBetween;
+					flex-wrap: wrap;
+					padding: 0 15upx 22upx;
+				}
+				&--txt:nth-child(1),&--txt:nth-child(2){margin-bottom: 30upx;}
+				&--txt{
+					@include flexLeft;
+					// padding: 0 50upx;
+					width: 50%;
+					color: #666666;
+					font-size: 24upx;
+					text{
+						color: $globalColor-style;
+					}
+				}
+			}
+			&__time{
+				color: #666666;
+				padding: 14upx 34upx;
+				font-size: 20upx;
+			}
+		}
+	}
+}

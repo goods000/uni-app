@@ -1,0 +1,97 @@
+.bgBox {
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	@include fullImage;
+}
+
+.main {
+	position: relative;
+	z-index: 1;
+}
+
+.infoBox {
+	padding: 0 30upx;
+	padding-top: 280upx;
+	&-wrapper {
+	}
+
+	&-item {
+		background-color: #0f1d1f;
+		padding: 30upx;
+		border-radius: 15upx;
+	}
+
+	&-header {
+		@include flexLeft;
+		border-bottom: 1upx dashed #666666;
+		padding-bottom: 30upx;
+		margin-bottom: 30upx;
+	}
+
+	&-label {
+		font-size: 26upx;
+		color: #ffffff;
+		font-weight: 300;
+	}
+
+	&-data {
+		color: $globalColor-style;
+		font-size: 32upx;
+		font-weight: bold;
+	}
+
+	&-form {
+		position: relative;
+		z-index: 1;
+
+		&__list {
+			&-label {
+				font-size: 32upx;
+				margin-bottom: 15upx;
+				color: #ffffff;
+				font-weight: bold;
+			}
+
+			&-input {
+				@include flexLeft;
+				margin-bottom: 15upx;
+				padding: 30upx;
+				border: 1upx solid #666666;
+				background-color: #1d2a2c;
+				border-radius: 8upx;
+				input {
+					flex: 1;
+					color: #ffffff;
+					font-size: 28upx;
+					font-weight: 300;
+				}
+			}
+
+			&-placeholder {
+				color: #cccccc;
+				font-size: 28upx;
+				font-weight: 300;
+			}
+
+			&-note {
+				color: #666666;
+				font-size: 24upx;
+				font-weight: 300;
+				&--highlight {
+					color: #ffffff;
+					margin-left: 15upx;
+				}
+			}
+		}
+	}
+}
+
+.initButton {
+	padding: 0 30upx;
+	margin-top: 120upx;
+}

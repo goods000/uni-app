@@ -1,0 +1,267 @@
+.main {
+	position: relative;
+	z-index: 1;
+}
+
+.highStyleBg {
+	@include themeBgColorValue(#EC6B00, #171D24) width: 100%;
+	height: calc(300upx + var(--status-bar-height));
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.planeBox {
+	@include themeBgColor('globalColor-pageStyle');
+	padding: 30upx;
+	// position: fixed;
+	// left: 0;
+	width: 100%;
+	// top: calc(var(--status-bar-height) + #{$global-header-height});
+	z-index: 2;
+
+	&-wrapper {
+		@include themeBgColor('globalColor-bgStyle');
+		@include initShadow;
+		@include flexCenterColumn;
+		height: 200upx;
+		border-radius: 18upx;
+		padding: 0 30upx;
+	}
+
+	&-itemBox {
+		@include flexCenter;
+		width: 100%;
+		// padding: 45upx 0;
+
+		&__item {
+			@include flexCenterColumn;
+			flex: 1;
+
+			&-data {
+				@include themeColor('globalColor-themeStyle');
+				font-size: 32upx;
+				font-weight: bold;
+				margin-bottom: 15upx;
+				
+				&--arrow{
+					background-position: right center;
+					background-size: 14upx 26upx;
+					background-repeat: no-repeat;
+					padding-right: 20upx;
+					background-image: url(@/static/public/icon-arrow-right-grey.png);
+				}
+			}
+
+			&-label {
+				@include themeColor('globalColor-fontSubStyle');
+				font-size: 24upx;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.filterBox {
+	// position: fixed;
+	// top: calc(var(--status-bar-height) + #{$global-header-height} + 200upx + 60upx);
+	// left: 0;
+	// z-index: 2;
+	width: 100%;
+
+	&-wrapper {
+		@include themeBgColor('globalColor-pageStyle');
+		@include flexBetween;
+		height: 90upx;
+		padding: 0 30upx;
+	}
+
+	&-title {
+		@include themeColor('globalColor-fontStyle');
+		@include initBeforeHolder;
+		font-size: 32upx;
+		font-weight: bold;
+		flex: 1;
+	}
+
+	&-date {
+		@include themeColor('globalColor-fontSubStyle');
+		@include flexCenter;
+		@include fullImage;
+		@include themeBgImg('@/static/public/icon-filter-light.png', '@/static/public/icon-filter-dark.png');
+		min-width: 40upx;
+		min-height: 40upx;
+		background-repeat: no-repeat;
+		background-size: 40upx 40upx;
+		background-position: right center;
+		padding-right: 50upx;
+		font-size: 24upx;
+		font-weight: 300;
+	}
+}
+
+.initScrollTabsBox {
+	@include themeBgColor('globalColor-pageStyle');
+	position: sticky;
+	top: calc(var(--status-bar-height) + #{$global-header-height});
+	left: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+.infoBox {
+	padding-top: 60upx;
+
+	&-wrapper {
+		@include flexCenter;
+		padding: 30upx;
+	}
+
+	&-item {
+		flex: 1;
+
+		&__label {
+			@include initBeforeHolder;
+			color: #999999;
+			font-size: 28upx;
+			font-weight: 300;
+			margin-bottom: 15upx;
+		}
+
+		&__data {
+			color: #101010;
+			font-size: 36upx;
+			font-weight: bold;
+			padding: 0 20upx;
+		}
+	}
+}
+
+.listBox {
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-title {
+		@include flexBetween;
+		margin-bottom: 30upx;
+
+		&__label {
+			@include themeBgColor('globalColor-fontStyle');
+			@include initBeforeHolder;
+			font-size: 32upx;
+			font-weight: bold;
+			flex: 1;
+		}
+
+		&__filter {
+			@include themeBgImg('@/static/public/icon-filter-light.png','@/static/public/icon-filter-dark.png')
+			@include themeBgColor('globalColor-fontSubStyle');
+			@include flexCenter;
+			@include fullImage;
+			min-width: 40upx;
+			min-height: 40upx;
+			background-repeat: no-repeat;
+			background-size: 40upx 40upx;
+			background-position: right center;
+			padding-right: 50upx;
+			font-size: 24upx;
+			font-weight: 300;
+		}
+	}
+
+	&-list {
+		@include themeBgColor('globalColor-bgStyle');
+		@include initShadow;
+		padding: 30upx 30upx 15upx;
+		border-radius: 24upx;
+		margin-bottom: 30upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&__header {
+			@include flexLeft;
+			margin-bottom: 15upx;
+		}
+
+		&__info {
+			flex: 1;
+		}
+
+		&__row {
+			@include flexLeft;
+		}
+
+		&__icon {
+			@include fullImage;
+			width: 42upx;
+			margin-right: 15upx;
+		}
+
+		&__type {
+			@include themeColor('globalColor-fontStyle');
+			font-size: 32upx;
+			font-weight: 300;
+			margin-right: 8upx;
+		}
+
+		&__currencyName {
+			@include themeColor('globalColor-themeStyle');
+			font-size: 32upx;
+			font-weight: 300;
+		}
+
+		&__label {
+			@include themeColor('globalColor-fontSubStyle');
+			flex: 1;
+			font-size: 20upx;
+			font-weight: 300;
+
+			&:first-child {
+				text-align: left;
+			}
+
+			&:last-child {
+				text-align: right;
+			}
+		}
+	}
+
+	&-itemBox {
+		&__wrapper {
+			@include flexCenter;
+			flex-wrap: wrap;
+		}
+		&__item {
+			padding: 15upx 0;
+			width: 33.33%;
+
+			&:nth-child(3n) {
+				text-align: right;
+			}
+
+			&-data {
+				@include themeColor('globalColor-fontStyle');
+				font-size: 28upx;
+				font-weight: bold;
+
+				&--green {
+					@include themeColor('globalColor-green');
+				}
+
+				&--red {
+					@include themeColor('globalColor-red');
+				}
+			}
+
+			&-label {
+				@include themeColor('globalColor-fontSubStyle');
+				font-size: 20upx;
+				font-weight: 300;
+			}
+		}
+	}
+}

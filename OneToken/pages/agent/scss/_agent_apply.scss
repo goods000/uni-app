@@ -1,0 +1,99 @@
+.itemBox {
+	margin-bottom: 45upx;
+	&-wrapper {
+		@include flexBetween;
+		padding: 0 30upx;
+	}
+	&-item {
+		flex: 1;
+		&__label {
+			@include initBeforeHolder;
+			color: #999999;
+			font-size: 28upx;
+			font-weight: 300;
+		}
+
+		&__data {
+			color: $globalColor-fontStyle;
+			font-size: 36upx;
+			font-weight: bold;
+		}
+	}
+}
+
+.levelBox {
+	&-wrapper {
+		padding: 0 30upx 30upx;
+	}
+
+	&-title {
+		color: $globalColor-fontStyle;
+		font-size: 36upx;
+		font-weight: bold;
+	}
+
+	&-desc {
+		color: #666666;
+		font-size: 24upx;
+		font-weight: 300;
+		margin-bottom: 30upx;
+
+		&--highlight {
+			color: #be7b25;
+		}
+	}
+
+	&-list {
+		@include initShadow;
+		@include initTransition(0.4);
+		background-color: #ffffff;
+		padding: 30upx;
+		margin-bottom: 30upx;
+		border-radius: 20upx;
+
+		&--active {
+			background-color: $globalColor-style;
+		}
+
+		&__header {
+			margin-bottom: 30upx;
+		}
+
+		&__level {
+			@include fullImage;
+			width: 80upx;
+		}
+
+		&__itemBox {
+			@include flexBetween;
+			&-item {
+				@include justifiedLayout;
+				flex: 1;
+				font-size: 24upx;
+			}
+
+			&-label {
+				@include initTransition(0.4);
+				color: #999999;
+				font-size: 24upx;
+				font-weight: 300;
+				margin-bottom: 15upx;
+
+				.levelBox-list--active & {
+					color: #cccccc;
+				}
+			}
+
+			&-data {
+				@include initTransition(0.4);
+				color: $globalColor-fontStyle;
+				font-size: 24upx;
+				font-weight: 300;
+
+				.levelBox-list--active & {
+					color: #ffffff;
+				}
+			}
+		}
+	}
+}

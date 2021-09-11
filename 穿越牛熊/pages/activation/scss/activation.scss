@@ -1,0 +1,131 @@
+.main{
+	padding-bottom: calc(constant(safe-area-inset-bottom) + 30upx);
+	padding-bottom: calc(env(safe-area-inset-bottom) + 30upx);
+}
+
+.userInfoBox {
+	&-wrapper {
+		@include flexLeft;
+		padding: 30upx;
+	}
+
+	&-avatar {
+		@include initAvatar(80);
+		margin-right: 15upx;
+	}
+
+	&-content {
+		flex: 1;
+	}
+
+	&-title {
+		@include themeColor('globalColor-fontStyle');
+		font-size: 36upx;
+		font-weight: bold;
+	}
+
+	&-row {
+		@include flexLeft;
+		margin-bottom: 8upx;
+	}
+
+	&-level {
+		@include fullImage;
+		width: 84upx;
+		margin-left: 30upx;
+	}
+
+	&-msg {
+		@include themeColor('globalColor-fontSubStyle');
+		font-size: 24upx;
+	}
+
+	&-code {
+		@include themeColor('globalColor-fontSubStyle');
+		font-size: 24upx;
+	}
+	
+	&-setting{
+		width: 40upx;
+		height: 40upx;
+		background-size: 44upx 44upx;
+		background-repeat: no-repeat;
+		background-position: right center;
+		@include themeBgImg('@/static/mine/icon-setting-light.png','@/static/mine/icon-setting-dark.png')
+	}
+}
+
+.typeList{
+	@include flexBetween;
+	flex-wrap: wrap;
+	// &-list{
+	// }
+	&-item{
+		@include flexLeftColumn;
+		// background: #F0F0F0;
+		@include themeBgColor('globalColor-typeStyle');
+		border: 1px solid;
+		@include themeBorderColor('globalColor-inputBorderStyle');
+		border-radius: 16upx;
+		padding: 24upx 20upx 39upx;
+		width: 47%;
+		margin-bottom: 32upx;
+		position: relative;
+		&--active{
+			@include themeBgColor('globalColor-themeStyle');
+		}
+		&__day{
+			font-size: 32upx;
+			font-family: DINPro;
+			font-weight: 500;
+			// color: #0A273F;
+			@include themeColor('globalColor-fontTypeStyle');
+			&--active{
+				color: #FFFFFF !important;
+			}
+		}
+		&__usdt{
+			@include flexCenter;
+			align-items: flex-end;
+			&-num{
+				font-size: 60upx;
+				font-family: DINPro;
+				font-weight: 500;
+				// color: #0A273F;
+				@include themeColor('globalColor-fontTypeStyle');
+				&--active{
+					color: #FFFFFF !important;
+				}
+			}
+			&-company{
+				font-size: 32upx;
+				font-family: DINPro;
+				font-weight: 500;
+				// color: #0A273F;
+				@include themeColor('globalColor-fontTypeStyle');
+				&--active{
+					color: #FFFFFF !important;
+				}
+			}
+		}
+		&__image{
+			position: absolute;
+			right: 15upx;
+			bottom: 15upx;
+			width: 36upx;
+			image{
+				width: 100%;
+			}
+		}
+	}
+}
+
+.initFormBox{
+	padding: 0 30upx;
+	&-item{
+		&__label{
+			margin-top: 35upx;
+		}
+	}
+}
+

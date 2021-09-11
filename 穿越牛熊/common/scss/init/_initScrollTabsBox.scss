@@ -1,0 +1,67 @@
+.initScrollTabsBox{
+	@include flexLeft;
+	height: 60upx;
+	
+	&-control{
+        width: 750rpx;
+        flex-direction: row;
+        white-space: nowrap;
+		height: 100%;
+		
+		&__tabs{
+			@include themeColor('globalColor-fontStyle');
+			@include initTransition(0.4);
+			display: inline-flex;
+			align-items: center;
+			padding: 0 30upx;
+			font-size: 28upx;
+			font-weight: bold;
+			position: relative;
+			height: 100%;
+			
+			&::after{
+				content: '';
+				display: inline-block;
+				position: absolute;
+				left: 50%;
+				bottom: 0upx;
+				transform: translateX(-50%);
+				height: 6upx;
+				width: 0;
+				background-color: transparent;
+				@include initTransition(0.4);
+				@include themeBgColor('globalColor-themeStyle');
+			}
+			
+			&--active{
+				@include themeColor('globalColor-themeStyle');
+				&::after{
+					width: 28upx;
+				}
+			}
+		}
+	}
+	
+	&-content{
+		padding: 30upx;
+	}
+	
+	&-itemBox{
+		@include flexLeft;
+		
+		&__item {
+			@include flexCenterColumn;
+			width: 25%;
+			&-icon {
+				width: 100upx;
+				margin-bottom: 20upx;
+				@include fullImage;
+			}
+			&-label {
+				color: #282828;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+		}
+	}
+}

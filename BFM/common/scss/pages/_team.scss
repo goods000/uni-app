@@ -1,0 +1,151 @@
+.bgBox {
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	@include fullImage;
+}
+
+.main{
+	position: relative;
+	z-index: 1;
+}
+
+.itemBox {
+	padding: 0 30upx;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 30upx;
+	&-wrapper {
+		@include flexBetween;
+		align-items: stretch;
+	}
+
+	&-item {
+		@include flexCenterColumn;
+		justify-content: flex-end;
+		padding: 30upx 0;
+		flex: 1;
+		&:last-child {
+			border-bottom: 0;
+		}
+
+		&__data {
+			color: $globalColor-fontStyle;
+			font-size: 36upx;
+			font-weight: 300;
+			
+			&--level{
+				width: 90upx;
+				@include fullImage;
+			}
+		}
+
+		&__label {
+			font-weight: 300;
+			color: $globalColor-fontStyle;
+			font-size: 24upx;
+			margin-top: 15upx;
+		}
+	}
+}
+
+.tabsBox {
+	&-control {
+		@include flexCenter;
+		&__item {
+			flex: 1;
+			text-align: center;
+			font-size: 32upx;
+			font-weight: bold;
+			color: #ffffff;
+			// margin-right: 30upx;
+			padding: 30upx 0;
+			position: relative;
+			@include initTransition(0.4);
+			&:after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 8upx;
+				background-color: transparent;
+				position: absolute;
+				bottom: -1upx;
+				left: 50%;
+				transform: translateX(-50%);
+				border-radius: 4upx;
+				@include initTransition(0.4);
+			}
+			&--active {
+				color: $globalColor-style;
+				&:after {
+					width: 100%;
+					background-color: $globalColor-style;
+				}
+			}
+		}
+	}
+}
+
+
+.listBox {
+	&-wrapper {
+		background-color: $globalColor-bgStyle;
+	}
+	
+	&-header{
+		@include flexBetween;
+		border-bottom: 1upx solid #333333;
+		padding: 30upx;
+		font-size: 24upx;
+		font-weight: 300;
+		color: #999999;
+	}
+	
+	&-list {
+		@include flexBetween;
+		padding: 30upx;
+		font-size: 28upx;
+		font-weight: 300;
+		color: #ffffff;
+	}
+	
+	&-data{
+		@include justifiedLayout;
+		flex: 1;
+	}
+}
+
+.infoBox{
+	&-wrapper {
+		background-color: $globalColor-bgStyle;
+	}
+	
+	&-list {
+		@include flexBetween;
+		padding: 30upx;
+		
+		&:nth-child(2n+1){
+			background-color: #142224;
+		}
+		&:nth-child(2n){
+			background-color: #000f11;
+		}
+		
+		&__label{
+			@include initBeforeHolder;
+			font-size: 28upx;
+			color: #ffffff;
+			font-weight: 300;
+		}
+		
+		&__data{
+			color: $globalColor-style;
+			font-size: 28upx;
+			font-weight: 300;
+		}
+	}
+}

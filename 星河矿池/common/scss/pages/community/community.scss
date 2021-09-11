@@ -1,0 +1,333 @@
+.communityBox{
+	margin: 30upx;
+	&-list{
+		background: #FFFFFF;
+		border-radius: 20upx;
+		@include initShadow;
+		padding: 30upx;
+		@include flexBetween;
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 30upx;
+		}
+		&-price{
+			color: $globalColor-style;
+			font-size: 30upx;
+		}
+	}
+	
+	.tipsBox{
+		background: none;
+	}
+	
+	&-box{
+		.tipsBox{
+			&-right{
+				background-image: url('@/static/public/icon-next.png');
+				background-size: 25upx 24upx;
+				background-repeat: no-repeat;
+				background-position: right;
+				padding-right: 30upx;
+				&-title{
+					color: #3C3C3C;
+				}
+			}
+		}
+		&-list{
+			&:nth-child(1){border-top: none;}
+			border-top: 1px solid rgba(255, 192, 51, 1);
+			&__item{
+				margin: 0 56upx;
+				&-type{
+					@include flexLeft;
+					margin: 0 0 30upx;
+				}
+				image{
+					width: 60upx;
+					border-radius: 50%;
+				}
+				&-title{
+					color: #3C3C3C;
+					font-size: 28upx;
+					margin-left: 36upx;
+				}
+			}
+		}
+	}
+}
+
+.team{
+	position: relative;
+	z-index: 2;
+	&-Bg{
+		background: url(../../static/community/icon-community-bg.png);
+		background-size: 100% 100%;
+		background-position: center center; 
+		background-repeat: no-repeat;
+		// background: $globalColor-style;
+		// border-radius: 0 0 65% 65%;
+		width: 100%;
+		height: 220upx;
+		position: absolute;
+		top: 0;
+		left: 0px;
+		z-index: -1;
+	}
+}
+.record{
+	position: relative;
+	z-index: 2;
+	&-Bg{
+		background: url(../../static/community/icon-bg.png);
+		background-size: 100% 100%;
+		background-position: center center; 
+		background-repeat: no-repeat;
+		// background: $globalColor-style;
+		// border-radius: 0 0 65% 65%;
+		width: 100%;
+		margin-bottom: 56upx;
+		// height: 220upx;
+		// position: absolute;
+		// top: 0;
+		// left: 0px;
+		// z-index: 0;
+	}
+}
+.teamBox{
+	background: $globalColor-white;
+	border-radius: 28upx;
+	/* #ifdef H5 */
+	margin: 0upx 30upx 54upx;
+	/* #endif */
+	/* #ifdef APP-PLUS */
+	margin: 0upx 30upx 54upx;
+	/* #endif */
+	padding: 30upx;
+	&-top{
+		@include flexCenterColumn;
+		&-txt{
+			color: $globalColor-fontStyle;
+			font-size: 24upx;
+		}
+		&-count{
+			color: $globalColor-style;
+			font-size: 46upx;
+			margin: 6upx 0 30upx;
+		}
+	}
+	&-bottom{
+		@include flexBetween;
+		justify-content: space-around;
+		&-item{
+			@include flexCenterColumn;
+			&__num{
+				font-weight: bold;
+				font-size: 32upx;
+				color: $globalColor-fontStyle;
+			}
+			&__title{
+				font-size: 24upx;
+				color: #999999;
+				margin-top: 10upx;
+			}
+		}
+		&-line{
+			border-left: 1px solid $globalColor-border;
+			height: 34upx;
+			width: 2upx;
+		}
+	}
+}
+
+.teamList{
+	margin: 30upx 30upx;
+	&-header{
+		padding: 0 30upx 15upx;
+		@include flexBetween;
+		&-txt{
+			color: #999999;
+			font-size: 20upx;
+			flex:2;
+			&:nth-last-child(1){
+				text-align: right;
+			}
+		}
+	}
+	&-wrapper{
+		@include flexCenterColumn;
+		border-radius: 20upx;
+		background: $globalColor-white;
+		&-item:nth-last-child(1){
+			border-bottom: none;
+		}
+		&-height{
+			height: 70vh;
+		}
+		&-item{
+			@include flexBetween;
+			border-bottom: 1px solid $globalColor-border;
+			width: 100%;
+			padding: 24upx 28upx;
+			&__left{
+				flex: 2;
+				@include flexLeft;
+				&-account{
+					color: $globalColor-fontStyle;
+					// text-align: left;
+				}
+				image{
+					width: 52upx;
+					height: 52upx;
+					margin-right: 14upx;
+				}
+				&-num{
+					color: $globalColor-fontStyle;
+					font-size: 28upx;
+					flex: 2;
+					text-align: center;
+				}
+			}
+			&__time{
+				color: #999999;
+				font-size: 28upx;
+				flex: 2;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+.initTabs{
+	padding: 0 30upx;
+	&-control {
+		@include flexCenter;
+		position: relative;
+		border-radius: 18upx;
+		overflow: hidden;
+		background-color: #ffffff;
+		&__aniBg {
+			@include initTransition(0.4);
+			display: inline-block;
+			border-radius: 18upx;
+			width: 50%;
+			height: 100%;
+			background-color: $globalColor-style;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	
+		&__item {
+			@include flexCenter;
+			@include initTransition(0.4);
+			color: #101010;
+			font-size: 28upx;
+			font-weight: 300;
+			flex: 1;
+			padding: 20upx 0;
+			position: relative;
+			z-index: 1;
+			font-weight: bold;
+	
+			&--active {
+				color: $globalColor-white;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.total{
+	padding: 30upx;
+	position: relative;
+	&-wrapper{
+		@include flexLeftColumn;
+	}
+	&-title{
+		position: relative;
+		font-size: 32upx;
+		font-weight: bold;
+		color: $globalColor-white;
+		padding-left: 30upx;
+		&::before{
+			content: '';
+			display: inline-block;
+			height: 34upx;
+			width: 8upx;
+			border-radius: 8upx;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: $globalColor-white;
+		}
+	}
+	&-level{
+		display: contents;
+		&__image{
+			position: absolute;
+			top: 30upx;
+			right: 0;
+			background: $globalColor-white;
+			border-radius: 12upx 0 0 12upx;
+			padding: 10upx 30upx 10upx 10upx;
+			width: 25%;
+			image{
+				// width: 15vw;
+				width: 100%;
+				height: 50upx;
+			}
+		}
+	}
+	&-cion{
+		@include flexLeft;
+		margin: 30upx 0;
+		image{
+			width: 60upx;
+			margin-right: 10upx;
+		}
+		&__item{
+			@include flexLeftColumn;
+			&-name{
+				color: $globalColor-white;
+				font-size: 24upx;
+			}
+			&-num{
+				color: $globalColor-white;
+				font-size: 30upx;
+				font-weight: bold;
+			}
+		}
+	}
+	&-dataBox{
+		@include flexLeft;
+		width: 100%;
+		&__item{
+			@include flexLeftColumn;
+			width: 50%;
+			&-title{
+				color: #C06300;
+				font-size: 20upx;
+			}
+			&-data{
+				color: $globalColor-white;
+				font-size: 30upx;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

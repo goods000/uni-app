@@ -1,0 +1,103 @@
+page,.pages{
+	background: url(../../static/invite/icon-invite-bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+.invite{
+	&-title{
+		color: $globalColor-white;
+		font-size: 82upx;
+		font-family: WenYue XinQingNianTi (Authorization Required);
+		font-weight: bold;
+		margin: 60upx auto 95upx;
+		display: block;
+		text-align: center;
+	}
+	// &-bg{
+	// 	background: url(../../static/invite/icon-invite-bg.png);
+	// 	background-size: 100% 100%;
+	// 	background-repeat: no-repeat;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	z-index: 1;
+	// 	width: 100%;
+	// 	height: 700upx;
+	// }
+	&-box{
+		background: url(../../static/invite/icon-bg-top.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		border-radius: 20upx;
+		// position: absolute;
+		// z-index: 2;
+		// top: 550upx;
+		width: 80%;
+		margin: auto;
+		padding: 50upx 0 30upx;
+		text-align: center;
+		&-qrcode{
+			margin: 40upx auto 0upx;
+			text-align: center;
+			display: inline-block;
+			image{
+				width: 326upx;
+				height: 326upx;
+			}
+		}
+		&-title{
+			color: #666666;
+			font-size: 28upx;
+			width: 40%;
+			position: relative;
+			margin: auto;
+			line-height: 0px;
+			&::after{
+				content: '';
+				width: 24upx;
+				height: 2upx;
+				background: #333333;
+				position: absolute;
+				left: 0;
+			}
+			&::before{
+				content: '';
+				width: 24upx;
+				height: 2upx;
+				background: #333333;
+				position: absolute;
+				right: 0;
+			}
+		}
+		&-copy{
+			width: 28upx;
+			height: 28upx;
+			margin-left: 20upx;
+		}
+		&-code{
+			color: $globalColor-style;
+			font-size: 44upx;
+			font-weight: bold;
+			margin-top: 30upx;
+			@include flexCenter;
+		}
+		&-url{
+			color: #999999;
+			font-size: 28upx;
+			word-break: break-all;
+			margin: 30upx auto 50upx;
+			width: 74%;
+		}
+		
+		.initBtn{
+			background: $globalColor-style;
+			color: $globalColor-white;
+			letter-spacing: 6upx;
+			border-radius: 50upx;
+			width: 45%;
+			font-size: 24upx;
+			margin: 30upx auto;
+		}
+	}
+}

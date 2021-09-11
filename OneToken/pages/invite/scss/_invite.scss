@@ -1,0 +1,54 @@
+.main {
+	padding: 30upx;
+}
+
+.titleBox {
+	margin-bottom: 30upx;
+	&-title {
+		@include fullImage;
+		width: 292upx;
+		margin-bottom: 15upx;
+	}
+	&-desc {
+		color: #999999;
+		font-size: 24upx;
+		font-weight: 300;
+	}
+}
+
+.bgBox {
+	@include fullImage;
+	width: 100%;
+	margin-bottom: 45upx;
+}
+
+.listBox {
+	&-list {
+		@include initShadow;
+		@include flexLeft;
+		align-items: stretch;
+		background-color: #ffffff;
+		border-radius: 20upx;
+		margin-bottom: 30upx;
+
+		&__label {
+			padding: 30upx;
+			flex: 1;
+			color: #101010;
+			font-size: 32upx;
+			font-weight: 300;
+			@include initOneLine;
+		}
+
+		&__btn {
+			@include flexCenterColumn;
+			width: 180upx;
+			border-radius: 20upx;
+			background-color: #cb0101;
+			// padding: 0 30upx;
+			color: #ffffff;
+			font-size: 26upx;
+			font-weight: bold;
+		}
+	}
+}

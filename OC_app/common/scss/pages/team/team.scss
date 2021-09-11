@@ -1,0 +1,187 @@
+.team{
+	background: url(../../static/team/icon-team.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	padding: 32upx;
+	min-height: 500upx;
+	.teamBox{
+		background: url(../../static/team/icon-team-bg.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		padding: 20upx 32upx;
+		margin-top: 130upx;
+		&-asset{
+			@include flexBetweenColumn;
+			position: relative;
+			&-num{
+				color: $globalColor-style;
+				font-size: 60upx;
+			}
+			&-txt{
+				color: #666666;
+				font-size: 24upx;
+				margin-bottom: 20upx;
+			}
+			&-image{
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				color: #E3C38A;
+				font-size: 20upx;
+				background: url(../../static/team/icon-team-level.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				padding: 40upx 40upx 60upx;
+				white-space: nowrap;
+			}
+		}
+		&-list{
+			padding: 49upx 0 20upx;
+			@include flexLeft;
+			flex-wrap: wrap;
+			&-item:nth-child(1),&-item:nth-child(2){margin-bottom: 30upx;}
+			&-item{
+				width: 50%;
+				color: $globalColor-style;
+				font-size: 24upx;
+			}
+		}
+		&-level{
+			@include flexLeft;
+			padding: 10upx 16upx 10upx 20upx;
+			background: #BCD8FD;
+			border-radius: 24upx 0 0 24upx;
+			position: absolute;
+			right: -20upx;
+			image{
+				width: 28upx;
+				height: 28upx;
+			}
+			&-txt{
+				color: $globalColor-style;
+				font-size: 20upx;
+			}
+		}
+	}
+}
+
+.team_tabs{
+	margin-top: 12upx;
+	&-list{
+		@include flexBetween;
+		padding: 20upx 94upx 0;
+		background: #FFFFFF;
+		&-txt{
+			color: #999999;
+			font-size: 28upx;
+			padding-bottom: 12upx;
+			border-bottom:2px solid transparent;
+		}
+		.active{
+			color: $globalColor-style;
+			border-bottom:2px solid $globalColor-style;
+		}
+	}
+}
+.teamItemBox{
+	margin-bottom: 12upx;
+	background: $globalColor-white;
+	padding:  20upx 32upx;
+}
+.teamItem{
+	&-box{
+		padding: 10upx 0upx 35upx;
+		border-bottom: 1px solid #DDDDDD;
+		@include flexBetween;
+		&-left{
+			@include flexLeft;
+			&-image{
+				color: #E3C38A;
+				font-size: 14upx;
+				background: url(../../static/team/icon-team-level.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				padding: 20upx 20upx 30upx;
+				margin-right: 15upx;
+				white-space: nowrap;
+			}
+			&-news{
+				@include flexLeftColumn;
+				&__name{
+					color: #333333;
+					font-size: 32upx;
+					margin-bottom: 16upx;
+				}
+				&__node{
+					@include flexLeftColumn;
+					color: #999999;
+					font-size: 24upx;
+					white-space: nowrap;
+					text{
+						color: $globalColor-fontStyle;
+						font-size: 32upx;
+						white-space: nowrap;
+					}
+					image{
+						width: 24upx;
+						height: 24upx;
+					}
+				}
+				&__nodeTwo{
+					@include flexLeft;
+					color: #999999;
+					font-size: 24upx;
+					white-space: nowrap;
+					text{
+						color: $globalColor-style;
+						white-space: nowrap;
+					}
+					image{
+						width: 24upx;
+						height: 24upx;
+					}
+				}
+			}
+		}
+		&-right{
+			@include flexRightColumn;
+			&__num{
+				@include flexLeft;
+				color: #999999;
+				font-size: 24upx;
+				text{
+					color: $globalColor-style;
+					font-size: 24upx;
+				}
+				image{
+					width: 24upx;
+					height: 24upx;
+				}
+			}
+			&__count{
+				@include flexLeftColumn;
+				color: #999999;
+				font-size: 24upx;
+				margin-top: 16upx;
+				text{
+					color: $globalColor-fontStyle;
+					font-size: 32upx;
+				}
+			}
+			&__time{
+				color: #999999;
+				font-size: 24upx;
+				margin-top: 24upx;
+				text-align: right;
+			}
+		}
+	}
+	&-bottom{
+		@include flexBetween;
+		margin-top: 20upx;
+		&__info{
+			color: #999999;
+			font-size: 24upx;
+		}
+	}
+}

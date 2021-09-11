@@ -1,0 +1,73 @@
+.main{
+	padding-bottom: 100upx;
+}
+.ito{
+	&-header{
+		width: 100%;
+		image{
+			// width: 684upx;
+			// height: 400upx;
+			width: 90%;
+			height: 400upx;
+			margin: 44upx auto 33upx;
+			display: block;
+		}
+	}
+	&-title{
+		display: block;
+		margin: 2upx 0 11upx;
+		image{
+			width: 365upx;
+			height: 84upx;
+			margin: auto;
+		}
+	}
+}
+.itoBox{
+	margin: 0 32upx;
+	&-tips{
+		font-size: 26upx;
+		font-family: PingFang SC, PingFang SC-Bold;
+		font-weight: 700;
+		text-align: center;
+		color: $globalColor-fontStyle;
+		margin: 22upx 0 4upx;
+	}
+	&-news{
+		font-size: 20upx;
+		font-family: PingFang SC, PingFang SC-Bold;
+		font-weight: 700;
+		text-align: center;
+		color: #dddddd;
+	}
+	&-list{
+		@include flexBetween;
+		margin: 38upx 0 58upx;
+		&__item{
+			@include flexCenterColumn;
+			image{
+				width: 108upx;
+				height: 108upx;
+			}
+			text{
+				font-size: 32upx;
+				font-family: PingFang SC, PingFang SC-Bold;
+				font-weight: 700;
+				text-align: center;
+				color: $globalColor-fontStyle;
+				margin-top: 4upx;
+			}
+		}
+	}
+	&-wrapper{
+		@include flexLeftColumn;
+		&__tips{
+			font-size: 26upx;
+			font-family: PingFang SC, PingFang SC-Regular;
+			font-weight: 400;
+			text-align: left;
+			color: $globalColor-fontStyle;
+			line-height: 52upx;
+		}
+	}
+}

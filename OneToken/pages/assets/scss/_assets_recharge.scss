@@ -1,0 +1,184 @@
+.infoBox {
+	padding: 30upx;
+	margin-bottom: 30upx;
+}
+
+.selectBox {
+	// padding: 30upx 0;
+	&-wrapper {
+		@include flexBetween;
+		@include initShadow;
+		padding: 30upx;
+		border-radius: 20upx;
+		background-color: #FFFFFF;
+	}
+
+	&-label {
+		color: #666666;
+		font-weight: bold;
+		font-size: 28upx;
+	}
+
+	&-data {
+		@include flexRight;
+		color: $globalColor-fontStyle;
+		font-size: 32upx;
+		font-weight: 300;
+		background-image: url(@/static/public/icon-arrow-bottom-grey.png);
+		background-size: 26upx 14upx;
+		background-position: right center;
+		background-repeat: no-repeat;
+		padding-right: 45upx;
+	}
+}
+
+.filterBox {
+	margin-top: 30upx;
+	&-title {
+		color: $globalColor-fontStyle;
+		font-size: 28upx;
+		font-weight: bold;
+		margin-bottom: 15upx;
+	}
+	&-button {
+		@include flexLeft;
+		@include calcMargin(4);
+		&__btn {
+			@include initTransition(0.4);
+			font-size: 24upx;
+			font-weight: 300;
+			border-radius: 12upx;
+			padding: 8upx 15px;
+			background-color: #FFFFFF;
+			color: $globalColor-style;
+			border: 1upx solid $globalColor-style;
+			margin: 0 8upx;
+
+			&--active {
+				background-color: $globalColor-style;
+				color: #f7dd8e;
+				border: 1upx solid transparent;
+			}
+		}
+	}
+}
+
+.contentBox {
+	padding: 0 90upx;
+	margin-bottom: 30upx;
+	
+	&-wrapper {
+		@include flexCenterColumn;
+		@include initShadow;
+		padding: 60upx 0;
+		border-radius: 30upx;
+		background-color: #FFFFFF;
+	}
+}
+
+.qrcodeBox {
+	@include flexCenter;
+	margin: 0 auto;
+	padding: 30upx;
+	// background-color: #f7f6fb;
+	border-radius: 15upx;
+	overflow: hidden;
+	&-image {
+		// @include fullImage;
+		margin: 0 auto;
+		width: 380upx;
+		image{
+			width: 380upx;
+			height: 380upx;
+		}
+	}
+}
+
+.savaBtn {
+	margin-top: 30rpx;
+
+	&-btn {
+		@include flexCenter;
+		border: 1upx solid $globalColor-style;
+		// background-color: $globalColor-style;
+		color: $globalColor-style;
+		font-size: 28upx;
+		font-weight: 300;
+		border-radius: 15upx;
+		margin: 0 auto;
+		padding: 25upx 30upx;
+	}
+}
+
+.addressBox {
+	text-align: center;
+	margin-top: 30upx;
+
+	&-title {
+		color: #999999;
+		font-size: 28upx;
+		font-weight: 300;
+		margin-bottom: 15upx;
+	}
+
+	&-data {
+		color: $globalColor-fontStyle;
+		font-size: 28upx;
+		font-weight: 300;
+		width: 80%;
+		word-break: break-all;
+		margin: 0 auto;
+		margin-bottom: 15upx;
+	}
+
+	&-info {
+		color: $globalColor-green;
+		font-size: 24upx;
+		margin-bottom: 15upx;
+	}
+
+	&-button {
+		width: 40upx;
+		margin: 0 auto;
+		@include fullImage;
+	}
+}
+
+.tipsBox {
+	text-align: left;
+	padding: 30upx;
+
+	&-title {
+		font-size: 32upx;
+		font-weight: 300;
+		margin-bottom: 15upx;
+		text-align: left;
+		color: $globalColor-fontStyle;
+	}
+
+	&-content {
+		&__list {
+			font-size: 24upx;
+			color: #101010;
+		}
+	}
+}
+
+.init{
+	padding: 30upx;
+	&-wrapper{
+		box-shadow: 0 0 16upx 0upx rgba(147, 147, 147, 0.27);
+		padding: 30upx;
+	}
+	
+	&-title{
+		font-size: 32upx;
+		font-weight: 300;
+		margin-bottom: 15upx;
+	}
+	
+	&-input{
+		border-bottom: 1upx solid skyblue;
+		margin-bottom: 15upx;
+	}
+}

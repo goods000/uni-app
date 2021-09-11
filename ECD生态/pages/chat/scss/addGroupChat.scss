@@ -1,0 +1,50 @@
+page{
+	background: $globalColor-white;
+}
+
+.addGroupChat{
+	padding-bottom: 10vh;
+	&-list{
+		@include flexLeft;
+		position: relative;
+		padding: 20upx 0 20upx 40upx;
+		&__box{
+			width: 38upx;
+			height: 38upx;
+			background: url(../../static/public/icon-noChioce.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			&--active{
+				background: url(../../static/public/icon-chioce.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+		}
+		&__image{
+			width: 74upx;
+			height: 74upx;
+			border-radius: 50%;
+			margin:0 28upx;
+		}
+		&__title{
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: bold;
+			color: $globalColor-fontStyle;
+		}
+		&__line{
+			background: #EDF1F4;
+			width: 75%;
+			height: 2upx;
+			position:absolute;
+			bottom: 0;right: 0;
+		}
+	}
+	&-btn{
+		position: fixed;bottom: 0;left: 0;right: 0;margin: auto;
+		background: $globalColor-white;
+		.initBtn{
+			margin: 0 auto 60upx;
+		}
+	}
+}

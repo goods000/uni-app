@@ -1,0 +1,111 @@
+// 中间弹出模块样式
+.initPopup {
+	&-wrapper {
+		@include themeBgColor('globalColor-bgStyle');
+		border-radius: 15upx;
+		padding: 30upx;
+		width: 600upx;
+	}
+
+	&-title {
+		@include themeColor('globalColor-fontStyle');
+		@include initBeforeHolder;
+		font-size: 32upx;
+		font-weight: bold;
+		margin-bottom: 30upx;
+	}
+
+	&-desc {
+		@include themeColor('globalColor-fontSubStyle');
+		font-size: 28upx;
+		font-weight: 300;
+		margin-bottom: 30upx;
+
+		&--style {
+			@include themeColor('globalColor-themeStyle');
+		}
+	}
+
+	&-listBox {
+		width: 100%;
+		margin-bottom: 30upx;
+		
+		&__list {
+			@include flexBetween;
+			padding: 15upx 0;
+			
+			&-label {
+				@include themeColor('globalColor-fontSubStyle');
+				font-size: 28upx;
+				font-weight: 300;
+			}
+			
+			&-data {
+				@include themeColor('globalColor-fontStyle');
+				font-size: 28upx;
+				font-weight: 300;
+			}
+			
+			&-input {
+				@include themeColor('globalColor-fontStyle');
+				@include themeBorderColor('globalColor-themeStyle');
+				@include flexLeft;
+				flex: 1;
+				border-bottom: 1px solid;
+				padding-bottom: 15upx;
+				font-size: 32upx;
+				font-weight: 300;
+				
+				input {
+					flex: 1;
+					font-size: inherit;
+				}
+			}
+
+			&-placeholder {
+				@include themeColor('globalColor-placeholderStyle');
+				font-size: 32upx;
+				font-weight: 300;
+			}
+		}
+
+		&__note {
+			@include themeColor('globalColor-fontSubStyle');
+			font-size: 22upx;
+
+			&--highlight {
+				@include themeColor('globalColor-fontStyle');
+			}
+		}
+	}
+
+	&-buttonBox {
+		@include flexCenter;
+		
+		&__btn {
+			@include flexCenter;
+			flex: 1;
+			color: #99999d;
+			padding: 15upx 0;
+			border-radius: 14upx;
+			font-size: 32upx;
+			margin-right: 30upx;
+			border: 1px solid;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&--cancel {
+				@include themeBorderColor('globalColor-themeStyle');
+				@include themeColor('globalColor-themeStyle');
+			}
+
+			&--confirm {
+				@include themeBgColor('globalColor-themeStyle');
+				border: 1px solid transparent;
+				color: #ffffff;
+			}
+		}
+	}
+}

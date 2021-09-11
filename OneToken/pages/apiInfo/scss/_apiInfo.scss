@@ -1,0 +1,71 @@
+.infoBox {
+	margin-bottom: 30upx;
+	padding: 0 30upx;
+
+	&-wrapper {
+		@include flexLeft;
+		@include initShadow;
+		border-radius: 20upx;
+		background-color: #ffffff;
+		text-align: center;
+		padding: 30upx;
+	}
+
+	&-logo {
+		@include fullImage;
+		width: 42upx;
+		margin-right: 15upx;
+	}
+
+	&-title {
+		font-size: 32upx;
+		color: $globalColor-fontStyle;
+		font-weight: 300;
+	}
+}
+
+.listBox {
+	// padding: 30upx;
+	&-wrapper {
+		padding: 0 30upx;
+	}
+	&-list {
+		@include flexBetween;
+		margin-bottom: 30upx;
+
+		&__label {
+			font-size: 28upx;
+			font-weight: bold;
+			color: #999999;
+		}
+
+		&__data {
+			font-size: 28upx;
+			color: $globalColor-fontStyle;
+			font-weight: bold;
+			&--style {
+				color: $globalColor-style;
+			}
+		}
+	}
+}
+
+.copyrightBox {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	&-wrapper {
+		padding: 60upx 0;
+	}
+
+	&-title {
+		@include flexCenter;
+		width: 100%;
+		text-align: center;
+		padding: 30upx;
+		font-size: 20upx;
+		font-family: 300;
+		color: #999999;
+	}
+}

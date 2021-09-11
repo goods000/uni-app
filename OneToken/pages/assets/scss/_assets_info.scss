@@ -1,0 +1,122 @@
+.infoBox {
+	position: relative;
+	z-index: 1;
+	padding: 30upx;
+	&-wrapper {
+		padding-bottom: 30upx;
+		border-bottom: 1upx solid #333333;
+	}
+	&-title {
+		color: #FFFFFF;
+		font-size: 52upx;
+		margin-bottom: 30upx;
+		font-weight: bold;
+	}
+	&-itemBox {
+		@include flexCenter;
+
+		&__item {
+			@include justifiedLayout;
+			flex: 1;
+
+			&--long {
+				flex: 2;
+			}
+
+			&-label {
+				color: #99999d;
+				font-size: 24upx;
+			}
+
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+			}
+			&:last-child {
+				text-align: right;
+			}
+		}
+	}
+}
+
+.listBox {
+	position: relative;
+	z-index: 1;
+	&-wrapper {
+		padding: 0 30upx;
+	}
+	&-title {
+		@include initBeforeHolder;
+		color: $globalColor-fontStyle;
+		font-size: 32upx;
+		font-weight: bold;
+		margin-bottom: 15upx;
+	}
+	
+	&-list {
+		padding: 30upx 0;
+		border-bottom: 1upx solid #cccccc;
+		&__title {
+			@include initBeforeHolder;
+			color: $globalColor-fontStyle;
+			font-size: 32upx;
+			margin-bottom: 15upx;
+			font-weight: bold;
+		}
+	}
+
+	&-itemBox {
+		@include flexCenter;
+		&__item {
+			@include justifiedLayout;
+			flex: 1;
+			
+			&:last-child {
+				text-align: right;
+			}
+
+			&--long {
+				flex: 2;
+			}
+
+			&-label {
+				color: #999999;
+				font-size: 24upx;
+				font-weight: 300;
+			}
+
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.fixedBox {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: $globalColor-fontStyle;
+	z-index: 9;
+	box-shadow: 0upx 1upx 20upx rgba(0, 0, 0, 0.5);
+
+	&-wrapper {
+		@include flexCenter;
+	}
+	&-item {
+		padding: 30upx;
+		text-align: center;
+		&__icon {
+			width: 80upx;
+			@include fullImage;
+		}
+
+		&__label {
+			color: $globalColor-fontStyle;
+			font-size: 20upx;
+		}
+	}
+}

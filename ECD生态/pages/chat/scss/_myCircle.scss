@@ -1,0 +1,134 @@
+page,.pages{
+	background: $globalColor-white;
+}
+
+.userInfoBox{
+	margin-bottom: 24upx;
+	&-wrapper{
+		position: relative;
+		margin-top: 40upx;
+	}
+	&-remarks{
+		border-top: 1px solid #4A86DA;
+		margin: 0 0 0 30upx;
+		padding: 30upx 24upx 10upx 0;
+		@include flexBetween;
+		&__title{
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: $globalColor-white;
+		}
+		&__image{
+			width: 13upx;
+			height: 13upx;
+		}
+	}
+}
+.myCircle{
+	&-bgBox{
+		background: $globalColor-style;
+		padding-bottom: 22upx;
+	}
+	&-image{
+		position: absolute;
+		right: 40upx;
+		width: 166upx;
+		height: 68upx;
+		image{
+			width: 100%;
+		}
+	}
+	&-wrapper{
+		margin: 30upx 0upx 30upx 40upx;
+		padding: 10upx 27upx;
+		border-left: 2upx solid #999999;
+	}
+	&-list{
+		margin-bottom: 30upx;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+		
+		&__date{
+			font-size: 32upx;
+			font-family: DINPro;
+			font-weight: 500;
+			color: $globalColor-fontStyle;
+			position: relative;
+			
+			&::before {
+				content: '';
+				display: inline-block;
+				height: 20upx;
+				width: 20upx;
+				position: absolute;
+				left: -38upx;
+				top: 50%;
+				transform: translateY(-50%);
+				background: url(@/static/myCircle/icon-myCircle-step.png) no-repeat;
+				background-position: center center;
+				background-size: 20upx 20upx;
+			}
+		}
+		
+		&__title{
+			margin: 43upx 0 25upx;
+			font-size: 32upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: #0C1E37;
+			line-height: 46upx;
+			word-break: break-all;
+		}
+		&__imageList{
+			@include flexLeft;
+			// padding: 0 30upx;
+			flex-wrap: wrap;
+			width: 100%;
+			&-imageBox{
+				width: 31.33%;
+				margin: 0 3% 24upx 0;
+				height: 214upx;
+				overflow: hidden;
+				&:nth-child(3n){
+					margin: 0 0 24upx 0;
+				}
+				image{
+					width: 100%;
+					height: 100%;
+					// width: 214upx;
+					// height: 214upx;
+					border-radius: 12upx;
+				}
+			}
+		}
+	}
+	&-operate{
+		width: 100%;
+		@include flexBetween;
+		&__time{
+			width: 100%;
+			background: $globalColor-bgStyle;
+			height: 16upx;
+			margin-right: 14upx;
+		}
+		&__like{
+			@include flexRight;
+			image{
+				width: 36upx;
+				margin-right: 11upx;
+			}
+			&-title{
+				font-size: 28upx;
+				font-family: DINPro;
+				font-weight: 500;
+				color: $globalColor-fontStyle;
+				&--active{
+					color: #FF002D;
+				}
+			}
+		}
+	}
+}

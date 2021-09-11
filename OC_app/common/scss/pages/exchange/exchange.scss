@@ -1,0 +1,181 @@
+.exchange{
+	padding: 30upx 32upx 70upx;
+	&-header{
+		@include flexBetween;
+		&-left{
+			@include flexLeft
+			&-image{
+				width: 28upx;
+				height: 28upx;
+			}
+			&-type{
+				color: $globalColor-fontStyle;
+				font-weight: 800;
+				font-size: 32upx;
+				margin:0 26upx 0 12upx;
+			}
+			&-data{
+				border-radius: 4upx;
+				padding: 2upx 6upx;
+				font-size: 20upx;
+			}
+			.status_red{
+				color: #C7564D;
+				border: 1px solid #C7564D;
+			}
+			.status_green{
+				color: #38C467;
+				border: 1px solid #38C467;
+			}
+		}
+		&-image{
+			width: 32upx;
+			height: 32upx;
+		}
+	}
+	&-wrapper{
+		@include flexBetween;
+		
+	}
+	&-operateBox{
+		width: 50%;
+	}
+	&-tabs{
+		margin: 22upx 0 20upx;
+		@include flexBetween;
+		&-txt{
+			color: #999999;
+			font-size: 24upx;
+			width: 50%;
+			// width: 180upx;
+			height: 56upx;
+			padding: 10upx 0;
+			white-space: nowrap;
+			text-align: center;
+		}
+		&-txt:nth-child(1){
+			background: url(../../static/exchange/icon-exchange-01.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		&-txt:nth-last-child(1){
+			background: url(../../static/exchange/icon-exchange-02.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		.active{color: $globalColor-white;}
+		.active:nth-child(1){
+			background: url(../../static/exchange/icon-exchange-01-active.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		.active:nth-last-child(1){
+			background: url(../../static/exchange/icon-exchange-02-active.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+	}
+	&-ways{
+		picker{
+			background: url(../../static/exchange/icon-exchange-select.png);
+			background-size: 20upx 20upx;
+			background-repeat: no-repeat;
+			background-position: center right 10upx;
+			font-size: 20upx;
+			color: $globalColor-fontStyle;
+		}
+	}
+	&-priceBox{
+		@include flexBetween;
+		border: 1px solid $globalColor-bgStyle;
+		padding: 21upx 24upx 23upx;
+		margin-top: 21upx;
+		image{
+			width: 24upx;
+			height: 24upx;
+		}
+		&-price{
+			color: $globalColor-fontStyle;
+			font-weight: 800;
+			font-size: 28upx;
+		}
+	}
+	&-yue{
+		color: #999999;
+		font-size: 20upx;
+		margin: 9upx 0 21upx;
+	}
+	&-numBox{
+		@include flexBetween;
+		border: 1px solid $globalColor-bgStyle;
+		padding: 21upx 24upx 23upx;
+		input{
+			color: $globalColor-fontStyle;
+			font-size: 24upx;
+		}
+		&-txt{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			margin-left: 20upx;
+		}
+	}
+	&-available{
+		@include flexBetween;
+		margin: 9upx 0 47upx;
+		text{
+			color: #999999;
+			font-size: 20upx;
+		}
+	}
+	&-type{
+		@include flexLeft;
+		&-box{
+			&-title{
+				border: 1px solid #E5E5E5;
+				color: #E5E5E5;
+				padding: 3upx 0;
+				font-size: 20upx;
+				margin-right: 20upx;
+				width: 76upx;
+				text-align: center;
+			}
+		}
+		.active{
+			color: $globalColor-fontStyle;
+			border: 1px solid $globalColor-fontStyle;
+		}
+	}
+	&-turnover{
+		margin: 81upx 0 24upx;
+		&-txt{
+			color: #999999;
+			font-size: 20upx;
+		}
+		&-num{
+			margin-left: 22upx;
+			color: #666666;
+			font-size: 20upx;
+		}
+	}
+	&-btn{
+		color: $globalColor-white;
+		font-size: 24upx;
+		padding: 14upx;
+		width: 100%;
+		border-radius: 4upx;
+		text-align: center;
+		&--green{
+			background: #38C467;
+		}
+		&--red{
+			background: #C7564D;
+		}
+	}
+	&-dataTitle{
+		@include flexBetween;
+		&-txt{
+			color: #999999;
+			font-size: 20upx;
+		}
+	}
+}

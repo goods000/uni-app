@@ -1,0 +1,72 @@
+.main {
+	padding: 30upx;
+}
+
+.titleBox {
+	margin-bottom: 30upx;
+	&-title {
+		@include fullImage;
+		width: 100%;
+	}
+}
+
+.initButton {
+	margin-bottom: 30upx;
+}
+
+.listBox {
+	&-wrapper {
+		// padding-bottom: 30upx;
+	}
+	&-list {
+		@include flexLeft;
+		@include initShadow;
+		padding: 30upx;
+		border-radius: 20upx;
+		background-color: #ffffff;
+		margin-bottom: 30upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&::after {
+			content: '';
+			margin-left: 15upx;
+			display: inline-block;
+			width: 14upx;
+			height: 26upx;
+			background: url(@/static/public/icon-arrow-right-grey.png) no-repeat;
+			background-size: 14upx 26upx;
+			background-position: center;
+		}
+
+		&__icon {
+			@include fullImage;
+			width: 70upx;
+			margin-right: 15upx;
+		}
+
+		&__info {
+			flex: 1;
+		}
+
+		&__title {
+			@include initMoreLine(1);
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: bold;
+		}
+
+		&__date {
+			color: #999999;
+			font-size: 20upx;
+		}
+
+		&__status {
+			color: #cccccc;
+			font-size: 28upx;
+			font-weight: bold;
+		}
+	}
+}

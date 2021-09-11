@@ -1,0 +1,116 @@
+.main{
+	padding-bottom: 160upx;
+}
+
+.listBox {
+	&-wrapper {
+	}
+
+	&-header {
+		@include flexBetween;
+		@include themeColor('globalColor-fontSubStyle');
+		@include themeBgColor('globalColor-pageStyle');
+		font-size: 20upx;
+		font-weight: 300;
+		padding: 15upx 30upx;
+
+		position: sticky;
+		top: calc(var(--status-bar-height) + #{$global-header-height});
+		z-index: 8;
+	}
+
+	&-body {
+		@include themeBgColor('globalColor-bgStyle');
+		padding: 0 30upx;
+	}
+
+	&-list {
+		@include flexBetween;
+		@include themeColor('globalColor-fontStyle');
+		@include themeBorderColor('globalColor-holderStyle');
+		padding: 30upx 0;
+		border-bottom: 1px solid;
+	}
+
+	&-data {
+		flex: 1;
+
+		&--style {
+			@include themeColor('globalColor-themeStyle');
+		}
+
+		&:last-child {
+			text-align: right;
+		}
+	}
+}
+
+.fixedBox {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding-bottom: constant(safe-area-inset-bottom);
+	padding-bottom: env(safe-area-inset-bottom);
+
+	&-wrapper {
+		@include themeBgColor('globalColor-themeStyle');
+	}
+}
+
+.shareBox {
+	&-wrapper {
+		@include flexLeft;
+		padding: 0 30upx;
+		height: 160upx;
+	}
+
+	&-left {
+		@include flexLeft;
+		margin-right: 30upx;
+	}
+
+	&-logo {
+		@include fullImage;
+		width: 72upx;
+		border-radius: 15upx;
+		overflow: hidden;
+		margin-right: 15upx;
+	}
+
+	&-info {
+		&__title {
+			color: #ffffff;
+			font-size: 32upx;
+			font-weight: bold;
+			margin-bottom: 8upx;
+		}
+
+		&__desc {
+			color: #ffffff;
+			font-size: 24upx;
+			font-weight: 300;
+		}
+	}
+	
+	&-center{
+		flex: 1;
+	}
+	
+	&-profit{
+		@include themeColor('globalColor-themeSubStyle');
+		font-size: 42upx;
+		font-weight: bold;
+	}
+	
+	&-label{
+		color: #ffffff;
+		font-size: 24upx;
+		font-weight: 300;
+	}
+	
+	&-code{
+		padding: 4upx;
+		background-color: #FFFFFF;
+	}
+}

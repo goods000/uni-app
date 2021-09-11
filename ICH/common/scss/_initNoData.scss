@@ -1,0 +1,13 @@
+.initNoData{
+	// background-color: skyblue;
+	&::after{
+		content: '';
+		width: 100%;
+		height: 400upx;
+		display: inline-block;
+		background-image: url('~@/static/public/img-nodata-1.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 400upx 310upx;
+	}
+}

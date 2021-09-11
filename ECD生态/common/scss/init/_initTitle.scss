@@ -1,0 +1,48 @@
+.initTilte{
+	width: 100%;
+	position: relative;
+	@include flexLeft;
+	padding: 0 30upx;
+	margin-top: 67upx;
+	&--mt{
+		margin-top: 40upx !important;
+	}
+	&-title{
+		font-size: 32upx;
+		font-family: PingFang SC;
+		font-weight: bold;
+		color: $globalColor-fontStyle;
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		line-height: 60upx;
+		letter-spacing: 2upx;
+		&::before{
+			content: '';
+			background: $globalColor-titleStyle;
+			width: 100%;
+			height: 20upx;
+			position: absolute;
+			bottom: 5upx;
+			z-index: -1;
+		}
+	}
+	&-tips{
+		font-size: 32upx;
+		font-family: PingFang SC;
+		font-weight: bold;
+		color: $globalColor-fontStyle;
+	}
+	&-close{
+		position: absolute;
+		right: 30upx;
+		top: 0%;
+		width: 30upx;
+		height: 30upx;
+		image{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+

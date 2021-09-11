@@ -1,0 +1,165 @@
+.iconItemBox {
+	margin-bottom: 30upx;
+	&-wrapper {
+		@include flexCenter;
+		padding: 30upx;
+	}
+
+	&-item {
+		@include flexLeft;
+		flex: 1;
+
+		&__icon {
+			@include fullImage;
+			@include initShadow;
+			border-radius: 16upx;
+			width: 66upx;
+			margin-right: 15upx;
+		}
+		&__label {
+			font-size: 28upx;
+			font-weight: bold;
+			color: $globalColor-fontStyle;
+			margin-bottom: 4upx;
+		}
+
+		&__data {
+			font-size: 24upx;
+			color: #666666;
+		}
+	}
+}
+
+.followBox {
+	&-wrapper {
+		padding: 0 30upx 30upx;
+	}
+
+	&-title {
+		@include flexBetween;
+		margin-bottom: 30upx;
+
+		&__label {
+			@include initBeforeHolder;
+			font-size: 32upx;
+			color: $globalColor-fontStyle;
+			font-weight: bold;
+		}
+
+		&__more {
+			@include fullImage;
+			width: 30upx;
+			height: 30upx;
+			background: url(@/static/index/icon-notice-more.png) no-repeat;
+			background-size: 30upx 30upx;
+			background-position: center center;
+		}
+	}
+
+	&-item {
+		margin-bottom: 45upx;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	&-content{
+		// min-height: 200upx;
+		max-height: 700upx;
+		
+		&--autoHeight{
+			padding-top: 30upx;
+			max-height: 100%;
+		}
+	}
+
+	&-list {
+		@include flexBetween;
+		// @include initShadow;
+		background-color: #ffffff;
+		border-radius: 20upx;
+		padding: 30upx;
+		margin-bottom: 20upx;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	&-plane {
+		@include flexCenterColumn;
+		width: 100%;
+		height: 100%;
+		background-color: #ffffff;
+		// padding: 0 15upx;
+		// border-radius: 10upx;
+	}
+	&-row {
+		@include flexLeft;
+	}
+	
+	&-header {
+		@include flexLeft;
+		width: 100%;
+	}
+	
+	&-body {
+		width: 100%;
+	}
+	
+	&-avatar {
+		@include fullImage;
+		@include initAvatar(60);
+		margin-right: 8upx;
+	}
+	
+	&-name {
+		color: $globalColor-fontStyle;
+		font-size: 26upx;
+		font-weight: 300;
+	}
+	
+	&-type {
+		color: #999999;
+		font-size: 20upx;
+		margin-right: 5upx;
+	}
+	
+	&-itemBox {
+		@include flexBetween;
+		margin-top: 15upx;
+	
+		&__item {
+			@include justifiedLayout;
+			&-data {
+				color: $globalColor-fontStyle;
+				font-size: 32upx;
+				font-weight: bold;
+	
+				&--style {
+					color: #be7b25;
+				}
+			}
+	
+			&-label {
+				color: #999999;
+				font-size: 20upx;
+				font-weight: 300;
+			}
+		}
+	}
+	
+	&-button{
+		flex: 1;
+		@include flexRight;
+		
+		&__btn{
+			color: #be7b25;
+			border-radius: 6upx;
+			border: 1px solid #be7b25;
+			font-size: 26upx;
+			font-weight: 300;
+			padding: 10upx 15upx;
+		}
+	}
+}

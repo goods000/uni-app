@@ -1,0 +1,21 @@
+/* 初始化赋值 */
+@import '@/common/scss/_variables.scss';
+
+/* 字体 */
+@import '@/common/scss/_fonts.scss';
+
+/* 公用方法 */
+@import '@/common/scss/_mixins.scss';
+
+/* 初始化样式 */
+@import '@/common/scss/_public.scss';
+
+/* 组件样式 */
+@import '@/common/scss/init/_initHeader.scss';
+@import '@/common/scss/init/_initList.scss';
+@import '@/common/scss/init/_initButton.scss';
+@import '@/common/scss/init/_initTabs.scss';
+@import '@/common/scss/init/_initForm.scss';
+@import '@/common/scss/init/_initOrder.scss';
+@import '@/common/scss/init/_initPopup.scss';
+@import '@/common/scss/init/_initNoData.scss';

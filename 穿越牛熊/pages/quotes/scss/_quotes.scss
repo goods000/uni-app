@@ -1,0 +1,141 @@
+@each $theme-name, $theme-map in $themes {
+	[data-theme='#{$theme-name}'] {
+		background-color: map-get($theme-map, 'globalColor-holderStyle');
+	}
+}
+
+.main {
+	padding: 30upx 0;
+	
+	/* #ifdef APP-PLUS */
+	padding-top: calc(var(--status-bar-height) + 30upx);
+	/* #endif */
+}
+
+.quotesBox {
+	&-wrapper {
+		padding: 0 30upx;
+	}
+	
+	&-tabs {
+		margin-bottom: 15upx;
+	}
+	
+	&-content{
+		@include flexBetween;
+		flex: 3;
+	}
+
+	&-body {
+		@include themeBgColor('globalColor-bgStyle');
+		@include initShadow;
+		border-radius: 20upx;
+		// padding: 15upx 0;
+		min-height: calc(100vh - (#{$global-header-height} + var(--status-bar-height) + var(--window-bottom) + 90upx));
+	}
+
+	&-header {
+		@include themeColor('globalColor-fontSubStyle');
+		@include flexBetween;
+		font-size: 20upx;
+		padding: 0 30upx;
+	}
+
+	&-list {
+		@include themeBorderColorValue(#e6e6e6, #2d343d);
+		@include flexBetween;
+		padding: 15upx 30upx;
+		border-bottom: 1px solid;
+		
+		&:last-child{
+			border-bottom: 0;
+		}
+	}
+
+	&-data {
+		@include flexLeft;
+		flex: 1;
+		text-align: center;
+		padding: 8upx 0;
+		font-size: 24upx;
+
+		&--flex2 {
+			flex: 2;
+		}
+
+		&--flex3 {
+			flex: 3;
+		}
+
+		&:first-child {
+			text-align: left;
+			justify-content: flex-start;
+		}
+
+		&:last-child {
+			text-align: right;
+			justify-content: flex-end;
+		}
+	}
+
+	&-icon {
+		@include initAvatar(60);
+		background-color: #FFFFFF;
+		margin-right: 10upx;
+	}
+
+	&-info {
+		@include flexLeft;
+	}
+	
+	&-tradeCurrencyName{
+		@include themeColor('globalColor-fontStyle');
+		font-size: 32upx;
+		font-weight: 300;
+	}
+	
+	&-currencyName{
+		@include themeColor('globalColor-fontSubStyle');
+		font-size: 24upx;
+		font-weight: 300;
+	}
+	
+	&-quantity{
+		@include themeColor('globalColor-fontSubStyle');
+		font-size: 22upx;
+	}
+	
+	&-price{
+		@include themeColor('globalColor-fontStyle');
+		font-size: 32upx;
+		font-weight: 300;
+	}
+	
+	&-cny{
+		@include themeColor('globalColor-fontSubStyle');
+		font-size: 24upx;
+	}
+	
+	&-button {
+		// width: 100%;
+		@include flexRight;
+		
+		&__btn {
+			@include flexCenter;
+			padding: 10upx 30upx;
+			border-radius: 12upx;
+			color: #ffffff;
+			font-size: 28upx;
+			width: 120upx;
+			background-color: #999999;
+			
+			&--up {
+				@include themeBgColor('globalColor-green');
+			}
+			
+			&--down {
+				@include themeBgColor('globalColor-red');
+			}
+		}
+	}
+}

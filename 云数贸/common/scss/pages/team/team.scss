@@ -1,0 +1,100 @@
+.team{
+	position: relative;
+	z-index: 2;
+}
+.teamMain{
+	margin-bottom: 30upx;
+}
+
+.teamBox{
+	background: $globalColor-bgColor;
+	@include flexBetween;
+	padding: 30upx;
+	border-bottom: 1px solid $globalColor-border;
+	&-top{
+		@include flexLeftColumn;
+		&-txt{
+			color: $globalColor-white;
+			font-size: 24upx;
+			margin: 28upx 0 0upx;
+			white-space: nowrap;
+		}
+		&-count{
+			color: $globalColor-white;
+			font-size: 40upx;
+		}
+	}
+	&-bottom{
+		@include flexRight;
+		width: 70%;
+		&-item{
+			@include flexRightColumn;
+			margin-left: 52upx;
+			&__num{
+				font-weight: bold;
+				font-size: 32upx;
+				color: $globalColor-white;
+			}
+			&__title{
+				font-size: 24upx;
+				color: #999999;
+				margin-top: 10upx;
+			}
+		}
+		&-line{
+			border-left: 1px solid $globalColor-border;
+			height: 34upx;
+			width: 2upx;
+		}
+	}
+	&-wrapper{
+		background: $globalColor-bgColor;
+		padding: 30upx;
+	}
+	&-list{
+		@include flexBetween;
+		width: 100%;
+		&-item{
+			@include flexLeftColumn;
+			&:nth-last-child(1){
+				align-items: flex-end;
+			}
+			&__data{
+				font-weight: bold;
+				font-size: 32upx;
+				color: $globalColor-white;
+			}
+			&__title{
+				font-size: 24upx;
+				color: #999999;
+				margin-top: 10upx;
+			}
+		}
+	}
+}
+
+.teamList{
+	margin: 0 30upx;
+	&-height{
+		height: 52vh;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

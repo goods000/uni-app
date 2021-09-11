@@ -1,0 +1,125 @@
+.bgBox {
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	@include fullImage;
+}
+
+.main {
+	position: relative;
+	z-index: 1;
+	padding: 200upx 0 0;
+}
+
+.planeBox {
+	margin-bottom: 60upx;
+	padding: 0 30upx;
+	&-wrapper {
+		background-color: #0F1D1E;
+		border-radius: 120upx;
+		padding: 60upx;
+	}
+
+	&-icon {
+		@include fullImage;
+		width: 200upx;
+		margin-right: 45upx;
+	}
+
+	&-content {
+		flex: 1;
+	}
+
+	&-info {
+		@include flexLeft;
+		margin-bottom: 45upx;
+
+		&__label {
+			font-size: 24upx;
+			font-weight: bold;
+			margin-right: 15upx;
+		}
+
+		&__level {
+			font-size: 16upx;
+			font-weight: 500;
+			color: #ff6767;
+			border: 1upx solid #ff6767;
+			border-radius: 14rpx;
+			padding: 2upx 14upx;
+		}
+	}
+
+	&-title {
+		color: #ffffff;
+		font-size: 36upx;
+		font-weight: bold;
+	}
+
+	&-desc {
+		font-size: 20rpx;
+		font-weight: 500;
+		color: #999999;
+		margin-bottom: 15upx;
+	}
+
+	&-itemBox {
+		@include flexLeft;
+
+		&__item {
+			&-label {
+				font-size: 24rpx;
+				font-weight: 500;
+				color: #ffffff;
+
+				&::before {
+					content: '';
+					display: inline-block;
+					width: 16rpx;
+					height: 16rpx;
+					background: #2BFFB0;
+					border-radius: 4rpx;
+					margin-right: 15upx;
+				}
+			}
+
+			&-data {
+				font-size: 28rpx;
+				font-weight: 700;
+				color: #2BFFB0;
+			}
+		}
+	}
+
+	&-listBox {
+		&__list {
+			@include flexBetween;
+			margin-bottom: 45upx;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&-label {
+				font-size: 28rpx;
+				font-weight: 500;
+				color: #DDDDDD;
+			}
+
+			&-data {
+				font-size: 28rpx;
+				font-weight: 500;
+				color: #DDDDDD;
+
+				&--highlight {
+					color: #cd2828;
+					margin-right: 8upx;
+				}
+			}
+		}
+	}
+}

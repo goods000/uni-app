@@ -1,0 +1,146 @@
+.userInfoBox {
+	&-wrapper {
+		@include flexLeft;
+		padding: 30upx;
+	}
+
+	&-avatar {
+		@include initAvatar(80);
+		margin-right: 15upx;
+	}
+
+	&-userName {
+		@include themeColor('globalColor-fontStyle');
+		font-size: 32upx;
+		font-weight: bold;
+		margin-right: 30upx;
+	}
+
+	&-level {
+		@include fullImage;
+		width: 114upx;
+	}
+}
+
+.itemBox {
+	&-wrapper {
+		padding: 0 30upx;
+	}
+
+	&-title {
+		@include themeColor('globalColor-fontStyle');
+		font-size: 28upx;
+		font-weight: 300;
+		margin-bottom: 15upx;
+	}
+
+	&-body {
+		@include flexLeft;
+		flex-wrap: wrap;
+		padding-bottom: 15upx;
+	}
+
+	&-item {
+		@include initTransition(0.4);
+		@include themeBorderColor('globalColor-inputBorderStyle');
+		@include themeBgColor('globalColor-cardStyle');
+		@include themeColor('globalColor-fontStyle');
+		margin: 15upx 0;
+		margin-right: 30upx;
+		width: calc((100% - 60upx) / 3);
+		padding: 30upx 15upx;
+		border: 1px solid;
+		border-radius: 10upx;
+
+		&:nth-child(3n + 3) {
+			margin-right: 0;
+		}
+
+		&--active {
+			@include themeColorValue(#ffffff,#ffffff);
+			@include themeBorderColor('globalColor-themeStyle');
+			@include themeBgColor('globalColor-themeStyle');
+		}
+
+		&__label {
+			font-size: 24upx;
+			font-weight: 300;
+			margin-bottom: 8upx;
+		}
+
+		&__data {
+			font-size: 28upx;
+			font-weight: 300;
+		}
+	}
+}
+
+.messageBox {
+	@include themeBorderColorValue(#e6e6e6,#2d343d);
+	border-top: 16upx solid;
+	
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-title {
+		@include themeColor('globalColor-fontStyle');
+		font-size: 32upx;
+		font-weight: bold;
+		margin-bottom: 45upx;
+	}
+
+	&-body {
+		@include flexCenter;
+	}
+
+	&-item {
+		@include flexCenterColumn;
+		flex: 1;
+
+		&__icon {
+			@include fullImage;
+			width: 86upx;
+			margin-bottom: 20upx;
+		}
+
+		&__title {
+			@include themeColor('globalColor-fontStyle');
+			font-size: 28upx;
+			font-weight: 300;
+		}
+
+		&__desc {
+			@include themeColor('globalColor-themeStyle');
+			font-size: 24upx;
+			font-weight: bold;
+		}
+	}
+}
+
+.fixedBox {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	
+	&-wrapper {
+		padding: 30upx;
+		padding-bottom: calc(constant(safe-area-inset-bottom) + 30upx);
+		padding-bottom: calc(env(safe-area-inset-bottom) + 30upx);
+	}
+	
+	&-link {
+		@include flexCenter;
+		width: 100%;
+		text-align: center;
+		padding: 30upx;
+		font-size: 24upx;
+		font-family: 300;
+		
+		&__btn{
+			@include themeColor('globalColor-themeStyle');
+			text-decoration: underline;
+		}
+	}
+}
