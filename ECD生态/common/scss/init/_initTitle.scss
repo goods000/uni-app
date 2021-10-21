@@ -27,6 +27,29 @@
 			z-index: -1;
 		}
 	}
+	&-style{
+		font-size: 32upx;
+		font-family: PingFang SC;
+		font-weight: bold;
+		color: $globalColor-fontStyle;
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		line-height: 60upx;
+		letter-spacing: 2upx;
+		padding-left: 25upx;
+		&::before{
+			content: '';
+			width: 8upx;
+			height: 36upx;
+			background: $globalColor-style;
+			border-radius: 4px;
+			position: absolute;
+			bottom: 10upx;
+			left: 0;
+			z-index: -1;
+		}
+	}
 	&-tips{
 		font-size: 32upx;
 		font-family: PingFang SC;

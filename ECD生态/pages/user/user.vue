@@ -24,6 +24,12 @@
 			</view>
 			<view class="listBox">
 				<view class="listBox-wrapper">
+					<view class="listBox-list" @click="$tools.jump('../node/node')">
+						<view class="listBox-list__icon"><image src="../../static/user/icon-user-08.png" mode="widthFix"></image></view>
+						<view class="listBox-list__label">生态节点申请</view>
+					</view>
+				</view>
+				<view class="listBox-wrapper">
 					<view class="listBox-list" @click="$tools.jump('../asset/asset')">
 						<view class="listBox-list__icon"><image src="../../static/user/icon-user-01.png" mode="widthFix"></image></view>
 						<view class="listBox-list__label">我的资产</view>

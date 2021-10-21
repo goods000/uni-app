@@ -32,18 +32,19 @@
 				</view>
 			</view>
 			
-			<view class="asset-btnBox" v-if="selectType == 'CNDT'">
+			<!-- <view class="asset-btnBox" v-if="selectType == 'CNDT'">
 				<view class="asset-btn" @click="$tools.jump('../recharge/recharge',selectType)">
 					<image src="../../static/asset/icon-asset-recharge.png" mode="widthFix"></image>
 					<view class="asset-btn__title">充 值</view>
 				</view>
 			</view>	
-			<view class="asset-btnBox" v-if="selectType == 'USDT'">
+			<view class="asset-btnBox" v-if="selectType == 'USDT'"> -->
+			<view class="asset-btnBox">
 				<view class="asset-btn" @click="$tools.jump('../recharge/recharge',selectType)">
 					<image src="../../static/asset/icon-asset-recharge.png" mode="widthFix"></image>
 					<view class="asset-btn__title">充 值</view>
 				</view>
-				<view class="asset-btnWith" @click="$tools.jump('../withdraw/withdraw')">
+				<view class="asset-btnWith" @click="$tools.jump('../withdraw/withdraw',selectType)">
 					<image src="../../static/asset/icon-asset-recharge.png" mode="widthFix"></image>
 					<view class="asset-btnWith__title">提 现</view>
 				</view>

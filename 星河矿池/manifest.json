@@ -2,7 +2,7 @@
     "name" : "星河",
     "appid" : "__UNI__040FD9F",
     "description" : "",
-    "versionName" : "0.11",
+    "versionName" : "0.14",
     "versionCode" : 100,
     "transformPx" : false,
     /* 5+App特有相关 */
@@ -159,7 +159,7 @@
             }
         },
         "devServer" : {
-            "https" : true
+            "https" : false
         }
     },
     "mp-qq" : {

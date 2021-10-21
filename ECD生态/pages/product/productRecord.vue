@@ -3,7 +3,7 @@
 		<view class="header_bar header_fixed header_bg">
 			<view class="header">
 				<view class="header-back" @click="$tools.back(1)"></view>
-				<view class="header-title">理财记录</view>
+				<view class="header-title">委托记录</view>
 			</view> 
 		</view> 
 		<view class="record">
@@ -27,11 +27,11 @@
 					</view>
 					<view class="recordBox-list-box">
 						<view class="recordBox-list-item">
-							<view class="recordBox-list-item-title">存入时间</view>
+							<view class="recordBox-list-item-title">委托时间</view>
 							<view class="recordBox-list-item-status">{{ item.createTime }}</view>
 						</view>
 						<view class="recordBox-list-item">
-							<view class="recordBox-list-item-title">存入数量</view>
+							<view class="recordBox-list-item-title">委托数量</view>
 							<view class="recordBox-list-item-status">{{ item.quantity | number(2)}}</view>
 						</view>
 						<view class="recordBox-list-item">

@@ -29,8 +29,9 @@
 				</view>
 				<view class="listBox-wrapper">		
 					<view class="listBox-list listBox-list--no"> 
-						<view class="listBox-list__label">手机号</view>
-						<view class="listBox-list__phone">{{ phone }}</view>
+						<view class="listBox-list__label">{{ baseInfo.authType == 1 ? '邮箱号' : '手机号' }}</view>
+						<view class="listBox-list__phone">{{ baseInfo.authType == 1 ? email : phone }}</view>
+						<!-- <view class="listBox-list__phone">{{ baseInfo.account.substring(0,3) + "****" + baseInfo.account.substring(7) }}</view> -->
 					</view>
 				</view>
 			</view>
@@ -43,7 +44,9 @@
 	export default {
 		data() {
 			return {
+				baseInfo:{},
 				phone:'',
+				email:'',
 			}
 		},
 		onShow() {
@@ -56,7 +59,13 @@
 			getBaseInfo() {
 				this.$Ajax('/front/user/baseInfo', {}, res => {
 					if (res.code == 0) {
-						this.phone = res.obj.phone.substring(0,3) + "****" + res.obj.phone.substring(7)
+						this.baseInfo = res.obj;
+						if(res.obj.phone != null){
+							this.phone = res.obj.phone.substring(0,3) + "****" + res.obj.phone.substring(7)
+						}
+						if(res.obj.email != null){
+							this.email = res.obj.email.substring(0,3) + "****" + res.obj.email.substring(7);
+						}
 					}
 				});
 			},

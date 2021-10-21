@@ -28,7 +28,7 @@
 									@blur="blurInput(0)"
 									@focus="focusInput(0)"
 									placeholder-class="operateBox-item__placeholder"
-									placeholder="请输入您的手机号"
+									placeholder="请输入您的手机号/邮箱"
 									v-model="phone"
 								/>
 								<view class="operateBox-item__fixedBox">
@@ -97,7 +97,7 @@ export default {
 			}
 
 			if (this.phone == '') {
-				return this.$tools.toast('请输入您的手机号');
+				return this.$tools.toast('请输入您的手机号/邮箱');
 			}
 			this.$Ajax(
 				'/ajax/sendCode',

@@ -1,0 +1,483 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		// {
+		//     "path" : "pages/openPage/openPage",
+		//     "style" : {
+		// 		"navigationBarTitleText": "启动页",
+		// 		"navigationBarTextStyle": "black",
+		// 		"bounce": "none", //禁止回弹
+		// 		"app-plus": {
+		// 			"titleNView": false
+		// 		}
+		// 	}
+		// },
+		{
+		    "path" : "pages/firstPage/firstPage",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "登录注册检测",
+				"navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		    
+		},{
+		    "path" : "pages/login/first",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "选择登录注册页面",
+				"navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		    
+		},{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#fff",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false, //禁用原生导航栏
+					"scrollIndicator": "none"
+				}
+			}
+		},{
+			"path": "pages/index/news",
+			"style": {
+				"navigationBarTitleText": "资讯",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"titleNView": false,
+				"bounce": "none"
+			}
+		},{
+			"path": "pages/index/newsDetail",
+			"style": {
+				"navigationBarTitleText": "资讯详情",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"titleNView": false,
+				"bounce": "none"
+			}
+		},{
+			"path": "pages/index/notice",
+			"style": {
+				"navigationBarTitleText": "公告",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"titleNView": false,
+				"bounce": "none"
+			}
+		},{
+			"path": "pages/index/noticeDetail",
+			"style": {
+				"navigationBarTitleText": "公告详情",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"titleNView": false,
+				"bounce": "none"
+			}
+		},{
+			"path": "pages/service/service",
+			"style": {
+				"navigationBarTitleText": "客服",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/my/service",
+			"style": {
+				"navigationBarTitleText": "客服",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}
+        ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的",
+                "navigationBarTextStyle": "white",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "titleNView": false,
+                "bounce": "none"
+            }
+        }
+		,{
+		    "path" : "pages/my/certification",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "实名认证",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		}
+		,{
+		    "path" : "pages/my/safety",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "安全中心",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		},{
+		    "path" : "pages/my/language",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "系统语言",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		},{
+		    "path" : "pages/my/Mnemonic",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "备份助记词",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		}
+		,{
+		    "path" : "pages/my/myTeam",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "我的团队",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		}
+		,{
+		    "path" : "pages/my/teamShare",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "邀请好友",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		},{
+		    "path" : "pages/my/nickName",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "修改昵称",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		}
+        ,{
+            "path" : "pages/assets/assets",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "资产",
+                "navigationBarTextStyle": "white",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "titleNView": false,
+                "bounce": "none"
+            }
+            
+        },
+		{
+		    "path" : "pages/assets/myAssets",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "我的资产",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		    
+		},
+		{
+		    "path" : "pages/assets/recharge",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "充值",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		    
+		},
+		{
+		    "path" : "pages/assets/withdraw",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "提币",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		    
+		},
+		{
+		    "path" : "pages/assets/transfer",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "转账",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		    
+		},
+		{
+		    "path" : "pages/assets/rechargeRecord",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "充值记录",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		    
+		},
+		{
+		    "path" : "pages/assets/withdrawRecord",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "提币记录",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		    
+		},
+		{
+		    "path" : "pages/assets/transferRecord",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "转账记录",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		    
+		},
+		{
+		    "path" : "pages/assets/recordDetail",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "记录详情",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		    
+		},
+		// {
+  //           "path" : "pages/assets/welfareVideo",
+  //           "style" :                                                                                    
+  //           {
+  //               "navigationBarTitleText": "福利视频",
+  //               "navigationBarTextStyle": "white",
+  //               "navigationBarBackgroundColor": "#FFFFFF",
+  //               "titleNView": false,
+  //               "bounce": "none"
+  //           }
+            
+  //       }
+       {
+            "path" : "pages/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "登录",
+				"navigationBarTextStyle": "white",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "titleNView": false,
+                "bounce": "none"
+            }
+            
+        },{
+            "path" : "pages/login/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "注册",
+				"navigationBarTextStyle": "white",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "titleNView": false,
+                "bounce": "none"
+            }
+            
+        },{
+            "path" : "pages/login/backupWallet",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "备份钱包",
+				"navigationBarTextStyle": "white",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "titleNView": false,
+                "bounce": "none"
+            }
+            
+        },{
+            "path" : "pages/login/backupMnemonic",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "备份助记词",
+				"navigationBarTextStyle": "white",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "titleNView": false,
+                "bounce": "none"
+            }
+            
+        },{
+            "path" : "pages/login/mnemonic",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "验证助记词",
+				"navigationBarTextStyle": "white",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "titleNView": false,
+                "bounce": "none"
+            }
+            
+        },{
+            "path" : "pages/login/changePwd",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改登录密码",
+                "navigationBarTextStyle": "white",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "titleNView": false,
+                "bounce": "none"
+            }
+            
+        },{
+            "path" : "pages/login/changeTradepwd",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改交易密码",
+                "navigationBarTextStyle": "white",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "titleNView": false,
+                "bounce": "none"
+            }
+            
+        }
+        ,{
+            "path" : "pages/group/group",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "拼团",
+                "navigationBarTextStyle": "white",
+                "navigationBarBackgroundColor": "#FFFFFF",
+                "titleNView": false,
+                "bounce": "none"
+            }
+            
+        },
+		{
+		    "path" : "pages/group/groupRecord",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "拼团记录",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		    
+		},
+		{
+		    "path" : "pages/group/groupLimited",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "限时拼团",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		    
+		},
+		{
+		    "path" : "pages/group/groupSuccess",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "拼团成功",
+		        "navigationBarTextStyle": "white",
+		        "navigationBarBackgroundColor": "#FFFFFF",
+		        "titleNView": false,
+		        "bounce": "none"
+		    }
+		    
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "light",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#F8F8F8",
+		"scrollIndicator": "none"
+	},
+	"tabBar": {
+		"color": "#FFFFFF",
+		"selectedColor": "#FFCF1E",
+		"backgroundColor": "#040D32",
+		// "borderStyle": "white",
+		"borderStyle": "#2B3A5B",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/tarbar/icon-tarbar-1.png",
+			"selectedIconPath": "static/tarbar/icon-tarbar-1-active.png",
+			"text": "首页"
+		}
+		,{
+			"pagePath": "pages/group/group",
+			"iconPath": "static/tarbar/icon-tarbar-2.png",
+			"selectedIconPath": "static/tarbar/icon-tarbar-2-active.png",
+			"text": "众筹"
+		},{
+			"pagePath": "pages/assets/assets",
+			"iconPath": "static/tarbar/icon-tarbar-3.png",
+			"selectedIconPath": "static/tarbar/icon-tarbar-3-active.png",
+			"text": "资产"
+		}
+		, {
+			"pagePath": "pages/my/my",
+			"iconPath": "static/tarbar/icon-tarbar-4.png",
+			"selectedIconPath": "static/tarbar/icon-tarbar-4-active.png",
+			"text": "我的"
+		}
+		]
+	}
+	// "condition": { //模式配置，仅开发期间生效
+	// 	"current": 0, //当前激活的模式（list 的索引项）
+	// 	"list": [{
+	// 			"name": "chongzhi", //模式名称
+	// 			"path": "pages/login/first", //启动页面，必选
+	// 			"query": "value1=follow" //启动参数，在页面的onLoad函数里面得到。
+	// 		}
+
+	// 	]
+	// }
+}

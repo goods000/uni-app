@@ -1,0 +1,167 @@
+page{
+	background: $globalColor-white;
+}
+.product{
+	&-image{
+		image{
+			width: 100%;
+		}
+		margin: 18upx 0;
+	}
+	
+	&-checkboxBox{
+		margin: 360upx 30upx 30upx;
+	}
+}
+
+.initTabs{
+	@include flexRight;
+	position: absolute;
+	right: 30upx;
+	&-title{
+		font-size: 32upx;
+		font-family: DINPro;
+		font-weight: bold;
+		color: $globalColor-fontStyle;
+		position: relative;
+		margin-left: 56upx;
+		&--active{
+			color: $globalColor-style;
+			&::before{
+				content: '';
+				background: $globalColor-style;
+				width: 32upx;
+				height: 4upx;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: -11upx;
+			}
+		}
+	}
+}
+
+.profit{
+	&-wrapper{
+		background: url(../../static/product/icon-product-bg1.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		position: relative;
+		margin: 30upx 0 0;
+		padding: 70upx;
+		@include flexCenterColumn;
+		&__see{
+			position: absolute;
+			top: 42upx;
+			right: 74upx;
+			image{
+				width: 34upx;
+				height: 34upx;
+			}
+		}
+		&__title{
+			@include flexCenter;
+			font-size: 28upx;
+			font-family: DINPro;
+			font-weight: 500;
+			color: $globalColor-white;
+			text{
+				font-size: 28upx;
+				font-family: DINPro;
+				font-weight: 500;
+				text-decoration: underline;
+				color: $globalColor-white;
+			}
+			image{
+				width: 20upx;
+				height: 20upx;
+				margin-left: 12upx;
+			}
+			&--active{
+				-webkit-transform: rotate(180deg); /* 旋转角度 Chrome, Safari, Opera */
+				transform: rotate(180deg);/* 旋转角度*/
+			}
+		}
+		&__sum{
+			font-size: 56upx;
+			font-family: DINPro;
+			font-weight: bold;
+			color: $globalColor-white;
+			line-height: 41upx;
+			margin: 34upx 0 67upx;
+		}
+		&__item{
+			@include flexBetween;
+			width: 100%;
+			&-box{
+				@include flexCenterColumn;
+				&--title{
+					font-size: 24upx;
+					font-family: PingFang SC;
+					font-weight: 500;
+					color: $globalColor-white;
+				}
+				&--num{
+					font-size: 36upx;
+					font-family: DINPro;
+					font-weight: 500;
+					color: $globalColor-white;
+				}
+			}
+		}
+	}
+	&-list{
+		margin:38upx 30upx;
+		background: $globalColor-white;
+		@include initShadow;
+		border-radius: 20upx;
+		&__height{
+			height: calc(100vh - 417px);
+			width: 100%;
+		}
+		&__box{
+			padding: 0 0 30upx 0;
+			&-item{
+				@include flexBetween;
+				padding: 30upx 0;
+				margin: 0 30upx;
+				border-bottom: 1px solid rgba(230, 230, 230, 1);
+				&::nth-last-child(1){border: none;}
+				&-time{
+					color: $globalColor-fontStyle;
+					font-family: DINPro;
+					font-weight: 500;
+					font-size: 28upx;
+				}
+				&-price{
+					color: $globalColor-style;
+					font-family: DINPro;
+					font-weight: 500;
+					font-size: 28upx;
+				}
+			}
+		}
+	}
+}
+
+.nodeBox{
+	.initTilte{
+		margin: 35upx 0;
+	}
+	&-tips{
+		@include flexBetween;
+		margin: 30upx;
+		&__title{
+			font-size: 26upx;
+			font-family: PingFang SC;
+			font-weight: 500;
+			color: #999999;
+		}
+		&__price{
+			font-size: 26upx;
+			font-family: DINPro;
+			font-weight: 500;
+			color: $globalColor-style;
+		}
+	}
+}

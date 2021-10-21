@@ -18,7 +18,7 @@
 			</view>
 			
 			<view class="initTilte">
-				<view class="initTilte-title">选择币种</view><view class="initTilte-tips">：</view>
+				<view class="initTilte-title">委托资产</view><view class="initTilte-tips">：</view>
 				
 				<view class="initTabs">
 					<view class="initTabs-title" v-for="(item,index) in curList" :class="{'initTabs-title--active' : tabTitle == index}" @click="changeTabTitle(index,item.id,item.name)">{{item.name}}</view>
@@ -27,13 +27,13 @@
 			</view>
 			
 			<view class="initTilte">
-				<view class="initTilte-title">选择币种</view><view class="initTilte-tips">规则</view>
+				<view class="initTilte-title">规则选择</view><view class="initTilte-tips">：</view>
 			</view>
 			
 			<view class="product-table">
 				<view class="product-table__item">
 					<view class="product-table__box">周期</view>
-					<view class="product-table__box">利息</view>
+					<view class="product-table__box">收益</view>
 				</view>
 				<view class="product-table__item" v-for="(item,index) in ruleList" :key="index">
 					<view class="product-table__box">{{item.fclCycle}}天</view>
@@ -42,7 +42,7 @@
 			</view>
 			
 			<view class="initTilte">
-				<view class="initTilte-title">选择理财</view><view class="initTilte-tips">周期</view>
+				<view class="initTilte-title">选择委托</view><view class="initTilte-tips">周期</view>
 			</view>
 			
 			<view class="product-checkboxBox">
@@ -56,7 +56,7 @@
 					</view>
 				</view>
 				<view class="initButton">
-					<view class="initButton-btn initButton-btn--style" @click="Deposit()">立即存入</view>
+					<view class="initButton-btn initButton-btn--style" @click="Deposit()">立即委托</view>
 				</view>
 			</view>
 		</view>
@@ -68,7 +68,7 @@
 						<image :src="eyeType ? '../../static/product/icon-product-see.png' : '../../static/product/icon-roduct-nosee.png'" @click="toggleAssetsInfo()"  mode="widthFix"></image>
 					</view>
 					<view class="profit-wrapper__title" @click="open()">
-						<text>{{currencyName}}</text>持币总量
+						<text>{{currencyName}}</text>总量
 						<image src="../../static/public/icon-select-white.png" :class="navigateFlag ? 'profit-wrapper__title--active' : ''" mode=""></image>
 					</view>
 					<view class="profit-wrapper__sum">{{ eyeType ? asset.total : '***' | number(4) }}</view>
@@ -78,7 +78,7 @@
 							<view class="profit-wrapper__item-box--num">{{ eyeType ? asset.accEarnings : '***' | number(4) }}</view>
 						</view>
 						<view class="profit-wrapper__item-box">
-							<view class="profit-wrapper__item-box--title">存入数量({{currencyName}})</view>
+							<view class="profit-wrapper__item-box--title">委托数量({{currencyName}})</view>
 							<view class="profit-wrapper__item-box--num">{{ eyeType ? asset.quantity : '***' | number(4) }}</view>
 						</view>
 					</view>

@@ -68,9 +68,6 @@
 				// if(this.idCard == ''){
 				// 	return this.$tools.toast('请输入身份证号');
 				// }
-				// if(!/^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$)|(^[1-9]\d{5}\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{2}$/.test(this.idCard)){
-				// 	return this.$tools.toast('请输入正确的身份证号');
-				// }
 				// if(this.phone == ''){
 				// 	return this.$tools.toast('请输入手机号');
 				// }
@@ -80,9 +77,9 @@
 				if(this.num == ''){
 					return this.$tools.toast('请输入银行卡号');
 				}
-				if(!/^([1-9]{1})(\d{14}|\d{18})$/.test(this.num)){
-					return this.$tools.toast('请输入正确的银行卡号');
-				}
+				// if(!/^([1-9]{1})(\d{15}|\d{16}|\d{18})$/.test(this.num)){
+				// 	return this.$tools.toast('请输入正确的银行卡号');
+				// }
 				if(this.address == ''){
 					return this.$tools.toast('请输入银行地址');
 				}

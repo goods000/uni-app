@@ -4,15 +4,15 @@ let location = {
 let config = {
   // socketServer: 'im-api-v2-31.easemob.com',    // socket Server地址
   // 测试
-  // xmppURL: 'wss://im-api-wechat.easemob.com/websocket', // xmpp Server地址
-  // restServer: '//a1.easemob.com',      
-  // apiURL: "https://a1.easemob.com", 
-  // appkey: "1118210727047216#demo", // 自己申请的App key(需修改的地方)
+  xmppURL: 'wss://im-api-wechat.easemob.com/websocket', // xmpp Server地址
+  restServer: '//a1.easemob.com',      
+  apiURL: "https://a1.easemob.com", 
+  appkey: "1118210727047216#demo", // 自己申请的App key(需修改的地方)
   // 正式
-  xmppURL: 'wss://im-api-wechat-31.easemob.com/websocket', // xmpp Server地址
-  restServer: '//a31.easemob.com',               
-  apiURL: "https://a31.easemob.com", 
-  appkey: "1118210727047216#community", // 自己申请的App key(需修改的地方)
+  // xmppURL: 'wss://im-api-wechat-31.easemob.com/websocket', // xmpp Server地址
+  // restServer: '//a31.easemob.com',               
+  // apiURL: "https://a31.easemob.com", 
+  // appkey: "1118210727047216#community", // 自己申请的App key(需修改的地方)
   
   Host: "easemob.com", //配置成自己的服务器的主机号+端口号(需修改的地方)
   https: false, // 是否使用https

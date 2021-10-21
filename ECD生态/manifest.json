@@ -2,7 +2,7 @@
     "name" : "ECD生态",
     "appid" : "__UNI__4F2C15E",
     "description" : "",
-    "versionName" : "0.0.7",
+    "versionName" : "0.11",
     "versionCode" : "100",
     "transformPx" : false,
     /* 5+App特有相关 */
@@ -159,5 +159,10 @@
     },
     "uniStatistics" : {
         "enable" : false
+    },
+    "h5" : {
+        "devServer" : {
+            "https" : false
+        }
     }
 }

@@ -33,6 +33,33 @@
 	}
 }
 
+.exchangeHeader{
+	background: $globalColor-white;
+	display: flow-root;
+	@include flexLeft;
+	padding: 30upx;
+	&-listItem{
+		@include flexBetween;
+		&-title{
+			color: #999999;
+			font-size: 30upx;
+			font-weight: bold;
+		}
+		&-picker{
+			background: url(../../static/public/icon-select-grey.png) no-repeat;
+			background-position: right;
+			background-size: 26upx 26upx;
+			padding-right: 40upx;
+		}
+		.uni-input{
+			font-size: 52upx;
+			font-family: DINPro;
+			font-weight: bold;
+			color: $globalColor-fontStyle;
+		}
+	}
+}
+
 .safety{
 	&-phone{
 		color: $globalColor-fontStyle;

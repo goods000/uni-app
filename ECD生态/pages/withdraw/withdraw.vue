@@ -15,7 +15,8 @@
 					<!-- <view class="withdrawBox-listItem-title">选择币种</view> -->
 					<view class="withdrawBox-listItem-picker">
 						<picker @change="bindPickerChange" :value="index" :range="array" range-key="currencyName">
-							<view class="uni-input">{{array[index].currencyName}}</view>
+							<!-- <view class="uni-input">{{array[index].currencyName}}</view> -->
+							<view class="uni-input">{{selectType}}</view>
 						</picker>
 					</view>
 				</view> 
@@ -75,8 +76,9 @@
 				</view>
 				<view class="withdrawBox-tips">
 					<view class="withdrawBox-tips-title">温馨提示</view>
-					<view class="withdrawBox-tips-item">1.USDT钱包地址禁止充币除USDT之外的其他资产充币将不可找回。</view>
+					<view class="withdrawBox-tips-item">1.{{ selectType }}钱包地址禁止充币除{{ selectType }}之外的其他资产充币将不可找回。</view>
 					<view class="withdrawBox-tips-item">2.为保障资金安全，当您账户安全策略变更、密码修改、我们会对提币进行人工审核，请耐心等待工作人员电话或邮件联系。</view>
+					<view class="withdrawBox-tips-item">3. 请确认提币数量和对应币种钱包地址正确；提币到账时间是T+1天，24小时以内到账。</view>
 				</view>
 				<view class="initBtn" @click="sumbit()">提币</view>
 				
@@ -129,6 +131,9 @@
 				this.actual = this.num - this.charge;
 			}
 		},
+		onLoad(hash) {
+			this.type = hash.value1;
+		},
 		onShow() {
 			this.init();
 			// this.getWalletInfo();
@@ -153,18 +158,22 @@
 					res => {
 						if (res.code == 0) {
 							this.array = res.obj;
-							this.array.forEach(item => {
+							this.array.forEach((item,index) => {
 								item.label = item.currencyName;
 								item.value = item.currencyId;
+								if(item.currencyName == this.type){
+									this.selectType = this.array[index].currencyName
+									this.currencyId = this.array[index].currencyId
+								}
 							});
 							// console.log(JSON.stringify(this.array));
 							
-							if(this.selectType == ''){
-								this.selectType = this.array[0].currencyName;
-							}
-							if(this.currencyId == ''){
-								this.currencyId = this.array[0].currencyId;
-							}
+							// if(this.selectType == ''){
+							// 	this.selectType = this.array[0].currencyName;
+							// }
+							// if(this.currencyId == ''){
+							// 	this.currencyId = this.array[0].currencyId;
+							// }
 							this.getCurrencyInfo();
 							this.getWalletInfo();
 						}

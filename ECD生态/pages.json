@@ -114,6 +114,76 @@
 				}
 			}
 		},{
+			"path": "pages/node/node",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "节点",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/node/nodeRecord",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "节点记录",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/node/nodeDetails",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "支付成功",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/node/buyRecordsDetails",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "购买记录详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/node/nodeRecordsDetails",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "申请记录详情",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/node/apply",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "节点申请",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
+			"path": "pages/node/upload",
+			"style": {
+				// "navigationBarTextStyle": "white",
+				"navigationBarTitleText": "上传付款凭证",
+				"bounce": "none",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},{
 			"path": "pages/user/user",
 			"style": {
 				"navigationBarTextStyle": "white",
@@ -547,7 +617,7 @@
 				"pagePath": "pages/product/product",
 				"iconPath": "static/tabbar/icon-tabbar-2.png",
 				"selectedIconPath": "static/tabbar/icon-tabbar-2-active.png",
-				"text": "理财"
+				"text": "委托"
 			}, {
 				"pagePath": "pages/chat/chat",
 				"iconPath": "static/tabbar/icon-tabbar-3.png",

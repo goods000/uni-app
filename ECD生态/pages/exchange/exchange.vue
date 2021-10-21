@@ -13,6 +13,15 @@
 		</view> 
 		
 		<view class="exchange">
+			<view class="exchangeHeader">
+				<view class="exchangeHeader-listItem">
+					<view class="exchangeHeader-listItem-picker">
+						<picker @change="bindPickerChange" :value="id" :range="pickerValueArray" range-key="currencyName">
+							<view class="uni-input">{{ currencyName }}</view>
+						</picker>
+					</view>
+				</view> 
+			</view> 
 			<view class="exchange-wrapper">
 				<view class="initNoData" v-if="orderList.length == 0"></view>
 				<view class="exchange-list" v-for="(item,index) in orderList" :key="index">
@@ -122,6 +131,10 @@
 				nextActive:'',
 				// status_2:0,
 				// status_3:0,
+				pickerValueArray:[],
+				index:'',
+				id:'',
+				currencyName:'',
 			}
 		},
 		onReachBottom() {
@@ -162,13 +175,31 @@
 				// 获取数据
 				this.$Ajax('/front/otc/init', {}, res => {
 					if (res.code == 0) {
-						this.currencyId = res.obj[0].currencyId;
-						this.otcTradeId = res.obj[0].id;
-						this.exchangePrice = res.obj[0].otcPrice;
+						this.pickerValueArray = res.obj;
+						this.pickerValueArray.forEach((item, index) => {
+							item.label = item.currencyName;
+						});
+						this.currencyId = this.pickerValueArray[0].currencyId;
+						this.otcTradeId = this.pickerValueArray[0].id;
+						this.exchangePrice = this.pickerValueArray[0].otcPrice;
+						this.currencyName = this.pickerValueArray[0].currencyName;
+						// this.currencyId = res.obj[0].currencyId;
+						// this.otcTradeId = res.obj[0].id;
+						// this.exchangePrice = res.obj[0].otcPrice;
 						this.getOrderList();
 						this.getassetsByCurrency();
 					}
 				});
+			},
+			bindPickerChange: function(e) {
+				console.log('picker发送选择改变，携带值为：' + this.pickerValueArray[e.detail.value].id +';当前值是' + this.pickerValueArray[e.detail.value].currencyName)
+				this.index = e.detail.value
+				this.currencyId = this.pickerValueArray[e.detail.value].currencyId
+				this.otcTradeId = this.pickerValueArray[e.detail.value].id
+				this.exchangePrice = this.pickerValueArray[e.detail.value].otcPrice
+				this.currencyName = this.pickerValueArray[e.detail.value].currencyName
+				this.getOrderList();
+				this.getassetsByCurrency();
 			},
 			getOrderList() {
 				uni.showLoading({

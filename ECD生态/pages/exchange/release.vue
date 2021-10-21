@@ -17,6 +17,15 @@
 			
 			<view class="release">
 				<view class="safety-list">
+					<view class="release-listItem">
+						<view class="release-listItem-picker">
+							<picker @change="bindPickerChange" :value="id" :range="pickerValueArray" range-key="currencyName">
+								<view class="uni-input">{{ currencyName }}</view>
+							</picker>
+						</view>
+					</view> 
+				</view> 
+				<view class="safety-list">
 					<view class="safety-list-title">交易数量</view>
 					<view class="safety-list-input">
 						<input type="text" placeholder="请输入交易数量" placeholder-style="color:#999999" v-model="num" />
@@ -107,6 +116,9 @@
 				currencyName:'',
 				tradePwd:'',
 				unit_Price:'',
+				pickerValueArray:[],
+				index:'',
+				id:'',
 			}
 		},
 		onShow() {
@@ -227,6 +239,13 @@
 						this.currencyName = this.pickerValueArray[0].currencyName;
 					}
 				});
+			},
+			bindPickerChange: function(e) {
+				console.log('picker发送选择改变，携带值为：' + this.pickerValueArray[e.detail.value].id +';当前值是' + this.pickerValueArray[e.detail.value].currencyName)
+				this.index = e.detail.value
+				this.currencyId = this.pickerValueArray[e.detail.value].id
+				this.unit_Price = this.pickerValueArray[e.detail.value].price
+				this.currencyName = this.pickerValueArray[e.detail.value].currencyName
 			},
 			/* 弹出框公用 */
 			openPopup(e, item) {

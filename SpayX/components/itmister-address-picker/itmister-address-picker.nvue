@@ -1,0 +1,316 @@
+<template>
+	<div v-if="isShow">
+		<div class="address-picker-mask" bubble='true' @click="hide" :class="[isOpen?'show-address-picker-mask':'hide-address-picker-mask']" 
+		:style="{backgroundColor:maskColor,opacity:opacity}">
+		</div>
+		<!-- #ifdef APP-PLUS-NVUE -->
+		<div class="address-picker-container" ref="addressPickerEl" @click.stop="handleClick" :class="[isOpen?'show-address-picker':'hide-address-picker']">
+		<!-- #endif -->
+		<!-- #ifndef APP-PLUS-NVUE -->
+		<div class="address-picker-container" @click.stop="handleClick" :class="[isOpen?'show-address-picker':'hide-address-picker']"
+		:style="{transform:'translatey('+translatey+'px)'}">
+		<!-- #endif -->
+			<div class="address-picker-button row between-center">
+				<text class="address-picker-button-text" style="color: #777777;" @click="hide">取消</text>
+				<text class="address-picker-button-text" style="color: #007AFF;" @click="confirmChange(value)">确认</text>
+			</div>
+			<picker-view class="address-picker-box" v-if="visible" :indicator-style="indicatorStyle" :value="value" @change="bindChange">
+				<picker-view-column class="center">
+					<div class="address-picker-item center" v-for="(item,index) in provinceList" :key="index">
+						<text class="address-picker-item-text">{{item}}</text>
+					</div>
+				</picker-view-column>
+				<picker-view-column>
+					<div class="address-picker-item center" v-for="(item,index) in cityList" :key="index">
+						<text class="address-picker-item-text">{{item}}</text>
+					</div>
+				</picker-view-column>
+				<picker-view-column>
+					<div class="address-picker-item center" v-for="(item,index) in areaList" :key="index">
+						<text class="address-picker-item-text">{{item}}</text>
+					</div>
+				</picker-view-column>
+			</picker-view>
+		</div>
+	</div>
+</template>
+
+<script>
+	// #ifdef APP-PLUS-NVUE
+	const animation = weex.requireModule('animation');
+	// #endif
+	export default {
+		name: "itmisterAddressPicker",
+		props: {
+			maskColor: { // 模态框背景色
+				type: String,
+				default: 'rgba(0,0,0,0.3)'
+			},
+			addressIndex:{ // 修改地址时使用，接收旧地址的省市区，对应的索引数组
+				type:Array,
+				default(){
+					return [0,0,0]
+				}
+			}
+		},
+		data() {
+			return {
+				isShow: false, // 是否弹出
+				isOpen: false,
+				translatey: 500, // 弹出层高度
+				opacity: 0, // 模态框透明度
+				
+				visible: true,
+				indicatorStyle: `height: ${Math.round(uni.getSystemInfoSync().screenWidth/(750/100))}px;`,
+				value: [], // 设置默认选中
+				cityData: require('../../static/city.json'), // 加载城市数据
+				
+				provinceList:[], // 省列表
+				cityList:[], // 市列表
+				areaList:[], // 区列表
+			}
+		},
+		mounted() {
+			this.value = this.addressIndex;
+			this.loadProvince(this.cityData);
+		},
+		methods: {
+			
+			// 确认选中
+			confirmChange(val){
+				let address = {
+					// 当前选中的地址
+					province:this.provinceList[val[0]],
+					city:this.cityList[val[1]],
+					area:this.areaList[val[2]],
+					// 当前地址的索引，保存起来，用于日后修改地址时，加载默认
+					provinceIndex:val[0],
+					cityIndex:val[1],
+					areaIndex:val[2]
+				}
+				this.$emit('confirmChange',address);
+				this.hide();
+			},
+			
+			// 监听选中
+			bindChange(e) {
+				const val = e.detail.value;
+				this.value = [val[0],val[1],val[2]];
+				this.loadCity(this.cityData[val[0]].city);
+			},
+			
+			// 加载数据
+			loadProvince(data){
+				let newList = [];
+				data.forEach(item => {
+					newList.push(item.name);
+				});
+				this.provinceList = newList;
+				this.loadCity(this.cityData[this.value[0]].city);
+			},
+			loadCity(data){
+				let newList = [];
+				data.forEach(item => {
+					newList.push(item.name);
+				});
+				this.cityList = newList;
+				
+				if((data.length - 1) >= this.value[1]){ // 解决特殊情况报错的问题
+					this.loadArea(this.cityData[this.value[0]].city[this.value[1]].area);
+				}else{
+					this.loadArea(this.cityData[this.value[0]].city[0].area);
+				}
+				
+			},
+			loadArea(data){
+				let newList = [];
+				data.forEach(item => {
+					newList.push(item);
+				});
+				this.areaList = newList;
+			},
+			
+			// 显示
+			show() {
+				// 渲染视图
+				this.isShow = true;
+				
+				// 等待视图渲染
+				this.$nextTick(() => {
+					setTimeout(() => {
+						// #ifdef APP-PLUS-NVUE
+						// APP 端获取动画元素
+						let ele = this.$refs.addressPickerEl;
+						// #endif
+						
+						// 执行 mask 透明度
+						this.isOpen = true;
+						this.opacity = 1;
+						
+						// #ifndef APP-PLUS-NVUE
+						// 非APP 端 执行动画
+						this.translatey = 0;
+						// #endif
+
+						// #ifdef APP-PLUS-NVUE
+						// APP 端执行动画
+						animation.transition(ele, {
+							styles: {
+								transform: 'translate(0,0)',
+								transformOrigin: 'center center'
+							},
+							duration: 250, //ms
+							timingFunction: 'ease',
+							delay: 0 //ms
+						});
+						// #endif
+
+					}, 10);
+				});
+			},
+			hide() {
+				// #ifdef APP-PLUS-NVUE
+				// APP 端获取动画元素
+				let ele = this.$refs.addressPickerEl;
+				// #endif
+				
+				// 执行 mask 透明度
+				this.isOpen = false;
+				this.opacity = 0;
+				
+				// #ifndef APP-PLUS-NVUE
+				// 非APP 端执行动画
+				this.translatey = 500;
+				setTimeout(() => {
+					this.isShow = false;
+				}, 200);
+				// #endif
+
+				// #ifdef APP-PLUS-NVUE
+				// APP 端执行动画
+				animation.transition(ele, {
+					styles: {
+						transform: 'translate(0,550)',
+						transformOrigin: 'center center'
+					},
+					duration: 250, //ms
+					timingFunction: 'ease',
+					delay: 0 //ms
+				},() => {
+					this.isShow = false;
+				});
+				// #endif
+
+			},
+			// 阻止冒泡
+			handleClick(event) {
+				event.stopPropagation();
+			}
+		}
+	}
+</script>
+
+<style lang="scss">
+	.address-picker-mask {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 999988;
+	}
+
+	.address-picker-container {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 999999;
+		height: 640rpx;
+		background-color: #FFFFFF;
+	}
+
+	.show-address-picker-mask {
+		transition-property: opacity;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+	}
+
+	.hide-address-picker-mask {
+		transition-property: opacity;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+	}
+
+	.show-address-picker {
+		/* #ifndef APP-PLUS-NVUE */
+		transition-property: transform;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+		/* #endif */
+		/* #ifdef APP-PLUS-NVUE */
+		transform: 'translate(0,550)',
+		/* #endif */
+	}
+
+	.hide-address-picker {
+		/* #ifndef APP-PLUS-NVUE */
+		transition-property: transform;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+		/* #endif */
+		/* #ifdef APP-PLUS-NVUE */
+		transform: 'translate(0,550)',
+		/* #endif */
+	}
+	
+	// 内容
+	.address-picker-box{
+		width: 750rpx;
+		height: 500rpx;
+		padding: 0 20rpx;
+		/* #ifdef H5 */
+		box-sizing: border-box;
+		/* #endif */
+		background-color: #FFF;
+	}
+	.address-picker-item{
+		height: 100rpx;
+	}
+	.address-picker-item-text{
+		color: #444;
+		font-size: 32rpx;
+	}
+	
+	// 按钮
+	.address-picker-button{
+		height: 100rpx;
+		margin-bottom: 20rpx;
+		box-shadow: 0 1rpx 1rpx #e4e4e4;
+		background-color: #FFFFFF;
+	}
+	.address-picker-button-text{
+		padding: 10rpx 25rpx;
+		margin: 0 30rpx;
+	}
+	
+	.row{
+		/* #ifndef APP-PLUS-NVUE */
+		display: flex;
+		/* #endif */
+		flex-direction: row;
+		
+	}
+	
+	.center{
+		/* #ifndef APP-PLUS-NVUE */
+		display: flex;
+		/* #endif */
+		justify-content: center;
+		align-items: center;
+	}
+	.between-center{
+		justify-content: space-between;
+		align-items: center;
+	}
+</style>

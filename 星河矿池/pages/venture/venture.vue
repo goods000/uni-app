@@ -10,6 +10,13 @@
 					<view class="header-right" @click="$tools.jump('./vipRecharge')">
 						<image src="../../static/product/icon-information.png" mode="widthFix"></image>
 					</view>
+					<view class="header-tab">
+						<scroll-view id="" class="header-tab-scroll" :scroll-x="true" :show-scrollbar="false" :scroll-into-view="scrollInto">
+							<view v-for="(tab,index) in tabBars" :key="index" class="header-tab__item" :class="tabIndex==index ? 'header-tab__item--active' : ''" :id="tab.key" :data-current="index" @click="ontabtap(index,tab.key,tab.name)">
+								<text class="header-tab__item-title" :class="tabIndex==index ? 'header-tab__item-title--active' : ''">{{tab.name}}</text>
+							</view>
+						</scroll-view>
+					</view>
 				</view>
 			</view>
 			
@@ -128,6 +135,13 @@
 				usdtcny:'',
 				ventureLmFee:'',
 				time:'',
+				tabBars:[
+					// {name:'FIL'},{name:'ETH'},{name:'BZZ'},{name:'PHA'},
+				],
+				tabIndex: 0,
+				index:0,
+				scrollInto:'',
+				currencyId:'',
 			}
 		},
 		onShow() {
@@ -148,7 +162,39 @@
 				this.recordTabsActive == 0;
 				this.PowerList = [];
 				this.getVentureLmFee();
-				this.getIPFSData();
+				// this.getIPFSData();
+				this.getTabBars();
+			},
+			//获取矿机类型
+			getTabBars() {
+				this.$Ajax('/front/miner/currencyList', {
+					type: 4,
+				}, res => {
+						if (res.code == 0) {
+							// console.log(JSON.stringify(res.obj))
+							this.tabBars = res.obj;
+							this.tabsName = this.tabBars[0].name;
+							if(this.currencyId == ''){
+								this.currencyId = this.tabBars[0].key;
+							}
+							this.getIPFSData();
+						}
+					}
+				);
+			},
+			ontabtap(index,currencyId,name) {
+				this.PowerList = [];
+				this.pageNum = 1;
+				this.currencyId = currencyId;
+				if(name == 'ICP'){
+					this.tabIndex = index;
+					console.log(this.tabIndex);
+					this.$tools.toast('敬请期待');
+				}else{
+					this.tabsName = name;
+					this.tabIndex = index;
+					this.getIPFSData();
+				}
 			},
 			//获取运算力信息
 			getVentureLmFee() {
@@ -162,7 +208,7 @@
 			//获取运算力信息
 			getIPFSData() {
 				this.$Ajax('/front/venture/getVentureData', {
-					// status: 0,
+					currencyId: this.currencyId,
 					pageSize: this.pageSize,
 					pageNum: this.pageNum,
 				}, res => {

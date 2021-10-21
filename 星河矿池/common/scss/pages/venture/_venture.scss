@@ -1,13 +1,70 @@
 .header_fixed + view{
+	/* #ifdef H5 */
+	padding-top: 170upx;
+	/* #endif */
 	/* #ifdef APP-PLUS */
-	padding-top: 180upx;
+	padding-top: 250upx;
 	/* #endif */
 }
 
+
 .header{
+	height: 88px;
 	&-right{position: absolute;font-size: 12px;right: 30upx;top:6px;color: $globalColor-fontStyle;@include flexRight;
 		image{width: 70upx;height: 70upx;}
 	}
+	&-tab{
+		margin-top:15upx;
+		&__item {
+			display: inline-block;
+			flex-wrap: nowrap;
+			// padding-left: 34rpx;
+			// padding-right: 34rpx;
+			width: 20%;
+			text-align: left;
+			color: $globalColor-fontStyle;
+			font-size: 30rpx;
+			/* #ifndef APP-PLUS */
+			white-space: nowrap;
+			/* #endif */
+			position: relative;
+			&--active {
+				color: $globalColor-style;
+				padding-bottom: 10upx;
+				&::before{
+					content: '';
+					display: inline-block;
+					height: 4upx;
+					width: 30upx;
+					border-radius: 8upx;
+					position: absolute;
+					left: 16upx;
+					// right:0;
+					bottom: 0;
+					// transform: translateY(-50%);
+					margin: auto;
+					background-color: $globalColor-style;
+				}
+			}
+		}
+		&-scroll{
+			// width: 750rpx;
+			// height: 80rpx;
+			display: flex;
+			flex-direction: row;
+			white-space: nowrap;
+			flex-wrap: nowrap;
+		}
+		&-title {
+			color: #c06300;
+			
+			height: 80rpx;
+			line-height: 80rpx;
+			flex-wrap: nowrap;
+			
+		}
+	}
+	
 }
 
 .bgBox{

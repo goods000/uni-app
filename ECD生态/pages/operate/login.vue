@@ -25,7 +25,7 @@
 											@blur="blurInput(0)"
 											@focus="focusInput(0)"
 											placeholder-class="operateBox-item__placeholder"
-											placeholder="请输入您的手机号"
+											placeholder="请输入您的手机号/邮箱"
 											v-model="phone"
 										/>
 										<view class="operateBox-item__fixedBox">
@@ -126,7 +126,7 @@ export default {
 		login() {
 			const that = this;
 			if (that.phone == '') {
-				return that.$tools.toast('请输入您的手机号');
+				return that.$tools.toast('请输入您的手机号/邮箱');
 			}
 			if (that.pwd == '') {
 				return that.$tools.toast('请输入密码');

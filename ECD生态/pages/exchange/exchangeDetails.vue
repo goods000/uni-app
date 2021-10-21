@@ -137,7 +137,7 @@
 					<view class="orderBox-list-item-title">取消时间：</view> -->
 					<view class="orderBox-list-item-title" v-if="sub.remark == '发起交易'">订单生成时间：</view>
 					<view class="orderBox-list-item-title" v-if="sub.remark == '付款'">打款时间：</view>
-					<view class="orderBox-list-item-title" v-if="sub.remark == '用户操作收款'">收款时间：</view>
+					<view class="orderBox-list-item-title" v-if="sub.remark == '用户操作收款' || sub.remark == '用户操作收取'">收款时间：</view>
 					<view class="orderBox-list-item-title" v-if="sub.remark == '系统放币'">提供时间：</view>
 					<view class="orderBox-list-item-title" v-if="sub.remark == '超时自动取消'">取消时间：</view>
 					<view class="orderBox-list-item-title" v-if="sub.remark.substr(0,4) == '提起申诉'">申诉时间：</view>
@@ -195,8 +195,8 @@
 		<!-- ['0待接单', '1待支付', '2待收款', '3已完成', '4已取消', '5申诉中', '6申诉成功', '7申诉失败'], -->
 		<!-- 发布者: isPublishUser 买家: isBuyer -->
 		<view class="exchangeDetails-btn" v-if="pageStatus == 1 || pageStatus == 2 || pageStatus == 3 || pageStatus == 4">
-			<view class="exchangeDetails-btn__contact" v-if="!isBuyer" @click="callPhoneFunc((detailsList.sellInfo || {}).phone)">联系收取家</view>
-			<view class="exchangeDetails-btn__contact" v-else @click="callPhoneFunc((detailsList.buyInfo || {}).phone)">联系提供家</view>
+			<view class="exchangeDetails-btn__contact" v-if="!isBuyer" @click="callPhoneFunc((detailsList.buyInfo || {}).phone)">联系收取家</view>
+			<view class="exchangeDetails-btn__contact" v-else @click="callPhoneFunc((detailsList.sellInfo || {}).phone)">联系提供家</view>
 			
 			<view class="exchangeDetails-btn__style" v-if="pageStatus == 1 && isBuyer" @click="$tools.jump('./upload')">上传付款凭证</view>
 			

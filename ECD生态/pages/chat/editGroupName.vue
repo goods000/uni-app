@@ -4,14 +4,14 @@
 			<view class="header_bar header_border">
 				<view class="header">
 					<view class="header-back" @click="$tools.back(1)"></view>
-					<view class="header-title">个人信息</view>
+					<view class="header-title">修改群聊名称</view>
 				</view> 
 			</view> 
 			
 			
 			<view class="safety-list">
 				<view class="safety-list-input" :class="{showCloseBtn: groupName != '' }">
-					<input type="text" placeholder="请输入您的昵称" placeholder-style="color:#999999" v-model="groupName" />
+					<input type="text" placeholder="请输入修改的群聊名称" placeholder-style="color:#999999" v-model="groupName" />
 					<view class="safety-list-input__fixedBox">
 						<view class="safety-list-input__fixedBox-btn safety-list-input__fixedBox-btn--clear" @click="clearData('groupName')">
 							<image src="../../static/public/icon-clear.png" mode="widthFix"></image>

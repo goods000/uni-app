@@ -14,7 +14,7 @@
 						<view class="recordBox-list-header-price">{{quantity}}</view>
 					</view>
 					<view class="recordBox-list-item">
-						<view class="recordBox-list-item-title">利息</view>
+						<view class="recordBox-list-item-title">收益</view>
 						<view class="recordBox-list-item-status">{{interest}}%</view>
 					</view>
 					<view class="recordBox-list-item">
@@ -69,7 +69,7 @@
 					<view class="initPopup-body">
 						<view class="initPopup-listBox">
 							<view class="initPopup-listBox__list">
-								<view class="initPopup-listBox__list-title">撤销当前理财将会导致您损失部分收益</view>
+								<view class="initPopup-listBox__list-title">撤销当前委托将会导致您损失部分收益</view>
 								<view class="initPopup-listBox__list-title">确定撤销吗？</view>
 							</view>
 						</view>

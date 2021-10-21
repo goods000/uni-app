@@ -9,6 +9,8 @@
 			</view> 
 			
 			<view class="safety-phone" v-if="userList.authType == 0">当前绑定的手机号{{ userList.phone }}</view>
+			<view class="safety-phone" v-if="userList.authType == 1">当前绑定的邮箱号{{ userList.email }}</view>
+			
 			
 			<view class="safety-list">
 				<view class="safety-list-title">旧密码</view>
@@ -91,6 +93,8 @@
 							this.userList = res.obj;
 							if(this.userList.phone != null){
 								this.userList.phone = this.userList.phone.substring(0,3) + "****" + this.userList.phone.substring(7);
+							}if(this.userList.email != null){
+								this.userList.email = this.userList.email.substring(0,3) + "****" + this.userList.email.substring(7);
 							}
 						}
 					}

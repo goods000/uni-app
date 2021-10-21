@@ -117,7 +117,8 @@
 		</view>
 		
 		<view class="confirmOrder-btn">
-			<view class="confirmOrder-btn__disable">联系提供家</view>
+			<view class="confirmOrder-btn__disable" v-if="isBuyer" @click="callPhoneFunc((sellInfo || {}).phone)">联系提供家</view>
+			<view class="confirmOrder-btn__disable" v-else @click="callPhoneFunc((buyInfo || {}).phone)">联系收取家</view>
 			<!-- <view class="confirmOrder-btn__style" @click="$tools.jump('./orderDetails')">提交订单</view> -->
 			<view class="confirmOrder-btn__style——1" v-if="endTimeStr == '00:00'">提交订单</view>
 			<view class="confirmOrder-btn__style" v-else @click="payOrder()">提交订单{{ endTimeStr }}</view>
@@ -150,10 +151,12 @@
 					uploadList: {src:''},
 					detailsList:{},
 					buyInfo:{},
+					sellInfo:{},
 					src:'',
 					remark:'',
 					endTimeStr: '',
 					endtimer:'',
+					isBuyer: true, //true为买家，false卖家
 				}
 			},
 			onLoad(hash) {
@@ -165,6 +168,7 @@
 			onShow() {
 				this.init();
 				this.countDownTime();
+				this.userId = uni.getStorageSync('userId');
 			},
 			methods: {
 				init(){
@@ -182,7 +186,9 @@
 					}, res => {
 						if (res.code == 0) {
 							this.detailsList = res.obj;
+							this.isBuyer = this.userId == this.detailsList.record.buyUserId;
 							this.buyInfo = res.obj.buyInfo;
+							this.sellInfo = res.obj.sellInfo;
 							this.endTime = res.obj.time;
 							var minute = Math.floor(((this.endTime % 86400) % 3600) / 60).toString().padStart(2, '0');
 							var second = Math.floor(((this.endTime % 86400) % 3600) % 60).toString().padStart(2, '0');
@@ -262,10 +268,19 @@
 					this.flag = index;
 					if(index == 1){
 						this.selectPayment = '银行卡';
+						if(this.remark == ''){
+							this.remark = '已通过银行卡付款给你，注意查收';
+						}
 					}else if(index == 2){
 						this.selectPayment = '支付宝';
+						if(this.remark == ''){
+							this.remark = '已通过支付宝付款给你，注意查收';
+						}
 					}else if(index == 3){
 						this.selectPayment = '微信';
+						if(this.remark == ''){
+							this.remark = '已通过微信付款给你，注意查收';
+						}
 					}
 				},
 				open(src){
@@ -303,6 +318,12 @@
 							}
 						}
 					);
+				},
+				// 联系对方
+				callPhoneFunc(phone) {
+					uni.makePhoneCall({
+						phoneNumber: phone //仅为示例
+					});
 				},
 				// 保存相册
 				saveQrcode() {

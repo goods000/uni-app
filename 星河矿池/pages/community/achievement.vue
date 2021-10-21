@@ -94,7 +94,7 @@
 							<!-- <image src="../../static/pack/logo.png" mode="widthFix"></image> -->
 							<view class="teamList-wrapper-item__left-account">{{ item.userName }}</view>
 						</view>
-						<view class="teamList-wrapper-item__left-num">{{ item.money }}</view>
+						<view class="teamList-wrapper-item__left-num">{{ item.money }}{{ item.currencyName }}</view>
 						<view class="teamList-wrapper-item__time">{{ item.createTime }}</view>
 					</view>
 				</scroll-view>
@@ -107,7 +107,7 @@
 							<!-- <image src="../../static/pack/logo.png" mode="widthFix"></image> -->
 							<view class="teamList-wrapper-item__left-account">{{ item.userName }}</view>
 						</view>
-						<view class="teamList-wrapper-item__left-num">{{ item.money }}</view>
+						<view class="teamList-wrapper-item__left-num">{{ item.money }}{{ item.currencyName }}</view>
 						<view class="teamList-wrapper-item__time">{{ item.createTime }}</view>
 					</view>
 				</scroll-view>
@@ -140,7 +140,7 @@
 							<!-- <image src="../../static/pack/logo.png" mode="widthFix"></image> -->
 							<view class="teamList-wrapper-item__left-account">{{ item.userName }}</view>
 						</view>
-						<view class="teamList-wrapper-item__left-num">{{ item.money }}</view>
+						<view class="teamList-wrapper-item__left-num">{{ item.money }}{{item.currencyName}}</view>
 						<view class="teamList-wrapper-item__time">{{ item.createTime }}</view>
 					</view>
 				</scroll-view>
@@ -221,6 +221,7 @@
 			changeTabsActive(index) {
 				if (this.tabsActive != index) {
 					this.tabsActive = index;
+					this.recordTabsActive = 0;
 					// if(this.tabsActive == 1){
 					// 	this.getmyTeamProfit();
 					// }

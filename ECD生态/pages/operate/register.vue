@@ -43,12 +43,13 @@
 						<view class="operateBox-item__label">账号</view>
 						<view class="operateBox-item__list">
 							<view class="operateBox-item__input" :class="{ 'operateBox-item__input--active': isFocus == 1, showCloseBtn: phone != '' }">
-								<view class="operateBox-item__zone" @click="zoneVisible = true">+{{ zone }}</view>
+								<!-- <view class="operateBox-item__zone" @click="zoneVisible = true"  v-if="!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g.test(this.phone)">+{{ zone }}</view> -->
+								<view class="operateBox-item__zone" @click="zoneVisible = true"  v-if="phone.indexOf('@') <0">+{{ zone }}</view>
 								<input
 									@blur="blurInput(1)"
 									@focus="focusInput(1)"
 									placeholder-class="operateBox-item__placeholder"
-									placeholder="请输入注册手机号"
+									placeholder="请输入您的手机号/邮箱"
 									v-model="phone"
 								/>
 								<view class="operateBox-item__fixedBox">
@@ -178,11 +179,11 @@ export default {
 				return this.$tools.toast('昵称只包含数字和字母(1-10位)');
 			}
 			if (this.phone == '') {
-				return this.$tools.toast('请输入手机号');
+				return this.$tools.toast('请输入您的手机号/邮箱');
 			}
-			if (this.phone.length!=11 || !/^((1[0-9])+\d{9})$/.test(this.phone)){
-				return this.$tools.toast('请输入正确的手机号');
-			}
+			// if (this.phone.length!=11 || !/^((1[0-9])+\d{9})$/.test(this.phone)){
+			// 	return this.$tools.toast('请输入正确的手机号');
+			// }
 			if (this.code == '') {
 				return this.$tools.toast('请输入验证码');
 			}

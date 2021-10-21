@@ -21,9 +21,13 @@
 				<view class="rechargeBox-list" v-if="currencyId == 1">
 					<view class="rechargeBox-list-title">链名称</view>
 					<view class="rechargeBox-list-item">
+						<view class="rechargeBox-list-item-type" v-for="(item,index) in ways"
+						 :class="{'rechargeBox-list-item-type--active': tabsActive == index }" @click="changeTabsActive(index)">{{ item.name }}</view>
+					</view>
+					<!-- <view class="rechargeBox-list-item">
 						<view class="rechargeBox-list-item-type" :class="{'rechargeBox-list-item-type--active': tabsActive == 0 }" @click="changeTabsActive(0)">TRC20</view>
 						<view class="rechargeBox-list-item-type" :class="{'rechargeBox-list-item-type--active': tabsActive == 1 }" @click="changeTabsActive(1)">ERC20</view>
-					</view>
+					</view> -->
 				</view>
 				
 				<view class="rechargeBox-code">
@@ -69,6 +73,7 @@
 				showBackBtn: true,
 				qrcodeAddress: '',
 				qrcodeImage: '',
+				ways:[],
 			}
 		},
 		onShow() {
@@ -122,25 +127,32 @@
 					res => {
 						if (res.code == 0) {
 							console.log(JSON.stringify(res.obj));
-							this.ways = res.obj.address;
-							if(this.currencyId == 1){
-								if(this.ways == undefined){
-									this.qrcodeAddress = res.obj.address;
-									this.qrcodeImage = QR.createQrCodeImg(res.obj.address);
-								}else{
-									if(this.tabsActive == 0){
-										if(res.obj.address[0].name == 'TRC20'){
-											this.qrcodeAddress = res.obj.address[0].address;
-											this.qrcodeImage = QR.createQrCodeImg(res.obj.address[0].address);
-										}
-									}else if(this.tabsActive == 1){
-										if(res.obj.address[1].name == 'ERC20'){
-											this.qrcodeAddress = res.obj.address[1].address;
-											this.qrcodeImage = QR.createQrCodeImg(res.obj.address[1].address);
-										}
-									}
-								}
-							}else{
+							// this.ways = res.obj.address;
+							if(res.obj.main == false){
+								this.ways = res.obj.address;
+								this.qrcodeAddress = res.obj.address[this.tabsActive].address;
+								this.qrcodeImage = QR.createQrCodeImg(res.obj.address[this.tabsActive].address);
+								
+							}
+							// if(this.currencyId == 1){
+							// 	if(this.ways == undefined){
+							// 		this.qrcodeAddress = res.obj.address;
+							// 		this.qrcodeImage = QR.createQrCodeImg(res.obj.address);
+							// 	}else{
+							// 		if(this.tabsActive == 0){
+							// 			if(res.obj.address[0].name == 'TRC20'){
+							// 				this.qrcodeAddress = res.obj.address[0].address;
+							// 				this.qrcodeImage = QR.createQrCodeImg(res.obj.address[0].address);
+							// 			}
+							// 		}else if(this.tabsActive == 1){
+							// 			if(res.obj.address[1].name == 'ERC20'){
+							// 				this.qrcodeAddress = res.obj.address[1].address;
+							// 				this.qrcodeImage = QR.createQrCodeImg(res.obj.address[1].address);
+							// 			}
+							// 		}
+							// 	}
+							// }
+							else{
 								this.qrcodeAddress = res.obj.address;
 								this.qrcodeImage = QR.createQrCodeImg(res.obj.address);
 							}
