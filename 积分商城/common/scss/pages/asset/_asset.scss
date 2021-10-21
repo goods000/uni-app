@@ -1,0 +1,167 @@
+.main {
+	background-color: $globalColor-bgStyle;
+	&-wrapper{
+		
+	}
+}
+
+.swiper{
+	&-box{
+		height: 33vh;
+	}
+}
+.tabBar{
+	@include flexCenter;
+	/* #ifdef H5 */
+	padding: 0 0 28upx 0;
+	/* #endif */
+	/* #ifdef APP-PLUS */
+	padding: 28upx 0;
+	/* #endif */
+	&-swiper{
+		&__list{
+			width: 46rpx;
+			height: 8rpx;
+			opacity: 1;
+			background: #444444;
+			border-radius: 4rpx;
+			margin: 0 10upx;
+		}
+		.active{
+			background: $globalColor-style;
+		}
+	}
+}
+
+.assetsBox{
+	&--image1{
+		background: url(../../static/asset/icon-asset-topBG.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+	&--image2{
+		background: url(../../static/asset/icon-asset-topPool.png);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+	margin: 27upx 27upx 0;
+	padding: 115upx 32upx 75upx;
+	&-header{
+		@include flexLeft;
+		image{
+			margin-right: 8upx;
+			width: 35upx;height: 35upx;
+		}
+		text{
+			color: $globalColor-white;
+			font-size: 23upx;
+		}
+	}
+	&-asset{
+		padding: 0upx 40upx 58upx;
+		&-usdt{
+			padding: 10upx 0;
+			color: $globalColor-white;
+			font-size: 51upx;
+			text{
+				font-size: 19upx;
+				margin-left: 15upx;
+			}
+		}
+		&-cny{
+			color: $globalColor-white;
+			font-size: 22upx;
+		}
+		&__title{
+			color: $globalColor-white;
+			font-size: 23upx;
+		}
+	}
+	&-pool{
+		&__usdt{
+			padding: 10upx 0;
+			color: $globalColor-white;
+			font-size: 32upx;
+			text{
+				font-size: 16upx;
+				margin-left: 15upx;
+			}
+		}
+		&__title{
+			color: $globalColor-white;
+			font-size: 24upx;
+		}
+	}
+	&-wrapper{
+		@include flexBetween;
+		padding: 0 40upx;
+		&__item{
+			@include flexCenterColumn;
+			
+			&--image{
+				width: 55upx;
+			}
+			&--info{
+				color: $globalColor-white;
+				font-size: 23upx;
+			}
+		}
+	}
+}
+
+.recommendBox {
+	border-top: 12upx solid #232323;
+	// margin-bottom: 30upx;
+	&-wrapper {
+		position: relative;
+		padding: 40upx 40upx;
+		&-item{
+			@include flexLeft;
+			&__image{
+				width: 40upx;
+				height: 40upx;
+				margin-right: 8upx;
+			}
+		}
+		&-right{
+			position: absolute;
+			right: 30upx;
+			color: #A5A5A5;
+			font-size: 16upx;
+			image{
+				width: 16upx;
+				height: 16upx;
+			}
+		}
+	}
+
+	&-title {
+		color: $globalColor-white;
+		font-size: 23upx;
+	}
+	&-txt{
+		color: #646464;
+		font-size: 18upx;
+	}
+	
+	&-body{
+		position: relative;
+		margin: 27upx 40upx 27upx 82upx;
+		&-title{
+			color: $globalColor-white;
+			font-size: 19upx;
+		}
+		&-scale{
+			color: $globalColor-white;
+			font-size: 23upx;
+			margin: 10upx 0 58upx;
+		}
+		&-image{
+			width: 27upx;
+			height: 27upx;
+			position: absolute;
+			right: 0;
+			top: 30upx;
+		}
+	}
+}

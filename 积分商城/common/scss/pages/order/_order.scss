@@ -1,0 +1,228 @@
+page,.pages{
+	background: #232323;
+}
+
+.tabsBox {
+	background-color: #111111;
+	padding: 35upx 0;
+	&-control {
+		@include flexCenter;
+		width: 90%;
+		margin: auto;
+		border-radius: 50upx;
+		background: #232323;
+		&__item {
+			color: $globalColor-white;
+			width: 50%;
+			font-size: 23upx;
+			text-align: center;
+			padding: 6upx 0;
+			&--active{
+				background: #747474;
+				border-radius: 50upx;
+			}
+		}
+	}
+}
+
+.listBox {
+	&-wrapper {
+	}
+	&__box{
+		background: #111111;
+		margin-bottom: 12upx;
+		padding: 43upx 30upx;
+	}
+	&-list {
+		@include flexLeft;
+		&-image {
+			image{
+				width: 208upx;
+				height: 208upx;
+			}
+			margin-right: 16upx;
+		}
+		&-news{
+			@include flexLeftColumn;
+		}
+		&-title{
+			font-size: 23upx;
+			font-family: PingFang SC, PingFang SC-Regular;
+			font-weight: 400;
+			color: $globalColor-white;
+			@include initMoreLine(2);
+		}
+		&-tips{
+			background: #232323;
+			color: $globalColor-style;
+			border-radius: 19upx;
+			font-size: 18upx;
+			font-family: PingFang SC, PingFang SC-Medium;
+			font-weight: 500;
+			padding: 8upx 29upx;
+			margin: 6upx 0 19upx;
+		}
+		&-txt{
+			color: $globalColor-white;
+			font-size: 20upx;
+		}
+		&-operate{
+			@include flexBetween;
+			width: 100%;
+		}
+	}
+	&-newsBox{
+		@include flexBetween;
+		align-items: flex-start;
+		padding: 25upx 0 0;
+		&-top{
+			padding-top: 37upx;
+		}
+		&-title{
+			color: $globalColor-white;
+			font-size: 23upx;
+			font-family: PingFang SC, PingFang SC-Medium;
+			font-weight: 500;
+			text-align: left;
+		}
+		&-border{
+			border-top: 1px solid #413E3C;
+			padding-top: 37upx;
+		}
+		&-info{
+			@include flexRight;
+			width: 68%;
+			color: $globalColor-white;
+			font-size: 23upx;
+			font-family: PingFang SC, PingFang SC-Medium;
+			font-weight: 500;
+			text-align: right;
+			text{
+				color: $globalColor-white;
+				font-size: 23upx;
+				font-family: PingFang SC, PingFang SC-Medium;
+				font-weight: 500;
+				text-align: right;
+			}
+			image{
+				width: 35upx;
+				height: 35upx;
+				margin-left: 14upx;
+			}
+		}
+	}
+}
+
+.operate{
+	&-wrapper{
+		@include flexLeftColumn;
+		&-price{
+			font-size: 39upx;
+			font-family: PingFang SC, PingFang SC-Heavy;
+			font-weight: 800;
+			text-align: left;
+			color: #ff5050;
+			text{
+				font-size: 20upx;
+				font-family: PingFang SC, PingFang SC-Heavy;
+				color: #ff5050;
+				margin-left: 10upx;
+			}
+		}
+		&-num{
+			color: $globalColor-white;
+			font-size: 31upx;
+		}
+	}
+}
+
+.cartListBox {
+	&-wrapper {
+		border-top-left-radius: 15upx;
+		border-top-right-radius: 15upx;
+		overflow: hidden;
+	}
+
+	&-list {
+		@include flexLeft;
+		padding: 15upx 0;
+
+		&__check{
+			width: 40upx;
+			height: 40upx;
+			margin-right: 15upx;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 32upx 32upx;
+			background-image: url(@/static/public/icon-check-not.png);
+			
+			&--active{
+				background-image: url(@/static/public/icon-check-active.png);
+			}
+		}
+
+		&__image {
+			width: 200upx;
+			padding-bottom: 200upx;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			margin-right: 30upx;
+			// @include fullImage;
+		}
+
+		&__content {
+			flex: 1;
+			// padding: 30upx;
+		}
+
+		&__title {
+			@include initMoreLine(1);
+			color: #ffffff;
+			font-size: 26upx;
+			margin-bottom: 15upx;
+		}
+
+		&__info {
+			@include flexBetween;
+		}
+
+		&__price {
+			font-size: 20upx;
+			color: #ffffff;
+			&--highlight {
+				margin-right: 8upx;
+				font-size: 32upx;
+				font-weight: bold;
+			}
+		}
+
+		&__tools {
+			@include flexRight;
+		}
+
+		&__quantity {
+			@include flexCenterColumn;
+			color: #ffffff;
+			font-size: 28upx;
+		}
+
+		&__btn {
+			@include flexCenterColumn;
+			border: 1upx solid #000000;
+			border-radius: 6upx;
+			height: 42upx;
+			width: 42upx;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 16upx 16upx;
+			
+			&--minus{
+				background-image: url(@/static/order/icon-minus.png);
+			}
+			&--plus{
+				background-image: url(@/static/order/icon-plus.png);
+			}
+		}
+	}
+}

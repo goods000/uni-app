@@ -1,0 +1,232 @@
+page,.pages{
+	background-color: #111111;
+	// height: 100vh;
+	// overflow: scroll;
+}
+
+.form{
+	&-wrapper{
+		position: relative;
+		margin:  32upx 32upx 0;
+		border-bottom: 1px solid #747474;
+		&--active{
+			border-bottom: 1px solid $globalColor-style;
+		}
+		&-picker{
+			border-bottom: none;
+			background: url(../../static/public/icon-arrow-right-grey.png);
+			background-size: 11upx 22upx;
+			background-repeat: no-repeat;
+			background-position: center right 20upx;
+			background-color: #232323;
+			border-radius: 8upx;
+			@include flexBetween;
+			flex: 1;
+			padding: 20upx;
+			margin: 74upx 32upx 0;
+			position: relative;
+		}
+		&__title{
+			color: $globalColor-fontStyle;
+			font-size: 27upx;
+			font-weight: 700;
+		}
+		&__txt{
+			color: $globalColor-style;
+			font-size: 24upx;
+			position: absolute;
+			right: 50upx;
+			bottom: 20upx;
+		}
+		&-label{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			font-weight: 700;
+		}
+		input{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			margin: 30upx 0 27upx;
+		}
+		image{
+			position: absolute;
+			right: 0upx;
+			bottom: 27upx;
+			width: 28upx;
+			height: 28upx;
+		}
+		&-txt{
+			position: absolute;
+			right: 0upx;
+			bottom: 27upx;
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+			&-01{
+				position: absolute;
+				right: 80upx;
+				bottom: 27upx;
+				color: $globalColor-fontStyle;
+				font-size: 28upx;
+			}
+			&__line{
+				color: #413E3C;
+				margin: 0 33upx;
+			}
+			&__text{
+				margin-left: 10upx;
+				color: $globalColor-style;
+				font-size: 23upx;
+			}
+		}
+		
+	}
+	&-item{
+		color: #999999;
+		font-size: 20upx;
+		margin: 16upx 32upx 0;
+	}
+	&-tips{
+		margin: 60upx 32upx;
+		&-txt{
+			color: $globalColor-white;
+			font-size: 27upx;
+			line-height: 40upx;
+		}
+		&-info{
+			color: #ACACAC;
+			font-size: 23upx;
+			line-height: 40upx;
+		}
+	}
+	&-flex{
+		margin: 92upx 58upx 0;
+		border-bottom: none;
+		@include flexBetween;
+		& > view{
+			color: $globalColor-fontStyle;
+			font-size: 28upx;
+		}
+	}
+	.initBtn{
+		margin: 22upx auto 60upx;
+	}
+}
+
+
+.formBg{
+	// background: url(../../static/public/icon-recharge-bg.png);
+	// background-size: 100% 100%;
+	// background-repeat: no-repeat;
+	padding: 0upx 0 130upx;
+	margin: 34upx 32upx;
+	border-bottom: 1px solid #413E3C;
+	picker{margin-top: 0;}
+	.recharge{
+		&-code{
+			&-qrcode{
+				width: 312upx;
+				height: 312upx;
+				border-radius: 12upx;
+				padding: 6upx;
+				// background: #CDE4FF;
+				margin: 66upx auto;
+				display: block;
+				image{
+					width: 100%;
+					height: 100%;
+					border-radius: 8upx;
+					background: $globalColor-white;
+					padding: 6upx;
+				}
+			}
+		}
+		&-box{
+			@include flexCenterColumn;
+			margin: auto;
+			text-align: center;
+		}
+		&-btn{
+			background: $globalColor-style;
+			color: #232323;
+			font-size: 24upx;
+			padding: 14upx 46upx 12upx;
+			text-align: center;
+			border-radius: 8upx;
+		}
+		&-border{
+			border-bottom: 1px solid #F5F5F5;
+			display: block;
+			width: 70%;
+			margin: 57upx auto 43upx;
+		}
+		&-title{
+			font-size: 24upx;
+			color: $globalColor-white;
+			margin: 51upx 0 16upx;
+		}
+		&-addr{
+			font-size: 24upx;
+			color: #999999;
+			width: 70%;
+			margin: 4upx 0 24upx;
+			word-break: break-all;
+		}
+		&-copy{
+			color: $globalColor-style;
+			font-size: 20upx;
+			background: #413E3C;
+			padding: 8upx 28upx;
+			border-radius: 21upx;
+		}
+	}
+}
+
+.record{
+	&-wrapper{
+		padding: 0 27upx;
+		&__item{
+			padding: 21upx 6upx;
+			border-bottom: 1px solid #444444;
+			&--header{
+				@include flexBetween;
+				margin: 20upx;
+				&-top{
+					margin-bottom: 39upx;
+				}
+				&-coin{
+					color: $globalColor-white;
+					font-size: 31upx;
+					font-family: PingFang SC, PingFang SC-Bold;
+					font-weight: 700;
+				}
+				&-status{
+					color: $globalColor-white;
+					font-size: 27upx;
+					font-family: PingFang SC, PingFang SC-Bold;
+					font-weight: 700;
+					&--active{
+						color: $globalColor-style;
+					}
+					&--end{
+						color: #FF5050;
+					}
+				}
+				&-title{
+					color: $globalColor-white;
+					font-size: 23upx;
+					font-family: PingFang SC, PingFang SC-Regular;
+					font-weight: 400;
+					word-break: break-all;
+				}
+				&-btn{
+					background: $globalColor-style;
+					font-size: 23upx;
+					font-family: PingFang SC, PingFang SC-Bold;
+					font-weight: 700;
+					padding: 8upx 35upx;
+					border-radius: 8upx;
+				}
+			}
+		}
+	}
+}

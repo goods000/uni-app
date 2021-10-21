@@ -1,12 +1,12 @@
 
 //正式
-var version = "v0.01";
-const IP='spayx.info'
-var ISHTTPS = true;
+// var version = "v0.03";
+// const IP='spayx.info'
+// var ISHTTPS = true;
 // 测试
-// const IP = '47.57.241.206:8056'
-// var version = "v0.01";
-// var ISHTTPS= false;
+const IP = '47.75.120.242:8056';
+var version = "v0.01";
+var ISHTTPS= false;
 // 本地
 // const IP='192.168.2.12:8083'
 // var version = "v0.01";

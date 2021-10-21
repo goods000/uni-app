@@ -2,7 +2,7 @@
     "name" : "SpayX",
     "appid" : "__UNI__884015D",
     "description" : "",
-    "versionName" : "0.0.1",
+    "versionName" : "0.03",
     "versionCode" : "100",
     "transformPx" : false,
     "app-plus" : {
@@ -160,7 +160,7 @@
         "title" : "SpayX",
         "domain" : "http://47.112.117.32:8116",
         "devServer" : {
-            "https" : true
+            "https" : false
         }
     },
     "mp-baidu" : {

@@ -1,0 +1,176 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'DINPro', 'PingFangSC-Regular', 'AvenirBold';
+}
+
+image {
+	height: 0;
+	display: block;
+}
+
+// 全局背景色
+page{
+	background-color: $globalColor-bgStyle;
+}
+.bg_header{
+	background-color: $globalColor-bgStyle;
+}
+.pages{
+	background-color: $globalColor-bgStyle;
+	/* #ifdef APP-PLUS */
+	min-height: 100vh;
+	/* #endif */
+	overflow: scroll;
+}
+.content {
+	height: 100vh;
+	background: $globalColor-bgStyle;
+	/* #ifdef H5 */
+	padding-bottom: 8vh;
+	/* #endif */
+	/* #ifdef APP-PLUS */
+	padding-bottom: 4vh;
+	/* #endif */
+}
+.contentBg{
+	background: $globalColor-bgStyle;
+}
+
+.initBtn{
+	background: $globalColor-style;
+	border: 1px solid $globalColor-style;
+	color: #232323;
+	margin: 60upx auto;
+	text-align: center;
+	border-radius: 8upx;
+	width: 90%;
+	font-size: 31upx;
+	padding: 15upx 0;
+	font-weight: bold;
+}
+
+// 
+.recommendBox {
+	// margin-bottom: 30upx;
+	&-wrapper {
+		position: relative;
+		padding: 40upx 40upx;
+		&-item{
+			@include flexLeft;
+			&__image{
+				width: 40upx;
+				height: 40upx;
+				margin-right: 8upx;
+			}
+		}
+		&-right{
+			position: absolute;
+			right: 30upx;
+			color: #A5A5A5;
+			font-size: 22upx;
+			image{
+				width: 16upx;
+				height: 16upx;
+			}
+			&--image{
+				width: 82upx !important;
+				height: 43upx !important;
+			}
+		}
+	}
+
+	&-title {
+		@include flexLeft;
+		color: $globalColor-white;
+		font-size: 23upx;
+		&-tips{
+			margin-left: 10upx;
+			color: #A5A5A5;
+			font-size: 22upx;
+		}
+	}
+	&-txt{
+		color: #646464;
+		font-size: 18upx;
+	}
+	
+	&-body{
+		position: relative;
+		margin: 27upx 40upx 27upx 82upx;
+		&-title{
+			color: $globalColor-white;
+			font-size: 22upx;
+		}
+		&-scale{
+			color: $globalColor-white;
+			font-size: 23upx;
+			margin: 10upx 0 58upx;
+		}
+		&-image{
+			width: 27upx;
+			height: 27upx;
+			position: absolute;
+			right: 0;
+			top: 30upx;
+		}
+	}
+}
+
+
+// 记录
+.transitionBox{
+	&-wrapper{
+		padding: 0 30upx;
+		&__item{
+			margin:0 0 43upx;
+			@include flexLeftColumn;
+			border-bottom: 1px solid #444444;
+			&--title{
+				color: #FFFFFF;
+				font-size: 31upx;
+				font-weight: 700;
+				padding: 0 10upx;
+				text{
+					margin-right: 8upx;
+					color: #FFFFFF;
+					border-radius: 4upx;
+					padding: 4upx 10upx;
+					font-size: 16upx;
+				}
+				&--green{
+					background: #489A4B;
+				}
+				&--red{
+					background: #FF5050;
+				}
+			}
+			&--see{
+				color: $globalColor-style;
+				font-size: 19upx;
+			}
+			&--box{
+				@include flexBetween;
+				width: 100%;
+			}
+		}
+	}
+	&-content:nth-child(1){@include flexLeftColumn;width: 35%;}
+	&-content:nth-child(2){@include flexLeftColumn;width: 25%;}
+	&-content:nth-child(3){@include flexRightColumn;width: 40%;}
+	&-content{
+		padding: 16upx 10upx;
+		&-title{
+			color: $globalColor-white;
+			font-size: 19upx;
+			margin: 27upx 0;
+		}
+		&-data{
+			color:$globalColor-white;
+			font-size: 27upx;
+			font-weight: 700;
+			white-space: nowrap;
+		}
+	}
+}

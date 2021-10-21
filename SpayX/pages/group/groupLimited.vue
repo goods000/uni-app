@@ -99,6 +99,9 @@
 		methods: {
 			openToast() {
 				console.log(666);
+				if (!/^[1-9]\d*$/.test(this.quantity)) {
+					return this.$tools.toast(this.i18n.group.placeholder_02);
+				}
 				this.toastStatus = true;
 			},
 			cancel() {

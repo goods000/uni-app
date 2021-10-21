@@ -1,0 +1,43 @@
+.initNoData{ 
+	font-size: 24upx;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 100upx 0;
+	
+	&--white{
+		color: #FFFFFF;
+	}
+	
+	&::before{
+		content: '';
+		width: 100%;
+		height: 200upx;
+		display: inline-block;
+		background-image: url('~@/static/public/img-nodata-1.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 226upx 122upx;
+	}
+}
+
+.initNoAddress{ 
+	font-size: 23upx;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 305upx 0;
+	
+	&--white{
+		color: #FFFFFF;
+	}
+	
+	&::before{
+		content: '';
+		width: 100%;
+		height: 200upx;
+		display: inline-block;
+		background-image: url('~@/static/public/img-noaddress-1.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 226upx 122upx;
+	}
+}

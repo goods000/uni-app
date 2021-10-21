@@ -387,7 +387,7 @@
             "path" : "pages/group/group",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "拼团",
+                "navigationBarTitleText": "众筹",
                 "navigationBarTextStyle": "white",
                 "navigationBarBackgroundColor": "#FFFFFF",
                 "titleNView": false,
@@ -399,7 +399,7 @@
 		    "path" : "pages/group/groupRecord",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "拼团记录",
+		        "navigationBarTitleText": "众筹记录",
 		        "navigationBarTextStyle": "white",
 		        "navigationBarBackgroundColor": "#FFFFFF",
 		        "titleNView": false,
@@ -411,7 +411,7 @@
 		    "path" : "pages/group/groupLimited",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "限时拼团",
+		        "navigationBarTitleText": "限时众筹",
 		        "navigationBarTextStyle": "white",
 		        "navigationBarBackgroundColor": "#FFFFFF",
 		        "titleNView": false,
@@ -423,7 +423,7 @@
 		    "path" : "pages/group/groupSuccess",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "拼团成功",
+		        "navigationBarTitleText": "众筹成功",
 		        "navigationBarTextStyle": "white",
 		        "navigationBarBackgroundColor": "#FFFFFF",
 		        "titleNView": false,

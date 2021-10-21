@@ -10,9 +10,9 @@
 				<view class="left-text">
 					<view class="text-top">
 						<view class="text-title">Hi, {{name}}</view>
-						<view class="text-pic" @click="nickName()">
+						<!-- <view class="text-pic" @click="nickName()">
 							<image src="../../static/my/edit-icon.png" mode=""></image>
-						</view>
+						</view> -->
 					</view>
 					<view class="text-bottom">UID:{{inviteCode}}</view>
 				</view>

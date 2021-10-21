@@ -1,0 +1,93 @@
+.tabsBox {
+	background-color: #111111;
+	padding: 47upx 0;
+	&-control {
+		@include flexCenter;
+		width: 90%;
+		margin: auto;
+		border-radius: 50upx;
+		background: #232323;
+		&__item {
+			color: $globalColor-white;
+			width: 50%;
+			font-size: 23upx;
+			text-align: center;
+			padding: 6upx 0;
+			&--active{
+				background: #747474;
+				border-radius: 50upx;
+			}
+		}
+	}
+}
+
+.teamBox{
+	border-bottom: 12upx solid #232323;
+	&-wrapper{
+		@include flexLeft;
+		padding: 40upx 40upx 50upx;
+		&__line{
+			width: 2upx;
+			height: 107upx;
+			opacity: 1;
+			background: #747474;
+			margin: 0 80upx 0 40upx;
+		}
+		&__item{
+			@include flexLeftColumn;
+			&--image{
+				width: 91upx;
+				height: 91upx;
+			}
+			&--name{
+				color: $globalColor-fontStyle;
+				font-size: 35upx;
+				font-weight: 700;
+				margin: 6upx 0;
+			}
+			&--uid{
+				@include flexLeft;
+				text{
+					color: $globalColor-fontStyle;
+					font-size: 20upx;
+					font-family: PingFang SC, PingFang SC-Regular;
+					font-weight: 400;
+				}
+				image{
+					margin-left: 16upx;
+					width: 23upx;
+					height: 23upx;
+				}
+			}
+			&--header{
+				color: $globalColor-fontStyle;
+				font-size: 23rpx;
+				font-family: PingFang SC, PingFang SC-Regular;
+				font-weight: 400;
+			}
+			&--asset{
+				color: $globalColor-fontStyle;
+				font-size: 51rpx;
+				font-family: PingFang SC, PingFang SC-Regular;
+				font-weight: 400;
+			}
+			&--push{
+				color: $globalColor-fontStyle;
+				font-size: 23rpx;
+				font-family: PingFang SC, PingFang SC-Regular;
+				font-weight: 400;
+				margin: 25upx 0;
+			}
+			&--team{
+				color: $globalColor-fontStyle;
+				font-size: 23rpx;
+				font-family: PingFang SC, PingFang SC-Regular;
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+.recommendBox {
+	border-top: 12upx solid #232323;
+}

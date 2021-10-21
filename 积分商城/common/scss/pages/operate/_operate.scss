@@ -1,0 +1,310 @@
+.pages{
+	height: 100vh;
+	// height: 100%;
+	overflow: scroll;
+}
+
+.main {
+	padding-top: 30upx;
+	position: relative;
+	z-index: 1;
+}
+
+.logoBox {
+	@include fullImage;
+}
+
+.titleBox {
+	@include flexLeft;
+	margin-bottom: 145upx;
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-title {
+		color: #FFFFFF;
+		font-size: 39upx;
+		font-weight: 700;
+		border-bottom: 2px solid transparent;
+		&--no{
+			color: #747474;
+			font-size: 39upx;
+			font-weight: 700;
+			border-bottom: 2px solid transparent;
+		}
+		&--active{
+			color: #FFFFFF;
+			border-bottom: 2px solid $globalColor-style;
+		}
+	}
+	
+	&-note {
+		color: #999999;
+		font-size: 28upx;
+		
+		&__btn {
+			color: $globalColor-style;
+		}
+	}
+}
+
+.operateBox {
+	&-wrapper {
+		padding: 30upx;
+	}
+
+	&-tabs {
+		// padding: 30upx 0;
+		margin-bottom: 90upx;
+		
+		&__control {
+			@include flexLeft;
+			align-items: flex-end;
+			height: 90upx;
+			&-item {
+				color: #c6c7d2;
+				font-size: 32upx;
+				margin-right: 15upx;
+				@include initTransition(0.2);
+				&--active {
+					color: #FFFFFF;
+					font-size: 52upx;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	&-item {
+		margin-top: 55upx;
+		&__list {
+			@include flexLeft;
+			align-items: stretch;
+		}
+
+		&__label {
+			color: #FFFFFF;
+			font-size: 28upx;
+			font-weight: 300;
+			margin-bottom: 15upx;
+			margin-left: 12upx;
+		}
+
+		&__input {
+			@include flexLeft;
+			@include initTransition(0.4);
+			padding: 20upx 12upx;
+			flex: 1;
+			font-size: 28upx;
+			font-weight: 300;
+			position: relative;
+			border-bottom: 1px solid #413E3C;
+			color: #FFFFFF;
+
+			&--active {
+				border-bottom: 1px solid $globalColor-style;
+			}
+
+			&.showCloseBtn {
+				.operateBox-item__fixedBox-btn--clear {
+					display: flex;
+				}
+			}
+
+			input {
+				font-size: inherit;
+				flex: 1;
+			}
+		}
+
+		&__placeholder {
+			color: #ACACAC;
+			font-size: 28upx;
+			font-weight: 300;
+		}
+
+		&__fixedBox {
+			@include flexRight;
+
+			&-btn {
+				width: 60upx;
+				height: 100%;
+				z-index: 999;
+				@include flexCenter;
+
+				&--clear {
+					display: none;
+					image {
+						width: 30upx;
+						@include fullImage;
+					}
+				}
+
+				&--eye {
+					image {
+						width: 40upx;
+						@include fullImage;
+					}
+				}
+			}
+		}
+		
+		&__radioBox{
+			@include flexBetween;
+			color: #FFFFFF;
+			font-size: 28upx;
+			font-weight: 300;
+		}
+		
+
+		&__verify {
+			@include flexCenterColumn;
+			color: $globalColor-style;
+			font-size: 28upx;
+			font-weight: 300;
+			margin-left: 30upx;
+			border-radius: 20upx;
+		}
+	}
+
+	&-button {
+		margin-top: 90upx;
+		padding: 0;
+		&__btn {
+			@include initTransition(0.4);
+			padding: 20upx 0;
+			border-radius: 30upx;
+			text-align: center;
+			color: #FFFFFF;
+			font-weight: 300;
+			font-size: 28upx;
+			background-color: $globalColor-style;
+		}
+	}
+
+	&-checkbox {
+		margin-top: 120upx;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		font-size: 24upx;
+		color: #999999;
+		.linkColor {
+			color: $globalColor-style;
+		}
+	}
+
+	&-rightButton {
+		color: #FFFFFF;
+		font-size: 24upx;
+		font-weight: 300;
+		text-align: right;
+		padding-top: 15upx;
+	}
+
+	&-textButton {
+		width: 100%;
+		text-align: center;
+		padding: 30upx;
+		color: $globalColor-fontStyle;
+		font-size: 24upx;
+		font-weight: 300;
+	}
+	
+	&-agreement{
+		margin: 20upx 0 0;
+		@include flexLeft;
+		label{
+			border: 1px solid $globalColor-border;
+			width: 30upx;
+			height: 30upx;
+			border-radius: 50%;
+			margin-right: 11upx;
+		}
+		.checkbox-active{
+			background: url(../../static/operate/icon-active.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			// border: 1px solid $globalColor-style;
+			// .checkbox{
+			// 	margin: 5upx;
+			// 	background: $globalColor-style;
+			// 	width: 18upx;
+			// 	height: 18upx;
+			// 	border-radius: 50%;
+			// }
+		}
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 24upx;
+		}
+		&-name{
+			color: $globalColor-style;
+			font-size: 24upx;
+		}
+	}
+}
+
+.fixedBox {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	
+	&-wrapper {
+		padding: 60upx 30upx;
+	}
+	
+	&-link {
+		@include flexCenter;
+		color: #FFFFFF;
+		width: 100%;
+		text-align: center;
+		padding: 30upx;
+		font-size: 24upx;
+		font-family: 300;
+
+		&__btn {
+			color: $globalColor-style;
+		}
+	}
+}
+
+.oppupBox{
+	background: #111111;
+	border-radius: 24upx;
+	&-wrapper{
+		padding: 0 40upx;
+		@include flexCenterColumn;
+		width: 35vh;
+		&__header{
+			text-align: center;
+			font-size: 39upx;
+			color: $globalColor-white;
+			font-weight: 700;
+			padding: 20upx 0;
+			letter-spacing: 8upx;
+		}
+		&__content{
+			// text-indent: 55upx;
+			margin: 0 0 30upx;
+			font-size: 30upx;
+			color: $globalColor-white;
+			font-weight: 700;
+			min-height: 18vh;
+			max-height: 65vh;
+			overflow: scroll;
+		}
+	}
+	&-initBtn{
+		background: $globalColor-style;
+		padding: 20upx 0;
+		border-radius: 0 0 24upx 24upx;
+		font-size: $globalColor-fontStyle;
+		font-weight: 700;
+		letter-spacing: 8upx;
+		text-align: center;
+	}
+}		
+
+

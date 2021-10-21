@@ -1,0 +1,46 @@
+.initButton {
+	@include flexCenterColumn;
+	
+	&--fixed{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 30upx;
+	}
+	
+	&--absolute{
+		position: absolute;
+		bottom: 60upx;
+		left: 0;
+		width: 100%;
+		padding: 0 30upx;
+	}
+	
+	&-row{
+		@include flexCenter;
+		flex: 1;
+		width: 100%;
+	}
+	
+	&-btn {
+		@include flexCenter;
+		flex: 1;
+		padding: 20upx 0;
+		border-radius: 8upx;
+		font-size: 100%;
+		font-weight: 300;
+		width: 100%;
+		color: #232323;
+		font-size: 31upx;
+		font-weight: 700;
+		
+		+ .initButton-btn{
+			margin-top: 30upx;
+		}
+		
+		&--style {
+			background-color: $globalColor-style;
+		}
+	}
+}

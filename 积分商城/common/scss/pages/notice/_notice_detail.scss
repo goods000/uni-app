@@ -1,0 +1,26 @@
+.noticeDetailBox {
+	&-wrapper {
+		background-color: $globalColor-bgStyle;
+		padding: 30upx ;
+	}
+	
+	&-title {
+		@include initBeforeHolder;
+		color: #FFFFFF;
+		font-size: 42upx;
+		margin-bottom: 30upx;
+		font-weight: 300;
+	}
+	
+	&-date {
+		color: #999999;
+		font-size: 24upx;
+		margin-bottom: 30upx;
+	}
+	
+	&-data {
+		font-size: 28upx;
+		color: #626266;
+		word-break: break-all;
+	} 
+}

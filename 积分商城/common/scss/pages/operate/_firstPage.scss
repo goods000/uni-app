@@ -1,0 +1,92 @@
+.firstPages{
+	background:#000002;
+	height: 100vh;
+}
+.firstBox{
+	&-topImg{
+		width: 100%;
+	}
+	&-wrapper{
+		padding: 0 58upx 97upx;
+		&-title{
+			color: $globalColor-white;
+			font-size: 50upx;
+			font-weight: 400;
+			text-align: left;
+			font-family: KaiTi, KaiTi-Regular;
+		}
+		&-txt{
+			color: $globalColor-white;
+			font-size: 20upx;
+			font-weight: 300;
+			text-align: left;
+			margin-top: 12upx;
+		}
+	}
+}
+
+.operateBox{
+	padding: 0 58upx;
+	&-topImg{
+		width: 393upx;
+		height: 214upx;
+	}
+	&-title{
+		color: #ACACAC;
+		font-size: 27upx;
+		margin-top: 14upx;
+	}
+	&-btn{
+		@include flexLeft;
+		margin: 76upx 0 30upx;
+		& > view{
+			font-size: 27upx;
+			border-radius: 33upx;
+			width: 30%;
+			padding: 17upx 0;
+			text-align: center;
+			margin-right: 27upx;
+		}
+		&-register{
+			border: 1px solid $globalColor-style;
+			background: $globalColor-style;
+			color: #232323;
+		}
+		&-login{
+			border: 1px solid $globalColor-style;
+			color: $globalColor-style;
+		}
+	}
+	&-agreement{
+		margin: 40upx 0 0;
+		@include flexLeft;
+		label{
+			border: 1px solid $globalColor-border;
+			width: 30upx;
+			height: 30upx;
+			border-radius: 50%;
+			margin-right: 11upx;
+		}
+		.checkbox-active{
+			background: url(../../static/operate/icon-active.png);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			// border: 1px solid $globalColor-style;
+			// .checkbox{
+			// 	margin: 5upx;
+			// 	background: $globalColor-style;
+			// 	width: 18upx;
+			// 	height: 18upx;
+			// 	border-radius: 50%;
+			// }
+		}
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 24upx;
+		}
+		&-name{
+			color: $globalColor-style;
+			font-size: 24upx;
+		}
+	}
+}

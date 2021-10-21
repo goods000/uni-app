@@ -1,0 +1,29 @@
+.initTitle {
+	@include flexCenter;
+	font-size: 32rpx;
+	font-family: HelloFont WenYiHei, HelloFont WenYiHei-Regular;
+	font-weight: 400;
+	color: #e2e2e2;
+	
+	&::before,
+	&::after {
+		content: '';
+		display: inline-block;
+		width: 23upx;
+		height: 17upx;
+		background-position: center center;
+		background-size: 23upx 17upx;
+		background-repeat: no-repeat;
+		margin: 0 15upx;
+	}
+	
+	&::before {
+		transform: scaleX(1);
+		background-image: url(@/static/public/icon-recommend-title-bg.png);
+	}
+	
+	&::after {
+		transform: scaleX(1);
+		background-image: url(@/static/public/icon-recommend-title-bg.png);
+	}
+}

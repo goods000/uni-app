@@ -1,0 +1,125 @@
+.realNameBox{
+	@include flexLeftColumn;
+	margin-top: 72upx;
+	&-label{
+		margin-bottom: 8upx;
+		font-size: 24rpx;
+		font-family: PingFang SC, PingFang SC-Medium;
+		font-weight: 500;
+		color: $globalColor-white;
+	}
+	&-tips{
+		font-size: 20rpx;
+		font-family: PingFang SC, PingFang SC-Light;
+		font-weight: 300;
+		color: #C0C0C0;
+	}
+	&-wrapper{
+		@include flexBetween;
+		width: 100%;
+	}
+}
+.realName{
+	&-tips{
+		font-size: 24rpx;
+		font-family: PingFang SC, PingFang SC-Regular;
+		font-weight: 400;
+		text-align: center;
+		color: #f5d279;
+		background: #1A1A1A;
+		border-radius: 0 0 16upx 16upx;
+		padding:10upx 0 8upx;
+	}
+	&-box{
+		margin: 60upx auto 0;
+		background: #26282B;
+		border-radius: 16upx;
+		width: 324upx;
+		height: 236upx;
+		// width: 400upx;
+		// height: 264upx;
+		padding: 16upx 0 0;
+		&-bg{
+			width: 100%;
+			height: 184upx;
+			position: relative;
+			z-index: 1;
+			    background-size: 100% 100%;
+				background-position: center center;
+				background-repeat: repeat;
+			
+			&__photo{
+				image{
+					width: 68upx;
+					height: 68upx;
+					position: absolute !important;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					z-index: 2;
+				}
+			}
+		}
+	}
+	&-end{
+		text-align: center;
+	}
+	&-status{
+		margin-top: 247upx;
+		image{
+			width: 120upx;
+			height: 120upx;
+			margin: auto;
+		}
+	}
+	&-result{
+		color: $globalColor-fontStyle;
+		font-size: 32upx;
+		margin: 39upx 0 86upx;
+		font-weight: bold;
+	}
+	&-title{
+		// color: #999999;
+		font-size: 30upx;
+		line-height: 40upx;
+		font-weight: 400;
+	}
+	&-statusTitle{
+		font-size: 28rpx;
+		font-family: PingFang SC, PingFang SC-Medium;
+		font-weight: 500;
+		text-align: center;
+		color: $globalColor-white;
+	}
+	&-statusEnd{
+		font-size: 20rpx;
+		font-family: PingFang SC, PingFang SC-Light;
+		font-weight: 300;
+		text-align: center;
+		color: $globalColor-white;
+		opacity: 0.5;
+		margin-top: 8upx;
+		display: block;
+		&--end{
+			margin-bottom: 206upx;
+		}
+	}
+}
+.initBtn{
+	margin-top: 260upx;
+}
+.safetytopBg{
+	margin: 168upx auto 57upx;
+	image{
+		width: 306upx;
+		margin: auto;
+	}
+}
+.contentTrans{
+	border-bottom: none;
+}
+.inputBox{
+	&-item{
+		margin-top: 40upx;
+	}
+}

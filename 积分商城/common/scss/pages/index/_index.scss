@@ -1,0 +1,204 @@
+.main {
+	background-color: $globalColor-bgStyle;
+}
+.pages{
+	height: 100vh;
+	// height: 100%;
+	overflow: scroll;
+}
+
+.swiperBox {
+	@include flexCenter;
+	height: 320upx;
+	margin-bottom: 30upx;
+
+	&-wrapper {
+		width: 100%;
+	}
+
+	&-swiper {
+		height: 320upx;
+
+		&__item {
+			@include flexCenterColumn;
+			width: 100%;
+			height: 320upx;
+			// padding: 0 30upx;
+			overflow: hidden;
+
+			image {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.noticeBox {
+	padding: 0 30upx;
+
+	&-wrapper {
+		@include flexBetween;
+		padding: 15upx 30upx;
+		border-top: 2px solid #444444;
+	}
+	
+	&-title{
+		color: $globalColor-style;
+		font-size: 23upx;
+		margin-right: 47upx;
+	}
+	&-icon {
+		@include fullImage;
+		width: 28upx;
+		margin-right: 15upx;
+	}
+
+	&-swiper {
+		height: 60upx;
+		flex: 1;
+
+		&__item {
+			@include flexCenter;
+
+			&-label {
+				color: #ffffff;
+				font-size: 20upx;
+				font-weight: 500;
+				width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				font-weight: bold;
+			}
+		}
+	}
+
+	&-more {
+		font-size: 20rpx;
+		font-family: PingFang SC, PingFang SC-Bold;
+		font-weight: 700;
+		color: #ffffff;
+	}
+}
+
+.setMealBox {
+	width: 100%;
+	&-wrapper {
+		width: 100%;
+		// margin: 30upx 0;
+	}
+
+	&-title {
+		font-size: 26rpx;
+		font-family: PingFang SC, PingFang SC-Regular;
+		font-weight: 400;
+		color: #ffffff;
+		margin-bottom: 15upx;
+	}
+
+	&-label {
+		font-size: 22rpx;
+		font-family: PingFang SC, PingFang SC-Light;
+		font-weight: 300;
+		color: #ffffff;
+		margin-bottom: 15upx;
+	}
+
+	&-data {
+		font-size: 48rpx;
+		font-family: PingFang SC, PingFang SC-Bold;
+		font-weight: 700;
+		color: #c19c5b;
+		margin-bottom: 15upx;
+	}
+
+	&-reward {
+		font-size: 22rpx;
+		font-family: PingFang SC, PingFang SC-Medium;
+		font-weight: 500;
+		color: #c19c5b;
+		background-color: #413e3c;
+		border-radius: 20rpx;
+		text-align: center;
+		padding: 8upx 0;
+	}
+}
+
+.etiquetaBox {
+	&-wrapper {
+		@include flexCenter;
+		flex-wrap: wrap;
+		padding: 15upx 0;
+	}
+	
+	&-item {
+		@include flexCenterColumn;
+		width: 25%;
+		padding: 15upx;
+
+		&__icon {
+			@include fullImage;
+			width: 52upx;
+			margin-bottom: 8upx;
+		}
+
+		&__label {
+			font-size: 24rpx;
+			font-family: PingFang SC, PingFang SC-Medium;
+			font-weight: 500;
+			color: #e2e2e2;
+		}
+	}
+}
+
+.recommendBox {
+	margin-bottom: 30upx;
+	&-wrapper {
+		position: relative;
+		padding: 40upx 30upx;
+		border-top: 16upx solid #232323;
+		border-bottom: 16upx solid #232323;
+		&-item{
+			@include flexLeft;
+			&__image{
+				width: 40upx;
+				height: 40upx;
+				margin-right: 8upx;
+			}
+		}
+		&-right{
+			position: absolute;
+			right: 30upx;
+			color: #A5A5A5;
+			font-size: 22upx;
+		}
+	}
+
+	&-title {
+		@include flexLeft;
+		color: $globalColor-white;
+		font-size: 23upx;
+		&-tips{
+			margin-left: 10upx;
+			color: #A5A5A5;
+			font-size: 22upx;
+		}
+	}
+	&-txt{
+		color: #646464;
+		font-size: 18upx;
+	}
+	
+	&-body{
+		margin: 27upx 82upx;
+		&-title{
+			color: $globalColor-white;
+			font-size: 22upx;
+		}
+		&-scale{
+			color: $globalColor-white;
+			font-size: 23upx;
+			margin: 10upx 0 58upx;
+		}
+	}
+}

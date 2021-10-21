@@ -1,0 +1,53 @@
+.recordBox{
+	border-bottom: 8upx solid #232323;
+	@include flexCenterColumn;
+	padding: 40upx 0 55upx;
+	&-image{
+		width: 250upx;
+	}
+	&-header{
+		color: $globalColor-fontStyle;
+		font-size: 23upx;
+		margin: 35upx 0 8upx;
+	}
+	&-title{
+		color: $globalColor-fontStyle;
+		font-size: 19upx;
+	}
+	&-num{
+		color: #FF5050;
+		font-weight: 800;
+		font-size: 62upx;
+		margin: 10upx 0;
+	}
+	&-info{
+		border-radius: 50upx;
+		background: #232323;
+		color: $globalColor-fontStyle;
+		padding: 10upx 50upx;
+		text-align: center;
+		font-size: 19upx;
+	}
+}
+
+.tabsBox{
+	width: 100%;
+	&-wrapper{
+		@include flexBetween;
+		overflow: scroll;
+	}
+	&-list{
+		padding: 0 30upx 30upx;
+		&__title{
+			font-size: 28rpx;;
+			font-family: PingFang SC, PingFang SC-Regular;
+			font-weight: 400;
+			color: #646464;
+			white-space: nowrap;
+			&--active{
+				color: $globalColor-style;
+				font-weight: bold;
+			}
+		}
+	}
+}

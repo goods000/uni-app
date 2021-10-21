@@ -1,0 +1,36 @@
+.noticeBox {
+	&-wrapper {
+	}
+
+	&-item {
+		@include flexBetween;
+		border-bottom: 1px solid #444444;
+		padding: 30upx 10upx;
+		margin: 0upx 30upx;
+		
+		&__content {
+			width: 100%;
+			padding-right: 45upx;
+			flex: 1;
+			background: url(@/static/public/icon-arrow-right-grey.png) no-repeat;
+			background-position: right center;
+			background-size: 14upx 26upx;
+		}
+
+		&__title {
+			@include initBeforeHolder;
+			color: #FFFFFF;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			width: 100%;
+			font-size: 32upx;
+			margin-bottom: 15upx;
+			font-weight: 300;
+		}
+		&__date {
+			font-size: 24upx;
+			color: #999999;
+		}
+	}
+}

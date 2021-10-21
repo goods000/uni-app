@@ -127,9 +127,9 @@
 							this.$set(this.grouplist[i], 'minute', '');
 							this.$set(this.grouplist[i], 'second', '');
 						}
-						console.log(111, this.grouplist);
+						// console.log(111, this.grouplist);
 						this.timelist = this.grouplist;
-						console.log(222, this.timelist);
+						// console.log(222, this.timelist);
 						this.timelist.forEach((item, index) => {
 							// let endTime = item.countDown - 1;
 							if (item.countDown <= 0) {
@@ -145,6 +145,9 @@
 										item.hour = 0;
 										item.minute = 0;
 										item.second = 0;
+										item.status = 2;
+										// this.$set(this.grouplist[index], item.status, 2);
+										// console.log("进来了。。。",this.grouplist[index],'---下标---',index,'---状态---',item.status);
 									}
 								}, 1000);
 							}

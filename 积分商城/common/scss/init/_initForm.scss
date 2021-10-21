@@ -1,0 +1,274 @@
+.initFormBox {
+	font-size: 28upx;
+	padding-bottom: 30upx;
+
+	&-content {
+		padding: 30upx;
+		background-color: #ffffff;
+		&__title {
+			font-size: 26upx;
+			color: #333333;
+			font-weight: bold;
+			margin-bottom: 30upx;
+		}
+		&__data {
+			@include flexBetween;
+		}
+
+		&__item {
+			flex: 1;
+			font-size: 24upx;
+			@include justifiedLayout;
+			&-label {
+				color: #999999;
+			}
+			&-data {
+				color: #333333;
+				font-weight: bold;
+			}
+		}
+	}
+
+	&-list {
+		&__label {
+			font-size: 32upx;
+			color: #101010;
+			margin-bottom: 30upx;
+		}
+
+		&__data {
+			@include flexBetween;
+			font-size: 32upx;
+
+			&--border {
+				border-bottom: 2upx solid #f1f1f1;
+				padding-bottom: 15upx;
+			}
+
+			input {
+				flex: 1;
+				font-size: 100%;
+			}
+
+			&-text {
+				font-weight: bold;
+			}
+
+			&-code,
+			&-all {
+				color: $globalColor-green;
+			}
+		}
+
+		&__info {
+			@include flexBetween;
+			font-size: 22upx;
+			color: #999999;
+			padding: 15upx 0;
+			font-weight: bold;
+		}
+
+		&__picker {
+			@include flexBetween;
+			font-size: 32upx;
+			
+			&-data{
+				@include flexRight;
+				padding-right: 30upx;
+				background: url(@/static/public/icon-arrow-right-grey.png) no-repeat;
+				background-size: 14upx 26upx;
+				background-position: right center;
+			}
+		}
+	}
+
+	&-subTitle {
+		font-size: 24upx;
+		color: #999999;
+		// background-color: #f9f9f9;
+		padding: 15upx 30upx;
+	}
+
+	&-matter {
+		@include flexLeft;
+		padding: 30upx;
+		color: #FFFFFF;
+
+		&__highlight {
+			color: $globalColor-blue;
+		}
+	}
+
+	&-tips {
+		padding: 30upx;
+		font-size: 22upx;
+		&__title {
+			color: #333333;
+			margin-bottom: 15upx;
+		}
+		&__data {
+			color: #999999;
+		}
+	}
+
+	&-note {
+		padding: 15upx 30upx;
+		color: #999999;
+		font-size: 28upx;
+		&--right {
+			text-align: right;
+		}
+	}
+
+	&-button {
+		@include flexCenter;
+		padding: 0 30upx;
+		// margin-top: 120upx;
+		&__btn {
+			flex: 1;
+			padding: 30upx 0;
+			border-radius: 10upx;
+			color: #ffffff;
+			@include flexCenter;
+
+			&--green {
+				background-color: $globalColor-green;
+			}
+			
+			&--red {
+				background-color: $globalColor-red;
+			}
+
+			&--blue {
+				background-color: $globalColor-blue;
+				box-shadow: 2px 2px 20upx  rgba(58, 121, 222, 0.5);
+			}
+		}
+	}
+
+	&-countdown {
+		padding: 30upx;
+		font-size: 32upx;
+		text-align: center;
+		color: #cccccc;
+	}
+	&-placeholder {
+		color: rgba(172,177,176, 0.5);
+	}
+}
+
+.initFormBox--setting {
+	padding: 0 30upx;
+	margin-top: 60upx;
+
+	.initFormBox-list {
+		margin-bottom: 60upx;
+		color: #101010;
+		&__label {
+			color: #333333;
+			font-size: 30upx;
+			margin-bottom: 15upx;
+		}
+		&__data {
+			font-size: 28upx;
+			padding: 15upx 0;
+			position: relative;
+			margin-bottom: 30upx;
+
+			@include flexLeft;
+			@include initTransition(0.4);
+			border-bottom: 2upx solid rgba(255,255,255,0.1);
+
+			&--active {
+				border-bottom: 2upx solid $globalColor-blue;
+			}
+
+			&.showCloseBtn {
+				.initFormBox-list__fixedBox-btn--clear {
+					display: flex;
+				}
+			}
+
+			input {
+				font-size: inherit;
+				flex: 1;
+			}
+		}
+
+		&__fixedBox {
+			@include flexRight;
+
+			&-btn {
+				width: 60upx;
+				height: 100%;
+				z-index: 999;
+				@include flexCenter;
+
+				&--clear {
+					display: none;
+					image {
+						width: 30upx;
+					}
+				}
+
+				&--eye {
+					image {
+						width: 40upx;
+					}
+				}
+			}
+
+			&-verification {
+				padding: 0 15upx;
+				color: $globalColor-blue;
+			}
+		}
+	}
+
+	.initFormBox-button {
+		margin-top: 90upx;
+		padding: 0;
+		&__btn {
+			padding: 30upx 0;
+			border-radius: 60upx;
+			font-size: 28upx;
+			text-align: center;
+			color: $globalColor-blur;
+			@include initTransition(0.4);
+
+			&--active {
+				color: #ffffff;
+			}
+			
+			&--green {
+				background-color: $globalColor-green;
+			}
+			
+			&--blue {
+				background-color: $globalColor-blue;
+			}
+		}
+	}
+
+	.initFormBox-textBtn {
+		width: 100%;
+		text-align: center;
+		padding: 30upx;
+		text {
+			font-size: 28upx;
+			color: #999999;
+		}
+	}
+
+	.initFormBox-checkbox {
+		margin-top: 120upx;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		font-size: 24upx;
+		color: #999999;
+		.linkColor {
+			color: $globalColor-blue;
+		}
+	}
+}

@@ -1,0 +1,62 @@
+
+
+.addressList{
+	&-wrapper{
+		position: relative;
+		padding: 0 30upx 40upx;
+		
+		&__item{
+			.box{
+				width: 100%;
+			}
+			@include flexLeftColumn;
+			border-bottom: 1px solid #444444;
+			padding: 40upx 10upx 40upx;
+			&--title{
+				color: $globalColor-fontStyle;
+				font-size: 21upx;
+				text{
+					background: $globalColor-style;
+					color: #111111;
+					font-size: 16upx;
+					border-radius: 4upx;
+					margin-right: 8upx;
+					padding: 2upx 10upx;
+				}
+			}
+			&--address{
+				color: $globalColor-fontStyle;
+				font-size: 27upx;
+				margin: 16upx 0;
+			}
+			&--operate{
+				width: 100%;
+				position: relative;
+				text{
+					color: $globalColor-fontStyle;
+					font-size: 21upx;
+					margin-right: 58upx;
+				}
+				image{
+					position: absolute;
+					right: 0;
+					bottom: 0upx;
+					width: 40upx;
+				}
+			}
+		}
+	}
+	
+	
+	
+	&-btn{
+		position: absolute;
+		bottom: 0;
+		border-top: 19upx solid #232323;
+		width: 100%;
+	}
+}
+
+.initBtn{
+	margin: 27upx auto;
+}

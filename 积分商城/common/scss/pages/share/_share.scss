@@ -1,0 +1,134 @@
+.main {
+	@include flexCenterColumn;
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+	// padding-bottom: 30upx;
+}
+
+.bgBox {
+	text-align: center;
+	width: 100%;
+	background: url(../../static/share/img-share-01.png) no-repeat;
+	background-size: 100% auto;
+	background-position: center bottom;
+	position: absolute;
+	// height: 100vh;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+
+	&-wrapper {
+		@include fullImage;
+	}
+}
+
+.titleBox {
+	margin-top: 200upx;
+	margin-bottom: 60upx;
+	&-wrapper {
+		text-align: center;
+		@include fullImage;
+		// width: 750upx;
+		image{
+			width: 607upx;
+		}
+		&-title{
+			color: $globalColor-fontStyle;
+			font-size: 23upx;
+		}
+	}
+}
+
+.planeBox {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	flex: 1;
+	padding: 0 30upx;
+
+	&-wrapper {
+		@include flexCenterColumn;
+		// @include initShadow;
+		// background-color: #ffffff;
+		// border-radius: 10upx;
+		padding: 60upx;
+		width: 600upx;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	&-shareBox {
+		text-align: center;
+
+		&__label {
+			@include flexCenter;
+			
+			font-size: 31upx;
+			font-family: PingFang SC, PingFang SC-Bold;
+			font-weight: 700;
+			color: #ffffff;
+			margin-bottom: 15upx;
+			position: relative;
+
+			&::before, &::after {
+				content: '';
+				display: inline-block;
+				width: 30upx;
+				height: 2upx;
+				background-color: $globalColor-fontStyle;
+				margin: 0 15upx;
+			}
+		}
+
+		&__data {
+			@include flexCenter;
+			color: $globalColor-style;
+			font-size: 52upx;
+			font-weight: bold;
+			position: relative;
+		}
+
+		&__copy {
+			position: absolute;
+			right: -50upx;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 40upx;
+			@include fullImage;
+		}
+	}
+
+	&-qrcode {
+		width: 100%;
+		&__wrapper {
+			@include flexCenterColumn;
+			padding: 30upx;
+			border-radius: 15upx;
+		}
+
+		&__code {
+			@include fullImage;
+			@include initShadow;
+			// width: 280upx;
+			padding: 10upx 10upx 0;
+			background-color: #413E3C;
+			margin-bottom: 33upx;
+		}
+
+		&__note {
+			@include flexCenter;
+			font-size: 23upx;
+			font-family: PingFang SC, PingFang SC-Bold;
+			font-weight: 700;
+			color: #ffffff;
+			margin: 20upx 0 50upx;
+		}
+	}
+
+	&-button {
+		width: 56%;
+		border-radius: 14upx;
+	}
+}

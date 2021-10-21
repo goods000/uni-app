@@ -236,8 +236,8 @@
 					padding: 60upx 0upx 0;
 				}
 				.operateBox-formBox-list-words{
-					background: #060C25;
-					color: rgba(255, 255, 255, .1);
+					background: #102E4D;
+					color: rgba(255, 255, 255, .3);
 					width: 30%;
 					text-align: center;
 					font-size: 32upx;

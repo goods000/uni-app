@@ -33,6 +33,7 @@
 				<input type="text" v-model="uid" value="" :placeholder="i18n.assets.placeholder_01" />
 			</view>
 		</view>
+		<view class="canuse">{{ i18n.assets.tranfter_tips }}</view>
 		<view class="input-plate">
 			<view class="input-title">{{ i18n.global.quantity }}</view>
 			<view class="input-flex">
@@ -337,6 +338,7 @@
 			font-weight: 500;
 			color: #999999;
 			padding-top: 20rpx;
+			word-break: break-word;
 		}
 	}
 </style>

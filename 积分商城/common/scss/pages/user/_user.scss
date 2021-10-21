@@ -1,0 +1,186 @@
+page,.pages{
+	background: #232323;
+}
+
+.main{
+	position: relative;
+	z-index: 1;
+	background: #111111;
+}
+
+.userBg{
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+.userInfoBox {
+	position: relative;
+	// background: url(../../static/user/icon-user-topBg.png);
+	// background-repeat: no-repeat;
+	// background-size: 100% 100%;
+	&-wrapper {
+		@include flexLeft;
+		padding: 45upx 58upx;
+		/* #ifdef H5 */
+		margin-top: 120upx;
+		/* #endif */
+		/* #ifdef APP-PLUS */
+		margin-top: 60upx;
+		/* #endif */
+	}
+
+	&-content {
+		flex: 1;
+	}
+	
+	&-row{
+		@include flexLeftColumn;
+	}
+	
+	&-level{
+		image{
+			width: 132upx;
+			height: 132upx;
+			border-radius: 50%;
+		}
+	}
+	
+	&-title {
+		font-size: 35rpx;
+		font-family: PingFang SC, PingFang SC-Heavy;
+		font-weight: 700;
+		color: #ffffff;
+		margin: 14upx 0 0;
+		@include flexLeft;
+		image{
+			height: 32upx;
+			margin-left: 22upx;
+		}
+		&__image--1{
+			width: 96upx;
+		}
+		&__image--2{
+			width: 148upx;
+		}
+	}
+	
+	&-avatar {
+		position: absolute;
+		bottom: 45upx;
+		right: 58upx;
+		image{
+			width: 35upx;
+			height: 35upx;
+			margin-left: 15upx;
+		}
+	}
+	
+	&-loginBtn{
+		background: $globalColor-style;
+		color: #232323;
+		font-size: 23upx;
+		padding: 4upx 35upx;
+		border-radius: 8upx;
+	}
+	
+	&-code {
+		color: #ffffff;
+		font-size: 22upx;
+		position: relative;
+		padding-right: 60upx;
+	}
+
+	&-id {
+		font-size: 24rpx;
+		font-family: PingFang SC, PingFang SC-Medium;
+		color: #e2e2e2;
+		padding-right: 45upx;
+		position: relative;
+		display: inline-block;
+	}
+
+	&-tourist{
+		border: 1px solid $globalColor-style;
+		color: $globalColor-style;
+		font-size: 19upx;
+		padding: 2upx 12upx;
+		display: inline-block;
+		border-radius: 4upx;
+		margin-top: 6upx;
+	}
+}
+
+.fancyBox {
+	margin-bottom: 45upx;
+	&-wrapper {
+		@include flexLeft;
+		padding: 0 30upx;
+	}
+	
+	&-item {
+		@include flexCenter;
+		border-radius: 30upx;
+		background-color: #413E3C;
+		border: 2upx solid #707070;
+		padding: 15upx 30upx;
+		margin-right: 45upx;
+		font-size: 18rpx;
+		font-family: PingFang SC, PingFang SC-Medium;
+		font-weight: 500;
+		color: #e9cb96;
+		
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+}
+
+.listBox {
+	background: #111111;
+	&-wrapper:nth-child(1) {
+		border-bottom: 12upx solid #232323;
+	}
+
+	&-list {
+		@include flexLeft;
+		position: relative;
+		margin: 0 27upx;
+		padding: 40upx 10upx 29upx;
+		background-image: url(@/static/public/icon-arrow-right-grey.png);
+		background-size: 14upx 26upx;
+		background-repeat: no-repeat;
+		background-position: right 20upx center;
+		border-bottom: 1px solid #413E3C;
+		
+		&:last-child{
+			border-bottom: 0;
+		}
+
+		&--noArrow {
+			background: none;
+			padding-right: 8upx;
+		}
+
+		&__icon {
+			@include fullImage;
+			width: 47upx;
+			height: 47upx;
+			margin-right: 15upx;
+		}
+		
+		&__label{
+			font-size: 23upx;
+			font-family: PingFang SC, PingFang SC-Medium;
+			font-weight: 500;
+			color: #ffffff;
+		}
+
+		&__data {
+			padding-right: 30upx;
+			font-size: 28upx;
+			color: $globalColor-style;
+			flex: 1;
+			text-align: right;
+		}
+	}
+}

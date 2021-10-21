@@ -314,6 +314,7 @@
 									item.hour = 0;
 									item.minute = 0;
 									item.second = 0;
+									item.status = 2;
 									// item[index].status = 2;
 								}
 							}, 1000);
